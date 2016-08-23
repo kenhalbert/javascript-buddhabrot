@@ -1,4 +1,8 @@
-export default (canvas, imageWidth, imageHeight) => {
+export default (params) => {
+	const canvas = params.canvas,
+		imageWidth = params.imageWidth,
+		imageHeight = params.imageHeight;
+
 	const canvasContext = canvas.getContext('2d');
 	const canvasData = canvasContext.getImageData(0, 0, imageWidth, imageHeight);
 

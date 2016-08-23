@@ -13,7 +13,10 @@ const createDensityPlotArray = (height, width) => {
 };
 
 const DensityPlot = (params) => {
-	const plot = createDensityPlotArray(params.height, params.width);
+	const width = params.width,
+		height = params.height;
+
+	const plot = createDensityPlotArray(height, width);
 
 	let highestDensity = 0;
 
@@ -22,7 +25,13 @@ const DensityPlot = (params) => {
 	};
 
 	return {
-		get highestDensity() {
+		get width () {
+			return width;
+		},
+		get height () {
+			return height;
+		},
+		get highestDensity () {
 			return highestDensity;
 		},
 		plotPoint (x, y) {
@@ -38,3 +47,5 @@ const DensityPlot = (params) => {
 		}
 	};
 };
+
+export default DensityPlot;
