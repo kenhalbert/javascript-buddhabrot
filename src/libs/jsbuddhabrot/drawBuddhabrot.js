@@ -2,7 +2,12 @@ import CanvasDrawer from './CanvasDrawer';
 import BuddhabrotGenerator from './math/BuddhabrotGenerator';
 import DensityPlot from './math/DensityPlot';
 
+const getColor = (density, rgbVal, highestDensity) => {
+    return Math.floor(density * rgbVal / highestDensity);
+}
+
 const rebaseColors = (plot, drawer) => {
+    console.log('rebasing colors...');
 	for (let h = 0; h < plot.width; h++) {
         for (let k = 0; k < plot.height; k++) {
             const red = getColor(plot.getDensity(h, k), 255, plot.highestDensity); // TODO make color configurable and allow to be changed after render
@@ -13,11 +18,12 @@ const rebaseColors = (plot, drawer) => {
 
 const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
 	const imageWidth = config.imageWidth, 
-		imageHeight = config.imageHeight;
+		imageHeight = config.imageHeight,
+        scale = config.scale;
 	let iteration = 0;
 
 	return function draw() {
-		rebaseColors();
+        if (iteration === 0) rebaseColors(plot, drawer);
 
 		const pointsToPlot = fractalGenerator.next().value;
 
@@ -34,10 +40,10 @@ const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
             drawer.setPixel(x, y, color, 0, 0, 255);
         }
 
-        i++;
+        iteration++;
 
-        if (i !== 0 && i % 10 === 0) {
-        	if (i % 10000 === 0) {
+        if (iteration !== 0 && iteration % 10 === 0) {
+        	if (iteration % 10000 === 0) {
         		rebaseColors(plot, drawer);
         	}
 
@@ -52,23 +58,21 @@ const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
 const drawBuddhabrot = (canvas, config) => {
 	const drawer = CanvasDrawer({
 		canvas,
-		config.imageWidth,
-		config.imageHeight
+		imageHeight: config.imageWidth,
+		imageWidth: config.imageHeight
 	});
 
 	const fractalGenerator = BuddhabrotGenerator({
-		config.sequenceEscapeThreshold,
-		config.sequenceBound
+		sequenceEscapeThreshold: config.sequenceEscapeThreshold,
+		sequenceBound: config.sequenceBound
 	});
 
 	const plot = DensityPlot({
-		config.imageWidth,
-		config.imageHeight
+		width: config.imageWidth,
+		height: config.imageHeight
 	});
 
-	const draw = () => {
-		const 
-	};
+	getDrawFunc(drawer, fractalGenerator, plot, config)();
 };
 
 export default drawBuddhabrot;

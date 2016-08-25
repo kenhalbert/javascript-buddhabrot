@@ -22,10 +22,8 @@ const executeIteration = (complexToTest, sequenceEscapeThreshold, sequenceBound)
 
 const getRandomNumberFromPlaneRegion = () => ComplexNumber(Math.random() * 3 - 2, Math.random() * 3 - 1.5);
 
-export default function* (config) => {
-	const current = getRandomNumberFromPlaneRegion();
-
+export default function* (config) {
 	while (true) {
-		yield executeIteration(current, config.sequenceEscapeThreshold, config.sequenceBound);
+		yield executeIteration(getRandomNumberFromPlaneRegion(), config.sequenceEscapeThreshold, config.sequenceBound);
 	}
 };
