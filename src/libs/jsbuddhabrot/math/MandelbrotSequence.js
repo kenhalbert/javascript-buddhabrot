@@ -1,11 +1,12 @@
-import ComplexNumber from './ComplexNumber';
+import math from 'mathjs';
 
-export default function* (c) {
-	let current = ComplexNumber.zero;
-	yield current;
+export default (c) => {
+	let current =  math.complex(0, 0);
 
-	while (true) {
-		current = ComplexNumber.add(ComplexNumber.pow(current, 2), c);  // z(n + 1) = z(n)^2 + c
-		yield current;
-	}
+	return {
+		next() {
+			current = math.add(math.multiply(current, current), c);  // z(n + 1) = z(n)^2 + c
+			return current;
+		}
+	};
 };

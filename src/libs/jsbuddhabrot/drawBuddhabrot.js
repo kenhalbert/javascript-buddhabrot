@@ -25,11 +25,11 @@ const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
 	return function draw() {
         if (iteration === 0) rebaseColors(plot, drawer);
 
-		const pointsToPlot = fractalGenerator.next().value;
+		const pointsToPlot = fractalGenerator.next();
 
 		for (let i = 0; i < pointsToPlot.length; i++) {  // TODO Why are 2 & -1.5 being added here?
-            const x = Math.floor(scale * (pointsToPlot[i].real + 2)); // TODO what exactly is scale doing here?  And how did I pick a scale of 200?  It could be that's just what the example I saw used.
-            const y = Math.floor(-scale * (pointsToPlot[i].imaginary - 1.5)); // TODO find a way to change scale dynamically from UI - the density plot & image dimensions/rendering should be decoupled.
+            const x = Math.floor(scale * (pointsToPlot[i].re + 2)); // TODO what exactly is scale doing here?  And how did I pick a scale of 200?  It could be that's just what the example I saw used.
+            const y = Math.floor(-scale * (pointsToPlot[i].im - 1.5)); // TODO find a way to change scale dynamically from UI - the density plot & image dimensions/rendering should be decoupled.
             if (x >= imageWidth || x >= imageHeight || x < 0 || y < 0) {  // TODO also, the above should be scale * (pointsToPlot[i].imaginary + 1.5) - change it after everything is working
                 continue;
             }
