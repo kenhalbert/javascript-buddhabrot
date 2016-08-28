@@ -8173,8 +8173,8 @@
 		imageWidth: 600,
 		imageHeight: 600,
 		imageScale: 200,
-		plotScale: 400, // TODO should this be calculated by the program every time?  pScale = Math.floor(pDim / 3) - easy
-		plotDimensions: 1200,
+		plotScale: 200, // TODO should this be calculated by the program every time?  pScale = Math.floor(pDim / 3) - easy
+		plotDimensions: 600,
 		sequenceEscapeThreshold: 10000,
 		sequenceBound: 2
 	});
@@ -8243,9 +8243,11 @@
 	        for (var k = 0; k < plot.height; k++) {
 	            // TODO may need to discard points that fall outside of image region here (absolutely will actually)
 	            var red = getColor(plot.getDensity(h, k), 255, plot.highestDensity); // TODO make color configurable and allow to be changed after render
+	            if (drawer.getPixel().r > red) continue; // TODO determine if I really need this.  It adds several seconds of execution time to the rebase.  Maybe that's okay if computation occurs on worker threads?  Can I optimize it by getting rid of the object literal?
 	            drawer.setPixel(rescale(h, plotScale, imageScale), rescale(k, plotScale, imageScale), red, 0, 0, 255); // TODO also consider allowing to save and load density plots, and inject coloring strategy to allow possibilities beyond monochrome
 	        }
 	    }
+	    console.log('done rebasing colors');
 	};
 	
 	var initCanvas = function initCanvas(drawer, config) {
@@ -8267,7 +8269,11 @@
 	        imageScale = config.imageScale,
 	        plotScale = config.plotScale,
 	        plotDimensions = config.plotDimensions;
-	    var iteration = 0;
+	    var iteration = 0,
+	        iterationSetStartTime = null,
+	        renderStartTime = null;
+	
+	    iterationSetStartTime = renderStartTime = new Date().getTime();
 	
 	    return function draw() {
 	        if (iteration === 0) rebaseColors(plot, drawer, config);
@@ -8311,6 +8317,9 @@
 	        if (iteration !== 0 && iteration % 10 === 0) {
 	            if (iteration % 10000 === 0) {
 	                rebaseColors(plot, drawer, config);
+	                console.log('iteration set ' + iteration / 10000 + ' finished in ' + (new Date().getTime() - iterationSetStartTime) + ' milliseconds ' + ('(total runtime ' + (new Date().getTime() - renderStartTime) + ' milliseconds'));
+	
+	                iterationSetStartTime = new Date().getTime();
 	            }
 	
 	            drawer.updateCanvas();
@@ -8335,12 +8344,17 @@
 	        sequenceBound: config.sequenceBound
 	    });
 	
-	    var plot = (0, _DensityPlot2.default)({
+	    var sourcePlot = (0, _DensityPlot2.default)({
 	        width: config.plotDimensions,
 	        height: config.plotDimensions
 	    });
 	
-	    getDrawFunc(drawer, fractalGenerator, plot, config)();
+	    var imagePlot = (0, _DensityPlot2.default)({
+	        width: config.imageWidth,
+	        height: config.imageHeight
+	    });
+	
+	    getDrawFunc(drawer, fractalGenerator, sourcePlot, config)();
 	};
 	
 	exports.default = drawBuddhabrot;
@@ -8388,6 +8402,7 @@
 	
 		return {
 			setPixel: setPixel,
+			getPixel: getPixel,
 			updateCanvas: updateCanvas
 		};
 	};

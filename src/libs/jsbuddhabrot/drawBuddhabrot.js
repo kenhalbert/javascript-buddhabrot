@@ -21,9 +21,11 @@ const rebaseColors = (plot, drawer, config) => {  // TODO the scaling problem ca
 	for (let h = 0; h < plot.width; h++) {  // rescale point: pImage = (pPlot / sPlot) * sImage
         for (let k = 0; k < plot.height; k++) {  // TODO may need to discard points that fall outside of image region here (absolutely will actually)
             const red = getColor(plot.getDensity(h, k), 255, plot.highestDensity); // TODO make color configurable and allow to be changed after render
+            if(drawer.getPixel().r > red) continue;  // TODO determine if I really need this.  It adds several seconds of execution time to the rebase.  Maybe that's okay if computation occurs on worker threads?  Can I optimize it by getting rid of the object literal?
             drawer.setPixel(rescale(h, plotScale, imageScale), rescale(k, plotScale, imageScale), red, 0, 0, 255);  // TODO also consider allowing to save and load density plots, and inject coloring strategy to allow possibilities beyond monochrome
         }
     }
+    console.log('done rebasing colors');
 };
 
 const initCanvas = (drawer, config) => {
@@ -45,7 +47,11 @@ const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
         imageScale = config.imageScale,
         plotScale = config.plotScale,
         plotDimensions = config.plotDimensions;
-	let iteration = 0;
+	let iteration = 0,
+        iterationSetStartTime = null,
+        renderStartTime = null;
+
+     iterationSetStartTime = renderStartTime = new Date().getTime();
 
 	return function draw() {
         if (iteration === 0) rebaseColors(plot, drawer, config);
@@ -88,6 +94,10 @@ const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
         if (iteration !== 0 && iteration % 10 === 0) {
         	if (iteration % 10000 === 0) {
         		rebaseColors(plot, drawer, config);
+                console.log(`iteration set ${iteration / 10000} finished in ${new Date().getTime() - iterationSetStartTime} milliseconds `
+                             + `(total runtime ${new Date().getTime() - renderStartTime} milliseconds`);
+
+                iterationSetStartTime = new Date().getTime();
         	}
 
         	drawer.updateCanvas();
@@ -112,12 +122,17 @@ const drawBuddhabrot = (canvas, config) => {
 		sequenceBound: config.sequenceBound
 	});
 
-	const plot = DensityPlot({
+	const sourcePlot = DensityPlot({
 		width: config.plotDimensions,
 		height: config.plotDimensions
 	});
 
-	getDrawFunc(drawer, fractalGenerator, plot, config)();
+    const imagePlot = DensityPlot({
+        width: config.imageWidth,
+        height: config.imageHeight
+    });
+
+	getDrawFunc(drawer, fractalGenerator, sourcePlot, config)();
 };
 
 export default drawBuddhabrot;

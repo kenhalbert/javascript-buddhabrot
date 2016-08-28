@@ -31,6 +31,7 @@ export default (params) => {
 
 	return {
 		setPixel,
+		getPixel,
 		updateCanvas
 	};
 };
