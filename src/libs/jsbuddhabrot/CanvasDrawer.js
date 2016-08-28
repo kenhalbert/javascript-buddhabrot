@@ -19,6 +19,16 @@ export default (params) => {
 		canvasContext.putImageData(canvasData, 0, 0);
 	};
 
+	const getPixel = (x, y) => {
+		const index = (x + y * imageWidth) * 4;
+		return {
+			r: canvasData.data[index],
+			g: canvasData.data[index + 1],
+			b: canvasData.data[index + 2],
+			a: canvasData.data[index + 3]
+		};
+	};
+
 	return {
 		setPixel,
 		updateCanvas

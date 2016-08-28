@@ -9,12 +9,12 @@ const executeIteration = (complexToTest, sequenceEscapeThreshold, sequenceBound)
 
 	const sequenceGenerator = MandelbrotSequence(complexToTest);
 
-	let i = 0, current = math.complex(0, 0);
+	let i = 0, current = sequenceGenerator.next();
 
 	while (i < sequenceEscapeThreshold && (Math.sqrt(Math.pow(current.re, 2) + Math.pow(current.im, 2))) < sequenceBound) {
-		current = sequenceGenerator.next();
 		i++;
 		result.push(current);
+		current = sequenceGenerator.next();
 	}
 
 	return i < sequenceEscapeThreshold ? result : [];

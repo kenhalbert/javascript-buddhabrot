@@ -8172,7 +8172,9 @@
 	(0, _jsbuddhabrot2.default)(document.getElementById('canvas'), {
 		imageWidth: 600,
 		imageHeight: 600,
-		scale: 200,
+		imageScale: 200,
+		plotScale: 400, // TODO should this be calculated by the program every time?  pScale = Math.floor(pDim / 3) - easy
+		plotDimensions: 1200,
 		sequenceEscapeThreshold: 10000,
 		sequenceBound: 2
 	});
@@ -8202,7 +8204,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	
 	var _CanvasDrawer = __webpack_require__(301);
@@ -8220,78 +8222,125 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var getColor = function getColor(density, rgbVal, highestDensity) {
-	  return Math.floor(density * rgbVal / highestDensity);
+	    return Math.floor(density * rgbVal / highestDensity);
 	};
 	
-	var rebaseColors = function rebaseColors(plot, drawer) {
-	  console.log('rebasing colors...');
-	  for (var h = 0; h < plot.width; h++) {
-	    for (var k = 0; k < plot.height; k++) {
-	      var red = getColor(plot.getDensity(h, k), 255, plot.highestDensity); // TODO make color configurable and allow to be changed after render
-	      drawer.setPixel(h, k, red, 0, 0, 255); // TODO also consider allowing to save and load density plots, and inject coloring strategy to allow possibilities beyond monochrome
+	var scale = function scale(initial, factor) {
+	    return Math.floor(initial * factor);
+	};
+	
+	var rescale = function rescale(initial, initialScale, newScale) {
+	    return scale(initial / initialScale, newScale);
+	};
+	
+	var rebaseColors = function rebaseColors(plot, drawer, config) {
+	    // TODO the scaling problem can be solved by keeping a second density plot representing the image itself in memory and checking if the density in the plot is greater than the new one to plot before calling setPixel
+	    var imageScale = config.imageScale,
+	        plotScale = config.plotScale;
+	    console.log('rebasing colors...');
+	    for (var h = 0; h < plot.width; h++) {
+	        // rescale point: pImage = (pPlot / sPlot) * sImage
+	        for (var k = 0; k < plot.height; k++) {
+	            // TODO may need to discard points that fall outside of image region here (absolutely will actually)
+	            var red = getColor(plot.getDensity(h, k), 255, plot.highestDensity); // TODO make color configurable and allow to be changed after render
+	            drawer.setPixel(rescale(h, plotScale, imageScale), rescale(k, plotScale, imageScale), red, 0, 0, 255); // TODO also consider allowing to save and load density plots, and inject coloring strategy to allow possibilities beyond monochrome
+	        }
 	    }
-	  }
+	};
+	
+	var initCanvas = function initCanvas(drawer, config) {
+	    var imageWidth = config.imageWidth,
+	        imageHeight = config.imageHeight;
+	
+	    for (var h = 0; h < imageWidth; h++) {
+	        for (var k = 0; k < imageHeight; k++) {
+	            drawer.setPixel(h, k, 0, 0, 0, 255);
+	        }
+	    }
+	
+	    drawer.updateCanvas();
 	};
 	
 	var getDrawFunc = function getDrawFunc(drawer, fractalGenerator, plot, config) {
-	  var imageWidth = config.imageWidth,
-	      imageHeight = config.imageHeight,
-	      scale = config.scale;
-	  var iteration = 0;
+	    var imageWidth = config.imageWidth,
+	        imageHeight = config.imageHeight,
+	        imageScale = config.imageScale,
+	        plotScale = config.plotScale,
+	        plotDimensions = config.plotDimensions;
+	    var iteration = 0;
 	
-	  return function draw() {
-	    if (iteration === 0) rebaseColors(plot, drawer);
+	    return function draw() {
+	        if (iteration === 0) rebaseColors(plot, drawer, config);
 	
-	    var pointsToPlot = fractalGenerator.next();
+	        var pointsToPlot = fractalGenerator.next();
 	
-	    for (var i = 0; i < pointsToPlot.length; i++) {
-	      // TODO Why are 2 & -1.5 being added here?
-	      var x = Math.floor(scale * (pointsToPlot[i].re + 2)); // TODO what exactly is scale doing here?  And how did I pick a scale of 200?  It could be that's just what the example I saw used.
-	      var y = Math.floor(-scale * (pointsToPlot[i].im - 1.5)); // TODO find a way to change scale dynamically from UI - the density plot & image dimensions/rendering should be decoupled.
-	      if (x >= imageWidth || x >= imageHeight || x < 0 || y < 0) {
-	        // TODO also, the above should be scale * (pointsToPlot[i].imaginary + 1.5) - change it after everything is working
-	        continue;
-	      }
+	        for (var i = 0; i < pointsToPlot.length; i++) {
+	            // First, add 2 & 1.5 to the real and imaginary components (respectively) to ensure that all points are translated to the positive quadrant of the complex plane.
+	            // Then, multiply the sum by a scale factor to fit the image to a region on the canvas & achieve the desired level of detail.
+	            // For example, if you want an image centered in a 600x600 canvas, the scale should be 200 because the figure is plotted on a
+	            // 3x3 region of the complex plane.  s = d / 3, where s is the scale & d is the width/height of the square region being rendered into.
 	
-	      var density = plot.plotPoint(x, y);
+	            var translatedReal = pointsToPlot[i].re + 2,
+	                translatedImaginary = pointsToPlot[i].im + 1.5;
 	
-	      var color = getColor(density, 255, plot.highestDensity);
-	      drawer.setPixel(x, y, color, 0, 0, 255);
-	    }
+	            var scaledReal = scale(translatedReal, plotScale),
+	                scaledImaginary = scale(translatedImaginary, plotScale);
 	
-	    iteration++;
+	            // if points are outside of image region, discard them
+	            if (scaledReal >= plotDimensions || scaledImaginary >= plotDimensions || scaledReal < 0 || scaledImaginary < 0) {
+	                // TODO I only have to do this because the escape threshold is set to 2, which results in escape sequences that go off the bounds of the image/plot after translation.  This wouldn't be an issue if the sequence bound were the same as the RNG bounds.  Changing this would also get rid of an expensive magnitude calculation.  Would the final rendering look different if I were to change this?  Try it!
+	                continue;
+	            }
 	
-	    if (iteration !== 0 && iteration % 10 === 0) {
-	      if (iteration % 10000 === 0) {
-	        rebaseColors(plot, drawer);
-	      }
+	            var density = plot.plotPoint(scaledReal, scaledImaginary);
 	
-	      drawer.updateCanvas();
-	      setTimeout(draw, 0);
-	    } else {
-	      draw();
-	    }
-	  };
+	            var x = scale(translatedReal, imageScale),
+	                y = scale(translatedImaginary, imageScale);
+	
+	            // if points are outside of image region, discard them
+	            if (x >= imageWidth || y >= imageHeight || x < 0 || y < 0) {
+	                continue;
+	            }
+	
+	            var color = getColor(density, 255, plot.highestDensity); // TODO if image & plot scales are different, image pixel colors can be overwritten.  Maybe set pixel only if color is higher?
+	            drawer.setPixel(x, y, color, 0, 0, 255);
+	        }
+	
+	        iteration++;
+	
+	        if (iteration !== 0 && iteration % 10 === 0) {
+	            if (iteration % 10000 === 0) {
+	                rebaseColors(plot, drawer, config);
+	            }
+	
+	            drawer.updateCanvas();
+	            setTimeout(draw, 0);
+	        } else {
+	            draw();
+	        }
+	    };
 	};
 	
 	var drawBuddhabrot = function drawBuddhabrot(canvas, config) {
-	  var drawer = (0, _CanvasDrawer2.default)({
-	    canvas: canvas,
-	    imageHeight: config.imageWidth,
-	    imageWidth: config.imageHeight
-	  });
+	    var drawer = (0, _CanvasDrawer2.default)({
+	        canvas: canvas,
+	        imageHeight: config.imageWidth,
+	        imageWidth: config.imageHeight
+	    });
 	
-	  var fractalGenerator = (0, _BuddhabrotGenerator2.default)({
-	    sequenceEscapeThreshold: config.sequenceEscapeThreshold,
-	    sequenceBound: config.sequenceBound
-	  });
+	    initCanvas(drawer, config);
 	
-	  var plot = (0, _DensityPlot2.default)({
-	    width: config.imageWidth,
-	    height: config.imageHeight
-	  });
+	    var fractalGenerator = (0, _BuddhabrotGenerator2.default)({
+	        sequenceEscapeThreshold: config.sequenceEscapeThreshold,
+	        sequenceBound: config.sequenceBound
+	    });
 	
-	  getDrawFunc(drawer, fractalGenerator, plot, config)();
+	    var plot = (0, _DensityPlot2.default)({
+	        width: config.plotDimensions,
+	        height: config.plotDimensions
+	    });
+	
+	    getDrawFunc(drawer, fractalGenerator, plot, config)();
 	};
 	
 	exports.default = drawBuddhabrot;
@@ -8325,6 +8374,16 @@
 	
 		var updateCanvas = function updateCanvas() {
 			canvasContext.putImageData(canvasData, 0, 0);
+		};
+	
+		var getPixel = function getPixel(x, y) {
+			var index = (x + y * imageWidth) * 4;
+			return {
+				r: canvasData.data[index],
+				g: canvasData.data[index + 1],
+				b: canvasData.data[index + 2],
+				a: canvasData.data[index + 3]
+			};
 		};
 	
 		return {
@@ -8362,12 +8421,12 @@
 		var sequenceGenerator = (0, _MandelbrotSequence2.default)(complexToTest);
 	
 		var i = 0,
-		    current = _mathjs2.default.complex(0, 0);
+		    current = sequenceGenerator.next();
 	
 		while (i < sequenceEscapeThreshold && Math.sqrt(Math.pow(current.re, 2) + Math.pow(current.im, 2)) < sequenceBound) {
-			current = sequenceGenerator.next();
 			i++;
 			result.push(current);
+			current = sequenceGenerator.next();
 		}
 	
 		return i < sequenceEscapeThreshold ? result : [];
