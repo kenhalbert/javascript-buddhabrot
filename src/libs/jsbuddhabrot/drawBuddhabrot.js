@@ -1,6 +1,7 @@
 import CanvasDrawer from './CanvasDrawer';
 import BuddhabrotGenerator from './math/BuddhabrotGenerator';
 import DensityPlot from './math/DensityPlot';
+import BuddhabrotWorker from 'worker?inline!./generateBuddhabrotPointsWorker.js';
 
 const getColor = (density, rgbVal, highestDensity) => {
     return Math.floor(density * rgbVal / highestDensity);
@@ -81,36 +82,44 @@ const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
         imageScale = config.imageScale,
         plotScale = config.plotScale,
         plotDimensions = config.plotDimensions,
-        pointsToPlot = [];
+        pointsToPlot = [],
+        workers = [];
 	let iteration = 0,
         iterationSetStartTime = null,
         renderStartTime = null;
 
-     iterationSetStartTime = renderStartTime = new Date().getTime();
+    iterationSetStartTime = renderStartTime = new Date().getTime();
+
+    for (let i = 0; i < 5;/* TODO move this to config */i++) {
+        const worker = BuddhabrotWorker();
+        worker.onmessage = (m) => {
+            for (let i = 0; i < m.data.length; i++) pointsToPlot.push(m.data[i]);
+        };
+        worker.postMessage([]);
+
+        workers.push(worker);
+    }
 
 	return function draw() {
         if (iteration === 0) rebaseColors(plot, drawer, config);
 
-		const pointsToPlot = fractalGenerator.next();
-
 		drawPoints(plot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions);
+
+        pointsToPlot.length = 0;  // clear the array
 
         iteration++;
 
-        if (iteration !== 0 && iteration % 10 === 0) {
-        	if (iteration % 10000 === 0) {
-        		rebaseColors(plot, drawer, config);
-                console.log(`iteration set ${iteration / 10000} finished in ${new Date().getTime() - iterationSetStartTime} milliseconds `
-                             + `(total runtime ${new Date().getTime() - renderStartTime} milliseconds`);
+        if (iteration % 10000 === 0) {
+            rebaseColors(plot, drawer, config);
+            console.log(`iteration set ${iteration / 10000} finished in ${new Date().getTime() - iterationSetStartTime} milliseconds `
+                         + `(total runtime ${new Date().getTime() - renderStartTime} milliseconds`);
 
-                iterationSetStartTime = new Date().getTime();
-        	}
-
-        	drawer.updateCanvas();
-        	setTimeout(draw, 0);
-        } else {
-        	draw();
+            iterationSetStartTime = new Date().getTime();
         }
+
+        if (iteration !== 0 && iteration % 10 === 0) drawer.updateCanvas();
+
+        setTimeout(draw, 0);
 	};
 };
 
