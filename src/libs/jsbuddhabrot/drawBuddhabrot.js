@@ -22,7 +22,7 @@ const rebaseColors = (plot, drawer, config) => {  // TODO the scaling problem ca
 	for (let h = 0; h < plot.width; h++) {  // rescale point: pImage = (pPlot / sPlot) * sImage
         for (let k = 0; k < plot.height; k++) {
             const red = getColor(plot.getDensity(h, k), 255, plot.highestDensity); // TODO make color configurable and allow to be changed after render
-            if(drawer.getPixel().r > red) continue;  // TODO replace this with a separate density plot for the image; faster & more flexible
+            if(drawer.getPixel(h, k).r > red) continue;  // TODO replace this with a separate density plot for the image; faster & more flexible
             drawer.setPixel(rescale(h, plotScale, imageScale), rescale(k, plotScale, imageScale), red, 0, 0, 255);  // TODO also consider allowing to save and load density plots, and inject coloring strategy to allow possibilities beyond monochrome
         }
     }
@@ -71,17 +71,20 @@ const drawPoints = (plot, drawer, pointsToPlot, imageWidth, imageHeight, imageSc
             continue;
         }
 
-        const color = getColor(density, 255, plot.highestDensity);  // TODO if image & plot scales are different, image pixel colors can be overwritten.  Maybe set pixel only if color is higher?
+        const color = getColor(density, 255, plot.highestDensity);
         drawer.setPixel(x, y, color, 0, 0, 255);
     }
 };
 
-const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
+const getDrawFunc = (drawer, plot, config) => {
 	const imageWidth = config.imageWidth, 
 		imageHeight = config.imageHeight,
         imageScale = config.imageScale,
         plotScale = config.plotScale,
         plotDimensions = config.plotDimensions,
+        threads = config.threads,
+        sequenceEscapeThreshold = config.sequenceEscapeThreshold,
+        sequenceBound = config.sequenceBound,
         pointsToPlot = [],
         workers = [];
 	let iteration = 0,
@@ -90,12 +93,15 @@ const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
 
     iterationSetStartTime = renderStartTime = new Date().getTime();
 
-    for (let i = 0; i < 5;/* TODO move this to config */i++) {
+    for (let i = 0; i < threads; i++) {
         const worker = BuddhabrotWorker();
         worker.onmessage = (m) => {
             for (let i = 0; i < m.data.length; i++) pointsToPlot.push(m.data[i]);
         };
-        worker.postMessage([]);
+        worker.postMessage({
+            sequenceEscapeThreshold,
+            sequenceBound
+        });
 
         workers.push(worker);
     }
@@ -113,7 +119,7 @@ const getDrawFunc = (drawer, fractalGenerator, plot, config) => {
             rebaseColors(plot, drawer, config);
             console.log(`iteration set ${iteration / 10000} finished in ${new Date().getTime() - iterationSetStartTime} milliseconds `
                          + `(total runtime ${new Date().getTime() - renderStartTime} milliseconds`);
-
+            console.log(`Greatest density:  ${plot.highestDensity}`);
             iterationSetStartTime = new Date().getTime();
         }
 
@@ -132,17 +138,12 @@ const drawBuddhabrot = (canvas, config) => {
 
     initCanvas(drawer, config);
 
-	const fractalGenerator = BuddhabrotGenerator({
-		sequenceEscapeThreshold: config.sequenceEscapeThreshold,
-		sequenceBound: config.sequenceBound
-	});
-
 	const sourcePlot = DensityPlot({
 		width: config.plotDimensions,
 		height: config.plotDimensions
 	});
 
-	getDrawFunc(drawer, fractalGenerator, sourcePlot, config)();
+	getDrawFunc(drawer, sourcePlot, config)();
 };
 
 export default drawBuddhabrot;

@@ -1,9 +1,12 @@
 import BuddhabrotGenerator from './math/BuddhabrotGenerator';
 
 onmessage = (m) => {
+	const sequenceEscapeThreshold = m.data.sequenceEscapeThreshold,
+		sequenceBound = m.data.sequenceBound;
+
 	const fractalGenerator = BuddhabrotGenerator({
-		sequenceEscapeThreshold: 10000,  // TODO replace with config value passed via postMessage
-		sequenceBound: 2  // TODO replace with config value passed via postMessage
+		sequenceEscapeThreshold,
+		sequenceBound
 	});
 
 	while (true) postMessage(fractalGenerator.next());
