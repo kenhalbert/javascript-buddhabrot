@@ -1,29 +1,21 @@
-import CanvasDrawer from './CanvasDrawer';
+import CanvasDrawer from './drawing/CanvasDrawer';
 import BuddhabrotGenerator from './math/BuddhabrotGenerator';
 import DensityPlot from './math/DensityPlot';
+import { scale } from './drawing/drawUtils';
 import BuddhabrotWorker from 'worker?inline!./generateBuddhabrotPointsWorker.js';
 
 const getColor = (density, rgbVal, highestDensity) => {
     return Math.floor(density * rgbVal / highestDensity);
 };
 
-const scale = (initial, factor) => {
-    return Math.floor(initial * factor);
-};
-
-const rescale = (initial, initialScale, newScale) => {
-    return scale(initial / initialScale, newScale);
-};
-
-const rebaseColors = (plot, drawer, config) => {  // TODO the scaling problem can be solved by keeping a second density plot representing the image itself in memory and checking if the density in the plot is greater than the new one to plot before calling setPixel
-    const imageScale = config.imageScale,
-        plotScale = config.plotScale;
+const rebaseColors = (imagePlot, drawer, config) => {  // TODO the scaling problem can be solved by keeping a second density plot representing the image itself in memory and checking if the density in the plot is greater than the new one to plot before calling setPixel
+    const imageScale = config.imageScale;
     console.log('rebasing colors...');
-	for (let h = 0; h < plot.width; h++) {  // rescale point: pImage = (pPlot / sPlot) * sImage
-        for (let k = 0; k < plot.height; k++) {
-            const red = getColor(plot.getDensity(h, k), 255, plot.highestDensity); // TODO make color configurable and allow to be changed after render
-            if(drawer.getPixel(h, k).r > red) continue;  // TODO replace this with a separate density plot for the image; faster & more flexible
-            drawer.setPixel(rescale(h, plotScale, imageScale), rescale(k, plotScale, imageScale), red, 0, 0, 255);  // TODO also consider allowing to save and load density plots, and inject coloring strategy to allow possibilities beyond monochrome
+	for (let h = 0; h < imagePlot.width; h++) {
+        for (let k = 0; k < imagePlot.height; k++) {
+            const srcDensity = imagePlot.getDensity(h, k);
+            const red = getColor(srcDensity, 255, imagePlot.highestDensity); // TODO make color configurable and allow to be changed after render
+            drawer.setPixel(h, k, red, 0, 0, 255);  // TODO also consider allowing to save and load density plots, and inject coloring strategy to allow possibilities beyond monochrome
         }
     }
     console.log('done rebasing colors');
@@ -42,7 +34,7 @@ const initCanvas = (drawer, config) => {
     drawer.updateCanvas();
 };
 
-const drawPoints = (plot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions) => {
+const drawPoints = (sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions) => {
     for (let i = 0; i < pointsToPlot.length; i++) {
 
         // First, add 2 & 1.5 to the real and imaginary components (respectively) to ensure that all points are translated to the positive quadrant of the complex plane.
@@ -60,7 +52,7 @@ const drawPoints = (plot, drawer, pointsToPlot, imageWidth, imageHeight, imageSc
             continue;
         }
 
-        const density = plot.plotPoint(scaledReal, scaledImaginary);
+        const sourceDensity = sourcePlot.plotPoint(scaledReal, scaledImaginary);
 
         // scale to canvas
         const x = scale(translatedReal, imageScale),
@@ -71,12 +63,16 @@ const drawPoints = (plot, drawer, pointsToPlot, imageWidth, imageHeight, imageSc
             continue;
         }
 
-        const color = getColor(density, 255, plot.highestDensity);
+        const imageDensity = imagePlot.plotPoint(x, y);
+
+        if (imageDensity - 1 > sourceDensity) continue;
+
+        const color = getColor(imageDensity, 255, imagePlot.highestDensity);
         drawer.setPixel(x, y, color, 0, 0, 255);
     }
 };
 
-const getDrawFunc = (drawer, plot, config) => {
+const getDrawFunc = (drawer, sourcePlot, imagePlot, config) => {
 	const imageWidth = config.imageWidth, 
 		imageHeight = config.imageHeight,
         imageScale = config.imageScale,
@@ -107,19 +103,18 @@ const getDrawFunc = (drawer, plot, config) => {
     }
 
 	return function draw() {
-        if (iteration === 0) rebaseColors(plot, drawer, config);
+        if (iteration === 0) rebaseColors(imagePlot, drawer, config);
 
-		drawPoints(plot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions);
+		drawPoints(sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions);
 
         pointsToPlot.length = 0;  // clear the array
 
         iteration++;
 
         if (iteration % 10000 === 0) {
-            rebaseColors(plot, drawer, config);
+            rebaseColors(imagePlot, drawer, config);
             console.log(`iteration set ${iteration / 10000} finished in ${new Date().getTime() - iterationSetStartTime} milliseconds `
                          + `(total runtime ${new Date().getTime() - renderStartTime} milliseconds`);
-            console.log(`Greatest density:  ${plot.highestDensity}`);
             iterationSetStartTime = new Date().getTime();
         }
 
@@ -143,7 +138,12 @@ const drawBuddhabrot = (canvas, config) => {
 		height: config.plotDimensions
 	});
 
-	getDrawFunc(drawer, sourcePlot, config)();
+    const imagePlot = DensityPlot({
+        width: config.imageWidth,
+        height: config.imageHeight
+    });
+
+	getDrawFunc(drawer, sourcePlot, imagePlot, config)();
 };
 
 export default drawBuddhabrot;
