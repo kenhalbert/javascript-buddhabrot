@@ -1,7 +1,6 @@
-import drawBuddhabrot from './libs/jsbuddhabrot';
+import createBuddhabrotDrawer from './libs/jsbuddhabrot';
 
-
-drawBuddhabrot(document.getElementById('canvas'), {
+const drawer = createBuddhabrotDrawer(document.getElementById('canvas'), {
 	imageWidth: 600,
 	imageHeight: 600,
 	imageScale: 200,
@@ -11,3 +10,5 @@ drawBuddhabrot(document.getElementById('canvas'), {
 	sequenceBound: 2,
 	threads: 8
 });
+
+window.drawer = drawer;

@@ -1,3 +1,3 @@
-import drawBuddhabrot from './drawBuddhabrot';
+import createBuddhabrotDrawer from './createBuddhabrotDrawer';
 
-export default drawBuddhabrot;
+export default createBuddhabrotDrawer;
