@@ -1,4 +1,5 @@
 import createBuddhabrotDrawer from './libs/jsbuddhabrot';
+import 'bootstrap-webpack';
 
 const drawer = createBuddhabrotDrawer(document.getElementById('canvas'), {
 	imageWidth: 1800,

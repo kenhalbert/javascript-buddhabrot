@@ -12,12 +12,43 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Canvas:</p>
-        <canvas id="canvas" width="1800" height="1800">
-            <!-- TODO put fallback image here -->
-        </canvas>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12 control-panel">
+                    <div class="controls">
+                        <div class="form-group">
+                            <label for="threads" class="control-label">Threads</label>
+                            <input type="text" class="form-control" id="threads" placeholder="Number of threads">
+                        </div>
+                        <h3>Colors</h3>
+                        <div class="form-group">
+                            <label for="r" class="control-label">R</label>
+                            <input type="text" class="form-control" id="r" placeholder="0-255">
+                        </div>
+                        <div class="form-group">
+                            <label for="g" class="control-label">G</label>
+                            <input type="text" class="form-control" id="g" placeholder="0-255">
+                        </div>
+                        <div class="form-group">
+                            <label for="b" class="control-label">B</label>
+                            <input type="text" class="form-control" id="b" placeholder="0-255">
+                        </div>
+                    </div>
+                    <div class="stats">
+                        
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12 canvas-container">
+                    <canvas id="canvas" width="1800" height="1800">
+                        <!-- TODO put fallback image here -->
+                    </canvas>
+                </div>
+            </div>
+        </div>
 
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js" 
+                integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" 
+                crossorigin="anonymous"></script>
         <script src="public/main.js"></script>
     </body>
 </html>
