@@ -8170,9 +8170,9 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var drawer = (0, _jsbuddhabrot2.default)(document.getElementById('canvas'), {
-		imageWidth: 600,
-		imageHeight: 600,
-		imageScale: 200,
+		imageWidth: 1800,
+		imageHeight: 1800,
+		imageScale: 600,
 		plotScale: 600, // TODO should this be calculated by the program every time?  pScale = Math.floor(pDim / 3) - easy
 		plotDimensions: 1800,
 		sequenceEscapeThreshold: 10000,
@@ -8409,7 +8409,7 @@
 	                return;
 	            }
 	
-	            if (iteration === 0) (0, _rebaseColors2.default)(simpleRgbValTransform, imagePlot, drawer, config);
+	            if (iteration === 0) (0, _rebaseColors2.default)(colorFunc, imagePlot, drawer, config);
 	
 	            (0, _drawPoints2.default)(sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions, colorFunc);
 	
@@ -8418,7 +8418,7 @@
 	            iteration++;
 	
 	            if (iteration % 10000 === 0) {
-	                (0, _rebaseColors2.default)(simpleRgbValTransform, imagePlot, drawer, config);
+	                (0, _rebaseColors2.default)(colorFunc, imagePlot, drawer, config);
 	                console.log('iteration set ' + iteration / 10000 + ' finished in ' + (new Date().getTime() - iterationSetStartTime) + ' milliseconds ' + ('(total runtime ' + (new Date().getTime() - renderStartTime) + ' milliseconds'));
 	                iterationSetStartTime = new Date().getTime();
 	            }

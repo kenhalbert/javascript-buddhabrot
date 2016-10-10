@@ -57,7 +57,7 @@ const getDrawFunc = (drawer, colorFunc, sourcePlot, imagePlot, config) => {
                 return;
             }
 
-            if (iteration === 0) rebaseColors(simpleRgbValTransform, imagePlot, drawer, config);
+            if (iteration === 0) rebaseColors(colorFunc, imagePlot, drawer, config);
 
             drawPoints(sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions, colorFunc);
 
@@ -66,7 +66,7 @@ const getDrawFunc = (drawer, colorFunc, sourcePlot, imagePlot, config) => {
             iteration++;
 
             if (iteration % 10000 === 0) {
-                rebaseColors(simpleRgbValTransform, imagePlot, drawer, config);
+                rebaseColors(colorFunc, imagePlot, drawer, config);
                 console.log(`iteration set ${iteration / 10000} finished in ${new Date().getTime() - iterationSetStartTime} milliseconds `
                              + `(total runtime ${new Date().getTime() - renderStartTime} milliseconds`);
                 iterationSetStartTime = new Date().getTime();
