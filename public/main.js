@@ -8236,11 +8236,11 @@
 	
 	var _jsbuddhabrot2 = _interopRequireDefault(_jsbuddhabrot);
 	
-	var _ui = __webpack_require__(883);
+	var _ui = __webpack_require__(884);
 	
-	__webpack_require__(888);
+	__webpack_require__(889);
 	
-	__webpack_require__(911);
+	__webpack_require__(912);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -8302,15 +8302,15 @@
 	
 	var _BuddhabrotDrawer2 = _interopRequireDefault(_BuddhabrotDrawer);
 	
-	var _CanvasDrawer = __webpack_require__(378);
+	var _CanvasDrawer = __webpack_require__(379);
 	
 	var _CanvasDrawer2 = _interopRequireDefault(_CanvasDrawer);
 	
-	var _BuddhabrotGenerator = __webpack_require__(379);
+	var _BuddhabrotGenerator = __webpack_require__(380);
 	
 	var _BuddhabrotGenerator2 = _interopRequireDefault(_BuddhabrotGenerator);
 	
-	var _simpleRgbValTransform = __webpack_require__(882);
+	var _simpleRgbValTransform = __webpack_require__(883);
 	
 	var _simpleRgbValTransform2 = _interopRequireDefault(_simpleRgbValTransform);
 	
@@ -8346,7 +8346,7 @@
 	
 	var _rebaseColors2 = _interopRequireDefault(_rebaseColors);
 	
-	var _mutableConfig = __webpack_require__(913);
+	var _mutableConfig = __webpack_require__(378);
 	
 	var _mutableConfig2 = _interopRequireDefault(_mutableConfig);
 	
@@ -8755,6 +8755,20 @@
 /* 378 */
 /***/ function(module, exports) {
 
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		threads: true,
+		colorScheme: true
+	};
+
+/***/ },
+/* 379 */
+/***/ function(module, exports) {
+
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -8800,7 +8814,7 @@
 	};
 
 /***/ },
-/* 379 */
+/* 380 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8809,11 +8823,11 @@
 		value: true
 	});
 	
-	var _MandelbrotSequence = __webpack_require__(380);
+	var _MandelbrotSequence = __webpack_require__(381);
 	
 	var _MandelbrotSequence2 = _interopRequireDefault(_MandelbrotSequence);
 	
-	var _mathjs = __webpack_require__(381);
+	var _mathjs = __webpack_require__(382);
 	
 	var _mathjs2 = _interopRequireDefault(_mathjs);
 	
@@ -8852,7 +8866,7 @@
 	};
 
 /***/ },
-/* 380 */
+/* 381 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8861,7 +8875,7 @@
 		value: true
 	});
 	
-	var _mathjs = __webpack_require__(381);
+	var _mathjs = __webpack_require__(382);
 	
 	var _mathjs2 = _interopRequireDefault(_mathjs);
 	
@@ -8879,10 +8893,10 @@
 	};
 
 /***/ },
-/* 381 */
+/* 382 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var core = __webpack_require__(382);
+	var core = __webpack_require__(383);
 	
 	/**
 	 * math.js factory function. Creates a new instance of math.js
@@ -8913,7 +8927,7 @@
 	  math.create = create;
 	
 	  // import data types, functions, constants, expression parser, etc.
-	  math['import'](__webpack_require__(394));
+	  math['import'](__webpack_require__(395));
 	
 	  return math;
 	}
@@ -8923,22 +8937,22 @@
 
 
 /***/ },
-/* 382 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(383);
-
-/***/ },
 /* 383 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isFactory = __webpack_require__(384).isFactory;
-	var deepExtend = __webpack_require__(384).deepExtend;
-	var typedFactory = __webpack_require__(385);
-	var emitter = __webpack_require__(389);
+	module.exports = __webpack_require__(384);
+
+/***/ },
+/* 384 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var isFactory = __webpack_require__(385).isFactory;
+	var deepExtend = __webpack_require__(385).deepExtend;
+	var typedFactory = __webpack_require__(386);
+	var emitter = __webpack_require__(390);
 	
-	var importFactory = __webpack_require__(391);
-	var configFactory = __webpack_require__(393);
+	var importFactory = __webpack_require__(392);
+	var configFactory = __webpack_require__(394);
 	
 	/**
 	 * Math.js core. Creates a new, empty math.js instance
@@ -9059,7 +9073,7 @@
 
 
 /***/ },
-/* 384 */
+/* 385 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9306,11 +9320,11 @@
 
 
 /***/ },
-/* 385 */
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var typedFunction = __webpack_require__(386);
-	var digits = __webpack_require__(387).digits;
+	var typedFunction = __webpack_require__(387);
+	var digits = __webpack_require__(388).digits;
 	
 	// returns a new instance of typed-function
 	var createTyped = function () {
@@ -9494,7 +9508,7 @@
 
 
 /***/ },
-/* 386 */
+/* 387 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -10805,12 +10819,12 @@
 
 
 /***/ },
-/* 387 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var NumberFormatter = __webpack_require__(388);
+	var NumberFormatter = __webpack_require__(389);
 	
 	/**
 	 * Test whether value is a number
@@ -11096,7 +11110,7 @@
 
 
 /***/ },
-/* 388 */
+/* 389 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11350,10 +11364,10 @@
 
 
 /***/ },
-/* 389 */
+/* 390 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Emitter = __webpack_require__(390);
+	var Emitter = __webpack_require__(391);
 	
 	/**
 	 * Extend given object with emitter functions `on`, `off`, `once`, `emit`
@@ -11375,7 +11389,7 @@
 
 
 /***/ },
-/* 390 */
+/* 391 */
 /***/ function(module, exports) {
 
 	function E () {
@@ -11447,16 +11461,16 @@
 
 
 /***/ },
-/* 391 */
+/* 392 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var lazy = __webpack_require__(384).lazy;
-	var isFactory = __webpack_require__(384).isFactory;
-	var traverse = __webpack_require__(384).traverse;
-	var extend = __webpack_require__(384).extend;
-	var ArgumentsError = __webpack_require__(392);
+	var lazy = __webpack_require__(385).lazy;
+	var isFactory = __webpack_require__(385).isFactory;
+	var traverse = __webpack_require__(385).traverse;
+	var extend = __webpack_require__(385).extend;
+	var ArgumentsError = __webpack_require__(393);
 	
 	function factory (type, config, load, typed, math) {
 	  /**
@@ -11715,7 +11729,7 @@
 
 
 /***/ },
-/* 392 */
+/* 393 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11755,12 +11769,12 @@
 
 
 /***/ },
-/* 393 */
+/* 394 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var object = __webpack_require__(384);
+	var object = __webpack_require__(385);
 	
 	function factory (type, config, load, typed, math) {
 	  var MATRIX = ['Matrix', 'Array'];                   // valid values for option matrix
@@ -11880,34 +11894,16 @@
 
 
 /***/ },
-/* 394 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = [
-	  __webpack_require__(395),        // data types (Matrix, Complex, Unit, ...)
-	  __webpack_require__(480),   // constants
-	  __webpack_require__(482),  // expression parsing
-	  __webpack_require__(715),    // functions
-	  __webpack_require__(879),        // serialization utility (math.json.reviver)
-	  __webpack_require__(881)        // errors
-	];
-
-
-/***/ },
 /* 395 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(396),
-	  __webpack_require__(401),
-	  __webpack_require__(402),
-	  __webpack_require__(407),
-	  __webpack_require__(414),
-	  __webpack_require__(418),
-	  __webpack_require__(451),
-	  __webpack_require__(452),
-	  __webpack_require__(454),
-	  __webpack_require__(455)
+	  __webpack_require__(396),        // data types (Matrix, Complex, Unit, ...)
+	  __webpack_require__(481),   // constants
+	  __webpack_require__(483),  // expression parsing
+	  __webpack_require__(716),    // functions
+	  __webpack_require__(880),        // serialization utility (math.json.reviver)
+	  __webpack_require__(882)        // errors
 	];
 
 
@@ -11916,11 +11912,16 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  // type
 	  __webpack_require__(397),
-	
-	  // construction function
-	  __webpack_require__(399)
+	  __webpack_require__(402),
+	  __webpack_require__(403),
+	  __webpack_require__(408),
+	  __webpack_require__(415),
+	  __webpack_require__(419),
+	  __webpack_require__(452),
+	  __webpack_require__(453),
+	  __webpack_require__(455),
+	  __webpack_require__(456)
 	];
 
 
@@ -11928,7 +11929,20 @@
 /* 397 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Decimal = __webpack_require__(398);
+	module.exports = [
+	  // type
+	  __webpack_require__(398),
+	
+	  // construction function
+	  __webpack_require__(400)
+	];
+
+
+/***/ },
+/* 398 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Decimal = __webpack_require__(399);
 	
 	function factory (type, config, load, typed, math) {
 	  var BigNumber = Decimal.clone({precision: config.precision});
@@ -11978,7 +11992,7 @@
 	exports.math = true; // request access to the math namespace
 
 /***/ },
-/* 398 */
+/* 399 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*! decimal.js v5.0.8 https://github.com/MikeMcl/decimal.js/LICENCE */
@@ -17005,12 +17019,12 @@
 
 
 /***/ },
-/* 399 */
+/* 400 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -17079,7 +17093,7 @@
 
 
 /***/ },
-/* 400 */
+/* 401 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17110,12 +17124,12 @@
 
 
 /***/ },
-/* 401 */
+/* 402 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -17194,26 +17208,26 @@
 
 
 /***/ },
-/* 402 */
+/* 403 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
 	  // type
-	  __webpack_require__(403),
+	  __webpack_require__(404),
 	
 	  // construction function
-	  __webpack_require__(406)
+	  __webpack_require__(407)
 	];
 
 
 /***/ },
-/* 403 */
+/* 404 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var format = __webpack_require__(404).format;
-	var lazy = __webpack_require__(384).lazy;
+	var format = __webpack_require__(405).format;
+	var lazy = __webpack_require__(385).lazy;
 	
 	function factory (type, config, load, typed, math) {
 	  /**
@@ -17378,13 +17392,13 @@
 
 
 /***/ },
-/* 404 */
+/* 405 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var formatNumber = __webpack_require__(387).format;
-	var formatBigNumber = __webpack_require__(405).format;
+	var formatNumber = __webpack_require__(388).format;
+	var formatBigNumber = __webpack_require__(406).format;
 	
 	/**
 	 * Test whether value is a string
@@ -17527,7 +17541,7 @@
 
 
 /***/ },
-/* 405 */
+/* 406 */
 /***/ function(module, exports) {
 
 	/**
@@ -17716,7 +17730,7 @@
 
 
 /***/ },
-/* 406 */
+/* 407 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17773,25 +17787,25 @@
 
 
 /***/ },
-/* 407 */
+/* 408 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
 	  // type
-	  __webpack_require__(408),
+	  __webpack_require__(409),
 	
 	  // construction function
-	  __webpack_require__(412)
+	  __webpack_require__(413)
 	];
 
 
 /***/ },
-/* 408 */
+/* 409 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Complex = __webpack_require__(409);
-	var format = __webpack_require__(387).format;
-	var isNumber = __webpack_require__(387).isNumber;
+	var Complex = __webpack_require__(410);
+	var format = __webpack_require__(388).format;
+	var isNumber = __webpack_require__(388).isNumber;
 	
 	function factory (type, config, load, typed, math) {
 	
@@ -17964,7 +17978,7 @@
 
 
 /***/ },
-/* 409 */
+/* 410 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {/**
@@ -19139,7 +19153,7 @@
 	  Complex["E"] = new Complex(Math.E, 0);
 	  Complex['EPSILON'] = 1e-16;
 	
-	  if ("function" === "function" && __webpack_require__(411)["amd"]) {
+	  if ("function" === "function" && __webpack_require__(412)["amd"]) {
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
 	      return Complex;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -19151,10 +19165,10 @@
 	  
 	})(this);
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(410)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(411)(module)))
 
 /***/ },
-/* 410 */
+/* 411 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -19170,22 +19184,22 @@
 
 
 /***/ },
-/* 411 */
+/* 412 */
 /***/ function(module, exports) {
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };
 
 
 /***/ },
-/* 412 */
+/* 413 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Create a complex value or convert a value to a complex value.
@@ -19283,7 +19297,7 @@
 
 
 /***/ },
-/* 413 */
+/* 414 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19393,23 +19407,23 @@
 
 
 /***/ },
-/* 414 */
+/* 415 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
 	  // type
-	  __webpack_require__(415),
+	  __webpack_require__(416),
 	
 	  // construction function
-	  __webpack_require__(417)
+	  __webpack_require__(418)
 	];
 
 
 /***/ },
-/* 415 */
+/* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Fraction = __webpack_require__(416);
+	var Fraction = __webpack_require__(417);
 	
 	/**
 	 * Attach type information
@@ -19451,7 +19465,7 @@
 
 
 /***/ },
-/* 416 */
+/* 417 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {/**
@@ -20222,7 +20236,7 @@
 	    }
 	  };
 	
-	  if ("function" === "function" && __webpack_require__(411)["amd"]) {
+	  if ("function" === "function" && __webpack_require__(412)["amd"]) {
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
 	      return Fraction;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -20234,15 +20248,15 @@
 	
 	})(this);
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(410)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(411)(module)))
 
 /***/ },
-/* 417 */
+/* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -20312,34 +20326,34 @@
 
 
 /***/ },
-/* 418 */
+/* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
 	  // types
-	  __webpack_require__(419),
-	  __webpack_require__(427),
+	  __webpack_require__(420),
 	  __webpack_require__(428),
-	  __webpack_require__(431),
-	  __webpack_require__(440),
-	  __webpack_require__(446),
+	  __webpack_require__(429),
+	  __webpack_require__(432),
+	  __webpack_require__(441),
 	  __webpack_require__(447),
 	  __webpack_require__(448),
+	  __webpack_require__(449),
 	
 	  // construction functions
-	  __webpack_require__(449),
-	  __webpack_require__(433),
-	  __webpack_require__(450)
+	  __webpack_require__(450),
+	  __webpack_require__(434),
+	  __webpack_require__(451)
 	];
 
 
 /***/ },
-/* 419 */
+/* 420 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
+	var util = __webpack_require__(421);
 	
 	var string = util.string;
 	
@@ -20592,34 +20606,34 @@
 
 
 /***/ },
-/* 420 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	exports.array = __webpack_require__(421);
-	exports['boolean'] = __webpack_require__(425);
-	exports['function'] = __webpack_require__(426);
-	exports.number = __webpack_require__(387);
-	exports.object = __webpack_require__(384);
-	exports.string = __webpack_require__(404);
-	exports.types = __webpack_require__(422);
-	exports.emitter = __webpack_require__(389);
-
-
-/***/ },
 /* 421 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var number = __webpack_require__(387);
-	var string = __webpack_require__(404);
-	var object = __webpack_require__(384);
-	var types = __webpack_require__(422);
+	exports.array = __webpack_require__(422);
+	exports['boolean'] = __webpack_require__(426);
+	exports['function'] = __webpack_require__(427);
+	exports.number = __webpack_require__(388);
+	exports.object = __webpack_require__(385);
+	exports.string = __webpack_require__(405);
+	exports.types = __webpack_require__(423);
+	exports.emitter = __webpack_require__(390);
+
+
+/***/ },
+/* 422 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
-	var IndexError = __webpack_require__(424);
+	var number = __webpack_require__(388);
+	var string = __webpack_require__(405);
+	var object = __webpack_require__(385);
+	var types = __webpack_require__(423);
+	
+	var DimensionError = __webpack_require__(424);
+	var IndexError = __webpack_require__(425);
 	
 	/**
 	 * Calculate the size of a multi dimensional array.
@@ -20961,7 +20975,7 @@
 
 
 /***/ },
-/* 422 */
+/* 423 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21021,7 +21035,7 @@
 
 
 /***/ },
-/* 423 */
+/* 424 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21062,7 +21076,7 @@
 
 
 /***/ },
-/* 424 */
+/* 425 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21114,7 +21128,7 @@
 
 
 /***/ },
-/* 425 */
+/* 426 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21130,7 +21144,7 @@
 
 
 /***/ },
-/* 426 */
+/* 427 */
 /***/ function(module, exports) {
 
 	// function utils
@@ -21181,13 +21195,13 @@
 
 
 /***/ },
-/* 427 */
+/* 428 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
-	var DimensionError = __webpack_require__(423);
+	var util = __webpack_require__(421);
+	var DimensionError = __webpack_require__(424);
 	
 	var string = util.string;
 	var array = util.array;
@@ -21202,7 +21216,7 @@
 	var validateIndex = array.validateIndex;
 	
 	function factory (type, config, load, typed) {
-	  var Matrix = load(__webpack_require__(419)); // force loading Matrix (do not use via type.Matrix)
+	  var Matrix = load(__webpack_require__(420)); // force loading Matrix (do not use via type.Matrix)
 	
 	  /**
 	   * Dense Matrix implementation. A regular, dense matrix, supporting multi-dimensional matrices. This is the default matrix type.
@@ -22044,13 +22058,13 @@
 	exports.lazy = false;  // no lazy loading, as we alter type.Matrix._storage
 
 /***/ },
-/* 428 */
+/* 429 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
-	var DimensionError = __webpack_require__(423);
+	var util = __webpack_require__(421);
+	var DimensionError = __webpack_require__(424);
 	
 	var array = util.array;
 	var object = util.object;
@@ -22065,8 +22079,8 @@
 	var validateIndex = array.validateIndex;
 	
 	function factory (type, config, load, typed) {
-	  var Matrix = load(__webpack_require__(419)); // force loading Matrix (do not use via type.Matrix)
-	  var equalScalar = load(__webpack_require__(429));
+	  var Matrix = load(__webpack_require__(420)); // force loading Matrix (do not use via type.Matrix)
+	  var equalScalar = load(__webpack_require__(430));
 	
 	  /**
 	   * Sparse Matrix implementation. This type implements a Compressed Column Storage format
@@ -23388,13 +23402,13 @@
 
 
 /***/ },
-/* 429 */
+/* 430 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var nearlyEqual = __webpack_require__(387).nearlyEqual;
-	var bigNearlyEqual = __webpack_require__(430);
+	var nearlyEqual = __webpack_require__(388).nearlyEqual;
+	var bigNearlyEqual = __webpack_require__(431);
 	
 	function factory (type, config, load, typed) {
 	  
@@ -23447,7 +23461,7 @@
 
 
 /***/ },
-/* 430 */
+/* 431 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23498,15 +23512,15 @@
 
 
 /***/ },
-/* 431 */
+/* 432 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	  
-	  var add = load(__webpack_require__(432));
-	  var equalScalar = load(__webpack_require__(429));
+	  var add = load(__webpack_require__(433));
+	  var equalScalar = load(__webpack_require__(430));
 	  
 	  /**
 	   * An ordered Sparse Accumulator is a representation for a sparse vector that includes a dense array 
@@ -23645,24 +23659,24 @@
 
 
 /***/ },
-/* 432 */
+/* 433 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var extend = __webpack_require__(384).extend;
+	var extend = __webpack_require__(385).extend;
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
-	  var addScalar = load(__webpack_require__(434));
-	  var latex = __webpack_require__(413);
+	  var matrix = load(__webpack_require__(434));
+	  var addScalar = load(__webpack_require__(435));
+	  var latex = __webpack_require__(414);
 	  
-	  var algorithm01 = load(__webpack_require__(435));
-	  var algorithm04 = load(__webpack_require__(436));
-	  var algorithm10 = load(__webpack_require__(437));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm01 = load(__webpack_require__(436));
+	  var algorithm04 = load(__webpack_require__(437));
+	  var algorithm10 = load(__webpack_require__(438));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Add two values, `x + y`.
@@ -23801,7 +23815,7 @@
 
 
 /***/ },
-/* 433 */
+/* 434 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23895,7 +23909,7 @@
 
 
 /***/ },
-/* 434 */
+/* 435 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23952,12 +23966,12 @@
 
 
 /***/ },
-/* 435 */
+/* 436 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
@@ -24072,16 +24086,16 @@
 
 
 /***/ },
-/* 436 */
+/* 437 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
-	  var equalScalar = load(__webpack_require__(429));
+	  var equalScalar = load(__webpack_require__(430));
 	
 	  var SparseMatrix = type.SparseMatrix;
 	
@@ -24265,7 +24279,7 @@
 
 
 /***/ },
-/* 437 */
+/* 438 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24381,13 +24395,13 @@
 
 
 /***/ },
-/* 438 */
+/* 439 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
-	var DimensionError = __webpack_require__(423);
+	var util = __webpack_require__(421);
+	var DimensionError = __webpack_require__(424);
 	
 	var string = util.string,
 	    isString = string.isString;
@@ -24491,12 +24505,12 @@
 
 
 /***/ },
-/* 439 */
+/* 440 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var clone = __webpack_require__(384).clone;
+	var clone = __webpack_require__(385).clone;
 	
 	function factory (type, config, load, typed) {
 	
@@ -24579,15 +24593,15 @@
 
 
 /***/ },
-/* 440 */
+/* 441 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	  
-	  var smaller = load(__webpack_require__(441));
-	  var larger = load(__webpack_require__(445));
+	  var smaller = load(__webpack_require__(442));
+	  var larger = load(__webpack_require__(446));
 	  
 	  var oneOverLogPhi = 1.0 / Math.log((1.0 + Math.sqrt(5.0)) / 2.0);
 	  
@@ -24934,25 +24948,25 @@
 
 
 /***/ },
-/* 441 */
+/* 442 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var nearlyEqual = __webpack_require__(387).nearlyEqual;
-	var bigNearlyEqual = __webpack_require__(430);
+	var nearlyEqual = __webpack_require__(388).nearlyEqual;
+	var bigNearlyEqual = __webpack_require__(431);
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Test whether value x is smaller than y.
@@ -25119,12 +25133,12 @@
 
 
 /***/ },
-/* 442 */
+/* 443 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
@@ -25250,12 +25264,12 @@
 
 
 /***/ },
-/* 443 */
+/* 444 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
@@ -25380,7 +25394,7 @@
 
 
 /***/ },
-/* 444 */
+/* 445 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25496,25 +25510,25 @@
 
 
 /***/ },
-/* 445 */
+/* 446 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var nearlyEqual = __webpack_require__(387).nearlyEqual;
-	var bigNearlyEqual = __webpack_require__(430);
+	var nearlyEqual = __webpack_require__(388).nearlyEqual;
+	var bigNearlyEqual = __webpack_require__(431);
 	
 	function factory (type, config, load, typed) {
 	  
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Test whether value x is larger than y.
@@ -25681,12 +25695,12 @@
 
 
 /***/ },
-/* 446 */
+/* 447 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
+	var util = __webpack_require__(421);
 	
 	var string = util.string;
 	var object = util.object;
@@ -25696,9 +25710,9 @@
 	
 	function factory (type, config, load) {
 	
-	  var DenseMatrix = load(__webpack_require__(427));
+	  var DenseMatrix = load(__webpack_require__(428));
 	
-	  var smaller = load(__webpack_require__(441));
+	  var smaller = load(__webpack_require__(442));
 	
 	  function ImmutableDenseMatrix(data, datatype) {
 	    if (!(this instanceof ImmutableDenseMatrix))
@@ -25911,13 +25925,13 @@
 
 
 /***/ },
-/* 447 */
+/* 448 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var clone = __webpack_require__(384).clone;
-	var isInteger = __webpack_require__(387).isInteger;
+	var clone = __webpack_require__(385).clone;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type) {
 	  
@@ -26200,12 +26214,12 @@
 
 
 /***/ },
-/* 448 */
+/* 449 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var number = __webpack_require__(387);
+	var number = __webpack_require__(388);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -26522,7 +26536,7 @@
 
 
 /***/ },
-/* 449 */
+/* 450 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26592,7 +26606,7 @@
 
 
 /***/ },
-/* 450 */
+/* 451 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26659,12 +26673,12 @@
 
 
 /***/ },
-/* 451 */
+/* 452 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -26744,17 +26758,17 @@
 
 
 /***/ },
-/* 452 */
+/* 453 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
 	  // type
-	  __webpack_require__(453)
+	  __webpack_require__(454)
 	];
 
 
 /***/ },
-/* 453 */
+/* 454 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26831,13 +26845,13 @@
 
 
 /***/ },
-/* 454 */
+/* 455 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var number = __webpack_require__(387);
+	var deepMap = __webpack_require__(401);
+	var number = __webpack_require__(388);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -26906,51 +26920,51 @@
 
 
 /***/ },
-/* 455 */
+/* 456 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
 	  // type
-	  __webpack_require__(456),
+	  __webpack_require__(457),
 	
 	  // construction function
-	  __webpack_require__(476),
-	
-	  // create new units
 	  __webpack_require__(477),
 	
-	  // split units
+	  // create new units
 	  __webpack_require__(478),
 	
+	  // split units
+	  __webpack_require__(479),
+	
 	  // physical constants
-	  __webpack_require__(479)
+	  __webpack_require__(480)
 	];
 
 
 /***/ },
-/* 456 */
+/* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var endsWith = __webpack_require__(404).endsWith;
-	var clone = __webpack_require__(384).clone;
-	var constants = __webpack_require__(457);
+	var endsWith = __webpack_require__(405).endsWith;
+	var clone = __webpack_require__(385).clone;
+	var constants = __webpack_require__(458);
 	
 	function factory (type, config, load, typed, math) {
-	  var add       = load(__webpack_require__(434));
-	  var subtract  = load(__webpack_require__(458));
-	  var multiply  = load(__webpack_require__(461));
-	  var divide    = load(__webpack_require__(462));
-	  var pow       = load(__webpack_require__(463));
-	  var abs       = load(__webpack_require__(467));
-	  var fix       = load(__webpack_require__(468));
-	  var equal     = load(__webpack_require__(469));
-	  var isNumeric = load(__webpack_require__(470));
-	  var format    = load(__webpack_require__(471));
-	  var getTypeOf = load(__webpack_require__(472));
-	  var toNumber  = load(__webpack_require__(451));
-	  var Complex   = load(__webpack_require__(408));
+	  var add       = load(__webpack_require__(435));
+	  var subtract  = load(__webpack_require__(459));
+	  var multiply  = load(__webpack_require__(462));
+	  var divide    = load(__webpack_require__(463));
+	  var pow       = load(__webpack_require__(464));
+	  var abs       = load(__webpack_require__(468));
+	  var fix       = load(__webpack_require__(469));
+	  var equal     = load(__webpack_require__(470));
+	  var isNumeric = load(__webpack_require__(471));
+	  var format    = load(__webpack_require__(472));
+	  var getTypeOf = load(__webpack_require__(473));
+	  var toNumber  = load(__webpack_require__(452));
+	  var Complex   = load(__webpack_require__(409));
 	
 	  /**
 	   * A unit can be constructed in the following ways:
@@ -27910,7 +27924,7 @@
 	            }
 	          }
 	        }
-	        var util = __webpack_require__(473);
+	        var util = __webpack_require__(474);
 	
 	        // Is the proposed unit list "simpler" than the existing one?
 	        if(proposedUnitList.length < this.units.length && !missingBaseDim) {
@@ -30150,10 +30164,10 @@
 
 
 /***/ },
-/* 457 */
+/* 458 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var memoize = __webpack_require__(426).memoize;
+	var memoize = __webpack_require__(427).memoize;
 	
 	/**
 	 * Calculate BigNumber e
@@ -30205,26 +30219,26 @@
 
 
 /***/ },
-/* 458 */
+/* 459 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
-	  var addScalar = load(__webpack_require__(434));
-	  var unaryMinus = load(__webpack_require__(459));
+	  var matrix = load(__webpack_require__(434));
+	  var addScalar = load(__webpack_require__(435));
+	  var unaryMinus = load(__webpack_require__(460));
 	
-	  var algorithm01 = load(__webpack_require__(435));
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm05 = load(__webpack_require__(460));
-	  var algorithm10 = load(__webpack_require__(437));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm01 = load(__webpack_require__(436));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm05 = load(__webpack_require__(461));
+	  var algorithm10 = load(__webpack_require__(438));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  // TODO: split function subtract in two: subtract and subtractScalar
 	
@@ -30410,15 +30424,15 @@
 
 
 /***/ },
-/* 459 */
+/* 460 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Inverse the sign of a value, apply a unary minus operation.
@@ -30486,16 +30500,16 @@
 
 
 /***/ },
-/* 460 */
+/* 461 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
-	  var equalScalar = load(__webpack_require__(429));
+	  var equalScalar = load(__webpack_require__(430));
 	  
 	  var SparseMatrix = type.SparseMatrix;
 	
@@ -30668,7 +30682,7 @@
 
 
 /***/ },
-/* 461 */
+/* 462 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30731,13 +30745,13 @@
 
 
 /***/ },
-/* 462 */
+/* 463 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory(type, config, load, typed) {
-	  var multiplyScalar = load(__webpack_require__(461));
+	  var multiplyScalar = load(__webpack_require__(462));
 	
 	  /**
 	   * Divide two scalar values, `x / y`.
@@ -30796,21 +30810,21 @@
 
 
 /***/ },
-/* 463 */
+/* 464 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var size = __webpack_require__(421).size;
+	var isInteger = __webpack_require__(388).isInteger;
+	var size = __webpack_require__(422).size;
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
-	  var eye = load(__webpack_require__(464));
-	  var multiply = load(__webpack_require__(465));
-	  var matrix = load(__webpack_require__(433));
-	  var fraction = load(__webpack_require__(417));
-	  var number = load(__webpack_require__(451));
+	  var latex = __webpack_require__(414);
+	  var eye = load(__webpack_require__(465));
+	  var multiply = load(__webpack_require__(466));
+	  var matrix = load(__webpack_require__(434));
+	  var fraction = load(__webpack_require__(418));
+	  var number = load(__webpack_require__(452));
 	
 	  /**
 	   * Calculates the power of x to y, `x ^ y`.
@@ -30986,17 +31000,17 @@
 
 
 /***/ },
-/* 464 */
+/* 465 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var array = __webpack_require__(421);
-	var isInteger = __webpack_require__(387).isInteger;
+	var array = __webpack_require__(422);
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
 	  
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	  
 	  /**
 	   * Create a 2-dimensional identity matrix with size m x n or n x n.
@@ -31138,24 +31152,24 @@
 
 
 /***/ },
-/* 465 */
+/* 466 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var extend = __webpack_require__(384).extend;
-	var array = __webpack_require__(421);
+	var extend = __webpack_require__(385).extend;
+	var array = __webpack_require__(422);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
-	  var addScalar = load(__webpack_require__(434));
-	  var multiplyScalar = load(__webpack_require__(461));
-	  var equalScalar = load(__webpack_require__(429));
+	  var matrix = load(__webpack_require__(434));
+	  var addScalar = load(__webpack_require__(435));
+	  var multiplyScalar = load(__webpack_require__(462));
+	  var equalScalar = load(__webpack_require__(430));
 	
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  var DenseMatrix = type.DenseMatrix;
 	  var SparseMatrix = type.SparseMatrix;
@@ -32100,14 +32114,14 @@
 
 
 /***/ },
-/* 466 */
+/* 467 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var equalScalar = load(__webpack_require__(429));
+	  var equalScalar = load(__webpack_require__(430));
 	
 	  var SparseMatrix = type.SparseMatrix;
 	
@@ -32215,12 +32229,12 @@
 
 
 /***/ },
-/* 467 */
+/* 468 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -32282,12 +32296,12 @@
 
 
 /***/ },
-/* 468 */
+/* 469 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -32353,23 +32367,23 @@
 
 
 /***/ },
-/* 469 */
+/* 470 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	  
-	  var matrix = load(__webpack_require__(433));
-	  var equalScalar = load(__webpack_require__(429));
+	  var matrix = load(__webpack_require__(434));
+	  var equalScalar = load(__webpack_require__(430));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Test whether two values are equal.
@@ -32528,13 +32542,13 @@
 
 
 /***/ },
-/* 470 */
+/* 471 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var number = __webpack_require__(387);
+	var deepMap = __webpack_require__(401);
+	var number = __webpack_require__(388);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -32587,12 +32601,12 @@
 
 
 /***/ },
-/* 471 */
+/* 472 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var string = __webpack_require__(404);
+	var string = __webpack_require__(405);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -32707,12 +32721,12 @@
 
 
 /***/ },
-/* 472 */
+/* 473 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var types = __webpack_require__(422);
+	var types = __webpack_require__(423);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -32790,7 +32804,7 @@
 
 
 /***/ },
-/* 473 */
+/* 474 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -33318,7 +33332,7 @@
 	}
 	exports.isPrimitive = isPrimitive;
 	
-	exports.isBuffer = __webpack_require__(474);
+	exports.isBuffer = __webpack_require__(475);
 	
 	function objectToString(o) {
 	  return Object.prototype.toString.call(o);
@@ -33362,7 +33376,7 @@
 	 *     prototype.
 	 * @param {function} superCtor Constructor function to inherit prototype from.
 	 */
-	exports.inherits = __webpack_require__(475);
+	exports.inherits = __webpack_require__(476);
 	
 	exports._extend = function(origin, add) {
 	  // Don't do anything if add isn't an object
@@ -33383,7 +33397,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(363)))
 
 /***/ },
-/* 474 */
+/* 475 */
 /***/ function(module, exports) {
 
 	module.exports = function isBuffer(arg) {
@@ -33394,7 +33408,7 @@
 	}
 
 /***/ },
-/* 475 */
+/* 476 */
 /***/ function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -33423,12 +33437,12 @@
 
 
 /***/ },
-/* 476 */
+/* 477 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -33490,12 +33504,12 @@
 
 
 /***/ },
-/* 477 */
+/* 478 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -33581,12 +33595,12 @@
 
 
 /***/ },
-/* 478 */
+/* 479 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -33625,10 +33639,10 @@
 
 
 /***/ },
-/* 479 */
+/* 480 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var lazy = __webpack_require__(384).lazy;
+	var lazy = __webpack_require__(385).lazy;
 	
 	
 	function factory (type, config, load, typed, math) {
@@ -33715,13 +33729,13 @@
 
 
 /***/ },
-/* 480 */
+/* 481 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var object = __webpack_require__(384);
-	var bigConstants = __webpack_require__(457);
+	var object = __webpack_require__(385);
+	var bigConstants = __webpack_require__(458);
 	
 	function factory (type, config, load, typed, math) {
 	  // listen for changed in the configuration, automatically reload
@@ -33735,7 +33749,7 @@
 	  math['true']     = true;
 	  math['false']    = false;
 	  math['null']     = null;
-	  math['uninitialized'] = __webpack_require__(421).UNINITIALIZED;
+	  math['uninitialized'] = __webpack_require__(422).UNINITIALIZED;
 	
 	  if (config.number === 'BigNumber') {
 	    math['Infinity'] = new type.BigNumber(Infinity);
@@ -33780,7 +33794,7 @@
 	  math.i = type.Complex.I;
 	
 	  // meta information
-	  math.version = __webpack_require__(481);
+	  math.version = __webpack_require__(482);
 	}
 	
 	exports.factory = factory;
@@ -33788,7 +33802,7 @@
 	exports.math = true;   // request access to the math namespace
 
 /***/ },
-/* 481 */
+/* 482 */
 /***/ function(module, exports) {
 
 	module.exports = '3.4.1';
@@ -33797,23 +33811,23 @@
 
 
 /***/ },
-/* 482 */
+/* 483 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(483),
-	  __webpack_require__(657),
-	  __webpack_require__(686),
-	  __webpack_require__(688),
+	  __webpack_require__(484),
+	  __webpack_require__(658),
+	  __webpack_require__(687),
+	  __webpack_require__(689),
 	
-	  __webpack_require__(714),
-	  __webpack_require__(659),
-	  __webpack_require__(685)
+	  __webpack_require__(715),
+	  __webpack_require__(660),
+	  __webpack_require__(686)
 	];
 
 
 /***/ },
-/* 483 */
+/* 484 */
 /***/ function(module, exports, __webpack_require__) {
 
 	function factory (construction, config, load, typed) {
@@ -33821,37 +33835,37 @@
 	
 	
 	  // construction functions
-	  docs.bignumber = __webpack_require__(484);
-	  docs['boolean'] = __webpack_require__(485);
-	  docs.complex = __webpack_require__(486);
-	  docs.fraction = __webpack_require__(487);
-	  docs.index = __webpack_require__(488);
-	  docs.matrix = __webpack_require__(489);
-	  docs.number = __webpack_require__(490);
-	  docs.sparse = __webpack_require__(491);
-	  docs.string = __webpack_require__(492);
-	  docs.unit = __webpack_require__(493);
+	  docs.bignumber = __webpack_require__(485);
+	  docs['boolean'] = __webpack_require__(486);
+	  docs.complex = __webpack_require__(487);
+	  docs.fraction = __webpack_require__(488);
+	  docs.index = __webpack_require__(489);
+	  docs.matrix = __webpack_require__(490);
+	  docs.number = __webpack_require__(491);
+	  docs.sparse = __webpack_require__(492);
+	  docs.string = __webpack_require__(493);
+	  docs.unit = __webpack_require__(494);
 	
 	  // constants
-	  docs.e = __webpack_require__(494);
-	  docs.E = __webpack_require__(494);
-	  docs['false'] = __webpack_require__(495);
-	  docs.i = __webpack_require__(496);
-	  docs['Infinity'] = __webpack_require__(497);
-	  docs.LN2 = __webpack_require__(498);
-	  docs.LN10 = __webpack_require__(499);
-	  docs.LOG2E = __webpack_require__(500);
-	  docs.LOG10E = __webpack_require__(501);
-	  docs.NaN = __webpack_require__(502);
-	  docs['null'] = __webpack_require__(503);
-	  docs.pi = __webpack_require__(504);
-	  docs.PI = __webpack_require__(504);
-	  docs.phi = __webpack_require__(505);
-	  docs.SQRT1_2 = __webpack_require__(506);
-	  docs.SQRT2 = __webpack_require__(507);
-	  docs.tau = __webpack_require__(508);
-	  docs['true'] = __webpack_require__(509);
-	  docs.version = __webpack_require__(510);
+	  docs.e = __webpack_require__(495);
+	  docs.E = __webpack_require__(495);
+	  docs['false'] = __webpack_require__(496);
+	  docs.i = __webpack_require__(497);
+	  docs['Infinity'] = __webpack_require__(498);
+	  docs.LN2 = __webpack_require__(499);
+	  docs.LN10 = __webpack_require__(500);
+	  docs.LOG2E = __webpack_require__(501);
+	  docs.LOG10E = __webpack_require__(502);
+	  docs.NaN = __webpack_require__(503);
+	  docs['null'] = __webpack_require__(504);
+	  docs.pi = __webpack_require__(505);
+	  docs.PI = __webpack_require__(505);
+	  docs.phi = __webpack_require__(506);
+	  docs.SQRT1_2 = __webpack_require__(507);
+	  docs.SQRT2 = __webpack_require__(508);
+	  docs.tau = __webpack_require__(509);
+	  docs['true'] = __webpack_require__(510);
+	  docs.version = __webpack_require__(511);
 	
 	  // physical constants
 	  // TODO: more detailed docs for physical constants
@@ -33914,184 +33928,184 @@
 	  docs.planckTemperature = {description: 'Planck temperature', examples: ['planckTemperature']};
 	
 	  // functions - algebra
-	  docs.lsolve = __webpack_require__(511);
-	  docs.lup = __webpack_require__(512);
-	  docs.lusolve = __webpack_require__(513);
-	  docs.slu = __webpack_require__(514);
-	  docs.usolve = __webpack_require__(515);
+	  docs.lsolve = __webpack_require__(512);
+	  docs.lup = __webpack_require__(513);
+	  docs.lusolve = __webpack_require__(514);
+	  docs.slu = __webpack_require__(515);
+	  docs.usolve = __webpack_require__(516);
 	
 	  // functions - arithmetic
-	  docs.abs = __webpack_require__(516);
-	  docs.add = __webpack_require__(517);
-	  docs.cbrt = __webpack_require__(518);
-	  docs.ceil = __webpack_require__(519);
-	  docs.cube = __webpack_require__(520);
-	  docs.divide = __webpack_require__(521);
-	  docs.dotDivide = __webpack_require__(522);
-	  docs.dotMultiply = __webpack_require__(523);
-	  docs.dotPow = __webpack_require__(524);
-	  docs.exp = __webpack_require__(525);
-	  docs.fix = __webpack_require__(526);
-	  docs.floor = __webpack_require__(527);
-	  docs.gcd = __webpack_require__(528);
-	  docs.hypot = __webpack_require__(529);
-	  docs.lcm = __webpack_require__(530);
-	  docs.log = __webpack_require__(531);
-	  docs.log10 = __webpack_require__(532);
-	  docs.mod = __webpack_require__(533);
-	  docs.multiply = __webpack_require__(534);
-	  docs.norm = __webpack_require__(535);
-	  docs.nthRoot = __webpack_require__(536);
-	  docs.pow = __webpack_require__(537);
-	  docs.round = __webpack_require__(538);
-	  docs.sign = __webpack_require__(539);
-	  docs.sqrt = __webpack_require__(540);
-	  docs.square = __webpack_require__(541);
-	  docs.subtract = __webpack_require__(542);
-	  docs.unaryMinus = __webpack_require__(543);
-	  docs.unaryPlus = __webpack_require__(544);
-	  docs.xgcd = __webpack_require__(545);
+	  docs.abs = __webpack_require__(517);
+	  docs.add = __webpack_require__(518);
+	  docs.cbrt = __webpack_require__(519);
+	  docs.ceil = __webpack_require__(520);
+	  docs.cube = __webpack_require__(521);
+	  docs.divide = __webpack_require__(522);
+	  docs.dotDivide = __webpack_require__(523);
+	  docs.dotMultiply = __webpack_require__(524);
+	  docs.dotPow = __webpack_require__(525);
+	  docs.exp = __webpack_require__(526);
+	  docs.fix = __webpack_require__(527);
+	  docs.floor = __webpack_require__(528);
+	  docs.gcd = __webpack_require__(529);
+	  docs.hypot = __webpack_require__(530);
+	  docs.lcm = __webpack_require__(531);
+	  docs.log = __webpack_require__(532);
+	  docs.log10 = __webpack_require__(533);
+	  docs.mod = __webpack_require__(534);
+	  docs.multiply = __webpack_require__(535);
+	  docs.norm = __webpack_require__(536);
+	  docs.nthRoot = __webpack_require__(537);
+	  docs.pow = __webpack_require__(538);
+	  docs.round = __webpack_require__(539);
+	  docs.sign = __webpack_require__(540);
+	  docs.sqrt = __webpack_require__(541);
+	  docs.square = __webpack_require__(542);
+	  docs.subtract = __webpack_require__(543);
+	  docs.unaryMinus = __webpack_require__(544);
+	  docs.unaryPlus = __webpack_require__(545);
+	  docs.xgcd = __webpack_require__(546);
 	
 	  // functions - bitwise
-	  docs.bitAnd = __webpack_require__(546);
-	  docs.bitNot = __webpack_require__(547);
-	  docs.bitOr = __webpack_require__(548);
-	  docs.bitXor = __webpack_require__(549);
-	  docs.leftShift = __webpack_require__(550);
-	  docs.rightArithShift = __webpack_require__(551);
-	  docs.rightLogShift = __webpack_require__(552);
+	  docs.bitAnd = __webpack_require__(547);
+	  docs.bitNot = __webpack_require__(548);
+	  docs.bitOr = __webpack_require__(549);
+	  docs.bitXor = __webpack_require__(550);
+	  docs.leftShift = __webpack_require__(551);
+	  docs.rightArithShift = __webpack_require__(552);
+	  docs.rightLogShift = __webpack_require__(553);
 	
 	  // functions - combinatorics
-	  docs.bellNumbers = __webpack_require__(553);
-	  docs.catalan = __webpack_require__(554);
-	  docs.composition = __webpack_require__(555);
-	  docs.stirlingS2 = __webpack_require__(556);
+	  docs.bellNumbers = __webpack_require__(554);
+	  docs.catalan = __webpack_require__(555);
+	  docs.composition = __webpack_require__(556);
+	  docs.stirlingS2 = __webpack_require__(557);
 	
 	  // functions - core
-	  docs['config'] =  __webpack_require__(557);
-	  docs['import'] =  __webpack_require__(558);
-	  docs['typed'] =  __webpack_require__(559);
+	  docs['config'] =  __webpack_require__(558);
+	  docs['import'] =  __webpack_require__(559);
+	  docs['typed'] =  __webpack_require__(560);
 	
 	  // functions - complex
-	  docs.arg = __webpack_require__(560);
-	  docs.conj = __webpack_require__(561);
-	  docs.re = __webpack_require__(562);
-	  docs.im = __webpack_require__(563);
+	  docs.arg = __webpack_require__(561);
+	  docs.conj = __webpack_require__(562);
+	  docs.re = __webpack_require__(563);
+	  docs.im = __webpack_require__(564);
 	
 	  // functions - expression
-	  docs['eval'] =  __webpack_require__(564);
-	  docs.help =  __webpack_require__(565);
+	  docs['eval'] =  __webpack_require__(565);
+	  docs.help =  __webpack_require__(566);
 	
 	  // functions - geometry
-	  docs.distance = __webpack_require__(566);
-	  docs.intersect = __webpack_require__(567);
+	  docs.distance = __webpack_require__(567);
+	  docs.intersect = __webpack_require__(568);
 	
 	  // functions - logical
-	  docs['and'] = __webpack_require__(568);
-	  docs['not'] = __webpack_require__(569);
-	  docs['or'] = __webpack_require__(570);
-	  docs['xor'] = __webpack_require__(571);
+	  docs['and'] = __webpack_require__(569);
+	  docs['not'] = __webpack_require__(570);
+	  docs['or'] = __webpack_require__(571);
+	  docs['xor'] = __webpack_require__(572);
 	
 	  // functions - matrix
-	  docs['concat'] = __webpack_require__(572);
-	  docs.cross = __webpack_require__(573);
-	  docs.det = __webpack_require__(574);
-	  docs.diag = __webpack_require__(575);
-	  docs.dot = __webpack_require__(576);
-	  docs.eye = __webpack_require__(577);
-	  docs.filter =  __webpack_require__(578);
-	  docs.flatten = __webpack_require__(579);
-	  docs.forEach =  __webpack_require__(580);
-	  docs.inv = __webpack_require__(581);
-	  docs.map =  __webpack_require__(582);
-	  docs.ones = __webpack_require__(583);
-	  docs.partitionSelect =  __webpack_require__(584);
-	  docs.range = __webpack_require__(585);
-	  docs.resize = __webpack_require__(586);
-	  docs.size = __webpack_require__(587);
-	  docs.sort =  __webpack_require__(588);
-	  docs.squeeze = __webpack_require__(589);
-	  docs.subset = __webpack_require__(590);
-	  docs.trace = __webpack_require__(591);
-	  docs.transpose = __webpack_require__(592);
-	  docs.zeros = __webpack_require__(593);
+	  docs['concat'] = __webpack_require__(573);
+	  docs.cross = __webpack_require__(574);
+	  docs.det = __webpack_require__(575);
+	  docs.diag = __webpack_require__(576);
+	  docs.dot = __webpack_require__(577);
+	  docs.eye = __webpack_require__(578);
+	  docs.filter =  __webpack_require__(579);
+	  docs.flatten = __webpack_require__(580);
+	  docs.forEach =  __webpack_require__(581);
+	  docs.inv = __webpack_require__(582);
+	  docs.map =  __webpack_require__(583);
+	  docs.ones = __webpack_require__(584);
+	  docs.partitionSelect =  __webpack_require__(585);
+	  docs.range = __webpack_require__(586);
+	  docs.resize = __webpack_require__(587);
+	  docs.size = __webpack_require__(588);
+	  docs.sort =  __webpack_require__(589);
+	  docs.squeeze = __webpack_require__(590);
+	  docs.subset = __webpack_require__(591);
+	  docs.trace = __webpack_require__(592);
+	  docs.transpose = __webpack_require__(593);
+	  docs.zeros = __webpack_require__(594);
 	
 	  // functions - probability
-	  docs.combinations = __webpack_require__(594);
+	  docs.combinations = __webpack_require__(595);
 	  //docs.distribution = require('./function/probability/distribution');
-	  docs.factorial = __webpack_require__(595);
-	  docs.gamma = __webpack_require__(596);
-	  docs.kldivergence = __webpack_require__(597);
-	  docs.multinomial = __webpack_require__(598);
-	  docs.permutations = __webpack_require__(599);
-	  docs.pickRandom = __webpack_require__(600);
-	  docs.random = __webpack_require__(601);
-	  docs.randomInt = __webpack_require__(602);
+	  docs.factorial = __webpack_require__(596);
+	  docs.gamma = __webpack_require__(597);
+	  docs.kldivergence = __webpack_require__(598);
+	  docs.multinomial = __webpack_require__(599);
+	  docs.permutations = __webpack_require__(600);
+	  docs.pickRandom = __webpack_require__(601);
+	  docs.random = __webpack_require__(602);
+	  docs.randomInt = __webpack_require__(603);
 	
 	  // functions - relational
-	  docs.compare = __webpack_require__(603);
-	  docs.deepEqual = __webpack_require__(604);
-	  docs['equal'] = __webpack_require__(605);
-	  docs.larger = __webpack_require__(606);
-	  docs.largerEq = __webpack_require__(607);
-	  docs.smaller = __webpack_require__(608);
-	  docs.smallerEq = __webpack_require__(609);
-	  docs.unequal = __webpack_require__(610);
+	  docs.compare = __webpack_require__(604);
+	  docs.deepEqual = __webpack_require__(605);
+	  docs['equal'] = __webpack_require__(606);
+	  docs.larger = __webpack_require__(607);
+	  docs.largerEq = __webpack_require__(608);
+	  docs.smaller = __webpack_require__(609);
+	  docs.smallerEq = __webpack_require__(610);
+	  docs.unequal = __webpack_require__(611);
 	
 	  // functions - statistics
-	  docs.max = __webpack_require__(611);
-	  docs.mean = __webpack_require__(612);
-	  docs.median = __webpack_require__(613);
-	  docs.min = __webpack_require__(614);
-	  docs.mode = __webpack_require__(615);
-	  docs.prod = __webpack_require__(616);
-	  docs.quantileSeq = __webpack_require__(617);
-	  docs.std = __webpack_require__(618);
-	  docs.sum = __webpack_require__(619);
-	  docs['var'] = __webpack_require__(620);
+	  docs.max = __webpack_require__(612);
+	  docs.mean = __webpack_require__(613);
+	  docs.median = __webpack_require__(614);
+	  docs.min = __webpack_require__(615);
+	  docs.mode = __webpack_require__(616);
+	  docs.prod = __webpack_require__(617);
+	  docs.quantileSeq = __webpack_require__(618);
+	  docs.std = __webpack_require__(619);
+	  docs.sum = __webpack_require__(620);
+	  docs['var'] = __webpack_require__(621);
 	
 	  // functions - trigonometry
-	  docs.acos = __webpack_require__(621);
-	  docs.acosh = __webpack_require__(622);
-	  docs.acot = __webpack_require__(623);
-	  docs.acoth = __webpack_require__(624);
-	  docs.acsc = __webpack_require__(625);
-	  docs.acsch = __webpack_require__(626);
-	  docs.asec = __webpack_require__(627);
-	  docs.asech = __webpack_require__(628);
-	  docs.asin = __webpack_require__(629);
-	  docs.asinh = __webpack_require__(630);
-	  docs.atan = __webpack_require__(631);
-	  docs.atanh = __webpack_require__(632);
-	  docs.atan2 = __webpack_require__(633);
-	  docs.cos = __webpack_require__(634);
-	  docs.cosh = __webpack_require__(635);
-	  docs.cot = __webpack_require__(636);
-	  docs.coth = __webpack_require__(637);
-	  docs.csc = __webpack_require__(638);
-	  docs.csch = __webpack_require__(639);
-	  docs.sec = __webpack_require__(640);
-	  docs.sech = __webpack_require__(641);
-	  docs.sin = __webpack_require__(642);
-	  docs.sinh = __webpack_require__(643);
-	  docs.tan = __webpack_require__(644);
-	  docs.tanh = __webpack_require__(645);
+	  docs.acos = __webpack_require__(622);
+	  docs.acosh = __webpack_require__(623);
+	  docs.acot = __webpack_require__(624);
+	  docs.acoth = __webpack_require__(625);
+	  docs.acsc = __webpack_require__(626);
+	  docs.acsch = __webpack_require__(627);
+	  docs.asec = __webpack_require__(628);
+	  docs.asech = __webpack_require__(629);
+	  docs.asin = __webpack_require__(630);
+	  docs.asinh = __webpack_require__(631);
+	  docs.atan = __webpack_require__(632);
+	  docs.atanh = __webpack_require__(633);
+	  docs.atan2 = __webpack_require__(634);
+	  docs.cos = __webpack_require__(635);
+	  docs.cosh = __webpack_require__(636);
+	  docs.cot = __webpack_require__(637);
+	  docs.coth = __webpack_require__(638);
+	  docs.csc = __webpack_require__(639);
+	  docs.csch = __webpack_require__(640);
+	  docs.sec = __webpack_require__(641);
+	  docs.sech = __webpack_require__(642);
+	  docs.sin = __webpack_require__(643);
+	  docs.sinh = __webpack_require__(644);
+	  docs.tan = __webpack_require__(645);
+	  docs.tanh = __webpack_require__(646);
 	
 	  // functions - units
-	  docs.to = __webpack_require__(646);
+	  docs.to = __webpack_require__(647);
 	
 	  // functions - utils
-	  docs.clone = __webpack_require__(647);
-	  docs.format = __webpack_require__(648);
-	  docs.isNaN = __webpack_require__(649);
-	  docs.isInteger = __webpack_require__(650);
-	  docs.isNegative = __webpack_require__(651);
-	  docs.isNumeric = __webpack_require__(652);
-	  docs.isPositive = __webpack_require__(653);
-	  docs.isPrime = __webpack_require__(654);
-	  docs.isZero = __webpack_require__(655);
+	  docs.clone = __webpack_require__(648);
+	  docs.format = __webpack_require__(649);
+	  docs.isNaN = __webpack_require__(650);
+	  docs.isInteger = __webpack_require__(651);
+	  docs.isNegative = __webpack_require__(652);
+	  docs.isNumeric = __webpack_require__(653);
+	  docs.isPositive = __webpack_require__(654);
+	  docs.isPrime = __webpack_require__(655);
+	  docs.isZero = __webpack_require__(656);
 	  // docs.print = require('./function/utils/print'); // TODO: add documentation for print as soon as the parser supports objects.
-	  docs['typeof'] =  __webpack_require__(656);
+	  docs['typeof'] =  __webpack_require__(657);
 	
 	  return docs;
 	}
@@ -34102,7 +34116,7 @@
 
 
 /***/ },
-/* 484 */
+/* 485 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34127,7 +34141,7 @@
 
 
 /***/ },
-/* 485 */
+/* 486 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34154,7 +34168,7 @@
 
 
 /***/ },
-/* 486 */
+/* 487 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34179,7 +34193,7 @@
 
 
 /***/ },
-/* 487 */
+/* 488 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34202,7 +34216,7 @@
 
 
 /***/ },
-/* 488 */
+/* 489 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34233,7 +34247,7 @@
 
 
 /***/ },
-/* 489 */
+/* 490 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34264,7 +34278,7 @@
 
 
 /***/ },
-/* 490 */
+/* 491 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34293,7 +34307,7 @@
 
 
 /***/ },
-/* 491 */
+/* 492 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34318,7 +34332,7 @@
 
 
 /***/ },
-/* 492 */
+/* 493 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34342,7 +34356,7 @@
 
 
 /***/ },
-/* 493 */
+/* 494 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34368,7 +34382,7 @@
 
 
 /***/ },
-/* 494 */
+/* 495 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34389,7 +34403,7 @@
 
 
 /***/ },
-/* 495 */
+/* 496 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34407,7 +34421,7 @@
 
 
 /***/ },
-/* 496 */
+/* 497 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34427,7 +34441,7 @@
 
 
 /***/ },
-/* 497 */
+/* 498 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34446,7 +34460,7 @@
 
 
 /***/ },
-/* 498 */
+/* 499 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34465,7 +34479,7 @@
 
 
 /***/ },
-/* 499 */
+/* 500 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34484,7 +34498,7 @@
 
 
 /***/ },
-/* 500 */
+/* 501 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34503,7 +34517,7 @@
 
 
 /***/ },
-/* 501 */
+/* 502 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34522,7 +34536,7 @@
 
 
 /***/ },
-/* 502 */
+/* 503 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34541,7 +34555,7 @@
 
 
 /***/ },
-/* 503 */
+/* 504 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34559,7 +34573,7 @@
 
 
 /***/ },
-/* 504 */
+/* 505 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34578,7 +34592,7 @@
 
 
 /***/ },
-/* 505 */
+/* 506 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34596,7 +34610,7 @@
 
 
 /***/ },
-/* 506 */
+/* 507 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34615,7 +34629,7 @@
 
 
 /***/ },
-/* 507 */
+/* 508 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34634,7 +34648,7 @@
 
 
 /***/ },
-/* 508 */
+/* 509 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34653,7 +34667,7 @@
 
 
 /***/ },
-/* 509 */
+/* 510 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34671,7 +34685,7 @@
 
 
 /***/ },
-/* 510 */
+/* 511 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34689,7 +34703,7 @@
 
 
 /***/ },
-/* 511 */
+/* 512 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34712,7 +34726,7 @@
 
 
 /***/ },
-/* 512 */
+/* 513 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34735,7 +34749,7 @@
 
 
 /***/ },
-/* 513 */
+/* 514 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34758,7 +34772,7 @@
 
 
 /***/ },
-/* 514 */
+/* 515 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34778,7 +34792,7 @@
 
 
 /***/ },
-/* 515 */
+/* 516 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34799,7 +34813,7 @@
 
 
 /***/ },
-/* 516 */
+/* 517 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34818,7 +34832,7 @@
 
 
 /***/ },
-/* 517 */
+/* 518 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34843,7 +34857,7 @@
 
 
 /***/ },
-/* 518 */
+/* 519 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34874,7 +34888,7 @@
 
 
 /***/ },
-/* 519 */
+/* 520 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34895,7 +34909,7 @@
 
 
 /***/ },
-/* 520 */
+/* 521 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34919,7 +34933,7 @@
 
 
 /***/ },
-/* 521 */
+/* 522 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34945,7 +34959,7 @@
 
 
 /***/ },
-/* 522 */
+/* 523 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34970,7 +34984,7 @@
 
 
 /***/ },
-/* 523 */
+/* 524 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -34995,7 +35009,7 @@
 
 
 /***/ },
-/* 524 */
+/* 525 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35018,7 +35032,7 @@
 
 
 /***/ },
-/* 525 */
+/* 526 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35043,7 +35057,7 @@
 
 
 /***/ },
-/* 526 */
+/* 527 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35065,7 +35079,7 @@
 
 
 /***/ },
-/* 527 */
+/* 528 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35086,7 +35100,7 @@
 
 
 /***/ },
-/* 528 */
+/* 529 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35107,7 +35121,7 @@
 
 
 /***/ },
-/* 529 */
+/* 530 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35129,7 +35143,7 @@
 
 
 /***/ },
-/* 530 */
+/* 531 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35149,7 +35163,7 @@
 
 
 /***/ },
-/* 531 */
+/* 532 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35177,7 +35191,7 @@
 	};
 
 /***/ },
-/* 532 */
+/* 533 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35202,7 +35216,7 @@
 
 
 /***/ },
-/* 533 */
+/* 534 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35228,7 +35242,7 @@
 
 
 /***/ },
-/* 534 */
+/* 535 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35253,7 +35267,7 @@
 
 
 /***/ },
-/* 535 */
+/* 536 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35279,7 +35293,7 @@
 
 
 /***/ },
-/* 536 */
+/* 537 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35305,7 +35319,7 @@
 	};
 
 /***/ },
-/* 537 */
+/* 538 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35327,7 +35341,7 @@
 
 
 /***/ },
-/* 538 */
+/* 539 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35352,7 +35366,7 @@
 
 
 /***/ },
-/* 539 */
+/* 540 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35375,7 +35389,7 @@
 
 
 /***/ },
-/* 540 */
+/* 541 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35399,7 +35413,7 @@
 
 
 /***/ },
-/* 541 */
+/* 542 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35426,7 +35440,7 @@
 
 
 /***/ },
-/* 542 */
+/* 543 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35451,7 +35465,7 @@
 
 
 /***/ },
-/* 543 */
+/* 544 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35475,7 +35489,7 @@
 
 
 /***/ },
-/* 544 */
+/* 545 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35498,7 +35512,7 @@
 
 
 /***/ },
-/* 545 */
+/* 546 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35518,7 +35532,7 @@
 
 
 /***/ },
-/* 546 */
+/* 547 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35541,7 +35555,7 @@
 
 
 /***/ },
-/* 547 */
+/* 548 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35564,7 +35578,7 @@
 
 
 /***/ },
-/* 548 */
+/* 549 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35586,7 +35600,7 @@
 
 
 /***/ },
-/* 549 */
+/* 550 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35607,7 +35621,7 @@
 
 
 /***/ },
-/* 550 */
+/* 551 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35629,7 +35643,7 @@
 
 
 /***/ },
-/* 551 */
+/* 552 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35652,7 +35666,7 @@
 
 
 /***/ },
-/* 552 */
+/* 553 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35675,7 +35689,7 @@
 
 
 /***/ },
-/* 553 */
+/* 554 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35693,7 +35707,7 @@
 	};
 
 /***/ },
-/* 554 */
+/* 555 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35711,7 +35725,7 @@
 	};
 
 /***/ },
-/* 555 */
+/* 556 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35728,7 +35742,7 @@
 	};
 
 /***/ },
-/* 556 */
+/* 557 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35746,7 +35760,7 @@
 
 
 /***/ },
-/* 557 */
+/* 558 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35768,7 +35782,7 @@
 
 
 /***/ },
-/* 558 */
+/* 559 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35789,7 +35803,7 @@
 
 
 /***/ },
-/* 559 */
+/* 560 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35810,7 +35824,7 @@
 
 
 /***/ },
-/* 560 */
+/* 561 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35836,7 +35850,7 @@
 
 
 /***/ },
-/* 561 */
+/* 562 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35862,7 +35876,7 @@
 
 
 /***/ },
-/* 562 */
+/* 563 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35888,7 +35902,7 @@
 
 
 /***/ },
-/* 563 */
+/* 564 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35914,7 +35928,7 @@
 
 
 /***/ },
-/* 564 */
+/* 565 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35934,7 +35948,7 @@
 
 
 /***/ },
-/* 565 */
+/* 566 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35954,7 +35968,7 @@
 
 
 /***/ },
-/* 566 */
+/* 567 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35974,7 +35988,7 @@
 
 
 /***/ },
-/* 567 */
+/* 568 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -35994,7 +36008,7 @@
 
 
 /***/ },
-/* 568 */
+/* 569 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36017,7 +36031,7 @@
 
 
 /***/ },
-/* 569 */
+/* 570 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36041,7 +36055,7 @@
 
 
 /***/ },
-/* 570 */
+/* 571 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36064,7 +36078,7 @@
 
 
 /***/ },
-/* 571 */
+/* 572 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36088,7 +36102,7 @@
 
 
 /***/ },
-/* 572 */
+/* 573 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36113,7 +36127,7 @@
 
 
 /***/ },
-/* 573 */
+/* 574 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36136,7 +36150,7 @@
 
 
 /***/ },
-/* 574 */
+/* 575 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36157,7 +36171,7 @@
 
 
 /***/ },
-/* 575 */
+/* 576 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36181,7 +36195,7 @@
 
 
 /***/ },
-/* 576 */
+/* 577 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36205,7 +36219,7 @@
 
 
 /***/ },
-/* 577 */
+/* 578 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36231,7 +36245,7 @@
 
 
 /***/ },
-/* 578 */
+/* 579 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36251,7 +36265,7 @@
 
 
 /***/ },
-/* 579 */
+/* 580 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36274,7 +36288,7 @@
 
 
 /***/ },
-/* 580 */
+/* 581 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36292,7 +36306,7 @@
 
 
 /***/ },
-/* 581 */
+/* 582 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36314,7 +36328,7 @@
 
 
 /***/ },
-/* 582 */
+/* 583 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36332,7 +36346,7 @@
 
 
 /***/ },
-/* 583 */
+/* 584 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36362,7 +36376,7 @@
 
 
 /***/ },
-/* 584 */
+/* 585 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36382,7 +36396,7 @@
 
 
 /***/ },
-/* 585 */
+/* 586 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36413,7 +36427,7 @@
 
 
 /***/ },
-/* 586 */
+/* 587 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36438,7 +36452,7 @@
 
 
 /***/ },
-/* 587 */
+/* 588 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36462,7 +36476,7 @@
 
 
 /***/ },
-/* 588 */
+/* 589 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36484,7 +36498,7 @@
 
 
 /***/ },
-/* 589 */
+/* 590 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36507,7 +36521,7 @@
 
 
 /***/ },
-/* 590 */
+/* 591 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36538,7 +36552,7 @@
 
 
 /***/ },
-/* 591 */
+/* 592 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36559,7 +36573,7 @@
 
 
 /***/ },
-/* 592 */
+/* 593 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36582,7 +36596,7 @@
 
 
 /***/ },
-/* 593 */
+/* 594 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36611,7 +36625,7 @@
 
 
 /***/ },
-/* 594 */
+/* 595 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36629,7 +36643,7 @@
 
 
 /***/ },
-/* 595 */
+/* 596 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36649,7 +36663,7 @@
 
 
 /***/ },
-/* 596 */
+/* 597 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36670,7 +36684,7 @@
 
 
 /***/ },
-/* 597 */
+/* 598 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36689,7 +36703,7 @@
 
 
 /***/ },
-/* 598 */
+/* 599 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36706,7 +36720,7 @@
 	};
 
 /***/ },
-/* 599 */
+/* 600 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36726,7 +36740,7 @@
 
 
 /***/ },
-/* 600 */
+/* 601 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36746,7 +36760,7 @@
 
 
 /***/ },
-/* 601 */
+/* 602 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36772,7 +36786,7 @@
 
 
 /***/ },
-/* 602 */
+/* 603 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36795,7 +36809,7 @@
 	};
 
 /***/ },
-/* 603 */
+/* 604 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36820,7 +36834,7 @@
 
 
 /***/ },
-/* 604 */
+/* 605 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36842,7 +36856,7 @@
 
 
 /***/ },
-/* 605 */
+/* 606 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36869,7 +36883,7 @@
 
 
 /***/ },
-/* 606 */
+/* 607 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36897,7 +36911,7 @@
 
 
 /***/ },
-/* 607 */
+/* 608 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36923,7 +36937,7 @@
 
 
 /***/ },
-/* 608 */
+/* 609 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36950,7 +36964,7 @@
 
 
 /***/ },
-/* 609 */
+/* 610 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36976,7 +36990,7 @@
 
 
 /***/ },
-/* 610 */
+/* 611 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37004,7 +37018,7 @@
 
 
 /***/ },
-/* 611 */
+/* 612 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37038,7 +37052,7 @@
 
 
 /***/ },
-/* 612 */
+/* 613 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37071,7 +37085,7 @@
 
 
 /***/ },
-/* 613 */
+/* 614 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37099,7 +37113,7 @@
 
 
 /***/ },
-/* 614 */
+/* 615 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37133,7 +37147,7 @@
 
 
 /***/ },
-/* 615 */
+/* 616 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37163,7 +37177,7 @@
 
 
 /***/ },
-/* 616 */
+/* 617 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37193,7 +37207,7 @@
 
 
 /***/ },
-/* 617 */
+/* 618 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37224,7 +37238,7 @@
 	};
 
 /***/ },
-/* 618 */
+/* 619 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37257,7 +37271,7 @@
 
 
 /***/ },
-/* 619 */
+/* 620 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37287,7 +37301,7 @@
 
 
 /***/ },
-/* 620 */
+/* 621 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37320,7 +37334,7 @@
 
 
 /***/ },
-/* 621 */
+/* 622 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37343,7 +37357,7 @@
 
 
 /***/ },
-/* 622 */
+/* 623 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37364,7 +37378,7 @@
 	};
 
 /***/ },
-/* 623 */
+/* 624 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37387,7 +37401,7 @@
 
 
 /***/ },
-/* 624 */
+/* 625 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37407,7 +37421,7 @@
 	};
 
 /***/ },
-/* 625 */
+/* 626 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37431,7 +37445,7 @@
 
 
 /***/ },
-/* 626 */
+/* 627 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37452,7 +37466,7 @@
 
 
 /***/ },
-/* 627 */
+/* 628 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37476,7 +37490,7 @@
 
 
 /***/ },
-/* 628 */
+/* 629 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37497,7 +37511,7 @@
 
 
 /***/ },
-/* 629 */
+/* 630 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37520,7 +37534,7 @@
 
 
 /***/ },
-/* 630 */
+/* 631 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37541,7 +37555,7 @@
 
 
 /***/ },
-/* 631 */
+/* 632 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37564,7 +37578,7 @@
 
 
 /***/ },
-/* 632 */
+/* 633 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37585,7 +37599,7 @@
 
 
 /***/ },
-/* 633 */
+/* 634 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37612,7 +37626,7 @@
 
 
 /***/ },
-/* 634 */
+/* 635 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37638,7 +37652,7 @@
 
 
 /***/ },
-/* 635 */
+/* 636 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37660,7 +37674,7 @@
 
 
 /***/ },
-/* 636 */
+/* 637 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37683,7 +37697,7 @@
 
 
 /***/ },
-/* 637 */
+/* 638 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37706,7 +37720,7 @@
 
 
 /***/ },
-/* 638 */
+/* 639 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37729,7 +37743,7 @@
 
 
 /***/ },
-/* 639 */
+/* 640 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37752,7 +37766,7 @@
 
 
 /***/ },
-/* 640 */
+/* 641 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37775,7 +37789,7 @@
 
 
 /***/ },
-/* 641 */
+/* 642 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37798,7 +37812,7 @@
 
 
 /***/ },
-/* 642 */
+/* 643 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37824,7 +37838,7 @@
 
 
 /***/ },
-/* 643 */
+/* 644 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37845,7 +37859,7 @@
 
 
 /***/ },
-/* 644 */
+/* 645 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37870,7 +37884,7 @@
 
 
 /***/ },
-/* 645 */
+/* 646 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37892,7 +37906,7 @@
 
 
 /***/ },
-/* 646 */
+/* 647 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37913,7 +37927,7 @@
 
 
 /***/ },
-/* 647 */
+/* 648 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37935,7 +37949,7 @@
 
 
 /***/ },
-/* 648 */
+/* 649 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37957,7 +37971,7 @@
 
 
 /***/ },
-/* 649 */
+/* 650 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37978,7 +37992,7 @@
 
 
 /***/ },
-/* 650 */
+/* 651 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37998,7 +38012,7 @@
 
 
 /***/ },
-/* 651 */
+/* 652 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -38019,7 +38033,7 @@
 
 
 /***/ },
-/* 652 */
+/* 653 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -38044,7 +38058,7 @@
 
 
 /***/ },
-/* 653 */
+/* 654 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -38065,7 +38079,7 @@
 
 
 /***/ },
-/* 654 */
+/* 655 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -38084,7 +38098,7 @@
 	};
 
 /***/ },
-/* 655 */
+/* 656 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -38105,7 +38119,7 @@
 
 
 /***/ },
-/* 656 */
+/* 657 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -38126,28 +38140,28 @@
 
 
 /***/ },
-/* 657 */
+/* 658 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(658),
-	  __webpack_require__(681),
+	  __webpack_require__(659),
 	  __webpack_require__(682),
 	  __webpack_require__(683),
-	  __webpack_require__(684)
+	  __webpack_require__(684),
+	  __webpack_require__(685)
 	];
 
 
 /***/ },
-/* 658 */
+/* 659 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var parse = load(__webpack_require__(659));
+	  var parse = load(__webpack_require__(660));
 	
 	  /**
 	   * Parse and compile an expression.
@@ -38201,29 +38215,29 @@
 
 
 /***/ },
-/* 659 */
+/* 660 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var ArgumentsError = __webpack_require__(392);
-	var deepMap = __webpack_require__(400);
+	var ArgumentsError = __webpack_require__(393);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var AccessorNode            = load(__webpack_require__(660));
-	  var ArrayNode               = load(__webpack_require__(666));
-	  var AssignmentNode          = load(__webpack_require__(667));
-	  var BlockNode               = load(__webpack_require__(670));
-	  var ConditionalNode         = load(__webpack_require__(671));
-	  var ConstantNode            = load(__webpack_require__(672));
-	  var FunctionAssignmentNode  = load(__webpack_require__(673));
-	  var IndexNode               = load(__webpack_require__(674));
-	  var ObjectNode              = load(__webpack_require__(677));
-	  var OperatorNode            = load(__webpack_require__(678));
-	  var ParenthesisNode         = load(__webpack_require__(680));
-	  var FunctionNode            = load(__webpack_require__(679));
-	  var RangeNode               = load(__webpack_require__(675));
-	  var SymbolNode              = load(__webpack_require__(676));
+	  var AccessorNode            = load(__webpack_require__(661));
+	  var ArrayNode               = load(__webpack_require__(667));
+	  var AssignmentNode          = load(__webpack_require__(668));
+	  var BlockNode               = load(__webpack_require__(671));
+	  var ConditionalNode         = load(__webpack_require__(672));
+	  var ConstantNode            = load(__webpack_require__(673));
+	  var FunctionAssignmentNode  = load(__webpack_require__(674));
+	  var IndexNode               = load(__webpack_require__(675));
+	  var ObjectNode              = load(__webpack_require__(678));
+	  var OperatorNode            = load(__webpack_require__(679));
+	  var ParenthesisNode         = load(__webpack_require__(681));
+	  var FunctionNode            = load(__webpack_require__(680));
+	  var RangeNode               = load(__webpack_require__(676));
+	  var SymbolNode              = load(__webpack_require__(677));
 	
 	
 	  /**
@@ -39705,14 +39719,14 @@
 
 
 /***/ },
-/* 660 */
+/* 661 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
-	  var access = load(__webpack_require__(663));
+	  var Node = load(__webpack_require__(662));
+	  var access = load(__webpack_require__(664));
 	
 	  /**
 	   * @constructor AccessorNode
@@ -39874,13 +39888,13 @@
 
 
 /***/ },
-/* 661 */
+/* 662 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var keywords = __webpack_require__(662);
-	var extend = __webpack_require__(384).extend;
+	var keywords = __webpack_require__(663);
+	var extend = __webpack_require__(385).extend;
 	
 	function factory (type, config, load, typed, math) {
 	  /**
@@ -40238,7 +40252,7 @@
 
 
 /***/ },
-/* 662 */
+/* 663 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40250,16 +40264,16 @@
 
 
 /***/ },
-/* 663 */
+/* 664 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var errorTransform = __webpack_require__(664).transform;
+	var errorTransform = __webpack_require__(665).transform;
 	
 	function factory (type, config, load, typed) {
-	  var subset = load(__webpack_require__(665));
-	  var matrix = load(__webpack_require__(433));
+	  var subset = load(__webpack_require__(666));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Retrieve part of an object:
@@ -40304,10 +40318,10 @@
 
 
 /***/ },
-/* 664 */
+/* 665 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var IndexError = __webpack_require__(424);
+	var IndexError = __webpack_require__(425);
 	
 	/**
 	 * Transform zero-based indices to one-based indices in errors
@@ -40327,17 +40341,17 @@
 
 
 /***/ },
-/* 665 */
+/* 666 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var clone = __webpack_require__(384).clone;
-	var validateIndex = __webpack_require__(421).validateIndex;
-	var DimensionError = __webpack_require__(423);
+	var clone = __webpack_require__(385).clone;
+	var validateIndex = __webpack_require__(422).validateIndex;
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Get or set a subset of a matrix or string.
@@ -40562,13 +40576,13 @@
 
 
 /***/ },
-/* 666 */
+/* 667 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
+	  var Node = load(__webpack_require__(662));
 	
 	  /**
 	   * @constructor ArrayNode
@@ -40705,22 +40719,22 @@
 
 
 /***/ },
-/* 667 */
+/* 668 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var latex = __webpack_require__(413);
+	var latex = __webpack_require__(414);
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
-	  var ArrayNode = load(__webpack_require__(666));
-	  var matrix = load(__webpack_require__(433));
-	  var assign = load(__webpack_require__(668));
-	  var access = load(__webpack_require__(663));
+	  var Node = load(__webpack_require__(662));
+	  var ArrayNode = load(__webpack_require__(667));
+	  var matrix = load(__webpack_require__(434));
+	  var assign = load(__webpack_require__(669));
+	  var access = load(__webpack_require__(664));
 	
-	  var keywords = __webpack_require__(662);
-	  var operators = __webpack_require__(669);
+	  var keywords = __webpack_require__(663);
+	  var operators = __webpack_require__(670);
 	
 	  /**
 	   * @constructor AssignmentNode
@@ -40974,16 +40988,16 @@
 
 
 /***/ },
-/* 668 */
+/* 669 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var errorTransform = __webpack_require__(664).transform;
+	var errorTransform = __webpack_require__(665).transform;
 	
 	function factory (type, config, load, typed) {
-	  var subset = load(__webpack_require__(665));
-	  var matrix = load(__webpack_require__(433));
+	  var subset = load(__webpack_require__(666));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Replace part of an object:
@@ -41031,7 +41045,7 @@
 
 
 /***/ },
-/* 669 */
+/* 670 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -41353,14 +41367,14 @@
 
 
 /***/ },
-/* 670 */
+/* 671 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
-	  var ResultSet = load(__webpack_require__(453));
+	  var Node = load(__webpack_require__(662));
+	  var ResultSet = load(__webpack_require__(454));
 	
 	  /**
 	   * @constructor BlockNode
@@ -41505,16 +41519,16 @@
 
 
 /***/ },
-/* 671 */
+/* 672 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var latex = __webpack_require__(413);
-	var operators = __webpack_require__(669);
+	var latex = __webpack_require__(414);
+	var operators = __webpack_require__(670);
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
+	  var Node = load(__webpack_require__(662));
 	
 	  /**
 	   * A lazy evaluating conditional operator: 'condition ? trueExpr : falseExpr'
@@ -41691,15 +41705,15 @@
 
 
 /***/ },
-/* 672 */
+/* 673 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var getType = __webpack_require__(422).type;
+	var getType = __webpack_require__(423).type;
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
+	  var Node = load(__webpack_require__(662));
 	
 	  /**
 	   * A ConstantNode holds a constant value like a number or string. A ConstantNode
@@ -41896,21 +41910,21 @@
 
 
 /***/ },
-/* 673 */
+/* 674 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var keywords = __webpack_require__(662);
-	var latex = __webpack_require__(413);
-	var operators = __webpack_require__(669);
+	var keywords = __webpack_require__(663);
+	var latex = __webpack_require__(414);
+	var operators = __webpack_require__(670);
 	
 	function isString (x) {
 	  return typeof x === 'string';
 	}
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
+	  var Node = load(__webpack_require__(662));
 	
 	  /**
 	   * @constructor FunctionAssignmentNode
@@ -42068,17 +42082,17 @@
 
 
 /***/ },
-/* 674 */
+/* 675 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
-	  var RangeNode = load(__webpack_require__(675));
-	  var SymbolNode = load(__webpack_require__(676));
+	  var Node = load(__webpack_require__(662));
+	  var RangeNode = load(__webpack_require__(676));
+	  var SymbolNode = load(__webpack_require__(677));
 	
-	  var Range = load(__webpack_require__(448));
+	  var Range = load(__webpack_require__(449));
 	
 	  var isArray = Array.isArray;
 	
@@ -42304,15 +42318,15 @@
 
 
 /***/ },
-/* 675 */
+/* 676 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var operators = __webpack_require__(669);
+	var operators = __webpack_require__(670);
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
+	  var Node = load(__webpack_require__(662));
 	
 	  /**
 	   * @constructor RangeNode
@@ -42522,17 +42536,17 @@
 
 
 /***/ },
-/* 676 */
+/* 677 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var latex = __webpack_require__(413);
+	var latex = __webpack_require__(414);
 	
 	function factory (type, config, load, typed, math) {
-	  var Node = load(__webpack_require__(661));
+	  var Node = load(__webpack_require__(662));
 	
-	  var Unit = load(__webpack_require__(456));
+	  var Unit = load(__webpack_require__(457));
 	
 	  /**
 	   * @constructor SymbolNode
@@ -42667,15 +42681,15 @@
 
 
 /***/ },
-/* 677 */
+/* 678 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var string = __webpack_require__(404);
+	var string = __webpack_require__(405);
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
+	  var Node = load(__webpack_require__(662));
 	
 	  /**
 	   * @constructor ObjectNode
@@ -42810,19 +42824,19 @@
 
 
 /***/ },
-/* 678 */
+/* 679 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var latex = __webpack_require__(413);
-	var operators = __webpack_require__(669);
+	var latex = __webpack_require__(414);
+	var operators = __webpack_require__(670);
 	
 	function factory (type, config, load, typed, math) {
-	  var Node         = load(__webpack_require__(661));
-	  var ConstantNode = load(__webpack_require__(672));
-	  var SymbolNode   = load(__webpack_require__(676));
-	  var FunctionNode = load(__webpack_require__(679));
+	  var Node         = load(__webpack_require__(662));
+	  var ConstantNode = load(__webpack_require__(673));
+	  var SymbolNode   = load(__webpack_require__(677));
+	  var FunctionNode = load(__webpack_require__(680));
 	
 	  /**
 	   * @constructor OperatorNode
@@ -43243,16 +43257,16 @@
 
 
 /***/ },
-/* 679 */
+/* 680 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var latex = __webpack_require__(413);
+	var latex = __webpack_require__(414);
 	
 	function factory (type, config, load, typed, math) {
-	  var Node = load(__webpack_require__(661));
-	  var SymbolNode = load(__webpack_require__(676));
+	  var Node = load(__webpack_require__(662));
+	  var SymbolNode = load(__webpack_require__(677));
 	
 	  /**
 	   * @constructor FunctionNode
@@ -43635,13 +43649,13 @@
 
 
 /***/ },
-/* 680 */
+/* 681 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var Node = load(__webpack_require__(661));
+	  var Node = load(__webpack_require__(662));
 	
 	  /**
 	   * @constructor ParenthesisNode
@@ -43756,15 +43770,15 @@
 
 
 /***/ },
-/* 681 */
+/* 682 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var parse = load(__webpack_require__(659));
+	  var parse = load(__webpack_require__(660));
 	
 	  /**
 	   * Evaluate an expression.
@@ -43824,13 +43838,13 @@
 	exports.factory = factory;
 
 /***/ },
-/* 682 */
+/* 683 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed, math) {
-	  var docs = load(__webpack_require__(483));
+	  var docs = load(__webpack_require__(484));
 	
 	  /**
 	   * Retrieve help on a function or data type.
@@ -43894,13 +43908,13 @@
 
 
 /***/ },
-/* 683 */
+/* 684 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var parse = load(__webpack_require__(659));
+	  var parse = load(__webpack_require__(660));
 	
 	  /**
 	   * Parse an expression. Returns a node tree, which can be evaluated by
@@ -43949,13 +43963,13 @@
 
 
 /***/ },
-/* 684 */
+/* 685 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed, math) {
-	  var Parser = load(__webpack_require__(685));
+	  var Parser = load(__webpack_require__(686));
 	
 	  /**
 	   * Create a parser. The function creates a new `math.expression.Parser` object.
@@ -44013,15 +44027,15 @@
 
 
 /***/ },
-/* 685 */
+/* 686 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var extend = __webpack_require__(384).extend;
+	var extend = __webpack_require__(385).extend;
 	
 	function factory (type, config, load, typed, math) {
-	  var _parse = load(__webpack_require__(659));
+	  var _parse = load(__webpack_require__(660));
 	
 	  /**
 	   * @constructor Parser
@@ -44180,31 +44194,31 @@
 
 
 /***/ },
-/* 686 */
+/* 687 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(660),
-	  __webpack_require__(666),
+	  __webpack_require__(661),
 	  __webpack_require__(667),
-	  __webpack_require__(670),
+	  __webpack_require__(668),
 	  __webpack_require__(671),
 	  __webpack_require__(672),
-	  __webpack_require__(674),
 	  __webpack_require__(673),
-	  __webpack_require__(679),
-	  __webpack_require__(661),
-	  __webpack_require__(677),
-	  __webpack_require__(678),
-	  __webpack_require__(680),
 	  __webpack_require__(675),
+	  __webpack_require__(674),
+	  __webpack_require__(680),
+	  __webpack_require__(662),
+	  __webpack_require__(678),
+	  __webpack_require__(679),
+	  __webpack_require__(681),
 	  __webpack_require__(676),
-	  __webpack_require__(687)
+	  __webpack_require__(677),
+	  __webpack_require__(688)
 	];
 
 
 /***/ },
-/* 687 */
+/* 688 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -44227,30 +44241,30 @@
 
 
 /***/ },
-/* 688 */
+/* 689 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(689),
-	  __webpack_require__(691),
-	  __webpack_require__(693),
-	  __webpack_require__(695),
+	  __webpack_require__(690),
+	  __webpack_require__(692),
+	  __webpack_require__(694),
 	  __webpack_require__(696),
-	  __webpack_require__(698),
-	  __webpack_require__(704),
-	  __webpack_require__(709),
-	  __webpack_require__(711),
-	  __webpack_require__(713)
+	  __webpack_require__(697),
+	  __webpack_require__(699),
+	  __webpack_require__(705),
+	  __webpack_require__(710),
+	  __webpack_require__(712),
+	  __webpack_require__(714)
 	];
 
 
 /***/ },
-/* 689 */
+/* 690 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var errorTransform = __webpack_require__(664).transform;
+	var errorTransform = __webpack_require__(665).transform;
 	
 	/**
 	 * Attach a transform function to math.range
@@ -44260,7 +44274,7 @@
 	 * from one-based to zero based
 	 */
 	function factory (type, config, load, typed) {
-	  var concat = load(__webpack_require__(690));
+	  var concat = load(__webpack_require__(691));
 	
 	  // @see: comment of concat itself
 	 return typed('concat', {
@@ -44291,19 +44305,19 @@
 
 
 /***/ },
-/* 690 */
+/* 691 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var clone = __webpack_require__(384).clone;
-	var isInteger = __webpack_require__(387).isInteger;
-	var array = __webpack_require__(421);
-	var IndexError = __webpack_require__(424);
-	var DimensionError = __webpack_require__(423);
+	var clone = __webpack_require__(385).clone;
+	var isInteger = __webpack_require__(388).isInteger;
+	var array = __webpack_require__(422);
+	var IndexError = __webpack_require__(425);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Concatenate two or more matrices.
@@ -44441,12 +44455,12 @@
 
 
 /***/ },
-/* 691 */
+/* 692 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var maxArgumentCount = __webpack_require__(426).maxArgumentCount;
+	var maxArgumentCount = __webpack_require__(427).maxArgumentCount;
 	
 	/**
 	 * Attach a transform function to math.filter
@@ -44456,8 +44470,8 @@
 	 * so you can do something like 'filter([3, -2, 5], x > 0)'.
 	 */
 	function factory (type, config, load, typed) {
-	  var filter = load(__webpack_require__(692));
-	  var SymbolNode = load(__webpack_require__(676));
+	  var filter = load(__webpack_require__(693));
+	  var SymbolNode = load(__webpack_require__(677));
 	
 	  function filterTransform(args, math, scope) {
 	    var x, test;
@@ -44513,16 +44527,16 @@
 
 
 /***/ },
-/* 692 */
+/* 693 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var size = __webpack_require__(421).size;
-	var maxArgumentCount = __webpack_require__(426).maxArgumentCount;
+	var size = __webpack_require__(422).size;
+	var maxArgumentCount = __webpack_require__(427).maxArgumentCount;
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	  
 	  /**
 	   * Filter the items in an array or one dimensional matrix.
@@ -44623,12 +44637,12 @@
 
 
 /***/ },
-/* 693 */
+/* 694 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var maxArgumentCount = __webpack_require__(426).maxArgumentCount;
+	var maxArgumentCount = __webpack_require__(427).maxArgumentCount;
 	
 	/**
 	 * Attach a transform function to math.forEach
@@ -44637,7 +44651,7 @@
 	 * This transform creates a one-based index instead of a zero-based index
 	 */
 	function factory (type, config, load, typed) {
-	  var forEach = load(__webpack_require__(694));
+	  var forEach = load(__webpack_require__(695));
 	
 	  return typed('forEach', {
 	    'Array | Matrix, function': function (array, callback) {
@@ -44675,12 +44689,12 @@
 
 
 /***/ },
-/* 694 */
+/* 695 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var maxArgumentCount = __webpack_require__(426).maxArgumentCount;
+	var maxArgumentCount = __webpack_require__(427).maxArgumentCount;
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -44757,7 +44771,7 @@
 
 
 /***/ },
-/* 695 */
+/* 696 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44771,7 +44785,7 @@
 	 * This transform creates a one-based index instead of a zero-based index
 	 */
 	function factory (type, config, load) {
-	  var indexFactory = load(__webpack_require__(449));
+	  var indexFactory = load(__webpack_require__(450));
 	
 	  return function indexTransform() {
 	    var args = [];
@@ -44817,12 +44831,12 @@
 
 
 /***/ },
-/* 696 */
+/* 697 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var maxArgumentCount = __webpack_require__(426).maxArgumentCount;
+	var maxArgumentCount = __webpack_require__(427).maxArgumentCount;
 	
 	/**
 	 * Attach a transform function to math.map
@@ -44831,8 +44845,8 @@
 	 * This transform creates a one-based index instead of a zero-based index
 	 */
 	function factory (type, config, load, typed) {
-	  var map = load(__webpack_require__(697));
-	  var matrix = load(__webpack_require__(433));
+	  var map = load(__webpack_require__(698));
+	  var matrix = load(__webpack_require__(434));
 	
 	  return typed('max', {
 	    'Array, function': function (x, callback) {
@@ -44887,12 +44901,12 @@
 
 
 /***/ },
-/* 697 */
+/* 698 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var maxArgumentCount = __webpack_require__(426).maxArgumentCount;
+	var maxArgumentCount = __webpack_require__(427).maxArgumentCount;
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -44972,13 +44986,13 @@
 
 
 /***/ },
-/* 698 */
+/* 699 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var errorTransform = __webpack_require__(664).transform;
-	var isCollection = __webpack_require__(699);
+	var errorTransform = __webpack_require__(665).transform;
+	var isCollection = __webpack_require__(700);
 	
 	/**
 	 * Attach a transform function to math.max
@@ -44988,7 +45002,7 @@
 	 * from one-based to zero based
 	 */
 	function factory (type, config, load, typed) {
-	  var max = load(__webpack_require__(700));
+	  var max = load(__webpack_require__(701));
 	
 	  return typed('max', {
 	    '...any': function (args) {
@@ -45019,7 +45033,7 @@
 
 
 /***/ },
-/* 699 */
+/* 700 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45035,17 +45049,17 @@
 
 
 /***/ },
-/* 700 */
+/* 701 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepForEach = __webpack_require__(701);
-	var reduce = __webpack_require__(702);
-	var containsCollections = __webpack_require__(703);
+	var deepForEach = __webpack_require__(702);
+	var reduce = __webpack_require__(703);
+	var containsCollections = __webpack_require__(704);
 	
 	function factory (type, config, load, typed) {
-	  var larger = load(__webpack_require__(445));
+	  var larger = load(__webpack_require__(446));
 	
 	  /**
 	   * Compute the maximum value of a matrix or a  list with values.
@@ -45140,7 +45154,7 @@
 
 
 /***/ },
-/* 701 */
+/* 702 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45171,13 +45185,13 @@
 
 
 /***/ },
-/* 702 */
+/* 703 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var arraySize = __webpack_require__(421).size;
-	var IndexError = __webpack_require__(424);
+	var arraySize = __webpack_require__(422).size;
+	var IndexError = __webpack_require__(425);
 	
 	/**
 	 * Reduce a given matrix or array to a new matrix or
@@ -45260,12 +45274,12 @@
 
 
 /***/ },
-/* 703 */
+/* 704 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isCollection = __webpack_require__(699);
+	var isCollection = __webpack_require__(700);
 	
 	/**
 	 * Test whether an array contains collections
@@ -45284,13 +45298,13 @@
 
 
 /***/ },
-/* 704 */
+/* 705 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var errorTransform = __webpack_require__(664).transform;
-	var isCollection = __webpack_require__(699);
+	var errorTransform = __webpack_require__(665).transform;
+	var isCollection = __webpack_require__(700);
 	
 	/**
 	 * Attach a transform function to math.mean
@@ -45300,7 +45314,7 @@
 	 * from one-based to zero based
 	 */
 	function factory (type, config, load, typed) {
-	  var mean = load(__webpack_require__(705));
+	  var mean = load(__webpack_require__(706));
 	
 	  return typed('mean', {
 	    '...any': function (args) {
@@ -45331,19 +45345,19 @@
 
 
 /***/ },
-/* 705 */
+/* 706 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var size = __webpack_require__(421).size;
-	var deepForEach = __webpack_require__(701);
-	var reduce = __webpack_require__(702);
-	var containsCollections = __webpack_require__(703);
+	var size = __webpack_require__(422).size;
+	var deepForEach = __webpack_require__(702);
+	var reduce = __webpack_require__(703);
+	var containsCollections = __webpack_require__(704);
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(432));
-	  var divide = load(__webpack_require__(706));
+	  var add = load(__webpack_require__(433));
+	  var divide = load(__webpack_require__(707));
 	
 	  /**
 	   * Compute the mean value of matrix or a list with values.
@@ -45435,22 +45449,22 @@
 
 
 /***/ },
-/* 706 */
+/* 707 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var extend = __webpack_require__(384).extend;
+	var extend = __webpack_require__(385).extend;
 	
 	function factory (type, config, load, typed) {
 	
-	  var divideScalar = load(__webpack_require__(462));
-	  var multiply     = load(__webpack_require__(465));
-	  var inv          = load(__webpack_require__(707));
-	  var matrix       = load(__webpack_require__(433));
+	  var divideScalar = load(__webpack_require__(463));
+	  var multiply     = load(__webpack_require__(466));
+	  var inv          = load(__webpack_require__(708));
+	  var matrix       = load(__webpack_require__(434));
 	
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Divide two values, `x / y`.
@@ -45530,21 +45544,21 @@
 
 
 /***/ },
-/* 707 */
+/* 708 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
+	var util = __webpack_require__(421);
 	
 	function factory (type, config, load, typed) {
-	  var matrix       = load(__webpack_require__(433));
-	  var divideScalar = load(__webpack_require__(462));
-	  var addScalar    = load(__webpack_require__(434));
-	  var multiply     = load(__webpack_require__(465));
-	  var unaryMinus   = load(__webpack_require__(459));
-	  var det          = load(__webpack_require__(708));
-	  var eye          = load(__webpack_require__(464));
+	  var matrix       = load(__webpack_require__(434));
+	  var divideScalar = load(__webpack_require__(463));
+	  var addScalar    = load(__webpack_require__(435));
+	  var multiply     = load(__webpack_require__(466));
+	  var unaryMinus   = load(__webpack_require__(460));
+	  var det          = load(__webpack_require__(709));
+	  var eye          = load(__webpack_require__(465));
 	
 	  /**
 	   * Calculate the inverse of a square matrix.
@@ -45743,21 +45757,21 @@
 
 
 /***/ },
-/* 708 */
+/* 709 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
+	var util = __webpack_require__(421);
 	var object = util.object;
 	var string = util.string;
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
-	  var add = load(__webpack_require__(432));
-	  var subtract = load(__webpack_require__(458));
-	  var multiply = load(__webpack_require__(465));
-	  var unaryMinus = load(__webpack_require__(459));
+	  var matrix = load(__webpack_require__(434));
+	  var add = load(__webpack_require__(433));
+	  var subtract = load(__webpack_require__(459));
+	  var multiply = load(__webpack_require__(466));
+	  var unaryMinus = load(__webpack_require__(460));
 	
 	  /**
 	   * Calculate the determinant of a matrix.
@@ -45917,13 +45931,13 @@
 
 
 /***/ },
-/* 709 */
+/* 710 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var errorTransform = __webpack_require__(664).transform;
-	var isCollection = __webpack_require__(699);
+	var errorTransform = __webpack_require__(665).transform;
+	var isCollection = __webpack_require__(700);
 	
 	/**
 	 * Attach a transform function to math.min
@@ -45933,7 +45947,7 @@
 	 * from one-based to zero based
 	 */
 	function factory (type, config, load, typed) {
-	  var min = load(__webpack_require__(710));
+	  var min = load(__webpack_require__(711));
 	
 	  return typed('min', {
 	    '...any': function (args) {
@@ -45964,17 +45978,17 @@
 
 
 /***/ },
-/* 710 */
+/* 711 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepForEach = __webpack_require__(701);
-	var reduce = __webpack_require__(702);
-	var containsCollections = __webpack_require__(703);
+	var deepForEach = __webpack_require__(702);
+	var reduce = __webpack_require__(703);
+	var containsCollections = __webpack_require__(704);
 	
 	function factory (type, config, load, typed) {
-	  var smaller = load(__webpack_require__(441));
+	  var smaller = load(__webpack_require__(442));
 	  
 	  /**
 	   * Compute the maximum value of a matrix or a  list of values.
@@ -46069,7 +46083,7 @@
 
 
 /***/ },
-/* 711 */
+/* 712 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46081,7 +46095,7 @@
 	 * This transform creates a range which includes the end value
 	 */
 	function factory (type, config, load, typed) {
-	  var range = load(__webpack_require__(712));
+	  var range = load(__webpack_require__(713));
 	
 	  return typed('range', {
 	    '...any': function (args) {
@@ -46103,13 +46117,13 @@
 
 
 /***/ },
-/* 712 */
+/* 713 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  var ZERO = new type.BigNumber(0);
 	  var ONE = new type.BigNumber(1);
@@ -46388,12 +46402,12 @@
 
 
 /***/ },
-/* 713 */
+/* 714 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var errorTransform = __webpack_require__(664).transform;
+	var errorTransform = __webpack_require__(665).transform;
 	
 	/**
 	 * Attach a transform function to math.subset
@@ -46402,7 +46416,7 @@
 	 * This transform creates a range which includes the end value
 	 */
 	function factory (type, config, load, typed) {
-	  var subset = load(__webpack_require__(665));
+	  var subset = load(__webpack_require__(666));
 	
 	  return typed('subset', {
 	    '...any': function (args) {
@@ -46422,16 +46436,16 @@
 
 
 /***/ },
-/* 714 */
+/* 715 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var object = __webpack_require__(384);
-	var string = __webpack_require__(404);
+	var object = __webpack_require__(385);
+	var string = __webpack_require__(405);
 	
 	function factory (type, config, load, typed) {
-	  var parser = load(__webpack_require__(684))();
+	  var parser = load(__webpack_require__(685))();
 	
 	  /**
 	   * Documentation object
@@ -46545,41 +46559,25 @@
 
 
 /***/ },
-/* 715 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = [
-	  __webpack_require__(716),
-	  __webpack_require__(743),
-	  __webpack_require__(774),
-	  __webpack_require__(790),
-	  __webpack_require__(799),
-	  __webpack_require__(804),
-	  __webpack_require__(807),
-	  __webpack_require__(813),
-	  __webpack_require__(825),
-	  __webpack_require__(834),
-	  __webpack_require__(838),
-	  __webpack_require__(845),
-	  __webpack_require__(847),
-	  __webpack_require__(873),
-	  __webpack_require__(875)
-	];
-
-
-/***/ },
 /* 716 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  // decomposition
 	  __webpack_require__(717),
-	  __webpack_require__(718),
-	
-	  // solver
-	  __webpack_require__(738),
-	  __webpack_require__(740),
-	  __webpack_require__(742)
+	  __webpack_require__(744),
+	  __webpack_require__(775),
+	  __webpack_require__(791),
+	  __webpack_require__(800),
+	  __webpack_require__(805),
+	  __webpack_require__(808),
+	  __webpack_require__(814),
+	  __webpack_require__(826),
+	  __webpack_require__(835),
+	  __webpack_require__(839),
+	  __webpack_require__(846),
+	  __webpack_require__(848),
+	  __webpack_require__(874),
+	  __webpack_require__(876)
 	];
 
 
@@ -46587,23 +46585,39 @@
 /* 717 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = [
+	  // decomposition
+	  __webpack_require__(718),
+	  __webpack_require__(719),
+	
+	  // solver
+	  __webpack_require__(739),
+	  __webpack_require__(741),
+	  __webpack_require__(743)
+	];
+
+
+/***/ },
+/* 718 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
-	var util = __webpack_require__(420);
+	var util = __webpack_require__(421);
 	
 	var object = util.object;
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
-	  var abs = load(__webpack_require__(467));
-	  var addScalar = load(__webpack_require__(434));
-	  var divideScalar = load(__webpack_require__(462));
-	  var multiplyScalar = load(__webpack_require__(461));
-	  var subtract = load(__webpack_require__(458));
-	  var larger = load(__webpack_require__(445));
-	  var equalScalar = load(__webpack_require__(429));
-	  var unaryMinus = load(__webpack_require__(459));
+	  var matrix = load(__webpack_require__(434));
+	  var abs = load(__webpack_require__(468));
+	  var addScalar = load(__webpack_require__(435));
+	  var divideScalar = load(__webpack_require__(463));
+	  var multiplyScalar = load(__webpack_require__(462));
+	  var subtract = load(__webpack_require__(459));
+	  var larger = load(__webpack_require__(446));
+	  var equalScalar = load(__webpack_require__(430));
+	  var unaryMinus = load(__webpack_require__(460));
 	  
 	  var SparseMatrix = type.SparseMatrix;
 	  var DenseMatrix = type.DenseMatrix;
@@ -46977,12 +46991,12 @@
 
 
 /***/ },
-/* 718 */
+/* 719 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
+	var util = __webpack_require__(421);
 	
 	var number = util.number,
 	    
@@ -46990,8 +47004,8 @@
 	
 	function factory (type, config, load, typed) {
 	
-	  var cs_sqr = load(__webpack_require__(719));
-	  var cs_lu = load(__webpack_require__(730));
+	  var cs_sqr = load(__webpack_require__(720));
+	  var cs_lu = load(__webpack_require__(731));
 	
 	  /**
 	   * Calculate the Sparse Matrix LU decomposition with full pivoting. Sparse Matrix `A` is decomposed in two matrices (`L`, `U`) and two permutation vectors (`pinv`, `q`) where
@@ -47055,18 +47069,18 @@
 
 
 /***/ },
-/* 719 */
+/* 720 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var cs_amd = load(__webpack_require__(720));
-	  var cs_permute = load(__webpack_require__(725));
-	  var cs_etree = load(__webpack_require__(726));
-	  var cs_post = load(__webpack_require__(727));
-	  var cs_counts = load(__webpack_require__(728));
+	  var cs_amd = load(__webpack_require__(721));
+	  var cs_permute = load(__webpack_require__(726));
+	  var cs_etree = load(__webpack_require__(727));
+	  var cs_post = load(__webpack_require__(728));
+	  var cs_counts = load(__webpack_require__(729));
 	
 	  /**
 	   * Symbolic ordering and analysis for QR and LU decompositions.
@@ -47224,20 +47238,20 @@
 
 
 /***/ },
-/* 720 */
+/* 721 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var cs_flip = load(__webpack_require__(721));
-	  var cs_fkeep = load(__webpack_require__(722));
-	  var cs_tdfs = load(__webpack_require__(723));
+	  var cs_flip = load(__webpack_require__(722));
+	  var cs_fkeep = load(__webpack_require__(723));
+	  var cs_tdfs = load(__webpack_require__(724));
 	  
-	  var add       = load(__webpack_require__(432));
-	  var multiply  = load(__webpack_require__(465));
-	  var transpose = load(__webpack_require__(724));
+	  var add       = load(__webpack_require__(433));
+	  var multiply  = load(__webpack_require__(466));
+	  var transpose = load(__webpack_require__(725));
 	
 	  /**
 	   * Approximate minimum degree ordering. The minimum degree algorithm is a widely used 
@@ -47803,7 +47817,7 @@
 
 
 /***/ },
-/* 721 */
+/* 722 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47831,7 +47845,7 @@
 
 
 /***/ },
-/* 722 */
+/* 723 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47902,7 +47916,7 @@
 
 
 /***/ },
-/* 723 */
+/* 724 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47960,18 +47974,18 @@
 
 
 /***/ },
-/* 724 */
+/* 725 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var clone = __webpack_require__(384).clone;
-	var format = __webpack_require__(404).format;
+	var clone = __webpack_require__(385).clone;
+	var format = __webpack_require__(405).format;
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  var DenseMatrix = type.DenseMatrix,
 	      SparseMatrix = type.SparseMatrix;
@@ -48142,7 +48156,7 @@
 
 
 /***/ },
-/* 725 */
+/* 726 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48219,7 +48233,7 @@
 
 
 /***/ },
-/* 726 */
+/* 727 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48301,14 +48315,14 @@
 
 
 /***/ },
-/* 727 */
+/* 728 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var cs_tdfs = load(__webpack_require__(723));
+	  var cs_tdfs = load(__webpack_require__(724));
 	
 	  /**
 	   * Post order a tree of forest
@@ -48366,16 +48380,16 @@
 
 
 /***/ },
-/* 728 */
+/* 729 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var transpose = load(__webpack_require__(724));
+	  var transpose = load(__webpack_require__(725));
 	  
-	  var cs_leaf = load(__webpack_require__(729));
+	  var cs_leaf = load(__webpack_require__(730));
 	
 	  /**
 	   * Computes the column counts using the upper triangular part of A.
@@ -48493,7 +48507,7 @@
 
 
 /***/ },
-/* 729 */
+/* 730 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48565,21 +48579,21 @@
 
 
 /***/ },
-/* 730 */
+/* 731 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var abs = load(__webpack_require__(467));
-	  var divideScalar = load(__webpack_require__(462));
-	  var multiply = load(__webpack_require__(465));
+	  var abs = load(__webpack_require__(468));
+	  var divideScalar = load(__webpack_require__(463));
+	  var multiply = load(__webpack_require__(466));
 	  
-	  var larger = load(__webpack_require__(445));
-	  var largerEq = load(__webpack_require__(731));
+	  var larger = load(__webpack_require__(446));
+	  var largerEq = load(__webpack_require__(732));
 	  
-	  var cs_spsolve = load(__webpack_require__(732));
+	  var cs_spsolve = load(__webpack_require__(733));
 	
 	  var SparseMatrix = type.SparseMatrix;
 	
@@ -48749,25 +48763,25 @@
 
 
 /***/ },
-/* 731 */
+/* 732 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var nearlyEqual = __webpack_require__(387).nearlyEqual;
-	var bigNearlyEqual = __webpack_require__(430);
+	var nearlyEqual = __webpack_require__(388).nearlyEqual;
+	var bigNearlyEqual = __webpack_require__(431);
 	
 	function factory (type, config, load, typed) {
 	  
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Test whether value x is larger or equal to y.
@@ -48930,18 +48944,18 @@
 
 
 /***/ },
-/* 732 */
+/* 733 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var divideScalar = load(__webpack_require__(462));
-	  var multiply = load(__webpack_require__(465));
-	  var subtract = load(__webpack_require__(458));
+	  var divideScalar = load(__webpack_require__(463));
+	  var multiply = load(__webpack_require__(466));
+	  var subtract = load(__webpack_require__(459));
 	
-	  var cs_reach = load(__webpack_require__(733));
+	  var cs_reach = load(__webpack_require__(734));
 	
 	  /**
 	   * The function cs_spsolve() computes the solution to G * x = bk, where bk is the
@@ -49022,16 +49036,16 @@
 
 
 /***/ },
-/* 733 */
+/* 734 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var cs_dfs = load(__webpack_require__(734));
-	  var cs_marked = load(__webpack_require__(735));
-	  var cs_mark = load(__webpack_require__(736));
+	  var cs_dfs = load(__webpack_require__(735));
+	  var cs_marked = load(__webpack_require__(736));
+	  var cs_mark = load(__webpack_require__(737));
 	
 	  /**
 	   * The cs_reach function computes X = Reach(B), where B is the nonzero pattern of the n-by-1 
@@ -49089,16 +49103,16 @@
 
 
 /***/ },
-/* 734 */
+/* 735 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var cs_marked = load(__webpack_require__(735));
-	  var cs_mark   = load(__webpack_require__(736));
-	  var cs_unflip = load(__webpack_require__(737));
+	  var cs_marked = load(__webpack_require__(736));
+	  var cs_mark   = load(__webpack_require__(737));
+	  var cs_unflip = load(__webpack_require__(738));
 	
 	  /**
 	   * Depth-first search computes the nonzero pattern xi of the directed graph G (Matrix) starting
@@ -49180,7 +49194,7 @@
 
 
 /***/ },
-/* 735 */
+/* 736 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -49209,14 +49223,14 @@
 
 
 /***/ },
-/* 736 */
+/* 737 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var cs_flip = load(__webpack_require__(721));
+	  var cs_flip = load(__webpack_require__(722));
 	
 	  /**
 	   * Marks the node at w[j]
@@ -49240,14 +49254,14 @@
 
 
 /***/ },
-/* 737 */
+/* 738 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load) {
 	
-	  var cs_flip = load(__webpack_require__(721));
+	  var cs_flip = load(__webpack_require__(722));
 	  
 	  /**
 	   * Flips the value if it is negative of returns the same value otherwise.
@@ -49270,20 +49284,20 @@
 
 
 /***/ },
-/* 738 */
+/* 739 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
-	  var divideScalar = load(__webpack_require__(462));
-	  var multiplyScalar = load(__webpack_require__(461));
-	  var subtract = load(__webpack_require__(458));
-	  var equalScalar = load(__webpack_require__(429));
+	  var matrix = load(__webpack_require__(434));
+	  var divideScalar = load(__webpack_require__(463));
+	  var multiplyScalar = load(__webpack_require__(462));
+	  var subtract = load(__webpack_require__(459));
+	  var equalScalar = load(__webpack_require__(430));
 	
-	  var solveValidation = load(__webpack_require__(739));
+	  var solveValidation = load(__webpack_require__(740));
 	
 	  var DenseMatrix = type.DenseMatrix;
 	
@@ -49463,12 +49477,12 @@
 
 
 /***/ },
-/* 739 */
+/* 740 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var util = __webpack_require__(420);
+	var util = __webpack_require__(421);
 	
 	var string = util.string;
 	var array = util.array;
@@ -49630,7 +49644,7 @@
 	exports.factory = factory;
 
 /***/ },
-/* 740 */
+/* 741 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49639,15 +49653,15 @@
 	
 	function factory (type, config, load, typed) {
 	  
-	  var matrix = load(__webpack_require__(433));
-	  var lup = load(__webpack_require__(717));
-	  var slu = load(__webpack_require__(718));
-	  var cs_ipvec = load(__webpack_require__(741));
+	  var matrix = load(__webpack_require__(434));
+	  var lup = load(__webpack_require__(718));
+	  var slu = load(__webpack_require__(719));
+	  var cs_ipvec = load(__webpack_require__(742));
 	
-	  var solveValidation = load(__webpack_require__(739));
+	  var solveValidation = load(__webpack_require__(740));
 	
-	  var usolve = load(__webpack_require__(742));
-	  var lsolve = load(__webpack_require__(738));
+	  var usolve = load(__webpack_require__(743));
+	  var lsolve = load(__webpack_require__(739));
 	
 	  /**
 	   * Solves the linear system `A * x = b` where `A` is an [n x n] matrix and `b` is a [n] column vector.
@@ -49761,7 +49775,7 @@
 
 
 /***/ },
-/* 741 */
+/* 742 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -49808,20 +49822,20 @@
 
 
 /***/ },
-/* 742 */
+/* 743 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
-	  var divideScalar = load(__webpack_require__(462));
-	  var multiplyScalar = load(__webpack_require__(461));
-	  var subtract = load(__webpack_require__(458));
-	  var equalScalar = load(__webpack_require__(429));
+	  var matrix = load(__webpack_require__(434));
+	  var divideScalar = load(__webpack_require__(463));
+	  var multiplyScalar = load(__webpack_require__(462));
+	  var subtract = load(__webpack_require__(459));
+	  var equalScalar = load(__webpack_require__(430));
 	
-	  var solveValidation = load(__webpack_require__(739));
+	  var solveValidation = load(__webpack_require__(740));
 	  
 	  var DenseMatrix = type.DenseMatrix;
 	
@@ -50002,56 +50016,56 @@
 
 
 /***/ },
-/* 743 */
+/* 744 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(467),
-	  __webpack_require__(432),
-	  __webpack_require__(434),
-	  __webpack_require__(744),
-	  __webpack_require__(746),
-	  __webpack_require__(747),
-	  __webpack_require__(706),
-	  __webpack_require__(748),
-	  __webpack_require__(750),
-	  __webpack_require__(752),
-	  __webpack_require__(753),
 	  __webpack_require__(468),
+	  __webpack_require__(433),
+	  __webpack_require__(435),
+	  __webpack_require__(745),
+	  __webpack_require__(747),
+	  __webpack_require__(748),
+	  __webpack_require__(707),
+	  __webpack_require__(749),
+	  __webpack_require__(751),
+	  __webpack_require__(753),
 	  __webpack_require__(754),
+	  __webpack_require__(469),
 	  __webpack_require__(755),
 	  __webpack_require__(756),
-	  __webpack_require__(759),
-	  __webpack_require__(762),
+	  __webpack_require__(757),
+	  __webpack_require__(760),
 	  __webpack_require__(763),
 	  __webpack_require__(764),
-	  __webpack_require__(465),
 	  __webpack_require__(765),
-	  __webpack_require__(767),
-	  __webpack_require__(463),
+	  __webpack_require__(466),
+	  __webpack_require__(766),
 	  __webpack_require__(768),
-	  __webpack_require__(770),
-	  __webpack_require__(757),
+	  __webpack_require__(464),
+	  __webpack_require__(769),
 	  __webpack_require__(771),
-	  __webpack_require__(458),
-	  __webpack_require__(459),
+	  __webpack_require__(758),
 	  __webpack_require__(772),
-	  __webpack_require__(773)
+	  __webpack_require__(459),
+	  __webpack_require__(460),
+	  __webpack_require__(773),
+	  __webpack_require__(774)
 	];
 
 
 /***/ },
-/* 744 */
+/* 745 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var unaryMinus = load(__webpack_require__(459));
-	  var isNegative = load(__webpack_require__(745));
-	  var matrix = load(__webpack_require__(433));
+	  var unaryMinus = load(__webpack_require__(460));
+	  var isNegative = load(__webpack_require__(746));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Calculate the cubic root of a value.
@@ -50232,13 +50246,13 @@
 
 
 /***/ },
-/* 745 */
+/* 746 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var number = __webpack_require__(387);
+	var deepMap = __webpack_require__(401);
+	var number = __webpack_require__(388);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -50300,12 +50314,12 @@
 
 
 /***/ },
-/* 746 */
+/* 747 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -50367,12 +50381,12 @@
 
 
 /***/ },
-/* 747 */
+/* 748 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -50437,24 +50451,24 @@
 
 
 /***/ },
-/* 748 */
+/* 749 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
-	  var divideScalar = load(__webpack_require__(462));
-	  var latex = __webpack_require__(413);
+	  var matrix = load(__webpack_require__(434));
+	  var divideScalar = load(__webpack_require__(463));
+	  var latex = __webpack_require__(414);
 	  
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Divide two matrices element wise. The function accepts both matrices and
@@ -50588,16 +50602,16 @@
 
 
 /***/ },
-/* 749 */
+/* 750 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
-	  var equalScalar = load(__webpack_require__(429));
+	  var equalScalar = load(__webpack_require__(430));
 	
 	  var SparseMatrix = type.SparseMatrix;
 	
@@ -50713,22 +50727,22 @@
 
 
 /***/ },
-/* 750 */
+/* 751 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
-	  var multiplyScalar = load(__webpack_require__(461));
-	  var latex = __webpack_require__(413);
+	  var matrix = load(__webpack_require__(434));
+	  var multiplyScalar = load(__webpack_require__(462));
+	  var latex = __webpack_require__(414);
 	
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm09 = load(__webpack_require__(751));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm09 = load(__webpack_require__(752));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Multiply two matrices element wise. The function accepts both matrices and
@@ -50862,16 +50876,16 @@
 
 
 /***/ },
-/* 751 */
+/* 752 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
-	  var equalScalar = load(__webpack_require__(429));
+	  var equalScalar = load(__webpack_require__(430));
 	
 	  var SparseMatrix = type.SparseMatrix;
 	
@@ -51017,23 +51031,23 @@
 
 
 /***/ },
-/* 752 */
+/* 753 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
-	  var pow = load(__webpack_require__(463));
-	  var latex = __webpack_require__(413);
+	  var matrix = load(__webpack_require__(434));
+	  var pow = load(__webpack_require__(464));
+	  var latex = __webpack_require__(414);
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Calculates the power of x to y element wise.
@@ -51164,12 +51178,12 @@
 
 
 /***/ },
-/* 753 */
+/* 754 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -51227,12 +51241,12 @@
 
 
 /***/ },
-/* 754 */
+/* 755 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -51293,22 +51307,22 @@
 
 
 /***/ },
-/* 755 */
+/* 756 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm01 = load(__webpack_require__(435));
-	  var algorithm04 = load(__webpack_require__(436));
-	  var algorithm10 = load(__webpack_require__(437));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm01 = load(__webpack_require__(436));
+	  var algorithm04 = load(__webpack_require__(437));
+	  var algorithm10 = load(__webpack_require__(438));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Calculate the greatest common divisor for two or more values or arrays.
@@ -51498,21 +51512,21 @@
 
 
 /***/ },
-/* 756 */
+/* 757 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var flatten = __webpack_require__(421).flatten;
+	var flatten = __webpack_require__(422).flatten;
 	
 	function factory (type, config, load, typed) {
-	  var abs = load(__webpack_require__(467));
-	  var add = load(__webpack_require__(434));
-	  var divide = load(__webpack_require__(462));
-	  var multiply = load(__webpack_require__(461));
-	  var sqrt = load(__webpack_require__(757));
-	  var smaller = load(__webpack_require__(441));
-	  var isPositive = load(__webpack_require__(758));
+	  var abs = load(__webpack_require__(468));
+	  var add = load(__webpack_require__(435));
+	  var divide = load(__webpack_require__(463));
+	  var multiply = load(__webpack_require__(462));
+	  var sqrt = load(__webpack_require__(758));
+	  var smaller = load(__webpack_require__(442));
+	  var isPositive = load(__webpack_require__(759));
 	
 	  /**
 	   * Calculate the hypotenusa of a list with values. The hypotenusa is defined as:
@@ -51588,12 +51602,12 @@
 
 
 /***/ },
-/* 757 */
+/* 758 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -51674,13 +51688,13 @@
 
 
 /***/ },
-/* 758 */
+/* 759 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var number = __webpack_require__(387);
+	var deepMap = __webpack_require__(401);
+	var number = __webpack_require__(388);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -51744,22 +51758,22 @@
 
 
 /***/ },
-/* 759 */
+/* 760 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
 	  
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm06 = load(__webpack_require__(760));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm06 = load(__webpack_require__(761));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Calculate the least common multiple for two or more values or arrays.
@@ -51964,17 +51978,17 @@
 
 
 /***/ },
-/* 760 */
+/* 761 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var scatter = __webpack_require__(761);
-	var DimensionError = __webpack_require__(423);
+	var scatter = __webpack_require__(762);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
-	  var equalScalar = load(__webpack_require__(429));
+	  var equalScalar = load(__webpack_require__(430));
 	
 	  var SparseMatrix = type.SparseMatrix;
 	
@@ -52133,7 +52147,7 @@
 
 
 /***/ },
-/* 761 */
+/* 762 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -52203,15 +52217,15 @@
 
 
 /***/ },
-/* 762 */
+/* 763 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var divideScalar = load(__webpack_require__(462));
+	  var divideScalar = load(__webpack_require__(463));
 	
 	  /**
 	   * Calculate the logarithm of a value.
@@ -52295,12 +52309,12 @@
 
 
 /***/ },
-/* 763 */
+/* 764 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -52379,23 +52393,23 @@
 
 
 /***/ },
-/* 764 */
+/* 765 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
-	  var latex = __webpack_require__(413);
+	  var matrix = load(__webpack_require__(434));
+	  var latex = __webpack_require__(414);
 	
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm05 = load(__webpack_require__(460));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm05 = load(__webpack_require__(461));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Calculates the modulus, the remainder of an integer division.
@@ -52569,24 +52583,24 @@
 
 
 /***/ },
-/* 765 */
+/* 766 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	  
-	  var abs         = load(__webpack_require__(467));
-	  var add         = load(__webpack_require__(432));
-	  var pow         = load(__webpack_require__(463));
-	  var sqrt        = load(__webpack_require__(757));
-	  var multiply    = load(__webpack_require__(465));
-	  var equalScalar = load(__webpack_require__(429));
-	  var larger      = load(__webpack_require__(445));
-	  var smaller     = load(__webpack_require__(441));
-	  var matrix      = load(__webpack_require__(433));
-	  var trace       = load(__webpack_require__(766));
-	  var transpose   = load(__webpack_require__(724));
+	  var abs         = load(__webpack_require__(468));
+	  var add         = load(__webpack_require__(433));
+	  var pow         = load(__webpack_require__(464));
+	  var sqrt        = load(__webpack_require__(758));
+	  var multiply    = load(__webpack_require__(466));
+	  var equalScalar = load(__webpack_require__(430));
+	  var larger      = load(__webpack_require__(446));
+	  var smaller     = load(__webpack_require__(442));
+	  var matrix      = load(__webpack_require__(434));
+	  var trace       = load(__webpack_require__(767));
+	  var transpose   = load(__webpack_require__(725));
 	
 	
 	  /**
@@ -52790,18 +52804,18 @@
 
 
 /***/ },
-/* 766 */
+/* 767 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var clone = __webpack_require__(384).clone;
-	var format = __webpack_require__(404).format;
+	var clone = __webpack_require__(385).clone;
+	var format = __webpack_require__(405).format;
 	
 	function factory (type, config, load, typed) {
 	  
-	  var matrix = load(__webpack_require__(433));
-	  var add = load(__webpack_require__(432));
+	  var matrix = load(__webpack_require__(434));
+	  var add = load(__webpack_require__(433));
 	
 	  /**
 	   * Calculate the trace of a matrix: the sum of the elements on the main
@@ -52943,21 +52957,21 @@
 
 
 /***/ },
-/* 767 */
+/* 768 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm01 = load(__webpack_require__(435));
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm06 = load(__webpack_require__(760));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm01 = load(__webpack_require__(436));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm06 = load(__webpack_require__(761));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Calculate the nth root of a value.
@@ -53248,25 +53262,25 @@
 
 
 /***/ },
-/* 768 */
+/* 769 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var toFixed = __webpack_require__(387).toFixed;
-	var deepMap = __webpack_require__(400);
+	var isInteger = __webpack_require__(388).isInteger;
+	var toFixed = __webpack_require__(388).toFixed;
+	var deepMap = __webpack_require__(401);
 	
 	var NO_INT = 'Number of decimals in function round must be an integer';
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
-	  var equalScalar = load(__webpack_require__(429));
-	  var zeros = load(__webpack_require__(769));
+	  var matrix = load(__webpack_require__(434));
+	  var equalScalar = load(__webpack_require__(430));
+	  var zeros = load(__webpack_require__(770));
 	
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Round a value towards the nearest integer.
@@ -53428,16 +53442,16 @@
 
 
 /***/ },
-/* 769 */
+/* 770 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var resize = __webpack_require__(421).resize;
+	var isInteger = __webpack_require__(388).isInteger;
+	var resize = __webpack_require__(422).resize;
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Create a matrix filled with zeros. The created matrix can have one or
@@ -53568,13 +53582,13 @@
 
 
 /***/ },
-/* 770 */
+/* 771 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var number = __webpack_require__(387);
-	var deepMap = __webpack_require__(400);
+	var number = __webpack_require__(388);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -53643,12 +53657,12 @@
 
 
 /***/ },
-/* 771 */
+/* 772 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -53714,15 +53728,15 @@
 
 
 /***/ },
-/* 772 */
+/* 773 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Unary plus operation.
@@ -53792,15 +53806,15 @@
 
 
 /***/ },
-/* 773 */
+/* 774 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Calculate the extended greatest common divisor for two values.
@@ -53943,39 +53957,39 @@
 
 
 /***/ },
-/* 774 */
+/* 775 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(775),
-	  __webpack_require__(779),
+	  __webpack_require__(776),
 	  __webpack_require__(780),
-	  __webpack_require__(782),
-	  __webpack_require__(784),
-	  __webpack_require__(787),
-	  __webpack_require__(789)
+	  __webpack_require__(781),
+	  __webpack_require__(783),
+	  __webpack_require__(785),
+	  __webpack_require__(788),
+	  __webpack_require__(790)
 	];
 
 
 /***/ },
-/* 775 */
+/* 776 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var bigBitAnd = __webpack_require__(776);
+	var isInteger = __webpack_require__(388).isInteger;
+	var bigBitAnd = __webpack_require__(777);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm06 = load(__webpack_require__(760));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm06 = load(__webpack_require__(761));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Bitwise AND two values, `x & y`.
@@ -54113,10 +54127,10 @@
 
 
 /***/ },
-/* 776 */
+/* 777 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var bitwise = __webpack_require__(777);
+	var bitwise = __webpack_require__(778);
 	
 	/**
 	 * Bitwise and for Bignumbers
@@ -54187,10 +54201,10 @@
 
 
 /***/ },
-/* 777 */
+/* 778 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var bitNot = __webpack_require__(778);
+	var bitNot = __webpack_require__(779);
 	
 	/**
 	 * Applies bitwise function to numbers
@@ -54317,7 +54331,7 @@
 
 
 /***/ },
-/* 778 */
+/* 779 */
 /***/ function(module, exports) {
 
 	/**
@@ -54344,17 +54358,17 @@
 
 
 /***/ },
-/* 779 */
+/* 780 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var bigBitNot = __webpack_require__(778);
-	var isInteger = __webpack_require__(387).isInteger;
+	var deepMap = __webpack_require__(401);
+	var bigBitNot = __webpack_require__(779);
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Bitwise NOT value, `~x`.
@@ -54406,24 +54420,24 @@
 
 
 /***/ },
-/* 780 */
+/* 781 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var bigBitOr = __webpack_require__(781);
+	var isInteger = __webpack_require__(388).isInteger;
+	var bigBitOr = __webpack_require__(782);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm01 = load(__webpack_require__(435));
-	  var algorithm04 = load(__webpack_require__(436));
-	  var algorithm10 = load(__webpack_require__(437));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm01 = load(__webpack_require__(436));
+	  var algorithm04 = load(__webpack_require__(437));
+	  var algorithm10 = load(__webpack_require__(438));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Bitwise OR two values, `x | y`.
@@ -54561,10 +54575,10 @@
 
 
 /***/ },
-/* 781 */
+/* 782 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var bitwise = __webpack_require__(777);
+	var bitwise = __webpack_require__(778);
 	
 	/**
 	 * Bitwise OR for BigNumbers
@@ -54620,24 +54634,24 @@
 
 
 /***/ },
-/* 782 */
+/* 783 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var bigBitXor = __webpack_require__(783);
+	var isInteger = __webpack_require__(388).isInteger;
+	var bigBitXor = __webpack_require__(784);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Bitwise XOR two values, `x ^ y`.
@@ -54775,11 +54789,11 @@
 
 
 /***/ },
-/* 783 */
+/* 784 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var bitwise = __webpack_require__(777);
-	var bitNot = __webpack_require__(778);
+	var bitwise = __webpack_require__(778);
+	var bitNot = __webpack_require__(779);
 	
 	/**
 	 * Bitwise XOR for BigNumbers
@@ -54841,28 +54855,28 @@
 
 
 /***/ },
-/* 784 */
+/* 785 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var bigLeftShift = __webpack_require__(785);
+	var isInteger = __webpack_require__(388).isInteger;
+	var bigLeftShift = __webpack_require__(786);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
-	  var equalScalar = load(__webpack_require__(429));
-	  var zeros = load(__webpack_require__(769));
+	  var matrix = load(__webpack_require__(434));
+	  var equalScalar = load(__webpack_require__(430));
+	  var zeros = load(__webpack_require__(770));
 	
-	  var algorithm01 = load(__webpack_require__(435));
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm08 = load(__webpack_require__(786));
-	  var algorithm10 = load(__webpack_require__(437));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm01 = load(__webpack_require__(436));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm08 = load(__webpack_require__(787));
+	  var algorithm10 = load(__webpack_require__(438));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Bitwise left logical shift of a value x by y number of bits, `x << y`.
@@ -55009,7 +55023,7 @@
 
 
 /***/ },
-/* 785 */
+/* 786 */
 /***/ function(module, exports) {
 
 	
@@ -55056,16 +55070,16 @@
 
 
 /***/ },
-/* 786 */
+/* 787 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
+	var DimensionError = __webpack_require__(424);
 	
 	function factory (type, config, load, typed) {
 	
-	  var equalScalar = load(__webpack_require__(429));
+	  var equalScalar = load(__webpack_require__(430));
 	
 	  var SparseMatrix = type.SparseMatrix;
 	
@@ -55222,28 +55236,28 @@
 
 
 /***/ },
-/* 787 */
+/* 788 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var bigRightArithShift = __webpack_require__(788);
+	var isInteger = __webpack_require__(388).isInteger;
+	var bigRightArithShift = __webpack_require__(789);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	  
-	  var matrix = load(__webpack_require__(433));
-	  var equalScalar = load(__webpack_require__(429));
-	  var zeros = load(__webpack_require__(769));
+	  var matrix = load(__webpack_require__(434));
+	  var equalScalar = load(__webpack_require__(430));
+	  var zeros = load(__webpack_require__(770));
 	
-	  var algorithm01 = load(__webpack_require__(435));
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm08 = load(__webpack_require__(786));
-	  var algorithm10 = load(__webpack_require__(437));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm01 = load(__webpack_require__(436));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm08 = load(__webpack_require__(787));
+	  var algorithm10 = load(__webpack_require__(438));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Bitwise right arithmetic shift of a value x by y number of bits, `x >> y`.
@@ -55390,7 +55404,7 @@
 
 
 /***/ },
-/* 788 */
+/* 789 */
 /***/ function(module, exports) {
 
 	/*
@@ -55443,27 +55457,27 @@
 
 
 /***/ },
-/* 789 */
+/* 790 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
-	  var equalScalar = load(__webpack_require__(429));
-	  var zeros = load(__webpack_require__(769));
+	  var matrix = load(__webpack_require__(434));
+	  var equalScalar = load(__webpack_require__(430));
+	  var zeros = load(__webpack_require__(770));
 	
-	  var algorithm01 = load(__webpack_require__(435));
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm08 = load(__webpack_require__(786));
-	  var algorithm10 = load(__webpack_require__(437));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm01 = load(__webpack_require__(436));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm08 = load(__webpack_require__(787));
+	  var algorithm10 = load(__webpack_require__(438));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Bitwise right logical shift of value x by y number of bits, `x >>> y`.
@@ -55611,28 +55625,28 @@
 
 
 /***/ },
-/* 790 */
+/* 791 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(791),
-	  __webpack_require__(797),
 	  __webpack_require__(792),
-	  __webpack_require__(798)
+	  __webpack_require__(798),
+	  __webpack_require__(793),
+	  __webpack_require__(799)
 	];
 
 
 /***/ },
-/* 791 */
+/* 792 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(432));
-	  var stirlingS2 = load(__webpack_require__(792));
-	  var isNegative = load(__webpack_require__(745));
-	  var isInteger = load(__webpack_require__(796));
+	  var add = load(__webpack_require__(433));
+	  var stirlingS2 = load(__webpack_require__(793));
+	  var isNegative = load(__webpack_require__(746));
+	  var isInteger = load(__webpack_require__(797));
 	
 	  /**
 	   * The Bell Numbers count the number of partitions of a set. A partition is a pairwise disjoint subset of S whose union is S.
@@ -55682,22 +55696,22 @@
 
 
 /***/ },
-/* 792 */
+/* 793 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(432));
-	  var subtract = load(__webpack_require__(458));
-	  var multiply = load(__webpack_require__(465));
-	  var divide = load(__webpack_require__(706));
-	  var pow = load(__webpack_require__(463));
-	  var factorial = load(__webpack_require__(793));
-	  var combinations = load(__webpack_require__(795));
-	  var isNegative = load(__webpack_require__(745));
-	  var isInteger = load(__webpack_require__(796));
-	  var larger = load(__webpack_require__(445));
+	  var add = load(__webpack_require__(433));
+	  var subtract = load(__webpack_require__(459));
+	  var multiply = load(__webpack_require__(466));
+	  var divide = load(__webpack_require__(707));
+	  var pow = load(__webpack_require__(464));
+	  var factorial = load(__webpack_require__(794));
+	  var combinations = load(__webpack_require__(796));
+	  var isNegative = load(__webpack_require__(746));
+	  var isInteger = load(__webpack_require__(797));
+	  var larger = load(__webpack_require__(446));
 	
 	  /**
 	   * The Stirling numbers of the second kind, counts the number of ways to partition
@@ -55757,16 +55771,16 @@
 
 
 /***/ },
-/* 793 */
+/* 794 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var gamma = load(__webpack_require__(794));
-	  var latex = __webpack_require__(413);
+	  var gamma = load(__webpack_require__(795));
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Compute the factorial of a value
@@ -55824,17 +55838,17 @@
 
 
 /***/ },
-/* 794 */
+/* 795 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var isInteger = __webpack_require__(387).isInteger;
+	var deepMap = __webpack_require__(401);
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
-	  var multiply = load(__webpack_require__(465));
-	  var pow = load(__webpack_require__(463));
+	  var multiply = load(__webpack_require__(466));
+	  var pow = load(__webpack_require__(464));
 	
 	  /**
 	   * Compute the gamma function of a value using Lanczos approximation for
@@ -56032,12 +56046,12 @@
 
 
 /***/ },
-/* 795 */
+/* 796 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -56129,13 +56143,13 @@
 
 
 /***/ },
-/* 796 */
+/* 797 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var number = __webpack_require__(387);
+	var deepMap = __webpack_require__(401);
+	var number = __webpack_require__(388);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -56191,17 +56205,17 @@
 
 
 /***/ },
-/* 797 */
+/* 798 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var combinations = load(__webpack_require__(795));
-	  var add = load(__webpack_require__(434));
-	  var isPositive = load(__webpack_require__(758));
-	  var isInteger = load(__webpack_require__(796));
-	  var larger = load(__webpack_require__(445));
+	  var combinations = load(__webpack_require__(796));
+	  var add = load(__webpack_require__(435));
+	  var isPositive = load(__webpack_require__(759));
+	  var isInteger = load(__webpack_require__(797));
+	  var larger = load(__webpack_require__(446));
 	
 	  /**
 	   * The composition counts of n into k parts.
@@ -56248,18 +56262,18 @@
 
 
 /***/ },
-/* 798 */
+/* 799 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(432));
-	  var divide = load(__webpack_require__(706));
-	  var multiply = load(__webpack_require__(465));
-	  var combinations = load(__webpack_require__(795));
-	  var isNegative = load(__webpack_require__(745));
-	  var isInteger = load(__webpack_require__(796));
+	  var add = load(__webpack_require__(433));
+	  var divide = load(__webpack_require__(707));
+	  var multiply = load(__webpack_require__(466));
+	  var combinations = load(__webpack_require__(796));
+	  var isNegative = load(__webpack_require__(746));
+	  var isInteger = load(__webpack_require__(797));
 	
 	
 	  /**
@@ -56305,24 +56319,24 @@
 
 
 /***/ },
-/* 799 */
+/* 800 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(800),
 	  __webpack_require__(801),
 	  __webpack_require__(802),
-	  __webpack_require__(803)
+	  __webpack_require__(803),
+	  __webpack_require__(804)
 	];
 
 
 /***/ },
-/* 800 */
+/* 801 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -56378,12 +56392,12 @@
 
 
 /***/ },
-/* 801 */
+/* 802 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -56439,12 +56453,12 @@
 
 
 /***/ },
-/* 802 */
+/* 803 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -56502,12 +56516,12 @@
 
 
 /***/ },
-/* 803 */
+/* 804 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -56565,28 +56579,28 @@
 
 
 /***/ },
-/* 804 */
+/* 805 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(805),
-	  __webpack_require__(806)
+	  __webpack_require__(806),
+	  __webpack_require__(807)
 	];
 
 
 /***/ },
-/* 805 */
+/* 806 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var abs = load(__webpack_require__(467));
-	  var add = load(__webpack_require__(432));
-	  var matrix = load(__webpack_require__(433));
-	  var multiply = load(__webpack_require__(465));
-	  var subtract = load(__webpack_require__(458));
+	  var abs = load(__webpack_require__(468));
+	  var add = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
+	  var multiply = load(__webpack_require__(466));
+	  var subtract = load(__webpack_require__(459));
 	
 	  /**
 	   * Calculates the point of intersection of two lines in two or three dimensions
@@ -56723,13 +56737,13 @@
 
 
 /***/ },
-/* 806 */
+/* 807 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	    * Calculates:
@@ -57030,36 +57044,36 @@
 
 
 /***/ },
-/* 807 */
+/* 808 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(808),
 	  __webpack_require__(809),
-	  __webpack_require__(811),
-	  __webpack_require__(812)
+	  __webpack_require__(810),
+	  __webpack_require__(812),
+	  __webpack_require__(813)
 	];
 
 
 /***/ },
-/* 808 */
+/* 809 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
-	  var zeros = load(__webpack_require__(769));
-	  var not = load(__webpack_require__(809));
-	  var isZero = load(__webpack_require__(810));
+	  var matrix = load(__webpack_require__(434));
+	  var zeros = load(__webpack_require__(770));
+	  var not = load(__webpack_require__(810));
+	  var isZero = load(__webpack_require__(811));
 	
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm06 = load(__webpack_require__(760));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm06 = load(__webpack_require__(761));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Logical `and`. Test whether two values are both defined with a nonzero/nonempty value.
@@ -57219,15 +57233,15 @@
 
 
 /***/ },
-/* 809 */
+/* 810 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Logical `not`. Flips boolean value of a given parameter.
@@ -57288,13 +57302,13 @@
 
 
 /***/ },
-/* 810 */
+/* 811 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var number = __webpack_require__(387);
+	var deepMap = __webpack_require__(401);
+	var number = __webpack_require__(388);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -57364,21 +57378,21 @@
 
 
 /***/ },
-/* 811 */
+/* 812 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm05 = load(__webpack_require__(460));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm05 = load(__webpack_require__(461));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Logical `or`. Test if at least one value is defined with a nonzero/nonempty value.
@@ -57528,21 +57542,21 @@
 
 
 /***/ },
-/* 812 */
+/* 813 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Logical `xor`. Test whether one and only one value is defined with a nonzero/nonempty value.
@@ -57692,47 +57706,47 @@
 
 
 /***/ },
-/* 813 */
+/* 814 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(690),
-	  __webpack_require__(814),
-	  __webpack_require__(708),
+	  __webpack_require__(691),
 	  __webpack_require__(815),
+	  __webpack_require__(709),
 	  __webpack_require__(816),
-	  __webpack_require__(464),
-	  __webpack_require__(692),
 	  __webpack_require__(817),
-	  __webpack_require__(694),
-	  __webpack_require__(707),
-	  __webpack_require__(697),
+	  __webpack_require__(465),
+	  __webpack_require__(693),
 	  __webpack_require__(818),
+	  __webpack_require__(695),
+	  __webpack_require__(708),
+	  __webpack_require__(698),
 	  __webpack_require__(819),
-	  __webpack_require__(712),
-	  __webpack_require__(821),
+	  __webpack_require__(820),
+	  __webpack_require__(713),
 	  __webpack_require__(822),
 	  __webpack_require__(823),
 	  __webpack_require__(824),
-	  __webpack_require__(665),
-	  __webpack_require__(766),
-	  __webpack_require__(724),
-	  __webpack_require__(769)
+	  __webpack_require__(825),
+	  __webpack_require__(666),
+	  __webpack_require__(767),
+	  __webpack_require__(725),
+	  __webpack_require__(770)
 	];
 
 
 /***/ },
-/* 814 */
+/* 815 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var size = __webpack_require__(421).size;
+	var size = __webpack_require__(422).size;
 	
 	function factory (type, config, load, typed) {
-	  var matrix   = load(__webpack_require__(433));
-	  var subtract = load(__webpack_require__(458));
-	  var multiply = load(__webpack_require__(465));
+	  var matrix   = load(__webpack_require__(434));
+	  var subtract = load(__webpack_require__(459));
+	  var multiply = load(__webpack_require__(466));
 	
 	  /**
 	   * Calculate the cross product for two vectors in three dimensional space.
@@ -57814,18 +57828,18 @@
 
 
 /***/ },
-/* 815 */
+/* 816 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var array     = __webpack_require__(421);
-	var clone     = __webpack_require__(384).clone;
-	var isInteger = __webpack_require__(387).isInteger;
+	var array     = __webpack_require__(422);
+	var clone     = __webpack_require__(385).clone;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	  
 	  /**
 	   * Create a diagonal matrix or retrieve the diagonal of a matrix
@@ -57990,16 +58004,16 @@
 
 
 /***/ },
-/* 816 */
+/* 817 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var size = __webpack_require__(421).size;
+	var size = __webpack_require__(422).size;
 	
 	function factory (type, config, load, typed) {
-	  var add      = load(__webpack_require__(432));
-	  var multiply = load(__webpack_require__(465));
+	  var add      = load(__webpack_require__(433));
+	  var multiply = load(__webpack_require__(466));
 	
 	  /**
 	   * Calculate the dot product of two vectors. The dot product of
@@ -58075,16 +58089,16 @@
 
 
 /***/ },
-/* 817 */
+/* 818 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var clone = __webpack_require__(384).clone;
-	var _flatten = __webpack_require__(421).flatten;
+	var clone = __webpack_require__(385).clone;
+	var _flatten = __webpack_require__(422).flatten;
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Flatten a multi dimensional matrix into a single dimensional matrix.
@@ -58126,16 +58140,16 @@
 
 
 /***/ },
-/* 818 */
+/* 819 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var resize = __webpack_require__(421).resize;
+	var isInteger = __webpack_require__(388).isInteger;
+	var resize = __webpack_require__(422).resize;
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Create a matrix filled with ones. The created matrix can have one or
@@ -58266,15 +58280,15 @@
 
 
 /***/ },
-/* 819 */
+/* 820 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
-	  var asc = load(__webpack_require__(820));
+	  var asc = load(__webpack_require__(821));
 	  function desc(a, b) {
 	    return -asc(a, b);
 	  }
@@ -58408,23 +58422,23 @@
 
 
 /***/ },
-/* 820 */
+/* 821 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var nearlyEqual = __webpack_require__(387).nearlyEqual;
-	var bigNearlyEqual = __webpack_require__(430);
+	var nearlyEqual = __webpack_require__(388).nearlyEqual;
+	var bigNearlyEqual = __webpack_require__(431);
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm05 = load(__webpack_require__(460));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm05 = load(__webpack_require__(461));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	  
 	  /**
 	   * Compare two values. Returns 1 when x > y, -1 when x < y, and 0 when x == y.
@@ -58596,21 +58610,21 @@
 
 
 /***/ },
-/* 821 */
+/* 822 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var DimensionError = __webpack_require__(423);
-	var ArgumentsError = __webpack_require__(392);
+	var DimensionError = __webpack_require__(424);
+	var ArgumentsError = __webpack_require__(393);
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var format = __webpack_require__(404).format;
-	var clone = __webpack_require__(384).clone;
-	var array = __webpack_require__(421);
+	var isInteger = __webpack_require__(388).isInteger;
+	var format = __webpack_require__(405).format;
+	var clone = __webpack_require__(385).clone;
+	var array = __webpack_require__(422);
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Resize a matrix
@@ -58740,15 +58754,15 @@
 
 
 /***/ },
-/* 822 */
+/* 823 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var array = __webpack_require__(421);
+	var array = __webpack_require__(422);
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Calculate the size of a matrix or scalar.
@@ -58801,16 +58815,16 @@
 
 
 /***/ },
-/* 823 */
+/* 824 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var size = __webpack_require__(421).size;
+	var size = __webpack_require__(422).size;
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
-	  var asc = load(__webpack_require__(820));
+	  var matrix = load(__webpack_require__(434));
+	  var asc = load(__webpack_require__(821));
 	  var desc = function (a, b) {
 	    return -asc(a, b);
 	  };
@@ -58927,16 +58941,16 @@
 
 
 /***/ },
-/* 824 */
+/* 825 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var object = __webpack_require__(384);
-	var array = __webpack_require__(421);
+	var object = __webpack_require__(385);
+	var array = __webpack_require__(422);
 	
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
 	  /**
 	   * Squeeze a matrix, remove inner and outer singleton dimensions from a matrix.
@@ -58994,38 +59008,38 @@
 
 
 /***/ },
-/* 825 */
+/* 826 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
 	  //require('./distribution'), // TODO: rethink math.distribution
-	  __webpack_require__(795),
-	  __webpack_require__(793),
+	  __webpack_require__(796),
 	  __webpack_require__(794),
-	  __webpack_require__(826),
-	  __webpack_require__(828),
+	  __webpack_require__(795),
+	  __webpack_require__(827),
 	  __webpack_require__(829),
 	  __webpack_require__(830),
-	  __webpack_require__(832),
-	  __webpack_require__(833)
+	  __webpack_require__(831),
+	  __webpack_require__(833),
+	  __webpack_require__(834)
 	];
 
 
 /***/ },
-/* 826 */
+/* 827 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	
 	function factory(type, config, load, typed) {
-	    var matrix = load(__webpack_require__(433));
-	    var divide = load(__webpack_require__(706));
-	    var sum = load(__webpack_require__(827));
-	    var multiply = load(__webpack_require__(465));
-	    var dotDivide = load(__webpack_require__(748));
-	    var log = load(__webpack_require__(762));
-	    var isNumeric = load(__webpack_require__(470));
+	    var matrix = load(__webpack_require__(434));
+	    var divide = load(__webpack_require__(707));
+	    var sum = load(__webpack_require__(828));
+	    var multiply = load(__webpack_require__(466));
+	    var dotDivide = load(__webpack_require__(749));
+	    var log = load(__webpack_require__(763));
+	    var isNumeric = load(__webpack_require__(471));
 	
 	    /**
 	     * Calculate the Kullback-Leibler (KL) divergence  between two distributions
@@ -59109,15 +59123,15 @@
 
 
 /***/ },
-/* 827 */
+/* 828 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepForEach = __webpack_require__(701);
+	var deepForEach = __webpack_require__(702);
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(434));
+	  var add = load(__webpack_require__(435));
 	
 	  /**
 	   * Compute the sum of a matrix or a list with values.
@@ -59199,20 +59213,20 @@
 
 
 /***/ },
-/* 828 */
+/* 829 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepForEach = __webpack_require__(701);
+	var deepForEach = __webpack_require__(702);
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(432));
-	  var multiply = load(__webpack_require__(465));
-	  var divide = load(__webpack_require__(706));
-	  var factorial = load(__webpack_require__(793));
-	  var isInteger = load(__webpack_require__(796));
-	  var isPositive = load(__webpack_require__(758));
+	  var add = load(__webpack_require__(433));
+	  var multiply = load(__webpack_require__(466));
+	  var divide = load(__webpack_require__(707));
+	  var factorial = load(__webpack_require__(794));
+	  var isInteger = load(__webpack_require__(797));
+	  var isPositive = load(__webpack_require__(759));
 	
 	  /**
 	   * Multinomial Coefficients compute the number of ways of picking a1, a2, ..., ai unordered outcomes from `n` possibilities.
@@ -59258,15 +59272,15 @@
 
 
 /***/ },
-/* 829 */
+/* 830 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
+	var isInteger = __webpack_require__(388).isInteger;
 	
 	function factory (type, config, load, typed) {
-	  var factorial = load(__webpack_require__(793));
+	  var factorial = load(__webpack_require__(794));
 	
 	  /**
 	   * Compute the number of ways of obtaining an ordered subset of `k` elements
@@ -59358,13 +59372,13 @@
 
 
 /***/ },
-/* 830 */
+/* 831 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var distribution = load(__webpack_require__(831));
+	  var distribution = load(__webpack_require__(832));
 	
 	  /**
 	   * Random pick a value from a one dimensional array.
@@ -59398,19 +59412,19 @@
 
 
 /***/ },
-/* 831 */
+/* 832 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var ArgumentsError = __webpack_require__(392);
-	var isCollection = __webpack_require__(699);
+	var ArgumentsError = __webpack_require__(393);
+	var isCollection = __webpack_require__(700);
 	
 	// TODO: rethink math.distribution
 	// TODO: rework to a typed function
 	function factory (type, config, load, typed) {
-	  var matrix = load(__webpack_require__(433));
-	  var array = __webpack_require__(421);
+	  var matrix = load(__webpack_require__(434));
+	  var array = __webpack_require__(422);
 	
 	  /**
 	   * Create a distribution object with a set of random functions for given
@@ -59616,13 +59630,13 @@
 
 
 /***/ },
-/* 832 */
+/* 833 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var distribution = load(__webpack_require__(831));
+	  var distribution = load(__webpack_require__(832));
 	
 	  /**
 	   * Return a random number larger or equal to `min` and smaller than `max`
@@ -59667,13 +59681,13 @@
 
 
 /***/ },
-/* 833 */
+/* 834 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var distribution = load(__webpack_require__(831));
+	  var distribution = load(__webpack_require__(832));
 	
 	  /**
 	   * Return a random integer number larger or equal to `min` and smaller than `max`
@@ -59716,29 +59730,29 @@
 
 
 /***/ },
-/* 834 */
+/* 835 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(820),
-	  __webpack_require__(835),
-	  __webpack_require__(469),
-	  __webpack_require__(445),
-	  __webpack_require__(731),
-	  __webpack_require__(441),
+	  __webpack_require__(821),
 	  __webpack_require__(836),
-	  __webpack_require__(837)
+	  __webpack_require__(470),
+	  __webpack_require__(446),
+	  __webpack_require__(732),
+	  __webpack_require__(442),
+	  __webpack_require__(837),
+	  __webpack_require__(838)
 	];
 
 
 /***/ },
-/* 835 */
+/* 836 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var equal = load(__webpack_require__(469));
+	  var equal = load(__webpack_require__(470));
 	
 	  /**
 	   * Test element wise whether two matrices are equal.
@@ -59819,25 +59833,25 @@
 
 
 /***/ },
-/* 836 */
+/* 837 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var nearlyEqual = __webpack_require__(387).nearlyEqual;
-	var bigNearlyEqual = __webpack_require__(430);
+	var nearlyEqual = __webpack_require__(388).nearlyEqual;
+	var bigNearlyEqual = __webpack_require__(431);
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Test whether value x is smaller or equal to y.
@@ -59999,25 +60013,25 @@
 
 
 /***/ },
-/* 837 */
+/* 838 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var nearlyEqual = __webpack_require__(387).nearlyEqual;
-	var bigNearlyEqual = __webpack_require__(430);
+	var nearlyEqual = __webpack_require__(388).nearlyEqual;
+	var bigNearlyEqual = __webpack_require__(431);
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm07 = load(__webpack_require__(443));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm07 = load(__webpack_require__(444));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
 	  /**
 	   * Test whether two values are unequal.
@@ -60209,37 +60223,37 @@
 
 
 /***/ },
-/* 838 */
+/* 839 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(700),
-	  __webpack_require__(705),
-	  __webpack_require__(839),
-	  __webpack_require__(710),
+	  __webpack_require__(701),
+	  __webpack_require__(706),
 	  __webpack_require__(840),
+	  __webpack_require__(711),
 	  __webpack_require__(841),
 	  __webpack_require__(842),
 	  __webpack_require__(843),
-	  __webpack_require__(827),
-	  __webpack_require__(844)
+	  __webpack_require__(844),
+	  __webpack_require__(828),
+	  __webpack_require__(845)
 	];
 
 /***/ },
-/* 839 */
+/* 840 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var flatten = __webpack_require__(421).flatten;
-	var reduce = __webpack_require__(702);
-	var containsCollections = __webpack_require__(703);
+	var flatten = __webpack_require__(422).flatten;
+	var reduce = __webpack_require__(703);
+	var containsCollections = __webpack_require__(704);
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(434));
-	  var divide = load(__webpack_require__(462));
-	  var compare = load(__webpack_require__(820));
-	  var partitionSelect = load(__webpack_require__(819));
+	  var add = load(__webpack_require__(435));
+	  var divide = load(__webpack_require__(463));
+	  var compare = load(__webpack_require__(821));
+	  var partitionSelect = load(__webpack_require__(820));
 	
 	  /**
 	   * Compute the median of a matrix or a list with values. The values are
@@ -60350,12 +60364,12 @@
 
 
 /***/ },
-/* 840 */
+/* 841 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var flatten = __webpack_require__(421).flatten;
+	var flatten = __webpack_require__(422).flatten;
 	
 	function factory (type, config, load, typed) {
 	
@@ -60432,15 +60446,15 @@
 	exports.factory = factory;
 
 /***/ },
-/* 841 */
+/* 842 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepForEach = __webpack_require__(701);
+	var deepForEach = __webpack_require__(702);
 	
 	function factory (type, config, load, typed) {
-	  var multiply = load(__webpack_require__(461));
+	  var multiply = load(__webpack_require__(462));
 	
 	  /**
 	   * Compute the product of a matrix or a list with values.
@@ -60514,21 +60528,21 @@
 
 
 /***/ },
-/* 842 */
+/* 843 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isInteger = __webpack_require__(387).isInteger;
-	var isNumber = __webpack_require__(387).isNumber;
-	var flatten = __webpack_require__(421).flatten;
-	var isCollection = __webpack_require__(699);
+	var isInteger = __webpack_require__(388).isInteger;
+	var isNumber = __webpack_require__(388).isNumber;
+	var flatten = __webpack_require__(422).flatten;
+	var isCollection = __webpack_require__(700);
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(432));
-	  var multiply = load(__webpack_require__(465));
-	  var partitionSelect = load(__webpack_require__(819));
-	  var compare = load(__webpack_require__(820));
+	  var add = load(__webpack_require__(433));
+	  var multiply = load(__webpack_require__(466));
+	  var partitionSelect = load(__webpack_require__(820));
+	  var compare = load(__webpack_require__(821));
 	
 	  /**
 	   * Compute the prob order quantile of a matrix or a list with values.
@@ -60777,14 +60791,14 @@
 
 
 /***/ },
-/* 843 */
+/* 844 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var sqrt       = load(__webpack_require__(757));
-	  var variance   = load(__webpack_require__(844));
+	  var sqrt       = load(__webpack_require__(758));
+	  var variance   = load(__webpack_require__(845));
 	
 	  /**
 	   * Compute the standard deviation of a matrix or a  list with values.
@@ -60857,20 +60871,20 @@
 
 
 /***/ },
-/* 844 */
+/* 845 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var DEFAULT_NORMALIZATION = 'unbiased';
 	
-	var deepForEach = __webpack_require__(701);
+	var deepForEach = __webpack_require__(702);
 	
 	function factory (type, config, load, typed) {
-	  var add = load(__webpack_require__(434));
-	  var subtract = load(__webpack_require__(458));
-	  var multiply = load(__webpack_require__(461));
-	  var divide = load(__webpack_require__(462));
+	  var add = load(__webpack_require__(435));
+	  var subtract = load(__webpack_require__(459));
+	  var multiply = load(__webpack_require__(462));
+	  var divide = load(__webpack_require__(463));
 	
 	  /**
 	   * Compute the variance of a matrix or a  list with values.
@@ -60991,23 +61005,23 @@
 
 
 /***/ },
-/* 845 */
+/* 846 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(471),
-	  __webpack_require__(846)
+	  __webpack_require__(472),
+	  __webpack_require__(847)
 	];
 
 
 /***/ },
-/* 846 */
+/* 847 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var isString = __webpack_require__(404).isString;
-	var format = __webpack_require__(404).format;
+	var isString = __webpack_require__(405).isString;
+	var format = __webpack_require__(405).format;
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -61094,11 +61108,10 @@
 
 
 /***/ },
-/* 847 */
+/* 848 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(848),
 	  __webpack_require__(849),
 	  __webpack_require__(850),
 	  __webpack_require__(851),
@@ -61122,17 +61135,18 @@
 	  __webpack_require__(869),
 	  __webpack_require__(870),
 	  __webpack_require__(871),
-	  __webpack_require__(872)
+	  __webpack_require__(872),
+	  __webpack_require__(873)
 	];
 
 
 /***/ },
-/* 848 */
+/* 849 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61192,12 +61206,12 @@
 
 
 /***/ },
-/* 849 */
+/* 850 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61266,12 +61280,12 @@
 
 
 /***/ },
-/* 850 */
+/* 851 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61326,12 +61340,12 @@
 
 
 /***/ },
-/* 851 */
+/* 852 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61387,12 +61401,12 @@
 
 
 /***/ },
-/* 852 */
+/* 853 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	
 	function factory (type, config, load, typed) {
@@ -61451,12 +61465,12 @@
 
 
 /***/ },
-/* 853 */
+/* 854 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61510,12 +61524,12 @@
 
 
 /***/ },
-/* 854 */
+/* 855 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61573,15 +61587,15 @@
 
 
 /***/ },
-/* 855 */
+/* 856 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
-	  var acosh = typed.find(load(__webpack_require__(849)), ['Complex']);
+	  var acosh = typed.find(load(__webpack_require__(850)), ['Complex']);
 	
 	  /**
 	   * Calculate the hyperbolic arcsecant of a value,
@@ -61643,12 +61657,12 @@
 
 
 /***/ },
-/* 856 */
+/* 857 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61709,12 +61723,12 @@
 
 
 /***/ },
-/* 857 */
+/* 858 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61768,12 +61782,12 @@
 
 
 /***/ },
-/* 858 */
+/* 859 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -61829,22 +61843,22 @@
 
 
 /***/ },
-/* 859 */
+/* 860 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm02 = load(__webpack_require__(749));
-	  var algorithm03 = load(__webpack_require__(442));
-	  var algorithm09 = load(__webpack_require__(751));
-	  var algorithm11 = load(__webpack_require__(466));
-	  var algorithm12 = load(__webpack_require__(444));
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm02 = load(__webpack_require__(750));
+	  var algorithm03 = load(__webpack_require__(443));
+	  var algorithm09 = load(__webpack_require__(752));
+	  var algorithm11 = load(__webpack_require__(467));
+	  var algorithm12 = load(__webpack_require__(445));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Calculate the inverse tangent function with two arguments, y/x.
@@ -61987,12 +62001,12 @@
 
 
 /***/ },
-/* 860 */
+/* 861 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62058,12 +62072,12 @@
 
 
 /***/ },
-/* 861 */
+/* 862 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -62126,12 +62140,12 @@
 
 
 /***/ },
-/* 862 */
+/* 863 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62198,12 +62212,12 @@
 
 
 /***/ },
-/* 863 */
+/* 864 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62262,12 +62276,12 @@
 
 
 /***/ },
-/* 864 */
+/* 865 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62337,12 +62351,12 @@
 
 
 /***/ },
-/* 865 */
+/* 866 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62401,13 +62415,13 @@
 
 
 /***/ },
-/* 866 */
+/* 867 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var sign = __webpack_require__(387).sign;
+	var deepMap = __webpack_require__(401);
+	var sign = __webpack_require__(388).sign;
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62482,12 +62496,12 @@
 
 
 /***/ },
-/* 867 */
+/* 868 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62546,12 +62560,12 @@
 
 
 /***/ },
-/* 868 */
+/* 869 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62620,12 +62634,12 @@
 
 
 /***/ },
-/* 869 */
+/* 870 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	
@@ -62689,12 +62703,12 @@
 
 
 /***/ },
-/* 870 */
+/* 871 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62762,12 +62776,12 @@
 
 
 /***/ },
-/* 871 */
+/* 872 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62827,12 +62841,12 @@
 
 
 /***/ },
-/* 872 */
+/* 873 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -62904,26 +62918,26 @@
 
 
 /***/ },
-/* 873 */
+/* 874 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(874)
+	  __webpack_require__(875)
 	];
 
 /***/ },
-/* 874 */
+/* 875 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	function factory (type, config, load, typed) {
-	  var latex = __webpack_require__(413);
+	  var latex = __webpack_require__(414);
 	
-	  var matrix = load(__webpack_require__(433));
+	  var matrix = load(__webpack_require__(434));
 	
-	  var algorithm13 = load(__webpack_require__(438));
-	  var algorithm14 = load(__webpack_require__(439));
+	  var algorithm13 = load(__webpack_require__(439));
+	  var algorithm14 = load(__webpack_require__(440));
 	
 	  /**
 	   * Change the unit of a value.
@@ -63008,29 +63022,29 @@
 
 
 /***/ },
-/* 875 */
+/* 876 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(876),
-	  __webpack_require__(796),
-	  __webpack_require__(745),
-	  __webpack_require__(470),
-	  __webpack_require__(758),
 	  __webpack_require__(877),
-	  __webpack_require__(810),
+	  __webpack_require__(797),
+	  __webpack_require__(746),
+	  __webpack_require__(471),
+	  __webpack_require__(759),
 	  __webpack_require__(878),
-	  __webpack_require__(472)
+	  __webpack_require__(811),
+	  __webpack_require__(879),
+	  __webpack_require__(473)
 	];
 
 
 /***/ },
-/* 876 */
+/* 877 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var object= __webpack_require__(384);
+	var object= __webpack_require__(385);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -63065,12 +63079,12 @@
 
 
 /***/ },
-/* 877 */
+/* 878 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
+	var deepMap = __webpack_require__(401);
 	
 	
 	function factory (type, config, load, typed) {
@@ -63152,13 +63166,13 @@
 
 
 /***/ },
-/* 878 */
+/* 879 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var deepMap = __webpack_require__(400);
-	var number = __webpack_require__(387);
+	var deepMap = __webpack_require__(401);
+	var number = __webpack_require__(388);
 	
 	function factory (type, config, load, typed) {
 	  /**
@@ -63224,16 +63238,16 @@
 
 
 /***/ },
-/* 879 */
+/* 880 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
-	  __webpack_require__(880)
+	  __webpack_require__(881)
 	];
 
 
 /***/ },
-/* 880 */
+/* 881 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63261,14 +63275,14 @@
 
 
 /***/ },
-/* 881 */
+/* 882 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var ArgumentsError = __webpack_require__(392);
-	var DimensionError = __webpack_require__(423);
-	var IndexError = __webpack_require__(424);
+	var ArgumentsError = __webpack_require__(393);
+	var DimensionError = __webpack_require__(424);
+	var IndexError = __webpack_require__(425);
 	
 	module.exports = [
 	  {
@@ -63297,7 +63311,7 @@
 
 
 /***/ },
-/* 882 */
+/* 883 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -63308,10 +63322,10 @@
 	
 	exports.default = function (density, rgbVal, highestDensity) {
 	    return Math.floor(density * rgbVal / highestDensity);
-	}; // TODO colorFunc should take r, g, b values
+	};
 
 /***/ },
-/* 883 */
+/* 884 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63321,15 +63335,15 @@
 	});
 	exports.stopwatch = exports.callbacks = exports.attachEventHandlers = undefined;
 	
-	var _attachEventHandlers = __webpack_require__(884);
+	var _attachEventHandlers = __webpack_require__(885);
 	
 	var _attachEventHandlers2 = _interopRequireDefault(_attachEventHandlers);
 	
-	var _callbacks = __webpack_require__(886);
+	var _callbacks = __webpack_require__(887);
 	
 	var _callbacks2 = _interopRequireDefault(_callbacks);
 	
-	var _stopwatch = __webpack_require__(885);
+	var _stopwatch = __webpack_require__(886);
 	
 	var _stopwatch2 = _interopRequireDefault(_stopwatch);
 	
@@ -63341,7 +63355,7 @@
 	exports.default = { attachEventHandlers: _attachEventHandlers2.default, callbacks: _callbacks2.default, stopwatch: _stopwatch2.default };
 
 /***/ },
-/* 884 */
+/* 885 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63350,7 +63364,7 @@
 		value: true
 	});
 	
-	var _stopwatch = __webpack_require__(885);
+	var _stopwatch = __webpack_require__(886);
 	
 	var _stopwatch2 = _interopRequireDefault(_stopwatch);
 	
@@ -63394,7 +63408,7 @@
 	};
 
 /***/ },
-/* 885 */
+/* 886 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63461,7 +63475,7 @@
 	};
 
 /***/ },
-/* 886 */
+/* 887 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63470,9 +63484,9 @@
 		value: true
 	});
 	
-	var _utils = __webpack_require__(887);
+	var _utils = __webpack_require__(888);
 	
-	var _stopwatch = __webpack_require__(885);
+	var _stopwatch = __webpack_require__(886);
 	
 	var _stopwatch2 = _interopRequireDefault(_stopwatch);
 	
@@ -63502,7 +63516,7 @@
 	};
 
 /***/ },
-/* 887 */
+/* 888 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -63544,24 +63558,24 @@
 	exports.default = { debounce: debounce, throttle: throttle };
 
 /***/ },
-/* 888 */
+/* 889 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(889);
-	__webpack_require__(898);
+	__webpack_require__(890);
+	__webpack_require__(899);
 
 
 /***/ },
-/* 889 */
+/* 890 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(890);
+	var content = __webpack_require__(891);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(897)(content, {});
+	var update = __webpack_require__(898)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -63578,21 +63592,21 @@
 	}
 
 /***/ },
-/* 890 */
+/* 891 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(891)();
+	exports = module.exports = __webpack_require__(892)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */\nhtml {\n  font-family: sans-serif;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\nbody {\n  margin: 0;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  vertical-align: baseline;\n}\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n[hidden],\ntemplate {\n  display: none;\n}\na {\n  background-color: transparent;\n}\na:active,\na:hover {\n  outline: 0;\n}\nabbr[title] {\n  border-bottom: 1px dotted;\n}\nb,\nstrong {\n  font-weight: bold;\n}\ndfn {\n  font-style: italic;\n}\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\nmark {\n  background: #ff0;\n  color: #000;\n}\nsmall {\n  font-size: 80%;\n}\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsup {\n  top: -0.5em;\n}\nsub {\n  bottom: -0.25em;\n}\nimg {\n  border: 0;\n}\nsvg:not(:root) {\n  overflow: hidden;\n}\nfigure {\n  margin: 1em 40px;\n}\nhr {\n  box-sizing: content-box;\n  height: 0;\n}\npre {\n  overflow: auto;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  font: inherit;\n  margin: 0;\n}\nbutton {\n  overflow: visible;\n}\nbutton,\nselect {\n  text-transform: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\ninput {\n  line-height: normal;\n}\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  box-sizing: content-box;\n}\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\nlegend {\n  border: 0;\n  padding: 0;\n}\ntextarea {\n  overflow: auto;\n}\noptgroup {\n  font-weight: bold;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\n/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */\n@media print {\n  *,\n  *:before,\n  *:after {\n    background: transparent !important;\n    color: #000 !important;\n    box-shadow: none !important;\n    text-shadow: none !important;\n  }\n  a,\n  a:visited {\n    text-decoration: underline;\n  }\n  a[href]:after {\n    content: \" (\" attr(href) \")\";\n  }\n  abbr[title]:after {\n    content: \" (\" attr(title) \")\";\n  }\n  a[href^=\"#\"]:after,\n  a[href^=\"javascript:\"]:after {\n    content: \"\";\n  }\n  pre,\n  blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid;\n  }\n  thead {\n    display: table-header-group;\n  }\n  tr,\n  img {\n    page-break-inside: avoid;\n  }\n  img {\n    max-width: 100% !important;\n  }\n  p,\n  h2,\n  h3 {\n    orphans: 3;\n    widows: 3;\n  }\n  h2,\n  h3 {\n    page-break-after: avoid;\n  }\n  .navbar {\n    display: none;\n  }\n  .btn > .caret,\n  .dropup > .btn > .caret {\n    border-top-color: #000 !important;\n  }\n  .label {\n    border: 1px solid #000;\n  }\n  .table {\n    border-collapse: collapse !important;\n  }\n  .table td,\n  .table th {\n    background-color: #fff !important;\n  }\n  .table-bordered th,\n  .table-bordered td {\n    border: 1px solid #ddd !important;\n  }\n}\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n*:before,\n*:after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\nhtml {\n  font-size: 10px;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #333333;\n  background-color: #fff;\n}\ninput,\nbutton,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: inherit;\n  line-height: inherit;\n}\na {\n  color: #337ab7;\n  text-decoration: none;\n}\na:hover,\na:focus {\n  color: #23527c;\n  text-decoration: underline;\n}\na:focus {\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\nfigure {\n  margin: 0;\n}\nimg {\n  vertical-align: middle;\n}\n.img-responsive,\n.thumbnail > img,\n.thumbnail a > img,\n.carousel-inner > .item > img,\n.carousel-inner > .item > a > img {\n  display: block;\n  max-width: 100%;\n  height: auto;\n}\n.img-rounded {\n  border-radius: 6px;\n}\n.img-thumbnail {\n  padding: 4px;\n  line-height: 1.42857143;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-radius: 4px;\n  -webkit-transition: all 0.2s ease-in-out;\n  -o-transition: all 0.2s ease-in-out;\n  transition: all 0.2s ease-in-out;\n  display: inline-block;\n  max-width: 100%;\n  height: auto;\n}\n.img-circle {\n  border-radius: 50%;\n}\nhr {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  border: 0;\n  border-top: 1px solid #eeeeee;\n}\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  padding: 0;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n.sr-only-focusable:active,\n.sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  clip: auto;\n}\n[role=\"button\"] {\n  cursor: pointer;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\n.h1,\n.h2,\n.h3,\n.h4,\n.h5,\n.h6 {\n  font-family: inherit;\n  font-weight: 500;\n  line-height: 1.1;\n  color: inherit;\n}\nh1 small,\nh2 small,\nh3 small,\nh4 small,\nh5 small,\nh6 small,\n.h1 small,\n.h2 small,\n.h3 small,\n.h4 small,\n.h5 small,\n.h6 small,\nh1 .small,\nh2 .small,\nh3 .small,\nh4 .small,\nh5 .small,\nh6 .small,\n.h1 .small,\n.h2 .small,\n.h3 .small,\n.h4 .small,\n.h5 .small,\n.h6 .small {\n  font-weight: normal;\n  line-height: 1;\n  color: #777777;\n}\nh1,\n.h1,\nh2,\n.h2,\nh3,\n.h3 {\n  margin-top: 20px;\n  margin-bottom: 10px;\n}\nh1 small,\n.h1 small,\nh2 small,\n.h2 small,\nh3 small,\n.h3 small,\nh1 .small,\n.h1 .small,\nh2 .small,\n.h2 .small,\nh3 .small,\n.h3 .small {\n  font-size: 65%;\n}\nh4,\n.h4,\nh5,\n.h5,\nh6,\n.h6 {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\nh4 small,\n.h4 small,\nh5 small,\n.h5 small,\nh6 small,\n.h6 small,\nh4 .small,\n.h4 .small,\nh5 .small,\n.h5 .small,\nh6 .small,\n.h6 .small {\n  font-size: 75%;\n}\nh1,\n.h1 {\n  font-size: 36px;\n}\nh2,\n.h2 {\n  font-size: 30px;\n}\nh3,\n.h3 {\n  font-size: 24px;\n}\nh4,\n.h4 {\n  font-size: 18px;\n}\nh5,\n.h5 {\n  font-size: 14px;\n}\nh6,\n.h6 {\n  font-size: 12px;\n}\np {\n  margin: 0 0 10px;\n}\n.lead {\n  margin-bottom: 20px;\n  font-size: 16px;\n  font-weight: 300;\n  line-height: 1.4;\n}\n@media (min-width: 768px) {\n  .lead {\n    font-size: 21px;\n  }\n}\nsmall,\n.small {\n  font-size: 85%;\n}\nmark,\n.mark {\n  background-color: #fcf8e3;\n  padding: .2em;\n}\n.text-left {\n  text-align: left;\n}\n.text-right {\n  text-align: right;\n}\n.text-center {\n  text-align: center;\n}\n.text-justify {\n  text-align: justify;\n}\n.text-nowrap {\n  white-space: nowrap;\n}\n.text-lowercase {\n  text-transform: lowercase;\n}\n.text-uppercase {\n  text-transform: uppercase;\n}\n.text-capitalize {\n  text-transform: capitalize;\n}\n.text-muted {\n  color: #777777;\n}\n.text-primary {\n  color: #337ab7;\n}\na.text-primary:hover,\na.text-primary:focus {\n  color: #286090;\n}\n.text-success {\n  color: #3c763d;\n}\na.text-success:hover,\na.text-success:focus {\n  color: #2b542c;\n}\n.text-info {\n  color: #31708f;\n}\na.text-info:hover,\na.text-info:focus {\n  color: #245269;\n}\n.text-warning {\n  color: #8a6d3b;\n}\na.text-warning:hover,\na.text-warning:focus {\n  color: #66512c;\n}\n.text-danger {\n  color: #a94442;\n}\na.text-danger:hover,\na.text-danger:focus {\n  color: #843534;\n}\n.bg-primary {\n  color: #fff;\n  background-color: #337ab7;\n}\na.bg-primary:hover,\na.bg-primary:focus {\n  background-color: #286090;\n}\n.bg-success {\n  background-color: #dff0d8;\n}\na.bg-success:hover,\na.bg-success:focus {\n  background-color: #c1e2b3;\n}\n.bg-info {\n  background-color: #d9edf7;\n}\na.bg-info:hover,\na.bg-info:focus {\n  background-color: #afd9ee;\n}\n.bg-warning {\n  background-color: #fcf8e3;\n}\na.bg-warning:hover,\na.bg-warning:focus {\n  background-color: #f7ecb5;\n}\n.bg-danger {\n  background-color: #f2dede;\n}\na.bg-danger:hover,\na.bg-danger:focus {\n  background-color: #e4b9b9;\n}\n.page-header {\n  padding-bottom: 9px;\n  margin: 40px 0 20px;\n  border-bottom: 1px solid #eeeeee;\n}\nul,\nol {\n  margin-top: 0;\n  margin-bottom: 10px;\n}\nul ul,\nol ul,\nul ol,\nol ol {\n  margin-bottom: 0;\n}\n.list-unstyled {\n  padding-left: 0;\n  list-style: none;\n}\n.list-inline {\n  padding-left: 0;\n  list-style: none;\n  margin-left: -5px;\n}\n.list-inline > li {\n  display: inline-block;\n  padding-left: 5px;\n  padding-right: 5px;\n}\ndl {\n  margin-top: 0;\n  margin-bottom: 20px;\n}\ndt,\ndd {\n  line-height: 1.42857143;\n}\ndt {\n  font-weight: bold;\n}\ndd {\n  margin-left: 0;\n}\n@media (min-width: 768px) {\n  .dl-horizontal dt {\n    float: left;\n    width: 160px;\n    clear: left;\n    text-align: right;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n  }\n  .dl-horizontal dd {\n    margin-left: 180px;\n  }\n}\nabbr[title],\nabbr[data-original-title] {\n  cursor: help;\n  border-bottom: 1px dotted #777777;\n}\n.initialism {\n  font-size: 90%;\n  text-transform: uppercase;\n}\nblockquote {\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 17.5px;\n  border-left: 5px solid #eeeeee;\n}\nblockquote p:last-child,\nblockquote ul:last-child,\nblockquote ol:last-child {\n  margin-bottom: 0;\n}\nblockquote footer,\nblockquote small,\nblockquote .small {\n  display: block;\n  font-size: 80%;\n  line-height: 1.42857143;\n  color: #777777;\n}\nblockquote footer:before,\nblockquote small:before,\nblockquote .small:before {\n  content: '\\2014   \\A0';\n}\n.blockquote-reverse,\nblockquote.pull-right {\n  padding-right: 15px;\n  padding-left: 0;\n  border-right: 5px solid #eeeeee;\n  border-left: 0;\n  text-align: right;\n}\n.blockquote-reverse footer:before,\nblockquote.pull-right footer:before,\n.blockquote-reverse small:before,\nblockquote.pull-right small:before,\n.blockquote-reverse .small:before,\nblockquote.pull-right .small:before {\n  content: '';\n}\n.blockquote-reverse footer:after,\nblockquote.pull-right footer:after,\n.blockquote-reverse small:after,\nblockquote.pull-right small:after,\n.blockquote-reverse .small:after,\nblockquote.pull-right .small:after {\n  content: '\\A0   \\2014';\n}\naddress {\n  margin-bottom: 20px;\n  font-style: normal;\n  line-height: 1.42857143;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\ncode {\n  padding: 2px 4px;\n  font-size: 90%;\n  color: #c7254e;\n  background-color: #f9f2f4;\n  border-radius: 4px;\n}\nkbd {\n  padding: 2px 4px;\n  font-size: 90%;\n  color: #fff;\n  background-color: #333;\n  border-radius: 3px;\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);\n}\nkbd kbd {\n  padding: 0;\n  font-size: 100%;\n  font-weight: bold;\n  box-shadow: none;\n}\npre {\n  display: block;\n  padding: 9.5px;\n  margin: 0 0 10px;\n  font-size: 13px;\n  line-height: 1.42857143;\n  word-break: break-all;\n  word-wrap: break-word;\n  color: #333333;\n  background-color: #f5f5f5;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\npre code {\n  padding: 0;\n  font-size: inherit;\n  color: inherit;\n  white-space: pre-wrap;\n  background-color: transparent;\n  border-radius: 0;\n}\n.pre-scrollable {\n  max-height: 340px;\n  overflow-y: scroll;\n}\n.container {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n@media (min-width: 768px) {\n  .container {\n    width: 750px;\n  }\n}\n@media (min-width: 992px) {\n  .container {\n    width: 970px;\n  }\n}\n@media (min-width: 1200px) {\n  .container {\n    width: 1170px;\n  }\n}\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\n  position: relative;\n  min-height: 1px;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {\n  float: left;\n}\n.col-xs-12 {\n  width: 100%;\n}\n.col-xs-11 {\n  width: 91.66666667%;\n}\n.col-xs-10 {\n  width: 83.33333333%;\n}\n.col-xs-9 {\n  width: 75%;\n}\n.col-xs-8 {\n  width: 66.66666667%;\n}\n.col-xs-7 {\n  width: 58.33333333%;\n}\n.col-xs-6 {\n  width: 50%;\n}\n.col-xs-5 {\n  width: 41.66666667%;\n}\n.col-xs-4 {\n  width: 33.33333333%;\n}\n.col-xs-3 {\n  width: 25%;\n}\n.col-xs-2 {\n  width: 16.66666667%;\n}\n.col-xs-1 {\n  width: 8.33333333%;\n}\n.col-xs-pull-12 {\n  right: 100%;\n}\n.col-xs-pull-11 {\n  right: 91.66666667%;\n}\n.col-xs-pull-10 {\n  right: 83.33333333%;\n}\n.col-xs-pull-9 {\n  right: 75%;\n}\n.col-xs-pull-8 {\n  right: 66.66666667%;\n}\n.col-xs-pull-7 {\n  right: 58.33333333%;\n}\n.col-xs-pull-6 {\n  right: 50%;\n}\n.col-xs-pull-5 {\n  right: 41.66666667%;\n}\n.col-xs-pull-4 {\n  right: 33.33333333%;\n}\n.col-xs-pull-3 {\n  right: 25%;\n}\n.col-xs-pull-2 {\n  right: 16.66666667%;\n}\n.col-xs-pull-1 {\n  right: 8.33333333%;\n}\n.col-xs-pull-0 {\n  right: auto;\n}\n.col-xs-push-12 {\n  left: 100%;\n}\n.col-xs-push-11 {\n  left: 91.66666667%;\n}\n.col-xs-push-10 {\n  left: 83.33333333%;\n}\n.col-xs-push-9 {\n  left: 75%;\n}\n.col-xs-push-8 {\n  left: 66.66666667%;\n}\n.col-xs-push-7 {\n  left: 58.33333333%;\n}\n.col-xs-push-6 {\n  left: 50%;\n}\n.col-xs-push-5 {\n  left: 41.66666667%;\n}\n.col-xs-push-4 {\n  left: 33.33333333%;\n}\n.col-xs-push-3 {\n  left: 25%;\n}\n.col-xs-push-2 {\n  left: 16.66666667%;\n}\n.col-xs-push-1 {\n  left: 8.33333333%;\n}\n.col-xs-push-0 {\n  left: auto;\n}\n.col-xs-offset-12 {\n  margin-left: 100%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.66666667%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.33333333%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.66666667%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.33333333%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.66666667%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.33333333%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.66666667%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.33333333%;\n}\n.col-xs-offset-0 {\n  margin-left: 0%;\n}\n@media (min-width: 768px) {\n  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {\n    float: left;\n  }\n  .col-sm-12 {\n    width: 100%;\n  }\n  .col-sm-11 {\n    width: 91.66666667%;\n  }\n  .col-sm-10 {\n    width: 83.33333333%;\n  }\n  .col-sm-9 {\n    width: 75%;\n  }\n  .col-sm-8 {\n    width: 66.66666667%;\n  }\n  .col-sm-7 {\n    width: 58.33333333%;\n  }\n  .col-sm-6 {\n    width: 50%;\n  }\n  .col-sm-5 {\n    width: 41.66666667%;\n  }\n  .col-sm-4 {\n    width: 33.33333333%;\n  }\n  .col-sm-3 {\n    width: 25%;\n  }\n  .col-sm-2 {\n    width: 16.66666667%;\n  }\n  .col-sm-1 {\n    width: 8.33333333%;\n  }\n  .col-sm-pull-12 {\n    right: 100%;\n  }\n  .col-sm-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-sm-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-sm-pull-9 {\n    right: 75%;\n  }\n  .col-sm-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-sm-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-sm-pull-6 {\n    right: 50%;\n  }\n  .col-sm-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-sm-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-sm-pull-3 {\n    right: 25%;\n  }\n  .col-sm-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-sm-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-sm-pull-0 {\n    right: auto;\n  }\n  .col-sm-push-12 {\n    left: 100%;\n  }\n  .col-sm-push-11 {\n    left: 91.66666667%;\n  }\n  .col-sm-push-10 {\n    left: 83.33333333%;\n  }\n  .col-sm-push-9 {\n    left: 75%;\n  }\n  .col-sm-push-8 {\n    left: 66.66666667%;\n  }\n  .col-sm-push-7 {\n    left: 58.33333333%;\n  }\n  .col-sm-push-6 {\n    left: 50%;\n  }\n  .col-sm-push-5 {\n    left: 41.66666667%;\n  }\n  .col-sm-push-4 {\n    left: 33.33333333%;\n  }\n  .col-sm-push-3 {\n    left: 25%;\n  }\n  .col-sm-push-2 {\n    left: 16.66666667%;\n  }\n  .col-sm-push-1 {\n    left: 8.33333333%;\n  }\n  .col-sm-push-0 {\n    left: auto;\n  }\n  .col-sm-offset-12 {\n    margin-left: 100%;\n  }\n  .col-sm-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-sm-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n  .col-sm-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-sm-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n  .col-sm-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-sm-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n  .col-sm-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-sm-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-sm-offset-0 {\n    margin-left: 0%;\n  }\n}\n@media (min-width: 992px) {\n  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {\n    float: left;\n  }\n  .col-md-12 {\n    width: 100%;\n  }\n  .col-md-11 {\n    width: 91.66666667%;\n  }\n  .col-md-10 {\n    width: 83.33333333%;\n  }\n  .col-md-9 {\n    width: 75%;\n  }\n  .col-md-8 {\n    width: 66.66666667%;\n  }\n  .col-md-7 {\n    width: 58.33333333%;\n  }\n  .col-md-6 {\n    width: 50%;\n  }\n  .col-md-5 {\n    width: 41.66666667%;\n  }\n  .col-md-4 {\n    width: 33.33333333%;\n  }\n  .col-md-3 {\n    width: 25%;\n  }\n  .col-md-2 {\n    width: 16.66666667%;\n  }\n  .col-md-1 {\n    width: 8.33333333%;\n  }\n  .col-md-pull-12 {\n    right: 100%;\n  }\n  .col-md-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-md-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-md-pull-9 {\n    right: 75%;\n  }\n  .col-md-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-md-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-md-pull-6 {\n    right: 50%;\n  }\n  .col-md-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-md-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-md-pull-3 {\n    right: 25%;\n  }\n  .col-md-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-md-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-md-pull-0 {\n    right: auto;\n  }\n  .col-md-push-12 {\n    left: 100%;\n  }\n  .col-md-push-11 {\n    left: 91.66666667%;\n  }\n  .col-md-push-10 {\n    left: 83.33333333%;\n  }\n  .col-md-push-9 {\n    left: 75%;\n  }\n  .col-md-push-8 {\n    left: 66.66666667%;\n  }\n  .col-md-push-7 {\n    left: 58.33333333%;\n  }\n  .col-md-push-6 {\n    left: 50%;\n  }\n  .col-md-push-5 {\n    left: 41.66666667%;\n  }\n  .col-md-push-4 {\n    left: 33.33333333%;\n  }\n  .col-md-push-3 {\n    left: 25%;\n  }\n  .col-md-push-2 {\n    left: 16.66666667%;\n  }\n  .col-md-push-1 {\n    left: 8.33333333%;\n  }\n  .col-md-push-0 {\n    left: auto;\n  }\n  .col-md-offset-12 {\n    margin-left: 100%;\n  }\n  .col-md-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-md-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n  .col-md-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-md-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n  .col-md-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-md-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n  .col-md-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-md-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-md-offset-0 {\n    margin-left: 0%;\n  }\n}\n@media (min-width: 1200px) {\n  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {\n    float: left;\n  }\n  .col-lg-12 {\n    width: 100%;\n  }\n  .col-lg-11 {\n    width: 91.66666667%;\n  }\n  .col-lg-10 {\n    width: 83.33333333%;\n  }\n  .col-lg-9 {\n    width: 75%;\n  }\n  .col-lg-8 {\n    width: 66.66666667%;\n  }\n  .col-lg-7 {\n    width: 58.33333333%;\n  }\n  .col-lg-6 {\n    width: 50%;\n  }\n  .col-lg-5 {\n    width: 41.66666667%;\n  }\n  .col-lg-4 {\n    width: 33.33333333%;\n  }\n  .col-lg-3 {\n    width: 25%;\n  }\n  .col-lg-2 {\n    width: 16.66666667%;\n  }\n  .col-lg-1 {\n    width: 8.33333333%;\n  }\n  .col-lg-pull-12 {\n    right: 100%;\n  }\n  .col-lg-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-lg-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-lg-pull-9 {\n    right: 75%;\n  }\n  .col-lg-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-lg-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-lg-pull-6 {\n    right: 50%;\n  }\n  .col-lg-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-lg-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-lg-pull-3 {\n    right: 25%;\n  }\n  .col-lg-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-lg-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-lg-pull-0 {\n    right: auto;\n  }\n  .col-lg-push-12 {\n    left: 100%;\n  }\n  .col-lg-push-11 {\n    left: 91.66666667%;\n  }\n  .col-lg-push-10 {\n    left: 83.33333333%;\n  }\n  .col-lg-push-9 {\n    left: 75%;\n  }\n  .col-lg-push-8 {\n    left: 66.66666667%;\n  }\n  .col-lg-push-7 {\n    left: 58.33333333%;\n  }\n  .col-lg-push-6 {\n    left: 50%;\n  }\n  .col-lg-push-5 {\n    left: 41.66666667%;\n  }\n  .col-lg-push-4 {\n    left: 33.33333333%;\n  }\n  .col-lg-push-3 {\n    left: 25%;\n  }\n  .col-lg-push-2 {\n    left: 16.66666667%;\n  }\n  .col-lg-push-1 {\n    left: 8.33333333%;\n  }\n  .col-lg-push-0 {\n    left: auto;\n  }\n  .col-lg-offset-12 {\n    margin-left: 100%;\n  }\n  .col-lg-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-lg-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n  .col-lg-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-lg-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n  .col-lg-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-lg-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n  .col-lg-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-lg-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-lg-offset-0 {\n    margin-left: 0%;\n  }\n}\ntable {\n  background-color: transparent;\n}\ncaption {\n  padding-top: 8px;\n  padding-bottom: 8px;\n  color: #777777;\n  text-align: left;\n}\nth {\n  text-align: left;\n}\n.table {\n  width: 100%;\n  max-width: 100%;\n  margin-bottom: 20px;\n}\n.table > thead > tr > th,\n.table > tbody > tr > th,\n.table > tfoot > tr > th,\n.table > thead > tr > td,\n.table > tbody > tr > td,\n.table > tfoot > tr > td {\n  padding: 8px;\n  line-height: 1.42857143;\n  vertical-align: top;\n  border-top: 1px solid #ddd;\n}\n.table > thead > tr > th {\n  vertical-align: bottom;\n  border-bottom: 2px solid #ddd;\n}\n.table > caption + thead > tr:first-child > th,\n.table > colgroup + thead > tr:first-child > th,\n.table > thead:first-child > tr:first-child > th,\n.table > caption + thead > tr:first-child > td,\n.table > colgroup + thead > tr:first-child > td,\n.table > thead:first-child > tr:first-child > td {\n  border-top: 0;\n}\n.table > tbody + tbody {\n  border-top: 2px solid #ddd;\n}\n.table .table {\n  background-color: #fff;\n}\n.table-condensed > thead > tr > th,\n.table-condensed > tbody > tr > th,\n.table-condensed > tfoot > tr > th,\n.table-condensed > thead > tr > td,\n.table-condensed > tbody > tr > td,\n.table-condensed > tfoot > tr > td {\n  padding: 5px;\n}\n.table-bordered {\n  border: 1px solid #ddd;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > tbody > tr > th,\n.table-bordered > tfoot > tr > th,\n.table-bordered > thead > tr > td,\n.table-bordered > tbody > tr > td,\n.table-bordered > tfoot > tr > td {\n  border: 1px solid #ddd;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > thead > tr > td {\n  border-bottom-width: 2px;\n}\n.table-striped > tbody > tr:nth-of-type(odd) {\n  background-color: #f9f9f9;\n}\n.table-hover > tbody > tr:hover {\n  background-color: #f5f5f5;\n}\ntable col[class*=\"col-\"] {\n  position: static;\n  float: none;\n  display: table-column;\n}\ntable td[class*=\"col-\"],\ntable th[class*=\"col-\"] {\n  position: static;\n  float: none;\n  display: table-cell;\n}\n.table > thead > tr > td.active,\n.table > tbody > tr > td.active,\n.table > tfoot > tr > td.active,\n.table > thead > tr > th.active,\n.table > tbody > tr > th.active,\n.table > tfoot > tr > th.active,\n.table > thead > tr.active > td,\n.table > tbody > tr.active > td,\n.table > tfoot > tr.active > td,\n.table > thead > tr.active > th,\n.table > tbody > tr.active > th,\n.table > tfoot > tr.active > th {\n  background-color: #f5f5f5;\n}\n.table-hover > tbody > tr > td.active:hover,\n.table-hover > tbody > tr > th.active:hover,\n.table-hover > tbody > tr.active:hover > td,\n.table-hover > tbody > tr:hover > .active,\n.table-hover > tbody > tr.active:hover > th {\n  background-color: #e8e8e8;\n}\n.table > thead > tr > td.success,\n.table > tbody > tr > td.success,\n.table > tfoot > tr > td.success,\n.table > thead > tr > th.success,\n.table > tbody > tr > th.success,\n.table > tfoot > tr > th.success,\n.table > thead > tr.success > td,\n.table > tbody > tr.success > td,\n.table > tfoot > tr.success > td,\n.table > thead > tr.success > th,\n.table > tbody > tr.success > th,\n.table > tfoot > tr.success > th {\n  background-color: #dff0d8;\n}\n.table-hover > tbody > tr > td.success:hover,\n.table-hover > tbody > tr > th.success:hover,\n.table-hover > tbody > tr.success:hover > td,\n.table-hover > tbody > tr:hover > .success,\n.table-hover > tbody > tr.success:hover > th {\n  background-color: #d0e9c6;\n}\n.table > thead > tr > td.info,\n.table > tbody > tr > td.info,\n.table > tfoot > tr > td.info,\n.table > thead > tr > th.info,\n.table > tbody > tr > th.info,\n.table > tfoot > tr > th.info,\n.table > thead > tr.info > td,\n.table > tbody > tr.info > td,\n.table > tfoot > tr.info > td,\n.table > thead > tr.info > th,\n.table > tbody > tr.info > th,\n.table > tfoot > tr.info > th {\n  background-color: #d9edf7;\n}\n.table-hover > tbody > tr > td.info:hover,\n.table-hover > tbody > tr > th.info:hover,\n.table-hover > tbody > tr.info:hover > td,\n.table-hover > tbody > tr:hover > .info,\n.table-hover > tbody > tr.info:hover > th {\n  background-color: #c4e3f3;\n}\n.table > thead > tr > td.warning,\n.table > tbody > tr > td.warning,\n.table > tfoot > tr > td.warning,\n.table > thead > tr > th.warning,\n.table > tbody > tr > th.warning,\n.table > tfoot > tr > th.warning,\n.table > thead > tr.warning > td,\n.table > tbody > tr.warning > td,\n.table > tfoot > tr.warning > td,\n.table > thead > tr.warning > th,\n.table > tbody > tr.warning > th,\n.table > tfoot > tr.warning > th {\n  background-color: #fcf8e3;\n}\n.table-hover > tbody > tr > td.warning:hover,\n.table-hover > tbody > tr > th.warning:hover,\n.table-hover > tbody > tr.warning:hover > td,\n.table-hover > tbody > tr:hover > .warning,\n.table-hover > tbody > tr.warning:hover > th {\n  background-color: #faf2cc;\n}\n.table > thead > tr > td.danger,\n.table > tbody > tr > td.danger,\n.table > tfoot > tr > td.danger,\n.table > thead > tr > th.danger,\n.table > tbody > tr > th.danger,\n.table > tfoot > tr > th.danger,\n.table > thead > tr.danger > td,\n.table > tbody > tr.danger > td,\n.table > tfoot > tr.danger > td,\n.table > thead > tr.danger > th,\n.table > tbody > tr.danger > th,\n.table > tfoot > tr.danger > th {\n  background-color: #f2dede;\n}\n.table-hover > tbody > tr > td.danger:hover,\n.table-hover > tbody > tr > th.danger:hover,\n.table-hover > tbody > tr.danger:hover > td,\n.table-hover > tbody > tr:hover > .danger,\n.table-hover > tbody > tr.danger:hover > th {\n  background-color: #ebcccc;\n}\n.table-responsive {\n  overflow-x: auto;\n  min-height: 0.01%;\n}\n@media screen and (max-width: 767px) {\n  .table-responsive {\n    width: 100%;\n    margin-bottom: 15px;\n    overflow-y: hidden;\n    -ms-overflow-style: -ms-autohiding-scrollbar;\n    border: 1px solid #ddd;\n  }\n  .table-responsive > .table {\n    margin-bottom: 0;\n  }\n  .table-responsive > .table > thead > tr > th,\n  .table-responsive > .table > tbody > tr > th,\n  .table-responsive > .table > tfoot > tr > th,\n  .table-responsive > .table > thead > tr > td,\n  .table-responsive > .table > tbody > tr > td,\n  .table-responsive > .table > tfoot > tr > td {\n    white-space: nowrap;\n  }\n  .table-responsive > .table-bordered {\n    border: 0;\n  }\n  .table-responsive > .table-bordered > thead > tr > th:first-child,\n  .table-responsive > .table-bordered > tbody > tr > th:first-child,\n  .table-responsive > .table-bordered > tfoot > tr > th:first-child,\n  .table-responsive > .table-bordered > thead > tr > td:first-child,\n  .table-responsive > .table-bordered > tbody > tr > td:first-child,\n  .table-responsive > .table-bordered > tfoot > tr > td:first-child {\n    border-left: 0;\n  }\n  .table-responsive > .table-bordered > thead > tr > th:last-child,\n  .table-responsive > .table-bordered > tbody > tr > th:last-child,\n  .table-responsive > .table-bordered > tfoot > tr > th:last-child,\n  .table-responsive > .table-bordered > thead > tr > td:last-child,\n  .table-responsive > .table-bordered > tbody > tr > td:last-child,\n  .table-responsive > .table-bordered > tfoot > tr > td:last-child {\n    border-right: 0;\n  }\n  .table-responsive > .table-bordered > tbody > tr:last-child > th,\n  .table-responsive > .table-bordered > tfoot > tr:last-child > th,\n  .table-responsive > .table-bordered > tbody > tr:last-child > td,\n  .table-responsive > .table-bordered > tfoot > tr:last-child > td {\n    border-bottom: 0;\n  }\n}\nfieldset {\n  padding: 0;\n  margin: 0;\n  border: 0;\n  min-width: 0;\n}\nlegend {\n  display: block;\n  width: 100%;\n  padding: 0;\n  margin-bottom: 20px;\n  font-size: 21px;\n  line-height: inherit;\n  color: #333333;\n  border: 0;\n  border-bottom: 1px solid #e5e5e5;\n}\nlabel {\n  display: inline-block;\n  max-width: 100%;\n  margin-bottom: 5px;\n  font-weight: bold;\n}\ninput[type=\"search\"] {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\ninput[type=\"radio\"],\ninput[type=\"checkbox\"] {\n  margin: 4px 0 0;\n  margin-top: 1px \\9;\n  line-height: normal;\n}\ninput[type=\"file\"] {\n  display: block;\n}\ninput[type=\"range\"] {\n  display: block;\n  width: 100%;\n}\nselect[multiple],\nselect[size] {\n  height: auto;\n}\ninput[type=\"file\"]:focus,\ninput[type=\"radio\"]:focus,\ninput[type=\"checkbox\"]:focus {\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\noutput {\n  display: block;\n  padding-top: 7px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #555555;\n}\n.form-control {\n  display: block;\n  width: 100%;\n  height: 34px;\n  padding: 6px 12px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #555555;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n}\n.form-control:focus {\n  border-color: #66afe9;\n  outline: 0;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n}\n.form-control::-moz-placeholder {\n  color: #999;\n  opacity: 1;\n}\n.form-control:-ms-input-placeholder {\n  color: #999;\n}\n.form-control::-webkit-input-placeholder {\n  color: #999;\n}\n.form-control::-ms-expand {\n  border: 0;\n  background-color: transparent;\n}\n.form-control[disabled],\n.form-control[readonly],\nfieldset[disabled] .form-control {\n  background-color: #eeeeee;\n  opacity: 1;\n}\n.form-control[disabled],\nfieldset[disabled] .form-control {\n  cursor: not-allowed;\n}\ntextarea.form-control {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: none;\n}\n@media screen and (-webkit-min-device-pixel-ratio: 0) {\n  input[type=\"date\"].form-control,\n  input[type=\"time\"].form-control,\n  input[type=\"datetime-local\"].form-control,\n  input[type=\"month\"].form-control {\n    line-height: 34px;\n  }\n  input[type=\"date\"].input-sm,\n  input[type=\"time\"].input-sm,\n  input[type=\"datetime-local\"].input-sm,\n  input[type=\"month\"].input-sm,\n  .input-group-sm input[type=\"date\"],\n  .input-group-sm input[type=\"time\"],\n  .input-group-sm input[type=\"datetime-local\"],\n  .input-group-sm input[type=\"month\"] {\n    line-height: 30px;\n  }\n  input[type=\"date\"].input-lg,\n  input[type=\"time\"].input-lg,\n  input[type=\"datetime-local\"].input-lg,\n  input[type=\"month\"].input-lg,\n  .input-group-lg input[type=\"date\"],\n  .input-group-lg input[type=\"time\"],\n  .input-group-lg input[type=\"datetime-local\"],\n  .input-group-lg input[type=\"month\"] {\n    line-height: 46px;\n  }\n}\n.form-group {\n  margin-bottom: 15px;\n}\n.radio,\n.checkbox {\n  position: relative;\n  display: block;\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.radio label,\n.checkbox label {\n  min-height: 20px;\n  padding-left: 20px;\n  margin-bottom: 0;\n  font-weight: normal;\n  cursor: pointer;\n}\n.radio input[type=\"radio\"],\n.radio-inline input[type=\"radio\"],\n.checkbox input[type=\"checkbox\"],\n.checkbox-inline input[type=\"checkbox\"] {\n  position: absolute;\n  margin-left: -20px;\n  margin-top: 4px \\9;\n}\n.radio + .radio,\n.checkbox + .checkbox {\n  margin-top: -5px;\n}\n.radio-inline,\n.checkbox-inline {\n  position: relative;\n  display: inline-block;\n  padding-left: 20px;\n  margin-bottom: 0;\n  vertical-align: middle;\n  font-weight: normal;\n  cursor: pointer;\n}\n.radio-inline + .radio-inline,\n.checkbox-inline + .checkbox-inline {\n  margin-top: 0;\n  margin-left: 10px;\n}\ninput[type=\"radio\"][disabled],\ninput[type=\"checkbox\"][disabled],\ninput[type=\"radio\"].disabled,\ninput[type=\"checkbox\"].disabled,\nfieldset[disabled] input[type=\"radio\"],\nfieldset[disabled] input[type=\"checkbox\"] {\n  cursor: not-allowed;\n}\n.radio-inline.disabled,\n.checkbox-inline.disabled,\nfieldset[disabled] .radio-inline,\nfieldset[disabled] .checkbox-inline {\n  cursor: not-allowed;\n}\n.radio.disabled label,\n.checkbox.disabled label,\nfieldset[disabled] .radio label,\nfieldset[disabled] .checkbox label {\n  cursor: not-allowed;\n}\n.form-control-static {\n  padding-top: 7px;\n  padding-bottom: 7px;\n  margin-bottom: 0;\n  min-height: 34px;\n}\n.form-control-static.input-lg,\n.form-control-static.input-sm {\n  padding-left: 0;\n  padding-right: 0;\n}\n.input-sm {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\nselect.input-sm {\n  height: 30px;\n  line-height: 30px;\n}\ntextarea.input-sm,\nselect[multiple].input-sm {\n  height: auto;\n}\n.form-group-sm .form-control {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.form-group-sm select.form-control {\n  height: 30px;\n  line-height: 30px;\n}\n.form-group-sm textarea.form-control,\n.form-group-sm select[multiple].form-control {\n  height: auto;\n}\n.form-group-sm .form-control-static {\n  height: 30px;\n  min-height: 32px;\n  padding: 6px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n}\n.input-lg {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n  border-radius: 6px;\n}\nselect.input-lg {\n  height: 46px;\n  line-height: 46px;\n}\ntextarea.input-lg,\nselect[multiple].input-lg {\n  height: auto;\n}\n.form-group-lg .form-control {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n  border-radius: 6px;\n}\n.form-group-lg select.form-control {\n  height: 46px;\n  line-height: 46px;\n}\n.form-group-lg textarea.form-control,\n.form-group-lg select[multiple].form-control {\n  height: auto;\n}\n.form-group-lg .form-control-static {\n  height: 46px;\n  min-height: 38px;\n  padding: 11px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n}\n.has-feedback {\n  position: relative;\n}\n.has-feedback .form-control {\n  padding-right: 42.5px;\n}\n.form-control-feedback {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 2;\n  display: block;\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n  text-align: center;\n  pointer-events: none;\n}\n.input-lg + .form-control-feedback,\n.input-group-lg + .form-control-feedback,\n.form-group-lg .form-control + .form-control-feedback {\n  width: 46px;\n  height: 46px;\n  line-height: 46px;\n}\n.input-sm + .form-control-feedback,\n.input-group-sm + .form-control-feedback,\n.form-group-sm .form-control + .form-control-feedback {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n}\n.has-success .help-block,\n.has-success .control-label,\n.has-success .radio,\n.has-success .checkbox,\n.has-success .radio-inline,\n.has-success .checkbox-inline,\n.has-success.radio label,\n.has-success.checkbox label,\n.has-success.radio-inline label,\n.has-success.checkbox-inline label {\n  color: #3c763d;\n}\n.has-success .form-control {\n  border-color: #3c763d;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-success .form-control:focus {\n  border-color: #2b542c;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;\n}\n.has-success .input-group-addon {\n  color: #3c763d;\n  border-color: #3c763d;\n  background-color: #dff0d8;\n}\n.has-success .form-control-feedback {\n  color: #3c763d;\n}\n.has-warning .help-block,\n.has-warning .control-label,\n.has-warning .radio,\n.has-warning .checkbox,\n.has-warning .radio-inline,\n.has-warning .checkbox-inline,\n.has-warning.radio label,\n.has-warning.checkbox label,\n.has-warning.radio-inline label,\n.has-warning.checkbox-inline label {\n  color: #8a6d3b;\n}\n.has-warning .form-control {\n  border-color: #8a6d3b;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-warning .form-control:focus {\n  border-color: #66512c;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;\n}\n.has-warning .input-group-addon {\n  color: #8a6d3b;\n  border-color: #8a6d3b;\n  background-color: #fcf8e3;\n}\n.has-warning .form-control-feedback {\n  color: #8a6d3b;\n}\n.has-error .help-block,\n.has-error .control-label,\n.has-error .radio,\n.has-error .checkbox,\n.has-error .radio-inline,\n.has-error .checkbox-inline,\n.has-error.radio label,\n.has-error.checkbox label,\n.has-error.radio-inline label,\n.has-error.checkbox-inline label {\n  color: #a94442;\n}\n.has-error .form-control {\n  border-color: #a94442;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-error .form-control:focus {\n  border-color: #843534;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;\n}\n.has-error .input-group-addon {\n  color: #a94442;\n  border-color: #a94442;\n  background-color: #f2dede;\n}\n.has-error .form-control-feedback {\n  color: #a94442;\n}\n.has-feedback label ~ .form-control-feedback {\n  top: 25px;\n}\n.has-feedback label.sr-only ~ .form-control-feedback {\n  top: 0;\n}\n.help-block {\n  display: block;\n  margin-top: 5px;\n  margin-bottom: 10px;\n  color: #737373;\n}\n@media (min-width: 768px) {\n  .form-inline .form-group {\n    display: inline-block;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .form-inline .form-control-static {\n    display: inline-block;\n  }\n  .form-inline .input-group {\n    display: inline-table;\n    vertical-align: middle;\n  }\n  .form-inline .input-group .input-group-addon,\n  .form-inline .input-group .input-group-btn,\n  .form-inline .input-group .form-control {\n    width: auto;\n  }\n  .form-inline .input-group > .form-control {\n    width: 100%;\n  }\n  .form-inline .control-label {\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .radio,\n  .form-inline .checkbox {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .radio label,\n  .form-inline .checkbox label {\n    padding-left: 0;\n  }\n  .form-inline .radio input[type=\"radio\"],\n  .form-inline .checkbox input[type=\"checkbox\"] {\n    position: relative;\n    margin-left: 0;\n  }\n  .form-inline .has-feedback .form-control-feedback {\n    top: 0;\n  }\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox,\n.form-horizontal .radio-inline,\n.form-horizontal .checkbox-inline {\n  margin-top: 0;\n  margin-bottom: 0;\n  padding-top: 7px;\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox {\n  min-height: 27px;\n}\n.form-horizontal .form-group {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .control-label {\n    text-align: right;\n    margin-bottom: 0;\n    padding-top: 7px;\n  }\n}\n.form-horizontal .has-feedback .form-control-feedback {\n  right: 15px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-lg .control-label {\n    padding-top: 11px;\n    font-size: 18px;\n  }\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-sm .control-label {\n    padding-top: 6px;\n    font-size: 12px;\n  }\n}\n.btn {\n  display: inline-block;\n  margin-bottom: 0;\n  font-weight: normal;\n  text-align: center;\n  vertical-align: middle;\n  touch-action: manipulation;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  white-space: nowrap;\n  padding: 6px 12px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  border-radius: 4px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n.btn:focus,\n.btn:active:focus,\n.btn.active:focus,\n.btn.focus,\n.btn:active.focus,\n.btn.active.focus {\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\n.btn:hover,\n.btn:focus,\n.btn.focus {\n  color: #333;\n  text-decoration: none;\n}\n.btn:active,\n.btn.active {\n  outline: 0;\n  background-image: none;\n  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n}\n.btn.disabled,\n.btn[disabled],\nfieldset[disabled] .btn {\n  cursor: not-allowed;\n  opacity: 0.65;\n  filter: alpha(opacity=65);\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\na.btn.disabled,\nfieldset[disabled] a.btn {\n  pointer-events: none;\n}\n.btn-default {\n  color: #333;\n  background-color: #fff;\n  border-color: #ccc;\n}\n.btn-default:focus,\n.btn-default.focus {\n  color: #333;\n  background-color: #e6e6e6;\n  border-color: #8c8c8c;\n}\n.btn-default:hover {\n  color: #333;\n  background-color: #e6e6e6;\n  border-color: #adadad;\n}\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  color: #333;\n  background-color: #e6e6e6;\n  border-color: #adadad;\n}\n.btn-default:active:hover,\n.btn-default.active:hover,\n.open > .dropdown-toggle.btn-default:hover,\n.btn-default:active:focus,\n.btn-default.active:focus,\n.open > .dropdown-toggle.btn-default:focus,\n.btn-default:active.focus,\n.btn-default.active.focus,\n.open > .dropdown-toggle.btn-default.focus {\n  color: #333;\n  background-color: #d4d4d4;\n  border-color: #8c8c8c;\n}\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  background-image: none;\n}\n.btn-default.disabled:hover,\n.btn-default[disabled]:hover,\nfieldset[disabled] .btn-default:hover,\n.btn-default.disabled:focus,\n.btn-default[disabled]:focus,\nfieldset[disabled] .btn-default:focus,\n.btn-default.disabled.focus,\n.btn-default[disabled].focus,\nfieldset[disabled] .btn-default.focus {\n  background-color: #fff;\n  border-color: #ccc;\n}\n.btn-default .badge {\n  color: #fff;\n  background-color: #333;\n}\n.btn-primary {\n  color: #fff;\n  background-color: #337ab7;\n  border-color: #2e6da4;\n}\n.btn-primary:focus,\n.btn-primary.focus {\n  color: #fff;\n  background-color: #286090;\n  border-color: #122b40;\n}\n.btn-primary:hover {\n  color: #fff;\n  background-color: #286090;\n  border-color: #204d74;\n}\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  color: #fff;\n  background-color: #286090;\n  border-color: #204d74;\n}\n.btn-primary:active:hover,\n.btn-primary.active:hover,\n.open > .dropdown-toggle.btn-primary:hover,\n.btn-primary:active:focus,\n.btn-primary.active:focus,\n.open > .dropdown-toggle.btn-primary:focus,\n.btn-primary:active.focus,\n.btn-primary.active.focus,\n.open > .dropdown-toggle.btn-primary.focus {\n  color: #fff;\n  background-color: #204d74;\n  border-color: #122b40;\n}\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  background-image: none;\n}\n.btn-primary.disabled:hover,\n.btn-primary[disabled]:hover,\nfieldset[disabled] .btn-primary:hover,\n.btn-primary.disabled:focus,\n.btn-primary[disabled]:focus,\nfieldset[disabled] .btn-primary:focus,\n.btn-primary.disabled.focus,\n.btn-primary[disabled].focus,\nfieldset[disabled] .btn-primary.focus {\n  background-color: #337ab7;\n  border-color: #2e6da4;\n}\n.btn-primary .badge {\n  color: #337ab7;\n  background-color: #fff;\n}\n.btn-success {\n  color: #fff;\n  background-color: #5cb85c;\n  border-color: #4cae4c;\n}\n.btn-success:focus,\n.btn-success.focus {\n  color: #fff;\n  background-color: #449d44;\n  border-color: #255625;\n}\n.btn-success:hover {\n  color: #fff;\n  background-color: #449d44;\n  border-color: #398439;\n}\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  color: #fff;\n  background-color: #449d44;\n  border-color: #398439;\n}\n.btn-success:active:hover,\n.btn-success.active:hover,\n.open > .dropdown-toggle.btn-success:hover,\n.btn-success:active:focus,\n.btn-success.active:focus,\n.open > .dropdown-toggle.btn-success:focus,\n.btn-success:active.focus,\n.btn-success.active.focus,\n.open > .dropdown-toggle.btn-success.focus {\n  color: #fff;\n  background-color: #398439;\n  border-color: #255625;\n}\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  background-image: none;\n}\n.btn-success.disabled:hover,\n.btn-success[disabled]:hover,\nfieldset[disabled] .btn-success:hover,\n.btn-success.disabled:focus,\n.btn-success[disabled]:focus,\nfieldset[disabled] .btn-success:focus,\n.btn-success.disabled.focus,\n.btn-success[disabled].focus,\nfieldset[disabled] .btn-success.focus {\n  background-color: #5cb85c;\n  border-color: #4cae4c;\n}\n.btn-success .badge {\n  color: #5cb85c;\n  background-color: #fff;\n}\n.btn-info {\n  color: #fff;\n  background-color: #5bc0de;\n  border-color: #46b8da;\n}\n.btn-info:focus,\n.btn-info.focus {\n  color: #fff;\n  background-color: #31b0d5;\n  border-color: #1b6d85;\n}\n.btn-info:hover {\n  color: #fff;\n  background-color: #31b0d5;\n  border-color: #269abc;\n}\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  color: #fff;\n  background-color: #31b0d5;\n  border-color: #269abc;\n}\n.btn-info:active:hover,\n.btn-info.active:hover,\n.open > .dropdown-toggle.btn-info:hover,\n.btn-info:active:focus,\n.btn-info.active:focus,\n.open > .dropdown-toggle.btn-info:focus,\n.btn-info:active.focus,\n.btn-info.active.focus,\n.open > .dropdown-toggle.btn-info.focus {\n  color: #fff;\n  background-color: #269abc;\n  border-color: #1b6d85;\n}\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  background-image: none;\n}\n.btn-info.disabled:hover,\n.btn-info[disabled]:hover,\nfieldset[disabled] .btn-info:hover,\n.btn-info.disabled:focus,\n.btn-info[disabled]:focus,\nfieldset[disabled] .btn-info:focus,\n.btn-info.disabled.focus,\n.btn-info[disabled].focus,\nfieldset[disabled] .btn-info.focus {\n  background-color: #5bc0de;\n  border-color: #46b8da;\n}\n.btn-info .badge {\n  color: #5bc0de;\n  background-color: #fff;\n}\n.btn-warning {\n  color: #fff;\n  background-color: #f0ad4e;\n  border-color: #eea236;\n}\n.btn-warning:focus,\n.btn-warning.focus {\n  color: #fff;\n  background-color: #ec971f;\n  border-color: #985f0d;\n}\n.btn-warning:hover {\n  color: #fff;\n  background-color: #ec971f;\n  border-color: #d58512;\n}\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  color: #fff;\n  background-color: #ec971f;\n  border-color: #d58512;\n}\n.btn-warning:active:hover,\n.btn-warning.active:hover,\n.open > .dropdown-toggle.btn-warning:hover,\n.btn-warning:active:focus,\n.btn-warning.active:focus,\n.open > .dropdown-toggle.btn-warning:focus,\n.btn-warning:active.focus,\n.btn-warning.active.focus,\n.open > .dropdown-toggle.btn-warning.focus {\n  color: #fff;\n  background-color: #d58512;\n  border-color: #985f0d;\n}\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  background-image: none;\n}\n.btn-warning.disabled:hover,\n.btn-warning[disabled]:hover,\nfieldset[disabled] .btn-warning:hover,\n.btn-warning.disabled:focus,\n.btn-warning[disabled]:focus,\nfieldset[disabled] .btn-warning:focus,\n.btn-warning.disabled.focus,\n.btn-warning[disabled].focus,\nfieldset[disabled] .btn-warning.focus {\n  background-color: #f0ad4e;\n  border-color: #eea236;\n}\n.btn-warning .badge {\n  color: #f0ad4e;\n  background-color: #fff;\n}\n.btn-danger {\n  color: #fff;\n  background-color: #d9534f;\n  border-color: #d43f3a;\n}\n.btn-danger:focus,\n.btn-danger.focus {\n  color: #fff;\n  background-color: #c9302c;\n  border-color: #761c19;\n}\n.btn-danger:hover {\n  color: #fff;\n  background-color: #c9302c;\n  border-color: #ac2925;\n}\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  color: #fff;\n  background-color: #c9302c;\n  border-color: #ac2925;\n}\n.btn-danger:active:hover,\n.btn-danger.active:hover,\n.open > .dropdown-toggle.btn-danger:hover,\n.btn-danger:active:focus,\n.btn-danger.active:focus,\n.open > .dropdown-toggle.btn-danger:focus,\n.btn-danger:active.focus,\n.btn-danger.active.focus,\n.open > .dropdown-toggle.btn-danger.focus {\n  color: #fff;\n  background-color: #ac2925;\n  border-color: #761c19;\n}\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  background-image: none;\n}\n.btn-danger.disabled:hover,\n.btn-danger[disabled]:hover,\nfieldset[disabled] .btn-danger:hover,\n.btn-danger.disabled:focus,\n.btn-danger[disabled]:focus,\nfieldset[disabled] .btn-danger:focus,\n.btn-danger.disabled.focus,\n.btn-danger[disabled].focus,\nfieldset[disabled] .btn-danger.focus {\n  background-color: #d9534f;\n  border-color: #d43f3a;\n}\n.btn-danger .badge {\n  color: #d9534f;\n  background-color: #fff;\n}\n.btn-link {\n  color: #337ab7;\n  font-weight: normal;\n  border-radius: 0;\n}\n.btn-link,\n.btn-link:active,\n.btn-link.active,\n.btn-link[disabled],\nfieldset[disabled] .btn-link {\n  background-color: transparent;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn-link,\n.btn-link:hover,\n.btn-link:focus,\n.btn-link:active {\n  border-color: transparent;\n}\n.btn-link:hover,\n.btn-link:focus {\n  color: #23527c;\n  text-decoration: underline;\n  background-color: transparent;\n}\n.btn-link[disabled]:hover,\nfieldset[disabled] .btn-link:hover,\n.btn-link[disabled]:focus,\nfieldset[disabled] .btn-link:focus {\n  color: #777777;\n  text-decoration: none;\n}\n.btn-lg,\n.btn-group-lg > .btn {\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n  border-radius: 6px;\n}\n.btn-sm,\n.btn-group-sm > .btn {\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.btn-xs,\n.btn-group-xs > .btn {\n  padding: 1px 5px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.btn-block {\n  display: block;\n  width: 100%;\n}\n.btn-block + .btn-block {\n  margin-top: 5px;\n}\ninput[type=\"submit\"].btn-block,\ninput[type=\"reset\"].btn-block,\ninput[type=\"button\"].btn-block {\n  width: 100%;\n}\n.fade {\n  opacity: 0;\n  -webkit-transition: opacity 0.15s linear;\n  -o-transition: opacity 0.15s linear;\n  transition: opacity 0.15s linear;\n}\n.fade.in {\n  opacity: 1;\n}\n.collapse {\n  display: none;\n}\n.collapse.in {\n  display: block;\n}\ntr.collapse.in {\n  display: table-row;\n}\ntbody.collapse.in {\n  display: table-row-group;\n}\n.collapsing {\n  position: relative;\n  height: 0;\n  overflow: hidden;\n  -webkit-transition-property: height, visibility;\n  transition-property: height, visibility;\n  -webkit-transition-duration: 0.35s;\n  transition-duration: 0.35s;\n  -webkit-transition-timing-function: ease;\n  transition-timing-function: ease;\n}\n@font-face {\n  font-family: 'Glyphicons Halflings';\n  src: url(" + __webpack_require__(892) + ");\n  src: url(" + __webpack_require__(892) + "?#iefix) format('embedded-opentype'), url(" + __webpack_require__(893) + ") format('woff2'), url(" + __webpack_require__(894) + ") format('woff'), url(" + __webpack_require__(895) + ") format('truetype'), url(" + __webpack_require__(896) + "#glyphicons_halflingsregular) format('svg');\n}\n.glyphicon {\n  position: relative;\n  top: 1px;\n  display: inline-block;\n  font-family: 'Glyphicons Halflings';\n  font-style: normal;\n  font-weight: normal;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.glyphicon-asterisk:before {\n  content: \"*\";\n}\n.glyphicon-plus:before {\n  content: \"+\";\n}\n.glyphicon-euro:before,\n.glyphicon-eur:before {\n  content: \"\\20AC\";\n}\n.glyphicon-minus:before {\n  content: \"\\2212\";\n}\n.glyphicon-cloud:before {\n  content: \"\\2601\";\n}\n.glyphicon-envelope:before {\n  content: \"\\2709\";\n}\n.glyphicon-pencil:before {\n  content: \"\\270F\";\n}\n.glyphicon-glass:before {\n  content: \"\\E001\";\n}\n.glyphicon-music:before {\n  content: \"\\E002\";\n}\n.glyphicon-search:before {\n  content: \"\\E003\";\n}\n.glyphicon-heart:before {\n  content: \"\\E005\";\n}\n.glyphicon-star:before {\n  content: \"\\E006\";\n}\n.glyphicon-star-empty:before {\n  content: \"\\E007\";\n}\n.glyphicon-user:before {\n  content: \"\\E008\";\n}\n.glyphicon-film:before {\n  content: \"\\E009\";\n}\n.glyphicon-th-large:before {\n  content: \"\\E010\";\n}\n.glyphicon-th:before {\n  content: \"\\E011\";\n}\n.glyphicon-th-list:before {\n  content: \"\\E012\";\n}\n.glyphicon-ok:before {\n  content: \"\\E013\";\n}\n.glyphicon-remove:before {\n  content: \"\\E014\";\n}\n.glyphicon-zoom-in:before {\n  content: \"\\E015\";\n}\n.glyphicon-zoom-out:before {\n  content: \"\\E016\";\n}\n.glyphicon-off:before {\n  content: \"\\E017\";\n}\n.glyphicon-signal:before {\n  content: \"\\E018\";\n}\n.glyphicon-cog:before {\n  content: \"\\E019\";\n}\n.glyphicon-trash:before {\n  content: \"\\E020\";\n}\n.glyphicon-home:before {\n  content: \"\\E021\";\n}\n.glyphicon-file:before {\n  content: \"\\E022\";\n}\n.glyphicon-time:before {\n  content: \"\\E023\";\n}\n.glyphicon-road:before {\n  content: \"\\E024\";\n}\n.glyphicon-download-alt:before {\n  content: \"\\E025\";\n}\n.glyphicon-download:before {\n  content: \"\\E026\";\n}\n.glyphicon-upload:before {\n  content: \"\\E027\";\n}\n.glyphicon-inbox:before {\n  content: \"\\E028\";\n}\n.glyphicon-play-circle:before {\n  content: \"\\E029\";\n}\n.glyphicon-repeat:before {\n  content: \"\\E030\";\n}\n.glyphicon-refresh:before {\n  content: \"\\E031\";\n}\n.glyphicon-list-alt:before {\n  content: \"\\E032\";\n}\n.glyphicon-lock:before {\n  content: \"\\E033\";\n}\n.glyphicon-flag:before {\n  content: \"\\E034\";\n}\n.glyphicon-headphones:before {\n  content: \"\\E035\";\n}\n.glyphicon-volume-off:before {\n  content: \"\\E036\";\n}\n.glyphicon-volume-down:before {\n  content: \"\\E037\";\n}\n.glyphicon-volume-up:before {\n  content: \"\\E038\";\n}\n.glyphicon-qrcode:before {\n  content: \"\\E039\";\n}\n.glyphicon-barcode:before {\n  content: \"\\E040\";\n}\n.glyphicon-tag:before {\n  content: \"\\E041\";\n}\n.glyphicon-tags:before {\n  content: \"\\E042\";\n}\n.glyphicon-book:before {\n  content: \"\\E043\";\n}\n.glyphicon-bookmark:before {\n  content: \"\\E044\";\n}\n.glyphicon-print:before {\n  content: \"\\E045\";\n}\n.glyphicon-camera:before {\n  content: \"\\E046\";\n}\n.glyphicon-font:before {\n  content: \"\\E047\";\n}\n.glyphicon-bold:before {\n  content: \"\\E048\";\n}\n.glyphicon-italic:before {\n  content: \"\\E049\";\n}\n.glyphicon-text-height:before {\n  content: \"\\E050\";\n}\n.glyphicon-text-width:before {\n  content: \"\\E051\";\n}\n.glyphicon-align-left:before {\n  content: \"\\E052\";\n}\n.glyphicon-align-center:before {\n  content: \"\\E053\";\n}\n.glyphicon-align-right:before {\n  content: \"\\E054\";\n}\n.glyphicon-align-justify:before {\n  content: \"\\E055\";\n}\n.glyphicon-list:before {\n  content: \"\\E056\";\n}\n.glyphicon-indent-left:before {\n  content: \"\\E057\";\n}\n.glyphicon-indent-right:before {\n  content: \"\\E058\";\n}\n.glyphicon-facetime-video:before {\n  content: \"\\E059\";\n}\n.glyphicon-picture:before {\n  content: \"\\E060\";\n}\n.glyphicon-map-marker:before {\n  content: \"\\E062\";\n}\n.glyphicon-adjust:before {\n  content: \"\\E063\";\n}\n.glyphicon-tint:before {\n  content: \"\\E064\";\n}\n.glyphicon-edit:before {\n  content: \"\\E065\";\n}\n.glyphicon-share:before {\n  content: \"\\E066\";\n}\n.glyphicon-check:before {\n  content: \"\\E067\";\n}\n.glyphicon-move:before {\n  content: \"\\E068\";\n}\n.glyphicon-step-backward:before {\n  content: \"\\E069\";\n}\n.glyphicon-fast-backward:before {\n  content: \"\\E070\";\n}\n.glyphicon-backward:before {\n  content: \"\\E071\";\n}\n.glyphicon-play:before {\n  content: \"\\E072\";\n}\n.glyphicon-pause:before {\n  content: \"\\E073\";\n}\n.glyphicon-stop:before {\n  content: \"\\E074\";\n}\n.glyphicon-forward:before {\n  content: \"\\E075\";\n}\n.glyphicon-fast-forward:before {\n  content: \"\\E076\";\n}\n.glyphicon-step-forward:before {\n  content: \"\\E077\";\n}\n.glyphicon-eject:before {\n  content: \"\\E078\";\n}\n.glyphicon-chevron-left:before {\n  content: \"\\E079\";\n}\n.glyphicon-chevron-right:before {\n  content: \"\\E080\";\n}\n.glyphicon-plus-sign:before {\n  content: \"\\E081\";\n}\n.glyphicon-minus-sign:before {\n  content: \"\\E082\";\n}\n.glyphicon-remove-sign:before {\n  content: \"\\E083\";\n}\n.glyphicon-ok-sign:before {\n  content: \"\\E084\";\n}\n.glyphicon-question-sign:before {\n  content: \"\\E085\";\n}\n.glyphicon-info-sign:before {\n  content: \"\\E086\";\n}\n.glyphicon-screenshot:before {\n  content: \"\\E087\";\n}\n.glyphicon-remove-circle:before {\n  content: \"\\E088\";\n}\n.glyphicon-ok-circle:before {\n  content: \"\\E089\";\n}\n.glyphicon-ban-circle:before {\n  content: \"\\E090\";\n}\n.glyphicon-arrow-left:before {\n  content: \"\\E091\";\n}\n.glyphicon-arrow-right:before {\n  content: \"\\E092\";\n}\n.glyphicon-arrow-up:before {\n  content: \"\\E093\";\n}\n.glyphicon-arrow-down:before {\n  content: \"\\E094\";\n}\n.glyphicon-share-alt:before {\n  content: \"\\E095\";\n}\n.glyphicon-resize-full:before {\n  content: \"\\E096\";\n}\n.glyphicon-resize-small:before {\n  content: \"\\E097\";\n}\n.glyphicon-exclamation-sign:before {\n  content: \"\\E101\";\n}\n.glyphicon-gift:before {\n  content: \"\\E102\";\n}\n.glyphicon-leaf:before {\n  content: \"\\E103\";\n}\n.glyphicon-fire:before {\n  content: \"\\E104\";\n}\n.glyphicon-eye-open:before {\n  content: \"\\E105\";\n}\n.glyphicon-eye-close:before {\n  content: \"\\E106\";\n}\n.glyphicon-warning-sign:before {\n  content: \"\\E107\";\n}\n.glyphicon-plane:before {\n  content: \"\\E108\";\n}\n.glyphicon-calendar:before {\n  content: \"\\E109\";\n}\n.glyphicon-random:before {\n  content: \"\\E110\";\n}\n.glyphicon-comment:before {\n  content: \"\\E111\";\n}\n.glyphicon-magnet:before {\n  content: \"\\E112\";\n}\n.glyphicon-chevron-up:before {\n  content: \"\\E113\";\n}\n.glyphicon-chevron-down:before {\n  content: \"\\E114\";\n}\n.glyphicon-retweet:before {\n  content: \"\\E115\";\n}\n.glyphicon-shopping-cart:before {\n  content: \"\\E116\";\n}\n.glyphicon-folder-close:before {\n  content: \"\\E117\";\n}\n.glyphicon-folder-open:before {\n  content: \"\\E118\";\n}\n.glyphicon-resize-vertical:before {\n  content: \"\\E119\";\n}\n.glyphicon-resize-horizontal:before {\n  content: \"\\E120\";\n}\n.glyphicon-hdd:before {\n  content: \"\\E121\";\n}\n.glyphicon-bullhorn:before {\n  content: \"\\E122\";\n}\n.glyphicon-bell:before {\n  content: \"\\E123\";\n}\n.glyphicon-certificate:before {\n  content: \"\\E124\";\n}\n.glyphicon-thumbs-up:before {\n  content: \"\\E125\";\n}\n.glyphicon-thumbs-down:before {\n  content: \"\\E126\";\n}\n.glyphicon-hand-right:before {\n  content: \"\\E127\";\n}\n.glyphicon-hand-left:before {\n  content: \"\\E128\";\n}\n.glyphicon-hand-up:before {\n  content: \"\\E129\";\n}\n.glyphicon-hand-down:before {\n  content: \"\\E130\";\n}\n.glyphicon-circle-arrow-right:before {\n  content: \"\\E131\";\n}\n.glyphicon-circle-arrow-left:before {\n  content: \"\\E132\";\n}\n.glyphicon-circle-arrow-up:before {\n  content: \"\\E133\";\n}\n.glyphicon-circle-arrow-down:before {\n  content: \"\\E134\";\n}\n.glyphicon-globe:before {\n  content: \"\\E135\";\n}\n.glyphicon-wrench:before {\n  content: \"\\E136\";\n}\n.glyphicon-tasks:before {\n  content: \"\\E137\";\n}\n.glyphicon-filter:before {\n  content: \"\\E138\";\n}\n.glyphicon-briefcase:before {\n  content: \"\\E139\";\n}\n.glyphicon-fullscreen:before {\n  content: \"\\E140\";\n}\n.glyphicon-dashboard:before {\n  content: \"\\E141\";\n}\n.glyphicon-paperclip:before {\n  content: \"\\E142\";\n}\n.glyphicon-heart-empty:before {\n  content: \"\\E143\";\n}\n.glyphicon-link:before {\n  content: \"\\E144\";\n}\n.glyphicon-phone:before {\n  content: \"\\E145\";\n}\n.glyphicon-pushpin:before {\n  content: \"\\E146\";\n}\n.glyphicon-usd:before {\n  content: \"\\E148\";\n}\n.glyphicon-gbp:before {\n  content: \"\\E149\";\n}\n.glyphicon-sort:before {\n  content: \"\\E150\";\n}\n.glyphicon-sort-by-alphabet:before {\n  content: \"\\E151\";\n}\n.glyphicon-sort-by-alphabet-alt:before {\n  content: \"\\E152\";\n}\n.glyphicon-sort-by-order:before {\n  content: \"\\E153\";\n}\n.glyphicon-sort-by-order-alt:before {\n  content: \"\\E154\";\n}\n.glyphicon-sort-by-attributes:before {\n  content: \"\\E155\";\n}\n.glyphicon-sort-by-attributes-alt:before {\n  content: \"\\E156\";\n}\n.glyphicon-unchecked:before {\n  content: \"\\E157\";\n}\n.glyphicon-expand:before {\n  content: \"\\E158\";\n}\n.glyphicon-collapse-down:before {\n  content: \"\\E159\";\n}\n.glyphicon-collapse-up:before {\n  content: \"\\E160\";\n}\n.glyphicon-log-in:before {\n  content: \"\\E161\";\n}\n.glyphicon-flash:before {\n  content: \"\\E162\";\n}\n.glyphicon-log-out:before {\n  content: \"\\E163\";\n}\n.glyphicon-new-window:before {\n  content: \"\\E164\";\n}\n.glyphicon-record:before {\n  content: \"\\E165\";\n}\n.glyphicon-save:before {\n  content: \"\\E166\";\n}\n.glyphicon-open:before {\n  content: \"\\E167\";\n}\n.glyphicon-saved:before {\n  content: \"\\E168\";\n}\n.glyphicon-import:before {\n  content: \"\\E169\";\n}\n.glyphicon-export:before {\n  content: \"\\E170\";\n}\n.glyphicon-send:before {\n  content: \"\\E171\";\n}\n.glyphicon-floppy-disk:before {\n  content: \"\\E172\";\n}\n.glyphicon-floppy-saved:before {\n  content: \"\\E173\";\n}\n.glyphicon-floppy-remove:before {\n  content: \"\\E174\";\n}\n.glyphicon-floppy-save:before {\n  content: \"\\E175\";\n}\n.glyphicon-floppy-open:before {\n  content: \"\\E176\";\n}\n.glyphicon-credit-card:before {\n  content: \"\\E177\";\n}\n.glyphicon-transfer:before {\n  content: \"\\E178\";\n}\n.glyphicon-cutlery:before {\n  content: \"\\E179\";\n}\n.glyphicon-header:before {\n  content: \"\\E180\";\n}\n.glyphicon-compressed:before {\n  content: \"\\E181\";\n}\n.glyphicon-earphone:before {\n  content: \"\\E182\";\n}\n.glyphicon-phone-alt:before {\n  content: \"\\E183\";\n}\n.glyphicon-tower:before {\n  content: \"\\E184\";\n}\n.glyphicon-stats:before {\n  content: \"\\E185\";\n}\n.glyphicon-sd-video:before {\n  content: \"\\E186\";\n}\n.glyphicon-hd-video:before {\n  content: \"\\E187\";\n}\n.glyphicon-subtitles:before {\n  content: \"\\E188\";\n}\n.glyphicon-sound-stereo:before {\n  content: \"\\E189\";\n}\n.glyphicon-sound-dolby:before {\n  content: \"\\E190\";\n}\n.glyphicon-sound-5-1:before {\n  content: \"\\E191\";\n}\n.glyphicon-sound-6-1:before {\n  content: \"\\E192\";\n}\n.glyphicon-sound-7-1:before {\n  content: \"\\E193\";\n}\n.glyphicon-copyright-mark:before {\n  content: \"\\E194\";\n}\n.glyphicon-registration-mark:before {\n  content: \"\\E195\";\n}\n.glyphicon-cloud-download:before {\n  content: \"\\E197\";\n}\n.glyphicon-cloud-upload:before {\n  content: \"\\E198\";\n}\n.glyphicon-tree-conifer:before {\n  content: \"\\E199\";\n}\n.glyphicon-tree-deciduous:before {\n  content: \"\\E200\";\n}\n.glyphicon-cd:before {\n  content: \"\\E201\";\n}\n.glyphicon-save-file:before {\n  content: \"\\E202\";\n}\n.glyphicon-open-file:before {\n  content: \"\\E203\";\n}\n.glyphicon-level-up:before {\n  content: \"\\E204\";\n}\n.glyphicon-copy:before {\n  content: \"\\E205\";\n}\n.glyphicon-paste:before {\n  content: \"\\E206\";\n}\n.glyphicon-alert:before {\n  content: \"\\E209\";\n}\n.glyphicon-equalizer:before {\n  content: \"\\E210\";\n}\n.glyphicon-king:before {\n  content: \"\\E211\";\n}\n.glyphicon-queen:before {\n  content: \"\\E212\";\n}\n.glyphicon-pawn:before {\n  content: \"\\E213\";\n}\n.glyphicon-bishop:before {\n  content: \"\\E214\";\n}\n.glyphicon-knight:before {\n  content: \"\\E215\";\n}\n.glyphicon-baby-formula:before {\n  content: \"\\E216\";\n}\n.glyphicon-tent:before {\n  content: \"\\26FA\";\n}\n.glyphicon-blackboard:before {\n  content: \"\\E218\";\n}\n.glyphicon-bed:before {\n  content: \"\\E219\";\n}\n.glyphicon-apple:before {\n  content: \"\\F8FF\";\n}\n.glyphicon-erase:before {\n  content: \"\\E221\";\n}\n.glyphicon-hourglass:before {\n  content: \"\\231B\";\n}\n.glyphicon-lamp:before {\n  content: \"\\E223\";\n}\n.glyphicon-duplicate:before {\n  content: \"\\E224\";\n}\n.glyphicon-piggy-bank:before {\n  content: \"\\E225\";\n}\n.glyphicon-scissors:before {\n  content: \"\\E226\";\n}\n.glyphicon-bitcoin:before {\n  content: \"\\E227\";\n}\n.glyphicon-btc:before {\n  content: \"\\E227\";\n}\n.glyphicon-xbt:before {\n  content: \"\\E227\";\n}\n.glyphicon-yen:before {\n  content: \"\\A5\";\n}\n.glyphicon-jpy:before {\n  content: \"\\A5\";\n}\n.glyphicon-ruble:before {\n  content: \"\\20BD\";\n}\n.glyphicon-rub:before {\n  content: \"\\20BD\";\n}\n.glyphicon-scale:before {\n  content: \"\\E230\";\n}\n.glyphicon-ice-lolly:before {\n  content: \"\\E231\";\n}\n.glyphicon-ice-lolly-tasted:before {\n  content: \"\\E232\";\n}\n.glyphicon-education:before {\n  content: \"\\E233\";\n}\n.glyphicon-option-horizontal:before {\n  content: \"\\E234\";\n}\n.glyphicon-option-vertical:before {\n  content: \"\\E235\";\n}\n.glyphicon-menu-hamburger:before {\n  content: \"\\E236\";\n}\n.glyphicon-modal-window:before {\n  content: \"\\E237\";\n}\n.glyphicon-oil:before {\n  content: \"\\E238\";\n}\n.glyphicon-grain:before {\n  content: \"\\E239\";\n}\n.glyphicon-sunglasses:before {\n  content: \"\\E240\";\n}\n.glyphicon-text-size:before {\n  content: \"\\E241\";\n}\n.glyphicon-text-color:before {\n  content: \"\\E242\";\n}\n.glyphicon-text-background:before {\n  content: \"\\E243\";\n}\n.glyphicon-object-align-top:before {\n  content: \"\\E244\";\n}\n.glyphicon-object-align-bottom:before {\n  content: \"\\E245\";\n}\n.glyphicon-object-align-horizontal:before {\n  content: \"\\E246\";\n}\n.glyphicon-object-align-left:before {\n  content: \"\\E247\";\n}\n.glyphicon-object-align-vertical:before {\n  content: \"\\E248\";\n}\n.glyphicon-object-align-right:before {\n  content: \"\\E249\";\n}\n.glyphicon-triangle-right:before {\n  content: \"\\E250\";\n}\n.glyphicon-triangle-left:before {\n  content: \"\\E251\";\n}\n.glyphicon-triangle-bottom:before {\n  content: \"\\E252\";\n}\n.glyphicon-triangle-top:before {\n  content: \"\\E253\";\n}\n.glyphicon-console:before {\n  content: \"\\E254\";\n}\n.glyphicon-superscript:before {\n  content: \"\\E255\";\n}\n.glyphicon-subscript:before {\n  content: \"\\E256\";\n}\n.glyphicon-menu-left:before {\n  content: \"\\E257\";\n}\n.glyphicon-menu-right:before {\n  content: \"\\E258\";\n}\n.glyphicon-menu-down:before {\n  content: \"\\E259\";\n}\n.glyphicon-menu-up:before {\n  content: \"\\E260\";\n}\n.caret {\n  display: inline-block;\n  width: 0;\n  height: 0;\n  margin-left: 2px;\n  vertical-align: middle;\n  border-top: 4px dashed;\n  border-top: 4px solid \\9;\n  border-right: 4px solid transparent;\n  border-left: 4px solid transparent;\n}\n.dropup,\n.dropdown {\n  position: relative;\n}\n.dropdown-toggle:focus {\n  outline: 0;\n}\n.dropdown-menu {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  display: none;\n  float: left;\n  min-width: 160px;\n  padding: 5px 0;\n  margin: 2px 0 0;\n  list-style: none;\n  font-size: 14px;\n  text-align: left;\n  background-color: #fff;\n  border: 1px solid #ccc;\n  border: 1px solid rgba(0, 0, 0, 0.15);\n  border-radius: 4px;\n  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  background-clip: padding-box;\n}\n.dropdown-menu.pull-right {\n  right: 0;\n  left: auto;\n}\n.dropdown-menu .divider {\n  height: 1px;\n  margin: 9px 0;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.dropdown-menu > li > a {\n  display: block;\n  padding: 3px 20px;\n  clear: both;\n  font-weight: normal;\n  line-height: 1.42857143;\n  color: #333333;\n  white-space: nowrap;\n}\n.dropdown-menu > li > a:hover,\n.dropdown-menu > li > a:focus {\n  text-decoration: none;\n  color: #262626;\n  background-color: #f5f5f5;\n}\n.dropdown-menu > .active > a,\n.dropdown-menu > .active > a:hover,\n.dropdown-menu > .active > a:focus {\n  color: #fff;\n  text-decoration: none;\n  outline: 0;\n  background-color: #337ab7;\n}\n.dropdown-menu > .disabled > a,\n.dropdown-menu > .disabled > a:hover,\n.dropdown-menu > .disabled > a:focus {\n  color: #777777;\n}\n.dropdown-menu > .disabled > a:hover,\n.dropdown-menu > .disabled > a:focus {\n  text-decoration: none;\n  background-color: transparent;\n  background-image: none;\n  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);\n  cursor: not-allowed;\n}\n.open > .dropdown-menu {\n  display: block;\n}\n.open > a {\n  outline: 0;\n}\n.dropdown-menu-right {\n  left: auto;\n  right: 0;\n}\n.dropdown-menu-left {\n  left: 0;\n  right: auto;\n}\n.dropdown-header {\n  display: block;\n  padding: 3px 20px;\n  font-size: 12px;\n  line-height: 1.42857143;\n  color: #777777;\n  white-space: nowrap;\n}\n.dropdown-backdrop {\n  position: fixed;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  top: 0;\n  z-index: 990;\n}\n.pull-right > .dropdown-menu {\n  right: 0;\n  left: auto;\n}\n.dropup .caret,\n.navbar-fixed-bottom .dropdown .caret {\n  border-top: 0;\n  border-bottom: 4px dashed;\n  border-bottom: 4px solid \\9;\n  content: \"\";\n}\n.dropup .dropdown-menu,\n.navbar-fixed-bottom .dropdown .dropdown-menu {\n  top: auto;\n  bottom: 100%;\n  margin-bottom: 2px;\n}\n@media (min-width: 768px) {\n  .navbar-right .dropdown-menu {\n    left: auto;\n    right: 0;\n  }\n  .navbar-right .dropdown-menu-left {\n    left: 0;\n    right: auto;\n  }\n}\n.btn-group,\n.btn-group-vertical {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.btn-group > .btn,\n.btn-group-vertical > .btn {\n  position: relative;\n  float: left;\n}\n.btn-group > .btn:hover,\n.btn-group-vertical > .btn:hover,\n.btn-group > .btn:focus,\n.btn-group-vertical > .btn:focus,\n.btn-group > .btn:active,\n.btn-group-vertical > .btn:active,\n.btn-group > .btn.active,\n.btn-group-vertical > .btn.active {\n  z-index: 2;\n}\n.btn-group .btn + .btn,\n.btn-group .btn + .btn-group,\n.btn-group .btn-group + .btn,\n.btn-group .btn-group + .btn-group {\n  margin-left: -1px;\n}\n.btn-toolbar {\n  margin-left: -5px;\n}\n.btn-toolbar .btn,\n.btn-toolbar .btn-group,\n.btn-toolbar .input-group {\n  float: left;\n}\n.btn-toolbar > .btn,\n.btn-toolbar > .btn-group,\n.btn-toolbar > .input-group {\n  margin-left: 5px;\n}\n.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {\n  border-radius: 0;\n}\n.btn-group > .btn:first-child {\n  margin-left: 0;\n}\n.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group > .btn:last-child:not(:first-child),\n.btn-group > .dropdown-toggle:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group > .btn-group {\n  float: left;\n}\n.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0;\n}\n.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group .dropdown-toggle:active,\n.btn-group.open .dropdown-toggle {\n  outline: 0;\n}\n.btn-group > .btn + .dropdown-toggle {\n  padding-left: 8px;\n  padding-right: 8px;\n}\n.btn-group > .btn-lg + .dropdown-toggle {\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.btn-group.open .dropdown-toggle {\n  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n}\n.btn-group.open .dropdown-toggle.btn-link {\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn .caret {\n  margin-left: 0;\n}\n.btn-lg .caret {\n  border-width: 5px 5px 0;\n  border-bottom-width: 0;\n}\n.dropup .btn-lg .caret {\n  border-width: 0 5px 5px;\n}\n.btn-group-vertical > .btn,\n.btn-group-vertical > .btn-group,\n.btn-group-vertical > .btn-group > .btn {\n  display: block;\n  float: none;\n  width: 100%;\n  max-width: 100%;\n}\n.btn-group-vertical > .btn-group > .btn {\n  float: none;\n}\n.btn-group-vertical > .btn + .btn,\n.btn-group-vertical > .btn + .btn-group,\n.btn-group-vertical > .btn-group + .btn,\n.btn-group-vertical > .btn-group + .btn-group {\n  margin-top: -1px;\n  margin-left: 0;\n}\n.btn-group-vertical > .btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.btn-group-vertical > .btn:first-child:not(:last-child) {\n  border-top-right-radius: 4px;\n  border-top-left-radius: 4px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group-vertical > .btn:last-child:not(:first-child) {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n  border-bottom-right-radius: 4px;\n  border-bottom-left-radius: 4px;\n}\n.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0;\n}\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group-justified {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n  border-collapse: separate;\n}\n.btn-group-justified > .btn,\n.btn-group-justified > .btn-group {\n  float: none;\n  display: table-cell;\n  width: 1%;\n}\n.btn-group-justified > .btn-group .btn {\n  width: 100%;\n}\n.btn-group-justified > .btn-group .dropdown-menu {\n  left: auto;\n}\n[data-toggle=\"buttons\"] > .btn input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn-group > .btn input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn input[type=\"checkbox\"],\n[data-toggle=\"buttons\"] > .btn-group > .btn input[type=\"checkbox\"] {\n  position: absolute;\n  clip: rect(0, 0, 0, 0);\n  pointer-events: none;\n}\n.input-group {\n  position: relative;\n  display: table;\n  border-collapse: separate;\n}\n.input-group[class*=\"col-\"] {\n  float: none;\n  padding-left: 0;\n  padding-right: 0;\n}\n.input-group .form-control {\n  position: relative;\n  z-index: 2;\n  float: left;\n  width: 100%;\n  margin-bottom: 0;\n}\n.input-group .form-control:focus {\n  z-index: 3;\n}\n.input-group-lg > .form-control,\n.input-group-lg > .input-group-addon,\n.input-group-lg > .input-group-btn > .btn {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n  border-radius: 6px;\n}\nselect.input-group-lg > .form-control,\nselect.input-group-lg > .input-group-addon,\nselect.input-group-lg > .input-group-btn > .btn {\n  height: 46px;\n  line-height: 46px;\n}\ntextarea.input-group-lg > .form-control,\ntextarea.input-group-lg > .input-group-addon,\ntextarea.input-group-lg > .input-group-btn > .btn,\nselect[multiple].input-group-lg > .form-control,\nselect[multiple].input-group-lg > .input-group-addon,\nselect[multiple].input-group-lg > .input-group-btn > .btn {\n  height: auto;\n}\n.input-group-sm > .form-control,\n.input-group-sm > .input-group-addon,\n.input-group-sm > .input-group-btn > .btn {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\nselect.input-group-sm > .form-control,\nselect.input-group-sm > .input-group-addon,\nselect.input-group-sm > .input-group-btn > .btn {\n  height: 30px;\n  line-height: 30px;\n}\ntextarea.input-group-sm > .form-control,\ntextarea.input-group-sm > .input-group-addon,\ntextarea.input-group-sm > .input-group-btn > .btn,\nselect[multiple].input-group-sm > .form-control,\nselect[multiple].input-group-sm > .input-group-addon,\nselect[multiple].input-group-sm > .input-group-btn > .btn {\n  height: auto;\n}\n.input-group-addon,\n.input-group-btn,\n.input-group .form-control {\n  display: table-cell;\n}\n.input-group-addon:not(:first-child):not(:last-child),\n.input-group-btn:not(:first-child):not(:last-child),\n.input-group .form-control:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.input-group-addon,\n.input-group-btn {\n  width: 1%;\n  white-space: nowrap;\n  vertical-align: middle;\n}\n.input-group-addon {\n  padding: 6px 12px;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 1;\n  color: #555555;\n  text-align: center;\n  background-color: #eeeeee;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\n.input-group-addon.input-sm {\n  padding: 5px 10px;\n  font-size: 12px;\n  border-radius: 3px;\n}\n.input-group-addon.input-lg {\n  padding: 10px 16px;\n  font-size: 18px;\n  border-radius: 6px;\n}\n.input-group-addon input[type=\"radio\"],\n.input-group-addon input[type=\"checkbox\"] {\n  margin-top: 0;\n}\n.input-group .form-control:first-child,\n.input-group-addon:first-child,\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group > .btn,\n.input-group-btn:first-child > .dropdown-toggle,\n.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),\n.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.input-group-addon:first-child {\n  border-right: 0;\n}\n.input-group .form-control:last-child,\n.input-group-addon:last-child,\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group > .btn,\n.input-group-btn:last-child > .dropdown-toggle,\n.input-group-btn:first-child > .btn:not(:first-child),\n.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.input-group-addon:last-child {\n  border-left: 0;\n}\n.input-group-btn {\n  position: relative;\n  font-size: 0;\n  white-space: nowrap;\n}\n.input-group-btn > .btn {\n  position: relative;\n}\n.input-group-btn > .btn + .btn {\n  margin-left: -1px;\n}\n.input-group-btn > .btn:hover,\n.input-group-btn > .btn:focus,\n.input-group-btn > .btn:active {\n  z-index: 2;\n}\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group {\n  margin-right: -1px;\n}\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group {\n  z-index: 2;\n  margin-left: -1px;\n}\n.nav {\n  margin-bottom: 0;\n  padding-left: 0;\n  list-style: none;\n}\n.nav > li {\n  position: relative;\n  display: block;\n}\n.nav > li > a {\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n}\n.nav > li > a:hover,\n.nav > li > a:focus {\n  text-decoration: none;\n  background-color: #eeeeee;\n}\n.nav > li.disabled > a {\n  color: #777777;\n}\n.nav > li.disabled > a:hover,\n.nav > li.disabled > a:focus {\n  color: #777777;\n  text-decoration: none;\n  background-color: transparent;\n  cursor: not-allowed;\n}\n.nav .open > a,\n.nav .open > a:hover,\n.nav .open > a:focus {\n  background-color: #eeeeee;\n  border-color: #337ab7;\n}\n.nav .nav-divider {\n  height: 1px;\n  margin: 9px 0;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.nav > li > a > img {\n  max-width: none;\n}\n.nav-tabs {\n  border-bottom: 1px solid #ddd;\n}\n.nav-tabs > li {\n  float: left;\n  margin-bottom: -1px;\n}\n.nav-tabs > li > a {\n  margin-right: 2px;\n  line-height: 1.42857143;\n  border: 1px solid transparent;\n  border-radius: 4px 4px 0 0;\n}\n.nav-tabs > li > a:hover {\n  border-color: #eeeeee #eeeeee #ddd;\n}\n.nav-tabs > li.active > a,\n.nav-tabs > li.active > a:hover,\n.nav-tabs > li.active > a:focus {\n  color: #555555;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-bottom-color: transparent;\n  cursor: default;\n}\n.nav-tabs.nav-justified {\n  width: 100%;\n  border-bottom: 0;\n}\n.nav-tabs.nav-justified > li {\n  float: none;\n}\n.nav-tabs.nav-justified > li > a {\n  text-align: center;\n  margin-bottom: 5px;\n}\n.nav-tabs.nav-justified > .dropdown .dropdown-menu {\n  top: auto;\n  left: auto;\n}\n@media (min-width: 768px) {\n  .nav-tabs.nav-justified > li {\n    display: table-cell;\n    width: 1%;\n  }\n  .nav-tabs.nav-justified > li > a {\n    margin-bottom: 0;\n  }\n}\n.nav-tabs.nav-justified > li > a {\n  margin-right: 0;\n  border-radius: 4px;\n}\n.nav-tabs.nav-justified > .active > a,\n.nav-tabs.nav-justified > .active > a:hover,\n.nav-tabs.nav-justified > .active > a:focus {\n  border: 1px solid #ddd;\n}\n@media (min-width: 768px) {\n  .nav-tabs.nav-justified > li > a {\n    border-bottom: 1px solid #ddd;\n    border-radius: 4px 4px 0 0;\n  }\n  .nav-tabs.nav-justified > .active > a,\n  .nav-tabs.nav-justified > .active > a:hover,\n  .nav-tabs.nav-justified > .active > a:focus {\n    border-bottom-color: #fff;\n  }\n}\n.nav-pills > li {\n  float: left;\n}\n.nav-pills > li > a {\n  border-radius: 4px;\n}\n.nav-pills > li + li {\n  margin-left: 2px;\n}\n.nav-pills > li.active > a,\n.nav-pills > li.active > a:hover,\n.nav-pills > li.active > a:focus {\n  color: #fff;\n  background-color: #337ab7;\n}\n.nav-stacked > li {\n  float: none;\n}\n.nav-stacked > li + li {\n  margin-top: 2px;\n  margin-left: 0;\n}\n.nav-justified {\n  width: 100%;\n}\n.nav-justified > li {\n  float: none;\n}\n.nav-justified > li > a {\n  text-align: center;\n  margin-bottom: 5px;\n}\n.nav-justified > .dropdown .dropdown-menu {\n  top: auto;\n  left: auto;\n}\n@media (min-width: 768px) {\n  .nav-justified > li {\n    display: table-cell;\n    width: 1%;\n  }\n  .nav-justified > li > a {\n    margin-bottom: 0;\n  }\n}\n.nav-tabs-justified {\n  border-bottom: 0;\n}\n.nav-tabs-justified > li > a {\n  margin-right: 0;\n  border-radius: 4px;\n}\n.nav-tabs-justified > .active > a,\n.nav-tabs-justified > .active > a:hover,\n.nav-tabs-justified > .active > a:focus {\n  border: 1px solid #ddd;\n}\n@media (min-width: 768px) {\n  .nav-tabs-justified > li > a {\n    border-bottom: 1px solid #ddd;\n    border-radius: 4px 4px 0 0;\n  }\n  .nav-tabs-justified > .active > a,\n  .nav-tabs-justified > .active > a:hover,\n  .nav-tabs-justified > .active > a:focus {\n    border-bottom-color: #fff;\n  }\n}\n.tab-content > .tab-pane {\n  display: none;\n}\n.tab-content > .active {\n  display: block;\n}\n.nav-tabs .dropdown-menu {\n  margin-top: -1px;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.navbar {\n  position: relative;\n  min-height: 50px;\n  margin-bottom: 20px;\n  border: 1px solid transparent;\n}\n@media (min-width: 768px) {\n  .navbar {\n    border-radius: 4px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-header {\n    float: left;\n  }\n}\n.navbar-collapse {\n  overflow-x: visible;\n  padding-right: 15px;\n  padding-left: 15px;\n  border-top: 1px solid transparent;\n  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);\n  -webkit-overflow-scrolling: touch;\n}\n.navbar-collapse.in {\n  overflow-y: auto;\n}\n@media (min-width: 768px) {\n  .navbar-collapse {\n    width: auto;\n    border-top: 0;\n    box-shadow: none;\n  }\n  .navbar-collapse.collapse {\n    display: block !important;\n    height: auto !important;\n    padding-bottom: 0;\n    overflow: visible !important;\n  }\n  .navbar-collapse.in {\n    overflow-y: visible;\n  }\n  .navbar-fixed-top .navbar-collapse,\n  .navbar-static-top .navbar-collapse,\n  .navbar-fixed-bottom .navbar-collapse {\n    padding-left: 0;\n    padding-right: 0;\n  }\n}\n.navbar-fixed-top .navbar-collapse,\n.navbar-fixed-bottom .navbar-collapse {\n  max-height: 340px;\n}\n@media (max-device-width: 480px) and (orientation: landscape) {\n  .navbar-fixed-top .navbar-collapse,\n  .navbar-fixed-bottom .navbar-collapse {\n    max-height: 200px;\n  }\n}\n.container > .navbar-header,\n.container-fluid > .navbar-header,\n.container > .navbar-collapse,\n.container-fluid > .navbar-collapse {\n  margin-right: -15px;\n  margin-left: -15px;\n}\n@media (min-width: 768px) {\n  .container > .navbar-header,\n  .container-fluid > .navbar-header,\n  .container > .navbar-collapse,\n  .container-fluid > .navbar-collapse {\n    margin-right: 0;\n    margin-left: 0;\n  }\n}\n.navbar-static-top {\n  z-index: 1000;\n  border-width: 0 0 1px;\n}\n@media (min-width: 768px) {\n  .navbar-static-top {\n    border-radius: 0;\n  }\n}\n.navbar-fixed-top,\n.navbar-fixed-bottom {\n  position: fixed;\n  right: 0;\n  left: 0;\n  z-index: 1030;\n}\n@media (min-width: 768px) {\n  .navbar-fixed-top,\n  .navbar-fixed-bottom {\n    border-radius: 0;\n  }\n}\n.navbar-fixed-top {\n  top: 0;\n  border-width: 0 0 1px;\n}\n.navbar-fixed-bottom {\n  bottom: 0;\n  margin-bottom: 0;\n  border-width: 1px 0 0;\n}\n.navbar-brand {\n  float: left;\n  padding: 15px 15px;\n  font-size: 18px;\n  line-height: 20px;\n  height: 50px;\n}\n.navbar-brand:hover,\n.navbar-brand:focus {\n  text-decoration: none;\n}\n.navbar-brand > img {\n  display: block;\n}\n@media (min-width: 768px) {\n  .navbar > .container .navbar-brand,\n  .navbar > .container-fluid .navbar-brand {\n    margin-left: -15px;\n  }\n}\n.navbar-toggle {\n  position: relative;\n  float: right;\n  margin-right: 15px;\n  padding: 9px 10px;\n  margin-top: 8px;\n  margin-bottom: 8px;\n  background-color: transparent;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n.navbar-toggle:focus {\n  outline: 0;\n}\n.navbar-toggle .icon-bar {\n  display: block;\n  width: 22px;\n  height: 2px;\n  border-radius: 1px;\n}\n.navbar-toggle .icon-bar + .icon-bar {\n  margin-top: 4px;\n}\n@media (min-width: 768px) {\n  .navbar-toggle {\n    display: none;\n  }\n}\n.navbar-nav {\n  margin: 7.5px -15px;\n}\n.navbar-nav > li > a {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  line-height: 20px;\n}\n@media (max-width: 767px) {\n  .navbar-nav .open .dropdown-menu {\n    position: static;\n    float: none;\n    width: auto;\n    margin-top: 0;\n    background-color: transparent;\n    border: 0;\n    box-shadow: none;\n  }\n  .navbar-nav .open .dropdown-menu > li > a,\n  .navbar-nav .open .dropdown-menu .dropdown-header {\n    padding: 5px 15px 5px 25px;\n  }\n  .navbar-nav .open .dropdown-menu > li > a {\n    line-height: 20px;\n  }\n  .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-nav .open .dropdown-menu > li > a:focus {\n    background-image: none;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-nav {\n    float: left;\n    margin: 0;\n  }\n  .navbar-nav > li {\n    float: left;\n  }\n  .navbar-nav > li > a {\n    padding-top: 15px;\n    padding-bottom: 15px;\n  }\n}\n.navbar-form {\n  margin-left: -15px;\n  margin-right: -15px;\n  padding: 10px 15px;\n  border-top: 1px solid transparent;\n  border-bottom: 1px solid transparent;\n  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);\n  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n@media (min-width: 768px) {\n  .navbar-form .form-group {\n    display: inline-block;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .navbar-form .form-control-static {\n    display: inline-block;\n  }\n  .navbar-form .input-group {\n    display: inline-table;\n    vertical-align: middle;\n  }\n  .navbar-form .input-group .input-group-addon,\n  .navbar-form .input-group .input-group-btn,\n  .navbar-form .input-group .form-control {\n    width: auto;\n  }\n  .navbar-form .input-group > .form-control {\n    width: 100%;\n  }\n  .navbar-form .control-label {\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .radio,\n  .navbar-form .checkbox {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .radio label,\n  .navbar-form .checkbox label {\n    padding-left: 0;\n  }\n  .navbar-form .radio input[type=\"radio\"],\n  .navbar-form .checkbox input[type=\"checkbox\"] {\n    position: relative;\n    margin-left: 0;\n  }\n  .navbar-form .has-feedback .form-control-feedback {\n    top: 0;\n  }\n}\n@media (max-width: 767px) {\n  .navbar-form .form-group {\n    margin-bottom: 5px;\n  }\n  .navbar-form .form-group:last-child {\n    margin-bottom: 0;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-form {\n    width: auto;\n    border: 0;\n    margin-left: 0;\n    margin-right: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    -webkit-box-shadow: none;\n    box-shadow: none;\n  }\n}\n.navbar-nav > li > .dropdown-menu {\n  margin-top: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {\n  margin-bottom: 0;\n  border-top-right-radius: 4px;\n  border-top-left-radius: 4px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.navbar-btn {\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n.navbar-btn.btn-sm {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.navbar-btn.btn-xs {\n  margin-top: 14px;\n  margin-bottom: 14px;\n}\n.navbar-text {\n  margin-top: 15px;\n  margin-bottom: 15px;\n}\n@media (min-width: 768px) {\n  .navbar-text {\n    float: left;\n    margin-left: 15px;\n    margin-right: 15px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-left {\n    float: left !important;\n  }\n  .navbar-right {\n    float: right !important;\n    margin-right: -15px;\n  }\n  .navbar-right ~ .navbar-right {\n    margin-right: 0;\n  }\n}\n.navbar-default {\n  background-color: #f8f8f8;\n  border-color: #e7e7e7;\n}\n.navbar-default .navbar-brand {\n  color: #777;\n}\n.navbar-default .navbar-brand:hover,\n.navbar-default .navbar-brand:focus {\n  color: #5e5e5e;\n  background-color: transparent;\n}\n.navbar-default .navbar-text {\n  color: #777;\n}\n.navbar-default .navbar-nav > li > a {\n  color: #777;\n}\n.navbar-default .navbar-nav > li > a:hover,\n.navbar-default .navbar-nav > li > a:focus {\n  color: #333;\n  background-color: transparent;\n}\n.navbar-default .navbar-nav > .active > a,\n.navbar-default .navbar-nav > .active > a:hover,\n.navbar-default .navbar-nav > .active > a:focus {\n  color: #555;\n  background-color: #e7e7e7;\n}\n.navbar-default .navbar-nav > .disabled > a,\n.navbar-default .navbar-nav > .disabled > a:hover,\n.navbar-default .navbar-nav > .disabled > a:focus {\n  color: #ccc;\n  background-color: transparent;\n}\n.navbar-default .navbar-toggle {\n  border-color: #ddd;\n}\n.navbar-default .navbar-toggle:hover,\n.navbar-default .navbar-toggle:focus {\n  background-color: #ddd;\n}\n.navbar-default .navbar-toggle .icon-bar {\n  background-color: #888;\n}\n.navbar-default .navbar-collapse,\n.navbar-default .navbar-form {\n  border-color: #e7e7e7;\n}\n.navbar-default .navbar-nav > .open > a,\n.navbar-default .navbar-nav > .open > a:hover,\n.navbar-default .navbar-nav > .open > a:focus {\n  background-color: #e7e7e7;\n  color: #555;\n}\n@media (max-width: 767px) {\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a {\n    color: #777;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {\n    color: #333;\n    background-color: transparent;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {\n    color: #555;\n    background-color: #e7e7e7;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {\n    color: #ccc;\n    background-color: transparent;\n  }\n}\n.navbar-default .navbar-link {\n  color: #777;\n}\n.navbar-default .navbar-link:hover {\n  color: #333;\n}\n.navbar-default .btn-link {\n  color: #777;\n}\n.navbar-default .btn-link:hover,\n.navbar-default .btn-link:focus {\n  color: #333;\n}\n.navbar-default .btn-link[disabled]:hover,\nfieldset[disabled] .navbar-default .btn-link:hover,\n.navbar-default .btn-link[disabled]:focus,\nfieldset[disabled] .navbar-default .btn-link:focus {\n  color: #ccc;\n}\n.navbar-inverse {\n  background-color: #222;\n  border-color: #080808;\n}\n.navbar-inverse .navbar-brand {\n  color: #9d9d9d;\n}\n.navbar-inverse .navbar-brand:hover,\n.navbar-inverse .navbar-brand:focus {\n  color: #fff;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-text {\n  color: #9d9d9d;\n}\n.navbar-inverse .navbar-nav > li > a {\n  color: #9d9d9d;\n}\n.navbar-inverse .navbar-nav > li > a:hover,\n.navbar-inverse .navbar-nav > li > a:focus {\n  color: #fff;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-nav > .active > a,\n.navbar-inverse .navbar-nav > .active > a:hover,\n.navbar-inverse .navbar-nav > .active > a:focus {\n  color: #fff;\n  background-color: #080808;\n}\n.navbar-inverse .navbar-nav > .disabled > a,\n.navbar-inverse .navbar-nav > .disabled > a:hover,\n.navbar-inverse .navbar-nav > .disabled > a:focus {\n  color: #444;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-toggle {\n  border-color: #333;\n}\n.navbar-inverse .navbar-toggle:hover,\n.navbar-inverse .navbar-toggle:focus {\n  background-color: #333;\n}\n.navbar-inverse .navbar-toggle .icon-bar {\n  background-color: #fff;\n}\n.navbar-inverse .navbar-collapse,\n.navbar-inverse .navbar-form {\n  border-color: #101010;\n}\n.navbar-inverse .navbar-nav > .open > a,\n.navbar-inverse .navbar-nav > .open > a:hover,\n.navbar-inverse .navbar-nav > .open > a:focus {\n  background-color: #080808;\n  color: #fff;\n}\n@media (max-width: 767px) {\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {\n    border-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {\n    background-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {\n    color: #9d9d9d;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {\n    color: #fff;\n    background-color: transparent;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {\n    color: #fff;\n    background-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {\n    color: #444;\n    background-color: transparent;\n  }\n}\n.navbar-inverse .navbar-link {\n  color: #9d9d9d;\n}\n.navbar-inverse .navbar-link:hover {\n  color: #fff;\n}\n.navbar-inverse .btn-link {\n  color: #9d9d9d;\n}\n.navbar-inverse .btn-link:hover,\n.navbar-inverse .btn-link:focus {\n  color: #fff;\n}\n.navbar-inverse .btn-link[disabled]:hover,\nfieldset[disabled] .navbar-inverse .btn-link:hover,\n.navbar-inverse .btn-link[disabled]:focus,\nfieldset[disabled] .navbar-inverse .btn-link:focus {\n  color: #444;\n}\n.breadcrumb {\n  padding: 8px 15px;\n  margin-bottom: 20px;\n  list-style: none;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n.breadcrumb > li {\n  display: inline-block;\n}\n.breadcrumb > li + li:before {\n  content: \"/\\A0\";\n  padding: 0 5px;\n  color: #ccc;\n}\n.breadcrumb > .active {\n  color: #777777;\n}\n.pagination {\n  display: inline-block;\n  padding-left: 0;\n  margin: 20px 0;\n  border-radius: 4px;\n}\n.pagination > li {\n  display: inline;\n}\n.pagination > li > a,\n.pagination > li > span {\n  position: relative;\n  float: left;\n  padding: 6px 12px;\n  line-height: 1.42857143;\n  text-decoration: none;\n  color: #337ab7;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  margin-left: -1px;\n}\n.pagination > li:first-child > a,\n.pagination > li:first-child > span {\n  margin-left: 0;\n  border-bottom-left-radius: 4px;\n  border-top-left-radius: 4px;\n}\n.pagination > li:last-child > a,\n.pagination > li:last-child > span {\n  border-bottom-right-radius: 4px;\n  border-top-right-radius: 4px;\n}\n.pagination > li > a:hover,\n.pagination > li > span:hover,\n.pagination > li > a:focus,\n.pagination > li > span:focus {\n  z-index: 2;\n  color: #23527c;\n  background-color: #eeeeee;\n  border-color: #ddd;\n}\n.pagination > .active > a,\n.pagination > .active > span,\n.pagination > .active > a:hover,\n.pagination > .active > span:hover,\n.pagination > .active > a:focus,\n.pagination > .active > span:focus {\n  z-index: 3;\n  color: #fff;\n  background-color: #337ab7;\n  border-color: #337ab7;\n  cursor: default;\n}\n.pagination > .disabled > span,\n.pagination > .disabled > span:hover,\n.pagination > .disabled > span:focus,\n.pagination > .disabled > a,\n.pagination > .disabled > a:hover,\n.pagination > .disabled > a:focus {\n  color: #777777;\n  background-color: #fff;\n  border-color: #ddd;\n  cursor: not-allowed;\n}\n.pagination-lg > li > a,\n.pagination-lg > li > span {\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n}\n.pagination-lg > li:first-child > a,\n.pagination-lg > li:first-child > span {\n  border-bottom-left-radius: 6px;\n  border-top-left-radius: 6px;\n}\n.pagination-lg > li:last-child > a,\n.pagination-lg > li:last-child > span {\n  border-bottom-right-radius: 6px;\n  border-top-right-radius: 6px;\n}\n.pagination-sm > li > a,\n.pagination-sm > li > span {\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n}\n.pagination-sm > li:first-child > a,\n.pagination-sm > li:first-child > span {\n  border-bottom-left-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.pagination-sm > li:last-child > a,\n.pagination-sm > li:last-child > span {\n  border-bottom-right-radius: 3px;\n  border-top-right-radius: 3px;\n}\n.pager {\n  padding-left: 0;\n  margin: 20px 0;\n  list-style: none;\n  text-align: center;\n}\n.pager li {\n  display: inline;\n}\n.pager li > a,\n.pager li > span {\n  display: inline-block;\n  padding: 5px 14px;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-radius: 15px;\n}\n.pager li > a:hover,\n.pager li > a:focus {\n  text-decoration: none;\n  background-color: #eeeeee;\n}\n.pager .next > a,\n.pager .next > span {\n  float: right;\n}\n.pager .previous > a,\n.pager .previous > span {\n  float: left;\n}\n.pager .disabled > a,\n.pager .disabled > a:hover,\n.pager .disabled > a:focus,\n.pager .disabled > span {\n  color: #777777;\n  background-color: #fff;\n  cursor: not-allowed;\n}\n.label {\n  display: inline;\n  padding: .2em .6em .3em;\n  font-size: 75%;\n  font-weight: bold;\n  line-height: 1;\n  color: #fff;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: .25em;\n}\na.label:hover,\na.label:focus {\n  color: #fff;\n  text-decoration: none;\n  cursor: pointer;\n}\n.label:empty {\n  display: none;\n}\n.btn .label {\n  position: relative;\n  top: -1px;\n}\n.label-default {\n  background-color: #777777;\n}\n.label-default[href]:hover,\n.label-default[href]:focus {\n  background-color: #5e5e5e;\n}\n.label-primary {\n  background-color: #337ab7;\n}\n.label-primary[href]:hover,\n.label-primary[href]:focus {\n  background-color: #286090;\n}\n.label-success {\n  background-color: #5cb85c;\n}\n.label-success[href]:hover,\n.label-success[href]:focus {\n  background-color: #449d44;\n}\n.label-info {\n  background-color: #5bc0de;\n}\n.label-info[href]:hover,\n.label-info[href]:focus {\n  background-color: #31b0d5;\n}\n.label-warning {\n  background-color: #f0ad4e;\n}\n.label-warning[href]:hover,\n.label-warning[href]:focus {\n  background-color: #ec971f;\n}\n.label-danger {\n  background-color: #d9534f;\n}\n.label-danger[href]:hover,\n.label-danger[href]:focus {\n  background-color: #c9302c;\n}\n.badge {\n  display: inline-block;\n  min-width: 10px;\n  padding: 3px 7px;\n  font-size: 12px;\n  font-weight: bold;\n  color: #fff;\n  line-height: 1;\n  vertical-align: middle;\n  white-space: nowrap;\n  text-align: center;\n  background-color: #777777;\n  border-radius: 10px;\n}\n.badge:empty {\n  display: none;\n}\n.btn .badge {\n  position: relative;\n  top: -1px;\n}\n.btn-xs .badge,\n.btn-group-xs > .btn .badge {\n  top: 0;\n  padding: 1px 5px;\n}\na.badge:hover,\na.badge:focus {\n  color: #fff;\n  text-decoration: none;\n  cursor: pointer;\n}\n.list-group-item.active > .badge,\n.nav-pills > .active > a > .badge {\n  color: #337ab7;\n  background-color: #fff;\n}\n.list-group-item > .badge {\n  float: right;\n}\n.list-group-item > .badge + .badge {\n  margin-right: 5px;\n}\n.nav-pills > li > a > .badge {\n  margin-left: 3px;\n}\n.jumbotron {\n  padding-top: 30px;\n  padding-bottom: 30px;\n  margin-bottom: 30px;\n  color: inherit;\n  background-color: #eeeeee;\n}\n.jumbotron h1,\n.jumbotron .h1 {\n  color: inherit;\n}\n.jumbotron p {\n  margin-bottom: 15px;\n  font-size: 21px;\n  font-weight: 200;\n}\n.jumbotron > hr {\n  border-top-color: #d5d5d5;\n}\n.container .jumbotron,\n.container-fluid .jumbotron {\n  border-radius: 6px;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.jumbotron .container {\n  max-width: 100%;\n}\n@media screen and (min-width: 768px) {\n  .jumbotron {\n    padding-top: 48px;\n    padding-bottom: 48px;\n  }\n  .container .jumbotron,\n  .container-fluid .jumbotron {\n    padding-left: 60px;\n    padding-right: 60px;\n  }\n  .jumbotron h1,\n  .jumbotron .h1 {\n    font-size: 63px;\n  }\n}\n.thumbnail {\n  display: block;\n  padding: 4px;\n  margin-bottom: 20px;\n  line-height: 1.42857143;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-radius: 4px;\n  -webkit-transition: border 0.2s ease-in-out;\n  -o-transition: border 0.2s ease-in-out;\n  transition: border 0.2s ease-in-out;\n}\n.thumbnail > img,\n.thumbnail a > img {\n  margin-left: auto;\n  margin-right: auto;\n}\na.thumbnail:hover,\na.thumbnail:focus,\na.thumbnail.active {\n  border-color: #337ab7;\n}\n.thumbnail .caption {\n  padding: 9px;\n  color: #333333;\n}\n.alert {\n  padding: 15px;\n  margin-bottom: 20px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n.alert h4 {\n  margin-top: 0;\n  color: inherit;\n}\n.alert .alert-link {\n  font-weight: bold;\n}\n.alert > p,\n.alert > ul {\n  margin-bottom: 0;\n}\n.alert > p + p {\n  margin-top: 5px;\n}\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #d6e9c6;\n  color: #3c763d;\n}\n.alert-success hr {\n  border-top-color: #c9e2b3;\n}\n.alert-success .alert-link {\n  color: #2b542c;\n}\n.alert-info {\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n}\n.alert-info hr {\n  border-top-color: #a6e1ec;\n}\n.alert-info .alert-link {\n  color: #245269;\n}\n.alert-warning {\n  background-color: #fcf8e3;\n  border-color: #faebcc;\n  color: #8a6d3b;\n}\n.alert-warning hr {\n  border-top-color: #f7e1b5;\n}\n.alert-warning .alert-link {\n  color: #66512c;\n}\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #ebccd1;\n  color: #a94442;\n}\n.alert-danger hr {\n  border-top-color: #e4b9c0;\n}\n.alert-danger .alert-link {\n  color: #843534;\n}\n@-webkit-keyframes progress-bar-stripes {\n  from {\n    background-position: 40px 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n@keyframes progress-bar-stripes {\n  from {\n    background-position: 40px 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n.progress {\n  overflow: hidden;\n  height: 20px;\n  margin-bottom: 20px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n}\n.progress-bar {\n  float: left;\n  width: 0%;\n  height: 100%;\n  font-size: 12px;\n  line-height: 20px;\n  color: #fff;\n  text-align: center;\n  background-color: #337ab7;\n  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);\n  -webkit-transition: width 0.6s ease;\n  -o-transition: width 0.6s ease;\n  transition: width 0.6s ease;\n}\n.progress-striped .progress-bar,\n.progress-bar-striped {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-size: 40px 40px;\n}\n.progress.active .progress-bar,\n.progress-bar.active {\n  -webkit-animation: progress-bar-stripes 2s linear infinite;\n  -o-animation: progress-bar-stripes 2s linear infinite;\n  animation: progress-bar-stripes 2s linear infinite;\n}\n.progress-bar-success {\n  background-color: #5cb85c;\n}\n.progress-striped .progress-bar-success {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-info {\n  background-color: #5bc0de;\n}\n.progress-striped .progress-bar-info {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-warning {\n  background-color: #f0ad4e;\n}\n.progress-striped .progress-bar-warning {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-danger {\n  background-color: #d9534f;\n}\n.progress-striped .progress-bar-danger {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.media {\n  margin-top: 15px;\n}\n.media:first-child {\n  margin-top: 0;\n}\n.media,\n.media-body {\n  zoom: 1;\n  overflow: hidden;\n}\n.media-body {\n  width: 10000px;\n}\n.media-object {\n  display: block;\n}\n.media-object.img-thumbnail {\n  max-width: none;\n}\n.media-right,\n.media > .pull-right {\n  padding-left: 10px;\n}\n.media-left,\n.media > .pull-left {\n  padding-right: 10px;\n}\n.media-left,\n.media-right,\n.media-body {\n  display: table-cell;\n  vertical-align: top;\n}\n.media-middle {\n  vertical-align: middle;\n}\n.media-bottom {\n  vertical-align: bottom;\n}\n.media-heading {\n  margin-top: 0;\n  margin-bottom: 5px;\n}\n.media-list {\n  padding-left: 0;\n  list-style: none;\n}\n.list-group {\n  margin-bottom: 20px;\n  padding-left: 0;\n}\n.list-group-item {\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  margin-bottom: -1px;\n  background-color: #fff;\n  border: 1px solid #ddd;\n}\n.list-group-item:first-child {\n  border-top-right-radius: 4px;\n  border-top-left-radius: 4px;\n}\n.list-group-item:last-child {\n  margin-bottom: 0;\n  border-bottom-right-radius: 4px;\n  border-bottom-left-radius: 4px;\n}\na.list-group-item,\nbutton.list-group-item {\n  color: #555;\n}\na.list-group-item .list-group-item-heading,\nbutton.list-group-item .list-group-item-heading {\n  color: #333;\n}\na.list-group-item:hover,\nbutton.list-group-item:hover,\na.list-group-item:focus,\nbutton.list-group-item:focus {\n  text-decoration: none;\n  color: #555;\n  background-color: #f5f5f5;\n}\nbutton.list-group-item {\n  width: 100%;\n  text-align: left;\n}\n.list-group-item.disabled,\n.list-group-item.disabled:hover,\n.list-group-item.disabled:focus {\n  background-color: #eeeeee;\n  color: #777777;\n  cursor: not-allowed;\n}\n.list-group-item.disabled .list-group-item-heading,\n.list-group-item.disabled:hover .list-group-item-heading,\n.list-group-item.disabled:focus .list-group-item-heading {\n  color: inherit;\n}\n.list-group-item.disabled .list-group-item-text,\n.list-group-item.disabled:hover .list-group-item-text,\n.list-group-item.disabled:focus .list-group-item-text {\n  color: #777777;\n}\n.list-group-item.active,\n.list-group-item.active:hover,\n.list-group-item.active:focus {\n  z-index: 2;\n  color: #fff;\n  background-color: #337ab7;\n  border-color: #337ab7;\n}\n.list-group-item.active .list-group-item-heading,\n.list-group-item.active:hover .list-group-item-heading,\n.list-group-item.active:focus .list-group-item-heading,\n.list-group-item.active .list-group-item-heading > small,\n.list-group-item.active:hover .list-group-item-heading > small,\n.list-group-item.active:focus .list-group-item-heading > small,\n.list-group-item.active .list-group-item-heading > .small,\n.list-group-item.active:hover .list-group-item-heading > .small,\n.list-group-item.active:focus .list-group-item-heading > .small {\n  color: inherit;\n}\n.list-group-item.active .list-group-item-text,\n.list-group-item.active:hover .list-group-item-text,\n.list-group-item.active:focus .list-group-item-text {\n  color: #c7ddef;\n}\n.list-group-item-success {\n  color: #3c763d;\n  background-color: #dff0d8;\n}\na.list-group-item-success,\nbutton.list-group-item-success {\n  color: #3c763d;\n}\na.list-group-item-success .list-group-item-heading,\nbutton.list-group-item-success .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-success:hover,\nbutton.list-group-item-success:hover,\na.list-group-item-success:focus,\nbutton.list-group-item-success:focus {\n  color: #3c763d;\n  background-color: #d0e9c6;\n}\na.list-group-item-success.active,\nbutton.list-group-item-success.active,\na.list-group-item-success.active:hover,\nbutton.list-group-item-success.active:hover,\na.list-group-item-success.active:focus,\nbutton.list-group-item-success.active:focus {\n  color: #fff;\n  background-color: #3c763d;\n  border-color: #3c763d;\n}\n.list-group-item-info {\n  color: #31708f;\n  background-color: #d9edf7;\n}\na.list-group-item-info,\nbutton.list-group-item-info {\n  color: #31708f;\n}\na.list-group-item-info .list-group-item-heading,\nbutton.list-group-item-info .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-info:hover,\nbutton.list-group-item-info:hover,\na.list-group-item-info:focus,\nbutton.list-group-item-info:focus {\n  color: #31708f;\n  background-color: #c4e3f3;\n}\na.list-group-item-info.active,\nbutton.list-group-item-info.active,\na.list-group-item-info.active:hover,\nbutton.list-group-item-info.active:hover,\na.list-group-item-info.active:focus,\nbutton.list-group-item-info.active:focus {\n  color: #fff;\n  background-color: #31708f;\n  border-color: #31708f;\n}\n.list-group-item-warning {\n  color: #8a6d3b;\n  background-color: #fcf8e3;\n}\na.list-group-item-warning,\nbutton.list-group-item-warning {\n  color: #8a6d3b;\n}\na.list-group-item-warning .list-group-item-heading,\nbutton.list-group-item-warning .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-warning:hover,\nbutton.list-group-item-warning:hover,\na.list-group-item-warning:focus,\nbutton.list-group-item-warning:focus {\n  color: #8a6d3b;\n  background-color: #faf2cc;\n}\na.list-group-item-warning.active,\nbutton.list-group-item-warning.active,\na.list-group-item-warning.active:hover,\nbutton.list-group-item-warning.active:hover,\na.list-group-item-warning.active:focus,\nbutton.list-group-item-warning.active:focus {\n  color: #fff;\n  background-color: #8a6d3b;\n  border-color: #8a6d3b;\n}\n.list-group-item-danger {\n  color: #a94442;\n  background-color: #f2dede;\n}\na.list-group-item-danger,\nbutton.list-group-item-danger {\n  color: #a94442;\n}\na.list-group-item-danger .list-group-item-heading,\nbutton.list-group-item-danger .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-danger:hover,\nbutton.list-group-item-danger:hover,\na.list-group-item-danger:focus,\nbutton.list-group-item-danger:focus {\n  color: #a94442;\n  background-color: #ebcccc;\n}\na.list-group-item-danger.active,\nbutton.list-group-item-danger.active,\na.list-group-item-danger.active:hover,\nbutton.list-group-item-danger.active:hover,\na.list-group-item-danger.active:focus,\nbutton.list-group-item-danger.active:focus {\n  color: #fff;\n  background-color: #a94442;\n  border-color: #a94442;\n}\n.list-group-item-heading {\n  margin-top: 0;\n  margin-bottom: 5px;\n}\n.list-group-item-text {\n  margin-bottom: 0;\n  line-height: 1.3;\n}\n.panel {\n  margin-bottom: 20px;\n  background-color: #fff;\n  border: 1px solid transparent;\n  border-radius: 4px;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.panel-body {\n  padding: 15px;\n}\n.panel-heading {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel-heading > .dropdown .dropdown-toggle {\n  color: inherit;\n}\n.panel-title {\n  margin-top: 0;\n  margin-bottom: 0;\n  font-size: 16px;\n  color: inherit;\n}\n.panel-title > a,\n.panel-title > small,\n.panel-title > .small,\n.panel-title > small > a,\n.panel-title > .small > a {\n  color: inherit;\n}\n.panel-footer {\n  padding: 10px 15px;\n  background-color: #f5f5f5;\n  border-top: 1px solid #ddd;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .list-group,\n.panel > .panel-collapse > .list-group {\n  margin-bottom: 0;\n}\n.panel > .list-group .list-group-item,\n.panel > .panel-collapse > .list-group .list-group-item {\n  border-width: 1px 0;\n  border-radius: 0;\n}\n.panel > .list-group:first-child .list-group-item:first-child,\n.panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {\n  border-top: 0;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel > .list-group:last-child .list-group-item:last-child,\n.panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {\n  border-bottom: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.panel-heading + .list-group .list-group-item:first-child {\n  border-top-width: 0;\n}\n.list-group + .panel-footer {\n  border-top-width: 0;\n}\n.panel > .table,\n.panel > .table-responsive > .table,\n.panel > .panel-collapse > .table {\n  margin-bottom: 0;\n}\n.panel > .table caption,\n.panel > .table-responsive > .table caption,\n.panel > .panel-collapse > .table caption {\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.panel > .table:first-child,\n.panel > .table-responsive:first-child > .table:first-child {\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {\n  border-top-left-radius: 3px;\n  border-top-right-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child td:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,\n.panel > .table:first-child > thead:first-child > tr:first-child th:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {\n  border-top-left-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child td:last-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,\n.panel > .table:first-child > thead:first-child > tr:first-child th:last-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {\n  border-top-right-radius: 3px;\n}\n.panel > .table:last-child,\n.panel > .table-responsive:last-child > .table:last-child {\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {\n  border-bottom-left-radius: 3px;\n  border-bottom-right-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,\n.panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {\n  border-bottom-left-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,\n.panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {\n  border-bottom-right-radius: 3px;\n}\n.panel > .panel-body + .table,\n.panel > .panel-body + .table-responsive,\n.panel > .table + .panel-body,\n.panel > .table-responsive + .panel-body {\n  border-top: 1px solid #ddd;\n}\n.panel > .table > tbody:first-child > tr:first-child th,\n.panel > .table > tbody:first-child > tr:first-child td {\n  border-top: 0;\n}\n.panel > .table-bordered,\n.panel > .table-responsive > .table-bordered {\n  border: 0;\n}\n.panel > .table-bordered > thead > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > thead > tr > th:first-child,\n.panel > .table-bordered > tbody > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,\n.panel > .table-bordered > tfoot > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,\n.panel > .table-bordered > thead > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > thead > tr > td:first-child,\n.panel > .table-bordered > tbody > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,\n.panel > .table-bordered > tfoot > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {\n  border-left: 0;\n}\n.panel > .table-bordered > thead > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > thead > tr > th:last-child,\n.panel > .table-bordered > tbody > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,\n.panel > .table-bordered > tfoot > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,\n.panel > .table-bordered > thead > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > thead > tr > td:last-child,\n.panel > .table-bordered > tbody > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,\n.panel > .table-bordered > tfoot > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {\n  border-right: 0;\n}\n.panel > .table-bordered > thead > tr:first-child > td,\n.panel > .table-responsive > .table-bordered > thead > tr:first-child > td,\n.panel > .table-bordered > tbody > tr:first-child > td,\n.panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,\n.panel > .table-bordered > thead > tr:first-child > th,\n.panel > .table-responsive > .table-bordered > thead > tr:first-child > th,\n.panel > .table-bordered > tbody > tr:first-child > th,\n.panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {\n  border-bottom: 0;\n}\n.panel > .table-bordered > tbody > tr:last-child > td,\n.panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,\n.panel > .table-bordered > tfoot > tr:last-child > td,\n.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,\n.panel > .table-bordered > tbody > tr:last-child > th,\n.panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,\n.panel > .table-bordered > tfoot > tr:last-child > th,\n.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {\n  border-bottom: 0;\n}\n.panel > .table-responsive {\n  border: 0;\n  margin-bottom: 0;\n}\n.panel-group {\n  margin-bottom: 20px;\n}\n.panel-group .panel {\n  margin-bottom: 0;\n  border-radius: 4px;\n}\n.panel-group .panel + .panel {\n  margin-top: 5px;\n}\n.panel-group .panel-heading {\n  border-bottom: 0;\n}\n.panel-group .panel-heading + .panel-collapse > .panel-body,\n.panel-group .panel-heading + .panel-collapse > .list-group {\n  border-top: 1px solid #ddd;\n}\n.panel-group .panel-footer {\n  border-top: 0;\n}\n.panel-group .panel-footer + .panel-collapse .panel-body {\n  border-bottom: 1px solid #ddd;\n}\n.panel-default {\n  border-color: #ddd;\n}\n.panel-default > .panel-heading {\n  color: #333333;\n  background-color: #f5f5f5;\n  border-color: #ddd;\n}\n.panel-default > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #ddd;\n}\n.panel-default > .panel-heading .badge {\n  color: #f5f5f5;\n  background-color: #333333;\n}\n.panel-default > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #ddd;\n}\n.panel-primary {\n  border-color: #337ab7;\n}\n.panel-primary > .panel-heading {\n  color: #fff;\n  background-color: #337ab7;\n  border-color: #337ab7;\n}\n.panel-primary > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #337ab7;\n}\n.panel-primary > .panel-heading .badge {\n  color: #337ab7;\n  background-color: #fff;\n}\n.panel-primary > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #337ab7;\n}\n.panel-success {\n  border-color: #d6e9c6;\n}\n.panel-success > .panel-heading {\n  color: #3c763d;\n  background-color: #dff0d8;\n  border-color: #d6e9c6;\n}\n.panel-success > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #d6e9c6;\n}\n.panel-success > .panel-heading .badge {\n  color: #dff0d8;\n  background-color: #3c763d;\n}\n.panel-success > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #d6e9c6;\n}\n.panel-info {\n  border-color: #bce8f1;\n}\n.panel-info > .panel-heading {\n  color: #31708f;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n}\n.panel-info > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #bce8f1;\n}\n.panel-info > .panel-heading .badge {\n  color: #d9edf7;\n  background-color: #31708f;\n}\n.panel-info > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #bce8f1;\n}\n.panel-warning {\n  border-color: #faebcc;\n}\n.panel-warning > .panel-heading {\n  color: #8a6d3b;\n  background-color: #fcf8e3;\n  border-color: #faebcc;\n}\n.panel-warning > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #faebcc;\n}\n.panel-warning > .panel-heading .badge {\n  color: #fcf8e3;\n  background-color: #8a6d3b;\n}\n.panel-warning > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #faebcc;\n}\n.panel-danger {\n  border-color: #ebccd1;\n}\n.panel-danger > .panel-heading {\n  color: #a94442;\n  background-color: #f2dede;\n  border-color: #ebccd1;\n}\n.panel-danger > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #ebccd1;\n}\n.panel-danger > .panel-heading .badge {\n  color: #f2dede;\n  background-color: #a94442;\n}\n.panel-danger > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #ebccd1;\n}\n.well {\n  min-height: 20px;\n  padding: 19px;\n  margin-bottom: 20px;\n  background-color: #f5f5f5;\n  border: 1px solid #e3e3e3;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.well blockquote {\n  border-color: #ddd;\n  border-color: rgba(0, 0, 0, 0.15);\n}\n.well-lg {\n  padding: 24px;\n  border-radius: 6px;\n}\n.well-sm {\n  padding: 9px;\n  border-radius: 3px;\n}\n.close {\n  float: right;\n  font-size: 21px;\n  font-weight: bold;\n  line-height: 1;\n  color: #000;\n  text-shadow: 0 1px 0 #fff;\n  opacity: 0.2;\n  filter: alpha(opacity=20);\n}\n.close:hover,\n.close:focus {\n  color: #000;\n  text-decoration: none;\n  cursor: pointer;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\nbutton.close {\n  padding: 0;\n  cursor: pointer;\n  background: transparent;\n  border: 0;\n  -webkit-appearance: none;\n}\n.modal-open {\n  overflow: hidden;\n}\n.modal {\n  display: none;\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1050;\n  -webkit-overflow-scrolling: touch;\n  outline: 0;\n}\n.modal.fade .modal-dialog {\n  -webkit-transform: translate(0, -25%);\n  -ms-transform: translate(0, -25%);\n  -o-transform: translate(0, -25%);\n  transform: translate(0, -25%);\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  -moz-transition: -moz-transform 0.3s ease-out;\n  -o-transition: -o-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n}\n.modal.in .modal-dialog {\n  -webkit-transform: translate(0, 0);\n  -ms-transform: translate(0, 0);\n  -o-transform: translate(0, 0);\n  transform: translate(0, 0);\n}\n.modal-open .modal {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.modal-dialog {\n  position: relative;\n  width: auto;\n  margin: 10px;\n}\n.modal-content {\n  position: relative;\n  background-color: #fff;\n  border: 1px solid #999;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);\n  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);\n  background-clip: padding-box;\n  outline: 0;\n}\n.modal-backdrop {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1040;\n  background-color: #000;\n}\n.modal-backdrop.fade {\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.modal-backdrop.in {\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\n.modal-header {\n  padding: 15px;\n  border-bottom: 1px solid #e5e5e5;\n}\n.modal-header .close {\n  margin-top: -2px;\n}\n.modal-title {\n  margin: 0;\n  line-height: 1.42857143;\n}\n.modal-body {\n  position: relative;\n  padding: 15px;\n}\n.modal-footer {\n  padding: 15px;\n  text-align: right;\n  border-top: 1px solid #e5e5e5;\n}\n.modal-footer .btn + .btn {\n  margin-left: 5px;\n  margin-bottom: 0;\n}\n.modal-footer .btn-group .btn + .btn {\n  margin-left: -1px;\n}\n.modal-footer .btn-block + .btn-block {\n  margin-left: 0;\n}\n.modal-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll;\n}\n@media (min-width: 768px) {\n  .modal-dialog {\n    width: 600px;\n    margin: 30px auto;\n  }\n  .modal-content {\n    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);\n  }\n  .modal-sm {\n    width: 300px;\n  }\n}\n@media (min-width: 992px) {\n  .modal-lg {\n    width: 900px;\n  }\n}\n.tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.42857143;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  font-size: 12px;\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.tooltip.in {\n  opacity: 0.9;\n  filter: alpha(opacity=90);\n}\n.tooltip.top {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip.right {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip.bottom {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip.left {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner {\n  max-width: 200px;\n  padding: 3px 8px;\n  color: #fff;\n  text-align: center;\n  background-color: #000;\n  border-radius: 4px;\n}\n.tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip.top .tooltip-arrow {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000;\n}\n.tooltip.top-left .tooltip-arrow {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000;\n}\n.tooltip.top-right .tooltip-arrow {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000;\n}\n.tooltip.right .tooltip-arrow {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #000;\n}\n.tooltip.left .tooltip-arrow {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #000;\n}\n.tooltip.bottom .tooltip-arrow {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000;\n}\n.tooltip.bottom-left .tooltip-arrow {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000;\n}\n.tooltip.bottom-right .tooltip-arrow {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000;\n}\n.popover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1060;\n  display: none;\n  max-width: 276px;\n  padding: 1px;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.42857143;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  font-size: 14px;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid #ccc;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n}\n.popover.top {\n  margin-top: -10px;\n}\n.popover.right {\n  margin-left: 10px;\n}\n.popover.bottom {\n  margin-top: 10px;\n}\n.popover.left {\n  margin-left: -10px;\n}\n.popover-title {\n  margin: 0;\n  padding: 8px 14px;\n  font-size: 14px;\n  background-color: #f7f7f7;\n  border-bottom: 1px solid #ebebeb;\n  border-radius: 5px 5px 0 0;\n}\n.popover-content {\n  padding: 9px 14px;\n}\n.popover > .arrow,\n.popover > .arrow:after {\n  position: absolute;\n  display: block;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.popover > .arrow {\n  border-width: 11px;\n}\n.popover > .arrow:after {\n  border-width: 10px;\n  content: \"\";\n}\n.popover.top > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-bottom-width: 0;\n  border-top-color: #999999;\n  border-top-color: rgba(0, 0, 0, 0.25);\n  bottom: -11px;\n}\n.popover.top > .arrow:after {\n  content: \" \";\n  bottom: 1px;\n  margin-left: -10px;\n  border-bottom-width: 0;\n  border-top-color: #fff;\n}\n.popover.right > .arrow {\n  top: 50%;\n  left: -11px;\n  margin-top: -11px;\n  border-left-width: 0;\n  border-right-color: #999999;\n  border-right-color: rgba(0, 0, 0, 0.25);\n}\n.popover.right > .arrow:after {\n  content: \" \";\n  left: 1px;\n  bottom: -10px;\n  border-left-width: 0;\n  border-right-color: #fff;\n}\n.popover.bottom > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-top-width: 0;\n  border-bottom-color: #999999;\n  border-bottom-color: rgba(0, 0, 0, 0.25);\n  top: -11px;\n}\n.popover.bottom > .arrow:after {\n  content: \" \";\n  top: 1px;\n  margin-left: -10px;\n  border-top-width: 0;\n  border-bottom-color: #fff;\n}\n.popover.left > .arrow {\n  top: 50%;\n  right: -11px;\n  margin-top: -11px;\n  border-right-width: 0;\n  border-left-color: #999999;\n  border-left-color: rgba(0, 0, 0, 0.25);\n}\n.popover.left > .arrow:after {\n  content: \" \";\n  right: 1px;\n  border-right-width: 0;\n  border-left-color: #fff;\n  bottom: -10px;\n}\n.carousel {\n  position: relative;\n}\n.carousel-inner {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n.carousel-inner > .item {\n  display: none;\n  position: relative;\n  -webkit-transition: 0.6s ease-in-out left;\n  -o-transition: 0.6s ease-in-out left;\n  transition: 0.6s ease-in-out left;\n}\n.carousel-inner > .item > img,\n.carousel-inner > .item > a > img {\n  line-height: 1;\n}\n@media all and (transform-3d), (-webkit-transform-3d) {\n  .carousel-inner > .item {\n    -webkit-transition: -webkit-transform 0.6s ease-in-out;\n    -moz-transition: -moz-transform 0.6s ease-in-out;\n    -o-transition: -o-transform 0.6s ease-in-out;\n    transition: transform 0.6s ease-in-out;\n    -webkit-backface-visibility: hidden;\n    -moz-backface-visibility: hidden;\n    backface-visibility: hidden;\n    -webkit-perspective: 1000px;\n    -moz-perspective: 1000px;\n    perspective: 1000px;\n  }\n  .carousel-inner > .item.next,\n  .carousel-inner > .item.active.right {\n    -webkit-transform: translate3d(100%, 0, 0);\n    transform: translate3d(100%, 0, 0);\n    left: 0;\n  }\n  .carousel-inner > .item.prev,\n  .carousel-inner > .item.active.left {\n    -webkit-transform: translate3d(-100%, 0, 0);\n    transform: translate3d(-100%, 0, 0);\n    left: 0;\n  }\n  .carousel-inner > .item.next.left,\n  .carousel-inner > .item.prev.right,\n  .carousel-inner > .item.active {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n    left: 0;\n  }\n}\n.carousel-inner > .active,\n.carousel-inner > .next,\n.carousel-inner > .prev {\n  display: block;\n}\n.carousel-inner > .active {\n  left: 0;\n}\n.carousel-inner > .next,\n.carousel-inner > .prev {\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.carousel-inner > .next {\n  left: 100%;\n}\n.carousel-inner > .prev {\n  left: -100%;\n}\n.carousel-inner > .next.left,\n.carousel-inner > .prev.right {\n  left: 0;\n}\n.carousel-inner > .active.left {\n  left: -100%;\n}\n.carousel-inner > .active.right {\n  left: 100%;\n}\n.carousel-control {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 15%;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n  font-size: 20px;\n  color: #fff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n  background-color: rgba(0, 0, 0, 0);\n}\n.carousel-control.left {\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-repeat: repeat-x;\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);\n}\n.carousel-control.right {\n  left: auto;\n  right: 0;\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-repeat: repeat-x;\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);\n}\n.carousel-control:hover,\n.carousel-control:focus {\n  outline: 0;\n  color: #fff;\n  text-decoration: none;\n  opacity: 0.9;\n  filter: alpha(opacity=90);\n}\n.carousel-control .icon-prev,\n.carousel-control .icon-next,\n.carousel-control .glyphicon-chevron-left,\n.carousel-control .glyphicon-chevron-right {\n  position: absolute;\n  top: 50%;\n  margin-top: -10px;\n  z-index: 5;\n  display: inline-block;\n}\n.carousel-control .icon-prev,\n.carousel-control .glyphicon-chevron-left {\n  left: 50%;\n  margin-left: -10px;\n}\n.carousel-control .icon-next,\n.carousel-control .glyphicon-chevron-right {\n  right: 50%;\n  margin-right: -10px;\n}\n.carousel-control .icon-prev,\n.carousel-control .icon-next {\n  width: 20px;\n  height: 20px;\n  line-height: 1;\n  font-family: serif;\n}\n.carousel-control .icon-prev:before {\n  content: '\\2039';\n}\n.carousel-control .icon-next:before {\n  content: '\\203A';\n}\n.carousel-indicators {\n  position: absolute;\n  bottom: 10px;\n  left: 50%;\n  z-index: 15;\n  width: 60%;\n  margin-left: -30%;\n  padding-left: 0;\n  list-style: none;\n  text-align: center;\n}\n.carousel-indicators li {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 1px;\n  text-indent: -999px;\n  border: 1px solid #fff;\n  border-radius: 10px;\n  cursor: pointer;\n  background-color: #000 \\9;\n  background-color: rgba(0, 0, 0, 0);\n}\n.carousel-indicators .active {\n  margin: 0;\n  width: 12px;\n  height: 12px;\n  background-color: #fff;\n}\n.carousel-caption {\n  position: absolute;\n  left: 15%;\n  right: 15%;\n  bottom: 20px;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: #fff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n}\n.carousel-caption .btn {\n  text-shadow: none;\n}\n@media screen and (min-width: 768px) {\n  .carousel-control .glyphicon-chevron-left,\n  .carousel-control .glyphicon-chevron-right,\n  .carousel-control .icon-prev,\n  .carousel-control .icon-next {\n    width: 30px;\n    height: 30px;\n    margin-top: -10px;\n    font-size: 30px;\n  }\n  .carousel-control .glyphicon-chevron-left,\n  .carousel-control .icon-prev {\n    margin-left: -10px;\n  }\n  .carousel-control .glyphicon-chevron-right,\n  .carousel-control .icon-next {\n    margin-right: -10px;\n  }\n  .carousel-caption {\n    left: 20%;\n    right: 20%;\n    padding-bottom: 30px;\n  }\n  .carousel-indicators {\n    bottom: 20px;\n  }\n}\n.clearfix:before,\n.clearfix:after,\n.dl-horizontal dd:before,\n.dl-horizontal dd:after,\n.container:before,\n.container:after,\n.container-fluid:before,\n.container-fluid:after,\n.row:before,\n.row:after,\n.form-horizontal .form-group:before,\n.form-horizontal .form-group:after,\n.btn-toolbar:before,\n.btn-toolbar:after,\n.btn-group-vertical > .btn-group:before,\n.btn-group-vertical > .btn-group:after,\n.nav:before,\n.nav:after,\n.navbar:before,\n.navbar:after,\n.navbar-header:before,\n.navbar-header:after,\n.navbar-collapse:before,\n.navbar-collapse:after,\n.pager:before,\n.pager:after,\n.panel-body:before,\n.panel-body:after,\n.modal-header:before,\n.modal-header:after,\n.modal-footer:before,\n.modal-footer:after {\n  content: \" \";\n  display: table;\n}\n.clearfix:after,\n.dl-horizontal dd:after,\n.container:after,\n.container-fluid:after,\n.row:after,\n.form-horizontal .form-group:after,\n.btn-toolbar:after,\n.btn-group-vertical > .btn-group:after,\n.nav:after,\n.navbar:after,\n.navbar-header:after,\n.navbar-collapse:after,\n.pager:after,\n.panel-body:after,\n.modal-header:after,\n.modal-footer:after {\n  clear: both;\n}\n.center-block {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n.pull-right {\n  float: right !important;\n}\n.pull-left {\n  float: left !important;\n}\n.hide {\n  display: none !important;\n}\n.show {\n  display: block !important;\n}\n.invisible {\n  visibility: hidden;\n}\n.text-hide {\n  font: 0/0 a;\n  color: transparent;\n  text-shadow: none;\n  background-color: transparent;\n  border: 0;\n}\n.hidden {\n  display: none !important;\n}\n.affix {\n  position: fixed;\n}\n@-ms-viewport {\n  width: device-width;\n}\n.visible-xs,\n.visible-sm,\n.visible-md,\n.visible-lg {\n  display: none !important;\n}\n.visible-xs-block,\n.visible-xs-inline,\n.visible-xs-inline-block,\n.visible-sm-block,\n.visible-sm-inline,\n.visible-sm-inline-block,\n.visible-md-block,\n.visible-md-inline,\n.visible-md-inline-block,\n.visible-lg-block,\n.visible-lg-inline,\n.visible-lg-inline-block {\n  display: none !important;\n}\n@media (max-width: 767px) {\n  .visible-xs {\n    display: block !important;\n  }\n  table.visible-xs {\n    display: table !important;\n  }\n  tr.visible-xs {\n    display: table-row !important;\n  }\n  th.visible-xs,\n  td.visible-xs {\n    display: table-cell !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-block {\n    display: block !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-inline {\n    display: inline !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm {\n    display: block !important;\n  }\n  table.visible-sm {\n    display: table !important;\n  }\n  tr.visible-sm {\n    display: table-row !important;\n  }\n  th.visible-sm,\n  td.visible-sm {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-block {\n    display: block !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md {\n    display: block !important;\n  }\n  table.visible-md {\n    display: table !important;\n  }\n  tr.visible-md {\n    display: table-row !important;\n  }\n  th.visible-md,\n  td.visible-md {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-block {\n    display: block !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg {\n    display: block !important;\n  }\n  table.visible-lg {\n    display: table !important;\n  }\n  tr.visible-lg {\n    display: table-row !important;\n  }\n  th.visible-lg,\n  td.visible-lg {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-block {\n    display: block !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (max-width: 767px) {\n  .hidden-xs {\n    display: none !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .hidden-sm {\n    display: none !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .hidden-md {\n    display: none !important;\n  }\n}\n@media (min-width: 1200px) {\n  .hidden-lg {\n    display: none !important;\n  }\n}\n.visible-print {\n  display: none !important;\n}\n@media print {\n  .visible-print {\n    display: block !important;\n  }\n  table.visible-print {\n    display: table !important;\n  }\n  tr.visible-print {\n    display: table-row !important;\n  }\n  th.visible-print,\n  td.visible-print {\n    display: table-cell !important;\n  }\n}\n.visible-print-block {\n  display: none !important;\n}\n@media print {\n  .visible-print-block {\n    display: block !important;\n  }\n}\n.visible-print-inline {\n  display: none !important;\n}\n@media print {\n  .visible-print-inline {\n    display: inline !important;\n  }\n}\n.visible-print-inline-block {\n  display: none !important;\n}\n@media print {\n  .visible-print-inline-block {\n    display: inline-block !important;\n  }\n}\n@media print {\n  .hidden-print {\n    display: none !important;\n  }\n}\n", ""]);
+	exports.push([module.id, "/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */\nhtml {\n  font-family: sans-serif;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\nbody {\n  margin: 0;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  vertical-align: baseline;\n}\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n[hidden],\ntemplate {\n  display: none;\n}\na {\n  background-color: transparent;\n}\na:active,\na:hover {\n  outline: 0;\n}\nabbr[title] {\n  border-bottom: 1px dotted;\n}\nb,\nstrong {\n  font-weight: bold;\n}\ndfn {\n  font-style: italic;\n}\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\nmark {\n  background: #ff0;\n  color: #000;\n}\nsmall {\n  font-size: 80%;\n}\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsup {\n  top: -0.5em;\n}\nsub {\n  bottom: -0.25em;\n}\nimg {\n  border: 0;\n}\nsvg:not(:root) {\n  overflow: hidden;\n}\nfigure {\n  margin: 1em 40px;\n}\nhr {\n  box-sizing: content-box;\n  height: 0;\n}\npre {\n  overflow: auto;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  font: inherit;\n  margin: 0;\n}\nbutton {\n  overflow: visible;\n}\nbutton,\nselect {\n  text-transform: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\ninput {\n  line-height: normal;\n}\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  box-sizing: content-box;\n}\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\nlegend {\n  border: 0;\n  padding: 0;\n}\ntextarea {\n  overflow: auto;\n}\noptgroup {\n  font-weight: bold;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\n/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */\n@media print {\n  *,\n  *:before,\n  *:after {\n    background: transparent !important;\n    color: #000 !important;\n    box-shadow: none !important;\n    text-shadow: none !important;\n  }\n  a,\n  a:visited {\n    text-decoration: underline;\n  }\n  a[href]:after {\n    content: \" (\" attr(href) \")\";\n  }\n  abbr[title]:after {\n    content: \" (\" attr(title) \")\";\n  }\n  a[href^=\"#\"]:after,\n  a[href^=\"javascript:\"]:after {\n    content: \"\";\n  }\n  pre,\n  blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid;\n  }\n  thead {\n    display: table-header-group;\n  }\n  tr,\n  img {\n    page-break-inside: avoid;\n  }\n  img {\n    max-width: 100% !important;\n  }\n  p,\n  h2,\n  h3 {\n    orphans: 3;\n    widows: 3;\n  }\n  h2,\n  h3 {\n    page-break-after: avoid;\n  }\n  .navbar {\n    display: none;\n  }\n  .btn > .caret,\n  .dropup > .btn > .caret {\n    border-top-color: #000 !important;\n  }\n  .label {\n    border: 1px solid #000;\n  }\n  .table {\n    border-collapse: collapse !important;\n  }\n  .table td,\n  .table th {\n    background-color: #fff !important;\n  }\n  .table-bordered th,\n  .table-bordered td {\n    border: 1px solid #ddd !important;\n  }\n}\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n*:before,\n*:after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\nhtml {\n  font-size: 10px;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #333333;\n  background-color: #fff;\n}\ninput,\nbutton,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: inherit;\n  line-height: inherit;\n}\na {\n  color: #337ab7;\n  text-decoration: none;\n}\na:hover,\na:focus {\n  color: #23527c;\n  text-decoration: underline;\n}\na:focus {\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\nfigure {\n  margin: 0;\n}\nimg {\n  vertical-align: middle;\n}\n.img-responsive,\n.thumbnail > img,\n.thumbnail a > img,\n.carousel-inner > .item > img,\n.carousel-inner > .item > a > img {\n  display: block;\n  max-width: 100%;\n  height: auto;\n}\n.img-rounded {\n  border-radius: 6px;\n}\n.img-thumbnail {\n  padding: 4px;\n  line-height: 1.42857143;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-radius: 4px;\n  -webkit-transition: all 0.2s ease-in-out;\n  -o-transition: all 0.2s ease-in-out;\n  transition: all 0.2s ease-in-out;\n  display: inline-block;\n  max-width: 100%;\n  height: auto;\n}\n.img-circle {\n  border-radius: 50%;\n}\nhr {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  border: 0;\n  border-top: 1px solid #eeeeee;\n}\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  padding: 0;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n.sr-only-focusable:active,\n.sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  clip: auto;\n}\n[role=\"button\"] {\n  cursor: pointer;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\n.h1,\n.h2,\n.h3,\n.h4,\n.h5,\n.h6 {\n  font-family: inherit;\n  font-weight: 500;\n  line-height: 1.1;\n  color: inherit;\n}\nh1 small,\nh2 small,\nh3 small,\nh4 small,\nh5 small,\nh6 small,\n.h1 small,\n.h2 small,\n.h3 small,\n.h4 small,\n.h5 small,\n.h6 small,\nh1 .small,\nh2 .small,\nh3 .small,\nh4 .small,\nh5 .small,\nh6 .small,\n.h1 .small,\n.h2 .small,\n.h3 .small,\n.h4 .small,\n.h5 .small,\n.h6 .small {\n  font-weight: normal;\n  line-height: 1;\n  color: #777777;\n}\nh1,\n.h1,\nh2,\n.h2,\nh3,\n.h3 {\n  margin-top: 20px;\n  margin-bottom: 10px;\n}\nh1 small,\n.h1 small,\nh2 small,\n.h2 small,\nh3 small,\n.h3 small,\nh1 .small,\n.h1 .small,\nh2 .small,\n.h2 .small,\nh3 .small,\n.h3 .small {\n  font-size: 65%;\n}\nh4,\n.h4,\nh5,\n.h5,\nh6,\n.h6 {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\nh4 small,\n.h4 small,\nh5 small,\n.h5 small,\nh6 small,\n.h6 small,\nh4 .small,\n.h4 .small,\nh5 .small,\n.h5 .small,\nh6 .small,\n.h6 .small {\n  font-size: 75%;\n}\nh1,\n.h1 {\n  font-size: 36px;\n}\nh2,\n.h2 {\n  font-size: 30px;\n}\nh3,\n.h3 {\n  font-size: 24px;\n}\nh4,\n.h4 {\n  font-size: 18px;\n}\nh5,\n.h5 {\n  font-size: 14px;\n}\nh6,\n.h6 {\n  font-size: 12px;\n}\np {\n  margin: 0 0 10px;\n}\n.lead {\n  margin-bottom: 20px;\n  font-size: 16px;\n  font-weight: 300;\n  line-height: 1.4;\n}\n@media (min-width: 768px) {\n  .lead {\n    font-size: 21px;\n  }\n}\nsmall,\n.small {\n  font-size: 85%;\n}\nmark,\n.mark {\n  background-color: #fcf8e3;\n  padding: .2em;\n}\n.text-left {\n  text-align: left;\n}\n.text-right {\n  text-align: right;\n}\n.text-center {\n  text-align: center;\n}\n.text-justify {\n  text-align: justify;\n}\n.text-nowrap {\n  white-space: nowrap;\n}\n.text-lowercase {\n  text-transform: lowercase;\n}\n.text-uppercase {\n  text-transform: uppercase;\n}\n.text-capitalize {\n  text-transform: capitalize;\n}\n.text-muted {\n  color: #777777;\n}\n.text-primary {\n  color: #337ab7;\n}\na.text-primary:hover,\na.text-primary:focus {\n  color: #286090;\n}\n.text-success {\n  color: #3c763d;\n}\na.text-success:hover,\na.text-success:focus {\n  color: #2b542c;\n}\n.text-info {\n  color: #31708f;\n}\na.text-info:hover,\na.text-info:focus {\n  color: #245269;\n}\n.text-warning {\n  color: #8a6d3b;\n}\na.text-warning:hover,\na.text-warning:focus {\n  color: #66512c;\n}\n.text-danger {\n  color: #a94442;\n}\na.text-danger:hover,\na.text-danger:focus {\n  color: #843534;\n}\n.bg-primary {\n  color: #fff;\n  background-color: #337ab7;\n}\na.bg-primary:hover,\na.bg-primary:focus {\n  background-color: #286090;\n}\n.bg-success {\n  background-color: #dff0d8;\n}\na.bg-success:hover,\na.bg-success:focus {\n  background-color: #c1e2b3;\n}\n.bg-info {\n  background-color: #d9edf7;\n}\na.bg-info:hover,\na.bg-info:focus {\n  background-color: #afd9ee;\n}\n.bg-warning {\n  background-color: #fcf8e3;\n}\na.bg-warning:hover,\na.bg-warning:focus {\n  background-color: #f7ecb5;\n}\n.bg-danger {\n  background-color: #f2dede;\n}\na.bg-danger:hover,\na.bg-danger:focus {\n  background-color: #e4b9b9;\n}\n.page-header {\n  padding-bottom: 9px;\n  margin: 40px 0 20px;\n  border-bottom: 1px solid #eeeeee;\n}\nul,\nol {\n  margin-top: 0;\n  margin-bottom: 10px;\n}\nul ul,\nol ul,\nul ol,\nol ol {\n  margin-bottom: 0;\n}\n.list-unstyled {\n  padding-left: 0;\n  list-style: none;\n}\n.list-inline {\n  padding-left: 0;\n  list-style: none;\n  margin-left: -5px;\n}\n.list-inline > li {\n  display: inline-block;\n  padding-left: 5px;\n  padding-right: 5px;\n}\ndl {\n  margin-top: 0;\n  margin-bottom: 20px;\n}\ndt,\ndd {\n  line-height: 1.42857143;\n}\ndt {\n  font-weight: bold;\n}\ndd {\n  margin-left: 0;\n}\n@media (min-width: 768px) {\n  .dl-horizontal dt {\n    float: left;\n    width: 160px;\n    clear: left;\n    text-align: right;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n  }\n  .dl-horizontal dd {\n    margin-left: 180px;\n  }\n}\nabbr[title],\nabbr[data-original-title] {\n  cursor: help;\n  border-bottom: 1px dotted #777777;\n}\n.initialism {\n  font-size: 90%;\n  text-transform: uppercase;\n}\nblockquote {\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 17.5px;\n  border-left: 5px solid #eeeeee;\n}\nblockquote p:last-child,\nblockquote ul:last-child,\nblockquote ol:last-child {\n  margin-bottom: 0;\n}\nblockquote footer,\nblockquote small,\nblockquote .small {\n  display: block;\n  font-size: 80%;\n  line-height: 1.42857143;\n  color: #777777;\n}\nblockquote footer:before,\nblockquote small:before,\nblockquote .small:before {\n  content: '\\2014   \\A0';\n}\n.blockquote-reverse,\nblockquote.pull-right {\n  padding-right: 15px;\n  padding-left: 0;\n  border-right: 5px solid #eeeeee;\n  border-left: 0;\n  text-align: right;\n}\n.blockquote-reverse footer:before,\nblockquote.pull-right footer:before,\n.blockquote-reverse small:before,\nblockquote.pull-right small:before,\n.blockquote-reverse .small:before,\nblockquote.pull-right .small:before {\n  content: '';\n}\n.blockquote-reverse footer:after,\nblockquote.pull-right footer:after,\n.blockquote-reverse small:after,\nblockquote.pull-right small:after,\n.blockquote-reverse .small:after,\nblockquote.pull-right .small:after {\n  content: '\\A0   \\2014';\n}\naddress {\n  margin-bottom: 20px;\n  font-style: normal;\n  line-height: 1.42857143;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\ncode {\n  padding: 2px 4px;\n  font-size: 90%;\n  color: #c7254e;\n  background-color: #f9f2f4;\n  border-radius: 4px;\n}\nkbd {\n  padding: 2px 4px;\n  font-size: 90%;\n  color: #fff;\n  background-color: #333;\n  border-radius: 3px;\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);\n}\nkbd kbd {\n  padding: 0;\n  font-size: 100%;\n  font-weight: bold;\n  box-shadow: none;\n}\npre {\n  display: block;\n  padding: 9.5px;\n  margin: 0 0 10px;\n  font-size: 13px;\n  line-height: 1.42857143;\n  word-break: break-all;\n  word-wrap: break-word;\n  color: #333333;\n  background-color: #f5f5f5;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\npre code {\n  padding: 0;\n  font-size: inherit;\n  color: inherit;\n  white-space: pre-wrap;\n  background-color: transparent;\n  border-radius: 0;\n}\n.pre-scrollable {\n  max-height: 340px;\n  overflow-y: scroll;\n}\n.container {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n@media (min-width: 768px) {\n  .container {\n    width: 750px;\n  }\n}\n@media (min-width: 992px) {\n  .container {\n    width: 970px;\n  }\n}\n@media (min-width: 1200px) {\n  .container {\n    width: 1170px;\n  }\n}\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\n  position: relative;\n  min-height: 1px;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {\n  float: left;\n}\n.col-xs-12 {\n  width: 100%;\n}\n.col-xs-11 {\n  width: 91.66666667%;\n}\n.col-xs-10 {\n  width: 83.33333333%;\n}\n.col-xs-9 {\n  width: 75%;\n}\n.col-xs-8 {\n  width: 66.66666667%;\n}\n.col-xs-7 {\n  width: 58.33333333%;\n}\n.col-xs-6 {\n  width: 50%;\n}\n.col-xs-5 {\n  width: 41.66666667%;\n}\n.col-xs-4 {\n  width: 33.33333333%;\n}\n.col-xs-3 {\n  width: 25%;\n}\n.col-xs-2 {\n  width: 16.66666667%;\n}\n.col-xs-1 {\n  width: 8.33333333%;\n}\n.col-xs-pull-12 {\n  right: 100%;\n}\n.col-xs-pull-11 {\n  right: 91.66666667%;\n}\n.col-xs-pull-10 {\n  right: 83.33333333%;\n}\n.col-xs-pull-9 {\n  right: 75%;\n}\n.col-xs-pull-8 {\n  right: 66.66666667%;\n}\n.col-xs-pull-7 {\n  right: 58.33333333%;\n}\n.col-xs-pull-6 {\n  right: 50%;\n}\n.col-xs-pull-5 {\n  right: 41.66666667%;\n}\n.col-xs-pull-4 {\n  right: 33.33333333%;\n}\n.col-xs-pull-3 {\n  right: 25%;\n}\n.col-xs-pull-2 {\n  right: 16.66666667%;\n}\n.col-xs-pull-1 {\n  right: 8.33333333%;\n}\n.col-xs-pull-0 {\n  right: auto;\n}\n.col-xs-push-12 {\n  left: 100%;\n}\n.col-xs-push-11 {\n  left: 91.66666667%;\n}\n.col-xs-push-10 {\n  left: 83.33333333%;\n}\n.col-xs-push-9 {\n  left: 75%;\n}\n.col-xs-push-8 {\n  left: 66.66666667%;\n}\n.col-xs-push-7 {\n  left: 58.33333333%;\n}\n.col-xs-push-6 {\n  left: 50%;\n}\n.col-xs-push-5 {\n  left: 41.66666667%;\n}\n.col-xs-push-4 {\n  left: 33.33333333%;\n}\n.col-xs-push-3 {\n  left: 25%;\n}\n.col-xs-push-2 {\n  left: 16.66666667%;\n}\n.col-xs-push-1 {\n  left: 8.33333333%;\n}\n.col-xs-push-0 {\n  left: auto;\n}\n.col-xs-offset-12 {\n  margin-left: 100%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.66666667%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.33333333%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.66666667%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.33333333%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.66666667%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.33333333%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.66666667%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.33333333%;\n}\n.col-xs-offset-0 {\n  margin-left: 0%;\n}\n@media (min-width: 768px) {\n  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {\n    float: left;\n  }\n  .col-sm-12 {\n    width: 100%;\n  }\n  .col-sm-11 {\n    width: 91.66666667%;\n  }\n  .col-sm-10 {\n    width: 83.33333333%;\n  }\n  .col-sm-9 {\n    width: 75%;\n  }\n  .col-sm-8 {\n    width: 66.66666667%;\n  }\n  .col-sm-7 {\n    width: 58.33333333%;\n  }\n  .col-sm-6 {\n    width: 50%;\n  }\n  .col-sm-5 {\n    width: 41.66666667%;\n  }\n  .col-sm-4 {\n    width: 33.33333333%;\n  }\n  .col-sm-3 {\n    width: 25%;\n  }\n  .col-sm-2 {\n    width: 16.66666667%;\n  }\n  .col-sm-1 {\n    width: 8.33333333%;\n  }\n  .col-sm-pull-12 {\n    right: 100%;\n  }\n  .col-sm-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-sm-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-sm-pull-9 {\n    right: 75%;\n  }\n  .col-sm-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-sm-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-sm-pull-6 {\n    right: 50%;\n  }\n  .col-sm-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-sm-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-sm-pull-3 {\n    right: 25%;\n  }\n  .col-sm-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-sm-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-sm-pull-0 {\n    right: auto;\n  }\n  .col-sm-push-12 {\n    left: 100%;\n  }\n  .col-sm-push-11 {\n    left: 91.66666667%;\n  }\n  .col-sm-push-10 {\n    left: 83.33333333%;\n  }\n  .col-sm-push-9 {\n    left: 75%;\n  }\n  .col-sm-push-8 {\n    left: 66.66666667%;\n  }\n  .col-sm-push-7 {\n    left: 58.33333333%;\n  }\n  .col-sm-push-6 {\n    left: 50%;\n  }\n  .col-sm-push-5 {\n    left: 41.66666667%;\n  }\n  .col-sm-push-4 {\n    left: 33.33333333%;\n  }\n  .col-sm-push-3 {\n    left: 25%;\n  }\n  .col-sm-push-2 {\n    left: 16.66666667%;\n  }\n  .col-sm-push-1 {\n    left: 8.33333333%;\n  }\n  .col-sm-push-0 {\n    left: auto;\n  }\n  .col-sm-offset-12 {\n    margin-left: 100%;\n  }\n  .col-sm-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-sm-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n  .col-sm-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-sm-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n  .col-sm-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-sm-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n  .col-sm-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-sm-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-sm-offset-0 {\n    margin-left: 0%;\n  }\n}\n@media (min-width: 992px) {\n  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {\n    float: left;\n  }\n  .col-md-12 {\n    width: 100%;\n  }\n  .col-md-11 {\n    width: 91.66666667%;\n  }\n  .col-md-10 {\n    width: 83.33333333%;\n  }\n  .col-md-9 {\n    width: 75%;\n  }\n  .col-md-8 {\n    width: 66.66666667%;\n  }\n  .col-md-7 {\n    width: 58.33333333%;\n  }\n  .col-md-6 {\n    width: 50%;\n  }\n  .col-md-5 {\n    width: 41.66666667%;\n  }\n  .col-md-4 {\n    width: 33.33333333%;\n  }\n  .col-md-3 {\n    width: 25%;\n  }\n  .col-md-2 {\n    width: 16.66666667%;\n  }\n  .col-md-1 {\n    width: 8.33333333%;\n  }\n  .col-md-pull-12 {\n    right: 100%;\n  }\n  .col-md-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-md-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-md-pull-9 {\n    right: 75%;\n  }\n  .col-md-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-md-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-md-pull-6 {\n    right: 50%;\n  }\n  .col-md-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-md-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-md-pull-3 {\n    right: 25%;\n  }\n  .col-md-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-md-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-md-pull-0 {\n    right: auto;\n  }\n  .col-md-push-12 {\n    left: 100%;\n  }\n  .col-md-push-11 {\n    left: 91.66666667%;\n  }\n  .col-md-push-10 {\n    left: 83.33333333%;\n  }\n  .col-md-push-9 {\n    left: 75%;\n  }\n  .col-md-push-8 {\n    left: 66.66666667%;\n  }\n  .col-md-push-7 {\n    left: 58.33333333%;\n  }\n  .col-md-push-6 {\n    left: 50%;\n  }\n  .col-md-push-5 {\n    left: 41.66666667%;\n  }\n  .col-md-push-4 {\n    left: 33.33333333%;\n  }\n  .col-md-push-3 {\n    left: 25%;\n  }\n  .col-md-push-2 {\n    left: 16.66666667%;\n  }\n  .col-md-push-1 {\n    left: 8.33333333%;\n  }\n  .col-md-push-0 {\n    left: auto;\n  }\n  .col-md-offset-12 {\n    margin-left: 100%;\n  }\n  .col-md-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-md-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n  .col-md-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-md-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n  .col-md-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-md-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n  .col-md-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-md-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-md-offset-0 {\n    margin-left: 0%;\n  }\n}\n@media (min-width: 1200px) {\n  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {\n    float: left;\n  }\n  .col-lg-12 {\n    width: 100%;\n  }\n  .col-lg-11 {\n    width: 91.66666667%;\n  }\n  .col-lg-10 {\n    width: 83.33333333%;\n  }\n  .col-lg-9 {\n    width: 75%;\n  }\n  .col-lg-8 {\n    width: 66.66666667%;\n  }\n  .col-lg-7 {\n    width: 58.33333333%;\n  }\n  .col-lg-6 {\n    width: 50%;\n  }\n  .col-lg-5 {\n    width: 41.66666667%;\n  }\n  .col-lg-4 {\n    width: 33.33333333%;\n  }\n  .col-lg-3 {\n    width: 25%;\n  }\n  .col-lg-2 {\n    width: 16.66666667%;\n  }\n  .col-lg-1 {\n    width: 8.33333333%;\n  }\n  .col-lg-pull-12 {\n    right: 100%;\n  }\n  .col-lg-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-lg-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-lg-pull-9 {\n    right: 75%;\n  }\n  .col-lg-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-lg-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-lg-pull-6 {\n    right: 50%;\n  }\n  .col-lg-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-lg-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-lg-pull-3 {\n    right: 25%;\n  }\n  .col-lg-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-lg-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-lg-pull-0 {\n    right: auto;\n  }\n  .col-lg-push-12 {\n    left: 100%;\n  }\n  .col-lg-push-11 {\n    left: 91.66666667%;\n  }\n  .col-lg-push-10 {\n    left: 83.33333333%;\n  }\n  .col-lg-push-9 {\n    left: 75%;\n  }\n  .col-lg-push-8 {\n    left: 66.66666667%;\n  }\n  .col-lg-push-7 {\n    left: 58.33333333%;\n  }\n  .col-lg-push-6 {\n    left: 50%;\n  }\n  .col-lg-push-5 {\n    left: 41.66666667%;\n  }\n  .col-lg-push-4 {\n    left: 33.33333333%;\n  }\n  .col-lg-push-3 {\n    left: 25%;\n  }\n  .col-lg-push-2 {\n    left: 16.66666667%;\n  }\n  .col-lg-push-1 {\n    left: 8.33333333%;\n  }\n  .col-lg-push-0 {\n    left: auto;\n  }\n  .col-lg-offset-12 {\n    margin-left: 100%;\n  }\n  .col-lg-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-lg-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n  .col-lg-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-lg-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n  .col-lg-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-lg-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n  .col-lg-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-lg-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-lg-offset-0 {\n    margin-left: 0%;\n  }\n}\ntable {\n  background-color: transparent;\n}\ncaption {\n  padding-top: 8px;\n  padding-bottom: 8px;\n  color: #777777;\n  text-align: left;\n}\nth {\n  text-align: left;\n}\n.table {\n  width: 100%;\n  max-width: 100%;\n  margin-bottom: 20px;\n}\n.table > thead > tr > th,\n.table > tbody > tr > th,\n.table > tfoot > tr > th,\n.table > thead > tr > td,\n.table > tbody > tr > td,\n.table > tfoot > tr > td {\n  padding: 8px;\n  line-height: 1.42857143;\n  vertical-align: top;\n  border-top: 1px solid #ddd;\n}\n.table > thead > tr > th {\n  vertical-align: bottom;\n  border-bottom: 2px solid #ddd;\n}\n.table > caption + thead > tr:first-child > th,\n.table > colgroup + thead > tr:first-child > th,\n.table > thead:first-child > tr:first-child > th,\n.table > caption + thead > tr:first-child > td,\n.table > colgroup + thead > tr:first-child > td,\n.table > thead:first-child > tr:first-child > td {\n  border-top: 0;\n}\n.table > tbody + tbody {\n  border-top: 2px solid #ddd;\n}\n.table .table {\n  background-color: #fff;\n}\n.table-condensed > thead > tr > th,\n.table-condensed > tbody > tr > th,\n.table-condensed > tfoot > tr > th,\n.table-condensed > thead > tr > td,\n.table-condensed > tbody > tr > td,\n.table-condensed > tfoot > tr > td {\n  padding: 5px;\n}\n.table-bordered {\n  border: 1px solid #ddd;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > tbody > tr > th,\n.table-bordered > tfoot > tr > th,\n.table-bordered > thead > tr > td,\n.table-bordered > tbody > tr > td,\n.table-bordered > tfoot > tr > td {\n  border: 1px solid #ddd;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > thead > tr > td {\n  border-bottom-width: 2px;\n}\n.table-striped > tbody > tr:nth-of-type(odd) {\n  background-color: #f9f9f9;\n}\n.table-hover > tbody > tr:hover {\n  background-color: #f5f5f5;\n}\ntable col[class*=\"col-\"] {\n  position: static;\n  float: none;\n  display: table-column;\n}\ntable td[class*=\"col-\"],\ntable th[class*=\"col-\"] {\n  position: static;\n  float: none;\n  display: table-cell;\n}\n.table > thead > tr > td.active,\n.table > tbody > tr > td.active,\n.table > tfoot > tr > td.active,\n.table > thead > tr > th.active,\n.table > tbody > tr > th.active,\n.table > tfoot > tr > th.active,\n.table > thead > tr.active > td,\n.table > tbody > tr.active > td,\n.table > tfoot > tr.active > td,\n.table > thead > tr.active > th,\n.table > tbody > tr.active > th,\n.table > tfoot > tr.active > th {\n  background-color: #f5f5f5;\n}\n.table-hover > tbody > tr > td.active:hover,\n.table-hover > tbody > tr > th.active:hover,\n.table-hover > tbody > tr.active:hover > td,\n.table-hover > tbody > tr:hover > .active,\n.table-hover > tbody > tr.active:hover > th {\n  background-color: #e8e8e8;\n}\n.table > thead > tr > td.success,\n.table > tbody > tr > td.success,\n.table > tfoot > tr > td.success,\n.table > thead > tr > th.success,\n.table > tbody > tr > th.success,\n.table > tfoot > tr > th.success,\n.table > thead > tr.success > td,\n.table > tbody > tr.success > td,\n.table > tfoot > tr.success > td,\n.table > thead > tr.success > th,\n.table > tbody > tr.success > th,\n.table > tfoot > tr.success > th {\n  background-color: #dff0d8;\n}\n.table-hover > tbody > tr > td.success:hover,\n.table-hover > tbody > tr > th.success:hover,\n.table-hover > tbody > tr.success:hover > td,\n.table-hover > tbody > tr:hover > .success,\n.table-hover > tbody > tr.success:hover > th {\n  background-color: #d0e9c6;\n}\n.table > thead > tr > td.info,\n.table > tbody > tr > td.info,\n.table > tfoot > tr > td.info,\n.table > thead > tr > th.info,\n.table > tbody > tr > th.info,\n.table > tfoot > tr > th.info,\n.table > thead > tr.info > td,\n.table > tbody > tr.info > td,\n.table > tfoot > tr.info > td,\n.table > thead > tr.info > th,\n.table > tbody > tr.info > th,\n.table > tfoot > tr.info > th {\n  background-color: #d9edf7;\n}\n.table-hover > tbody > tr > td.info:hover,\n.table-hover > tbody > tr > th.info:hover,\n.table-hover > tbody > tr.info:hover > td,\n.table-hover > tbody > tr:hover > .info,\n.table-hover > tbody > tr.info:hover > th {\n  background-color: #c4e3f3;\n}\n.table > thead > tr > td.warning,\n.table > tbody > tr > td.warning,\n.table > tfoot > tr > td.warning,\n.table > thead > tr > th.warning,\n.table > tbody > tr > th.warning,\n.table > tfoot > tr > th.warning,\n.table > thead > tr.warning > td,\n.table > tbody > tr.warning > td,\n.table > tfoot > tr.warning > td,\n.table > thead > tr.warning > th,\n.table > tbody > tr.warning > th,\n.table > tfoot > tr.warning > th {\n  background-color: #fcf8e3;\n}\n.table-hover > tbody > tr > td.warning:hover,\n.table-hover > tbody > tr > th.warning:hover,\n.table-hover > tbody > tr.warning:hover > td,\n.table-hover > tbody > tr:hover > .warning,\n.table-hover > tbody > tr.warning:hover > th {\n  background-color: #faf2cc;\n}\n.table > thead > tr > td.danger,\n.table > tbody > tr > td.danger,\n.table > tfoot > tr > td.danger,\n.table > thead > tr > th.danger,\n.table > tbody > tr > th.danger,\n.table > tfoot > tr > th.danger,\n.table > thead > tr.danger > td,\n.table > tbody > tr.danger > td,\n.table > tfoot > tr.danger > td,\n.table > thead > tr.danger > th,\n.table > tbody > tr.danger > th,\n.table > tfoot > tr.danger > th {\n  background-color: #f2dede;\n}\n.table-hover > tbody > tr > td.danger:hover,\n.table-hover > tbody > tr > th.danger:hover,\n.table-hover > tbody > tr.danger:hover > td,\n.table-hover > tbody > tr:hover > .danger,\n.table-hover > tbody > tr.danger:hover > th {\n  background-color: #ebcccc;\n}\n.table-responsive {\n  overflow-x: auto;\n  min-height: 0.01%;\n}\n@media screen and (max-width: 767px) {\n  .table-responsive {\n    width: 100%;\n    margin-bottom: 15px;\n    overflow-y: hidden;\n    -ms-overflow-style: -ms-autohiding-scrollbar;\n    border: 1px solid #ddd;\n  }\n  .table-responsive > .table {\n    margin-bottom: 0;\n  }\n  .table-responsive > .table > thead > tr > th,\n  .table-responsive > .table > tbody > tr > th,\n  .table-responsive > .table > tfoot > tr > th,\n  .table-responsive > .table > thead > tr > td,\n  .table-responsive > .table > tbody > tr > td,\n  .table-responsive > .table > tfoot > tr > td {\n    white-space: nowrap;\n  }\n  .table-responsive > .table-bordered {\n    border: 0;\n  }\n  .table-responsive > .table-bordered > thead > tr > th:first-child,\n  .table-responsive > .table-bordered > tbody > tr > th:first-child,\n  .table-responsive > .table-bordered > tfoot > tr > th:first-child,\n  .table-responsive > .table-bordered > thead > tr > td:first-child,\n  .table-responsive > .table-bordered > tbody > tr > td:first-child,\n  .table-responsive > .table-bordered > tfoot > tr > td:first-child {\n    border-left: 0;\n  }\n  .table-responsive > .table-bordered > thead > tr > th:last-child,\n  .table-responsive > .table-bordered > tbody > tr > th:last-child,\n  .table-responsive > .table-bordered > tfoot > tr > th:last-child,\n  .table-responsive > .table-bordered > thead > tr > td:last-child,\n  .table-responsive > .table-bordered > tbody > tr > td:last-child,\n  .table-responsive > .table-bordered > tfoot > tr > td:last-child {\n    border-right: 0;\n  }\n  .table-responsive > .table-bordered > tbody > tr:last-child > th,\n  .table-responsive > .table-bordered > tfoot > tr:last-child > th,\n  .table-responsive > .table-bordered > tbody > tr:last-child > td,\n  .table-responsive > .table-bordered > tfoot > tr:last-child > td {\n    border-bottom: 0;\n  }\n}\nfieldset {\n  padding: 0;\n  margin: 0;\n  border: 0;\n  min-width: 0;\n}\nlegend {\n  display: block;\n  width: 100%;\n  padding: 0;\n  margin-bottom: 20px;\n  font-size: 21px;\n  line-height: inherit;\n  color: #333333;\n  border: 0;\n  border-bottom: 1px solid #e5e5e5;\n}\nlabel {\n  display: inline-block;\n  max-width: 100%;\n  margin-bottom: 5px;\n  font-weight: bold;\n}\ninput[type=\"search\"] {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\ninput[type=\"radio\"],\ninput[type=\"checkbox\"] {\n  margin: 4px 0 0;\n  margin-top: 1px \\9;\n  line-height: normal;\n}\ninput[type=\"file\"] {\n  display: block;\n}\ninput[type=\"range\"] {\n  display: block;\n  width: 100%;\n}\nselect[multiple],\nselect[size] {\n  height: auto;\n}\ninput[type=\"file\"]:focus,\ninput[type=\"radio\"]:focus,\ninput[type=\"checkbox\"]:focus {\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\noutput {\n  display: block;\n  padding-top: 7px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #555555;\n}\n.form-control {\n  display: block;\n  width: 100%;\n  height: 34px;\n  padding: 6px 12px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #555555;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n}\n.form-control:focus {\n  border-color: #66afe9;\n  outline: 0;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n}\n.form-control::-moz-placeholder {\n  color: #999;\n  opacity: 1;\n}\n.form-control:-ms-input-placeholder {\n  color: #999;\n}\n.form-control::-webkit-input-placeholder {\n  color: #999;\n}\n.form-control::-ms-expand {\n  border: 0;\n  background-color: transparent;\n}\n.form-control[disabled],\n.form-control[readonly],\nfieldset[disabled] .form-control {\n  background-color: #eeeeee;\n  opacity: 1;\n}\n.form-control[disabled],\nfieldset[disabled] .form-control {\n  cursor: not-allowed;\n}\ntextarea.form-control {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: none;\n}\n@media screen and (-webkit-min-device-pixel-ratio: 0) {\n  input[type=\"date\"].form-control,\n  input[type=\"time\"].form-control,\n  input[type=\"datetime-local\"].form-control,\n  input[type=\"month\"].form-control {\n    line-height: 34px;\n  }\n  input[type=\"date\"].input-sm,\n  input[type=\"time\"].input-sm,\n  input[type=\"datetime-local\"].input-sm,\n  input[type=\"month\"].input-sm,\n  .input-group-sm input[type=\"date\"],\n  .input-group-sm input[type=\"time\"],\n  .input-group-sm input[type=\"datetime-local\"],\n  .input-group-sm input[type=\"month\"] {\n    line-height: 30px;\n  }\n  input[type=\"date\"].input-lg,\n  input[type=\"time\"].input-lg,\n  input[type=\"datetime-local\"].input-lg,\n  input[type=\"month\"].input-lg,\n  .input-group-lg input[type=\"date\"],\n  .input-group-lg input[type=\"time\"],\n  .input-group-lg input[type=\"datetime-local\"],\n  .input-group-lg input[type=\"month\"] {\n    line-height: 46px;\n  }\n}\n.form-group {\n  margin-bottom: 15px;\n}\n.radio,\n.checkbox {\n  position: relative;\n  display: block;\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.radio label,\n.checkbox label {\n  min-height: 20px;\n  padding-left: 20px;\n  margin-bottom: 0;\n  font-weight: normal;\n  cursor: pointer;\n}\n.radio input[type=\"radio\"],\n.radio-inline input[type=\"radio\"],\n.checkbox input[type=\"checkbox\"],\n.checkbox-inline input[type=\"checkbox\"] {\n  position: absolute;\n  margin-left: -20px;\n  margin-top: 4px \\9;\n}\n.radio + .radio,\n.checkbox + .checkbox {\n  margin-top: -5px;\n}\n.radio-inline,\n.checkbox-inline {\n  position: relative;\n  display: inline-block;\n  padding-left: 20px;\n  margin-bottom: 0;\n  vertical-align: middle;\n  font-weight: normal;\n  cursor: pointer;\n}\n.radio-inline + .radio-inline,\n.checkbox-inline + .checkbox-inline {\n  margin-top: 0;\n  margin-left: 10px;\n}\ninput[type=\"radio\"][disabled],\ninput[type=\"checkbox\"][disabled],\ninput[type=\"radio\"].disabled,\ninput[type=\"checkbox\"].disabled,\nfieldset[disabled] input[type=\"radio\"],\nfieldset[disabled] input[type=\"checkbox\"] {\n  cursor: not-allowed;\n}\n.radio-inline.disabled,\n.checkbox-inline.disabled,\nfieldset[disabled] .radio-inline,\nfieldset[disabled] .checkbox-inline {\n  cursor: not-allowed;\n}\n.radio.disabled label,\n.checkbox.disabled label,\nfieldset[disabled] .radio label,\nfieldset[disabled] .checkbox label {\n  cursor: not-allowed;\n}\n.form-control-static {\n  padding-top: 7px;\n  padding-bottom: 7px;\n  margin-bottom: 0;\n  min-height: 34px;\n}\n.form-control-static.input-lg,\n.form-control-static.input-sm {\n  padding-left: 0;\n  padding-right: 0;\n}\n.input-sm {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\nselect.input-sm {\n  height: 30px;\n  line-height: 30px;\n}\ntextarea.input-sm,\nselect[multiple].input-sm {\n  height: auto;\n}\n.form-group-sm .form-control {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.form-group-sm select.form-control {\n  height: 30px;\n  line-height: 30px;\n}\n.form-group-sm textarea.form-control,\n.form-group-sm select[multiple].form-control {\n  height: auto;\n}\n.form-group-sm .form-control-static {\n  height: 30px;\n  min-height: 32px;\n  padding: 6px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n}\n.input-lg {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n  border-radius: 6px;\n}\nselect.input-lg {\n  height: 46px;\n  line-height: 46px;\n}\ntextarea.input-lg,\nselect[multiple].input-lg {\n  height: auto;\n}\n.form-group-lg .form-control {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n  border-radius: 6px;\n}\n.form-group-lg select.form-control {\n  height: 46px;\n  line-height: 46px;\n}\n.form-group-lg textarea.form-control,\n.form-group-lg select[multiple].form-control {\n  height: auto;\n}\n.form-group-lg .form-control-static {\n  height: 46px;\n  min-height: 38px;\n  padding: 11px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n}\n.has-feedback {\n  position: relative;\n}\n.has-feedback .form-control {\n  padding-right: 42.5px;\n}\n.form-control-feedback {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 2;\n  display: block;\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n  text-align: center;\n  pointer-events: none;\n}\n.input-lg + .form-control-feedback,\n.input-group-lg + .form-control-feedback,\n.form-group-lg .form-control + .form-control-feedback {\n  width: 46px;\n  height: 46px;\n  line-height: 46px;\n}\n.input-sm + .form-control-feedback,\n.input-group-sm + .form-control-feedback,\n.form-group-sm .form-control + .form-control-feedback {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n}\n.has-success .help-block,\n.has-success .control-label,\n.has-success .radio,\n.has-success .checkbox,\n.has-success .radio-inline,\n.has-success .checkbox-inline,\n.has-success.radio label,\n.has-success.checkbox label,\n.has-success.radio-inline label,\n.has-success.checkbox-inline label {\n  color: #3c763d;\n}\n.has-success .form-control {\n  border-color: #3c763d;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-success .form-control:focus {\n  border-color: #2b542c;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;\n}\n.has-success .input-group-addon {\n  color: #3c763d;\n  border-color: #3c763d;\n  background-color: #dff0d8;\n}\n.has-success .form-control-feedback {\n  color: #3c763d;\n}\n.has-warning .help-block,\n.has-warning .control-label,\n.has-warning .radio,\n.has-warning .checkbox,\n.has-warning .radio-inline,\n.has-warning .checkbox-inline,\n.has-warning.radio label,\n.has-warning.checkbox label,\n.has-warning.radio-inline label,\n.has-warning.checkbox-inline label {\n  color: #8a6d3b;\n}\n.has-warning .form-control {\n  border-color: #8a6d3b;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-warning .form-control:focus {\n  border-color: #66512c;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;\n}\n.has-warning .input-group-addon {\n  color: #8a6d3b;\n  border-color: #8a6d3b;\n  background-color: #fcf8e3;\n}\n.has-warning .form-control-feedback {\n  color: #8a6d3b;\n}\n.has-error .help-block,\n.has-error .control-label,\n.has-error .radio,\n.has-error .checkbox,\n.has-error .radio-inline,\n.has-error .checkbox-inline,\n.has-error.radio label,\n.has-error.checkbox label,\n.has-error.radio-inline label,\n.has-error.checkbox-inline label {\n  color: #a94442;\n}\n.has-error .form-control {\n  border-color: #a94442;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-error .form-control:focus {\n  border-color: #843534;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;\n}\n.has-error .input-group-addon {\n  color: #a94442;\n  border-color: #a94442;\n  background-color: #f2dede;\n}\n.has-error .form-control-feedback {\n  color: #a94442;\n}\n.has-feedback label ~ .form-control-feedback {\n  top: 25px;\n}\n.has-feedback label.sr-only ~ .form-control-feedback {\n  top: 0;\n}\n.help-block {\n  display: block;\n  margin-top: 5px;\n  margin-bottom: 10px;\n  color: #737373;\n}\n@media (min-width: 768px) {\n  .form-inline .form-group {\n    display: inline-block;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .form-inline .form-control-static {\n    display: inline-block;\n  }\n  .form-inline .input-group {\n    display: inline-table;\n    vertical-align: middle;\n  }\n  .form-inline .input-group .input-group-addon,\n  .form-inline .input-group .input-group-btn,\n  .form-inline .input-group .form-control {\n    width: auto;\n  }\n  .form-inline .input-group > .form-control {\n    width: 100%;\n  }\n  .form-inline .control-label {\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .radio,\n  .form-inline .checkbox {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .radio label,\n  .form-inline .checkbox label {\n    padding-left: 0;\n  }\n  .form-inline .radio input[type=\"radio\"],\n  .form-inline .checkbox input[type=\"checkbox\"] {\n    position: relative;\n    margin-left: 0;\n  }\n  .form-inline .has-feedback .form-control-feedback {\n    top: 0;\n  }\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox,\n.form-horizontal .radio-inline,\n.form-horizontal .checkbox-inline {\n  margin-top: 0;\n  margin-bottom: 0;\n  padding-top: 7px;\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox {\n  min-height: 27px;\n}\n.form-horizontal .form-group {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .control-label {\n    text-align: right;\n    margin-bottom: 0;\n    padding-top: 7px;\n  }\n}\n.form-horizontal .has-feedback .form-control-feedback {\n  right: 15px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-lg .control-label {\n    padding-top: 11px;\n    font-size: 18px;\n  }\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-sm .control-label {\n    padding-top: 6px;\n    font-size: 12px;\n  }\n}\n.btn {\n  display: inline-block;\n  margin-bottom: 0;\n  font-weight: normal;\n  text-align: center;\n  vertical-align: middle;\n  touch-action: manipulation;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  white-space: nowrap;\n  padding: 6px 12px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  border-radius: 4px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n.btn:focus,\n.btn:active:focus,\n.btn.active:focus,\n.btn.focus,\n.btn:active.focus,\n.btn.active.focus {\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\n.btn:hover,\n.btn:focus,\n.btn.focus {\n  color: #333;\n  text-decoration: none;\n}\n.btn:active,\n.btn.active {\n  outline: 0;\n  background-image: none;\n  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n}\n.btn.disabled,\n.btn[disabled],\nfieldset[disabled] .btn {\n  cursor: not-allowed;\n  opacity: 0.65;\n  filter: alpha(opacity=65);\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\na.btn.disabled,\nfieldset[disabled] a.btn {\n  pointer-events: none;\n}\n.btn-default {\n  color: #333;\n  background-color: #fff;\n  border-color: #ccc;\n}\n.btn-default:focus,\n.btn-default.focus {\n  color: #333;\n  background-color: #e6e6e6;\n  border-color: #8c8c8c;\n}\n.btn-default:hover {\n  color: #333;\n  background-color: #e6e6e6;\n  border-color: #adadad;\n}\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  color: #333;\n  background-color: #e6e6e6;\n  border-color: #adadad;\n}\n.btn-default:active:hover,\n.btn-default.active:hover,\n.open > .dropdown-toggle.btn-default:hover,\n.btn-default:active:focus,\n.btn-default.active:focus,\n.open > .dropdown-toggle.btn-default:focus,\n.btn-default:active.focus,\n.btn-default.active.focus,\n.open > .dropdown-toggle.btn-default.focus {\n  color: #333;\n  background-color: #d4d4d4;\n  border-color: #8c8c8c;\n}\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  background-image: none;\n}\n.btn-default.disabled:hover,\n.btn-default[disabled]:hover,\nfieldset[disabled] .btn-default:hover,\n.btn-default.disabled:focus,\n.btn-default[disabled]:focus,\nfieldset[disabled] .btn-default:focus,\n.btn-default.disabled.focus,\n.btn-default[disabled].focus,\nfieldset[disabled] .btn-default.focus {\n  background-color: #fff;\n  border-color: #ccc;\n}\n.btn-default .badge {\n  color: #fff;\n  background-color: #333;\n}\n.btn-primary {\n  color: #fff;\n  background-color: #337ab7;\n  border-color: #2e6da4;\n}\n.btn-primary:focus,\n.btn-primary.focus {\n  color: #fff;\n  background-color: #286090;\n  border-color: #122b40;\n}\n.btn-primary:hover {\n  color: #fff;\n  background-color: #286090;\n  border-color: #204d74;\n}\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  color: #fff;\n  background-color: #286090;\n  border-color: #204d74;\n}\n.btn-primary:active:hover,\n.btn-primary.active:hover,\n.open > .dropdown-toggle.btn-primary:hover,\n.btn-primary:active:focus,\n.btn-primary.active:focus,\n.open > .dropdown-toggle.btn-primary:focus,\n.btn-primary:active.focus,\n.btn-primary.active.focus,\n.open > .dropdown-toggle.btn-primary.focus {\n  color: #fff;\n  background-color: #204d74;\n  border-color: #122b40;\n}\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  background-image: none;\n}\n.btn-primary.disabled:hover,\n.btn-primary[disabled]:hover,\nfieldset[disabled] .btn-primary:hover,\n.btn-primary.disabled:focus,\n.btn-primary[disabled]:focus,\nfieldset[disabled] .btn-primary:focus,\n.btn-primary.disabled.focus,\n.btn-primary[disabled].focus,\nfieldset[disabled] .btn-primary.focus {\n  background-color: #337ab7;\n  border-color: #2e6da4;\n}\n.btn-primary .badge {\n  color: #337ab7;\n  background-color: #fff;\n}\n.btn-success {\n  color: #fff;\n  background-color: #5cb85c;\n  border-color: #4cae4c;\n}\n.btn-success:focus,\n.btn-success.focus {\n  color: #fff;\n  background-color: #449d44;\n  border-color: #255625;\n}\n.btn-success:hover {\n  color: #fff;\n  background-color: #449d44;\n  border-color: #398439;\n}\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  color: #fff;\n  background-color: #449d44;\n  border-color: #398439;\n}\n.btn-success:active:hover,\n.btn-success.active:hover,\n.open > .dropdown-toggle.btn-success:hover,\n.btn-success:active:focus,\n.btn-success.active:focus,\n.open > .dropdown-toggle.btn-success:focus,\n.btn-success:active.focus,\n.btn-success.active.focus,\n.open > .dropdown-toggle.btn-success.focus {\n  color: #fff;\n  background-color: #398439;\n  border-color: #255625;\n}\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  background-image: none;\n}\n.btn-success.disabled:hover,\n.btn-success[disabled]:hover,\nfieldset[disabled] .btn-success:hover,\n.btn-success.disabled:focus,\n.btn-success[disabled]:focus,\nfieldset[disabled] .btn-success:focus,\n.btn-success.disabled.focus,\n.btn-success[disabled].focus,\nfieldset[disabled] .btn-success.focus {\n  background-color: #5cb85c;\n  border-color: #4cae4c;\n}\n.btn-success .badge {\n  color: #5cb85c;\n  background-color: #fff;\n}\n.btn-info {\n  color: #fff;\n  background-color: #5bc0de;\n  border-color: #46b8da;\n}\n.btn-info:focus,\n.btn-info.focus {\n  color: #fff;\n  background-color: #31b0d5;\n  border-color: #1b6d85;\n}\n.btn-info:hover {\n  color: #fff;\n  background-color: #31b0d5;\n  border-color: #269abc;\n}\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  color: #fff;\n  background-color: #31b0d5;\n  border-color: #269abc;\n}\n.btn-info:active:hover,\n.btn-info.active:hover,\n.open > .dropdown-toggle.btn-info:hover,\n.btn-info:active:focus,\n.btn-info.active:focus,\n.open > .dropdown-toggle.btn-info:focus,\n.btn-info:active.focus,\n.btn-info.active.focus,\n.open > .dropdown-toggle.btn-info.focus {\n  color: #fff;\n  background-color: #269abc;\n  border-color: #1b6d85;\n}\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  background-image: none;\n}\n.btn-info.disabled:hover,\n.btn-info[disabled]:hover,\nfieldset[disabled] .btn-info:hover,\n.btn-info.disabled:focus,\n.btn-info[disabled]:focus,\nfieldset[disabled] .btn-info:focus,\n.btn-info.disabled.focus,\n.btn-info[disabled].focus,\nfieldset[disabled] .btn-info.focus {\n  background-color: #5bc0de;\n  border-color: #46b8da;\n}\n.btn-info .badge {\n  color: #5bc0de;\n  background-color: #fff;\n}\n.btn-warning {\n  color: #fff;\n  background-color: #f0ad4e;\n  border-color: #eea236;\n}\n.btn-warning:focus,\n.btn-warning.focus {\n  color: #fff;\n  background-color: #ec971f;\n  border-color: #985f0d;\n}\n.btn-warning:hover {\n  color: #fff;\n  background-color: #ec971f;\n  border-color: #d58512;\n}\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  color: #fff;\n  background-color: #ec971f;\n  border-color: #d58512;\n}\n.btn-warning:active:hover,\n.btn-warning.active:hover,\n.open > .dropdown-toggle.btn-warning:hover,\n.btn-warning:active:focus,\n.btn-warning.active:focus,\n.open > .dropdown-toggle.btn-warning:focus,\n.btn-warning:active.focus,\n.btn-warning.active.focus,\n.open > .dropdown-toggle.btn-warning.focus {\n  color: #fff;\n  background-color: #d58512;\n  border-color: #985f0d;\n}\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  background-image: none;\n}\n.btn-warning.disabled:hover,\n.btn-warning[disabled]:hover,\nfieldset[disabled] .btn-warning:hover,\n.btn-warning.disabled:focus,\n.btn-warning[disabled]:focus,\nfieldset[disabled] .btn-warning:focus,\n.btn-warning.disabled.focus,\n.btn-warning[disabled].focus,\nfieldset[disabled] .btn-warning.focus {\n  background-color: #f0ad4e;\n  border-color: #eea236;\n}\n.btn-warning .badge {\n  color: #f0ad4e;\n  background-color: #fff;\n}\n.btn-danger {\n  color: #fff;\n  background-color: #d9534f;\n  border-color: #d43f3a;\n}\n.btn-danger:focus,\n.btn-danger.focus {\n  color: #fff;\n  background-color: #c9302c;\n  border-color: #761c19;\n}\n.btn-danger:hover {\n  color: #fff;\n  background-color: #c9302c;\n  border-color: #ac2925;\n}\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  color: #fff;\n  background-color: #c9302c;\n  border-color: #ac2925;\n}\n.btn-danger:active:hover,\n.btn-danger.active:hover,\n.open > .dropdown-toggle.btn-danger:hover,\n.btn-danger:active:focus,\n.btn-danger.active:focus,\n.open > .dropdown-toggle.btn-danger:focus,\n.btn-danger:active.focus,\n.btn-danger.active.focus,\n.open > .dropdown-toggle.btn-danger.focus {\n  color: #fff;\n  background-color: #ac2925;\n  border-color: #761c19;\n}\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  background-image: none;\n}\n.btn-danger.disabled:hover,\n.btn-danger[disabled]:hover,\nfieldset[disabled] .btn-danger:hover,\n.btn-danger.disabled:focus,\n.btn-danger[disabled]:focus,\nfieldset[disabled] .btn-danger:focus,\n.btn-danger.disabled.focus,\n.btn-danger[disabled].focus,\nfieldset[disabled] .btn-danger.focus {\n  background-color: #d9534f;\n  border-color: #d43f3a;\n}\n.btn-danger .badge {\n  color: #d9534f;\n  background-color: #fff;\n}\n.btn-link {\n  color: #337ab7;\n  font-weight: normal;\n  border-radius: 0;\n}\n.btn-link,\n.btn-link:active,\n.btn-link.active,\n.btn-link[disabled],\nfieldset[disabled] .btn-link {\n  background-color: transparent;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn-link,\n.btn-link:hover,\n.btn-link:focus,\n.btn-link:active {\n  border-color: transparent;\n}\n.btn-link:hover,\n.btn-link:focus {\n  color: #23527c;\n  text-decoration: underline;\n  background-color: transparent;\n}\n.btn-link[disabled]:hover,\nfieldset[disabled] .btn-link:hover,\n.btn-link[disabled]:focus,\nfieldset[disabled] .btn-link:focus {\n  color: #777777;\n  text-decoration: none;\n}\n.btn-lg,\n.btn-group-lg > .btn {\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n  border-radius: 6px;\n}\n.btn-sm,\n.btn-group-sm > .btn {\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.btn-xs,\n.btn-group-xs > .btn {\n  padding: 1px 5px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.btn-block {\n  display: block;\n  width: 100%;\n}\n.btn-block + .btn-block {\n  margin-top: 5px;\n}\ninput[type=\"submit\"].btn-block,\ninput[type=\"reset\"].btn-block,\ninput[type=\"button\"].btn-block {\n  width: 100%;\n}\n.fade {\n  opacity: 0;\n  -webkit-transition: opacity 0.15s linear;\n  -o-transition: opacity 0.15s linear;\n  transition: opacity 0.15s linear;\n}\n.fade.in {\n  opacity: 1;\n}\n.collapse {\n  display: none;\n}\n.collapse.in {\n  display: block;\n}\ntr.collapse.in {\n  display: table-row;\n}\ntbody.collapse.in {\n  display: table-row-group;\n}\n.collapsing {\n  position: relative;\n  height: 0;\n  overflow: hidden;\n  -webkit-transition-property: height, visibility;\n  transition-property: height, visibility;\n  -webkit-transition-duration: 0.35s;\n  transition-duration: 0.35s;\n  -webkit-transition-timing-function: ease;\n  transition-timing-function: ease;\n}\n@font-face {\n  font-family: 'Glyphicons Halflings';\n  src: url(" + __webpack_require__(893) + ");\n  src: url(" + __webpack_require__(893) + "?#iefix) format('embedded-opentype'), url(" + __webpack_require__(894) + ") format('woff2'), url(" + __webpack_require__(895) + ") format('woff'), url(" + __webpack_require__(896) + ") format('truetype'), url(" + __webpack_require__(897) + "#glyphicons_halflingsregular) format('svg');\n}\n.glyphicon {\n  position: relative;\n  top: 1px;\n  display: inline-block;\n  font-family: 'Glyphicons Halflings';\n  font-style: normal;\n  font-weight: normal;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.glyphicon-asterisk:before {\n  content: \"*\";\n}\n.glyphicon-plus:before {\n  content: \"+\";\n}\n.glyphicon-euro:before,\n.glyphicon-eur:before {\n  content: \"\\20AC\";\n}\n.glyphicon-minus:before {\n  content: \"\\2212\";\n}\n.glyphicon-cloud:before {\n  content: \"\\2601\";\n}\n.glyphicon-envelope:before {\n  content: \"\\2709\";\n}\n.glyphicon-pencil:before {\n  content: \"\\270F\";\n}\n.glyphicon-glass:before {\n  content: \"\\E001\";\n}\n.glyphicon-music:before {\n  content: \"\\E002\";\n}\n.glyphicon-search:before {\n  content: \"\\E003\";\n}\n.glyphicon-heart:before {\n  content: \"\\E005\";\n}\n.glyphicon-star:before {\n  content: \"\\E006\";\n}\n.glyphicon-star-empty:before {\n  content: \"\\E007\";\n}\n.glyphicon-user:before {\n  content: \"\\E008\";\n}\n.glyphicon-film:before {\n  content: \"\\E009\";\n}\n.glyphicon-th-large:before {\n  content: \"\\E010\";\n}\n.glyphicon-th:before {\n  content: \"\\E011\";\n}\n.glyphicon-th-list:before {\n  content: \"\\E012\";\n}\n.glyphicon-ok:before {\n  content: \"\\E013\";\n}\n.glyphicon-remove:before {\n  content: \"\\E014\";\n}\n.glyphicon-zoom-in:before {\n  content: \"\\E015\";\n}\n.glyphicon-zoom-out:before {\n  content: \"\\E016\";\n}\n.glyphicon-off:before {\n  content: \"\\E017\";\n}\n.glyphicon-signal:before {\n  content: \"\\E018\";\n}\n.glyphicon-cog:before {\n  content: \"\\E019\";\n}\n.glyphicon-trash:before {\n  content: \"\\E020\";\n}\n.glyphicon-home:before {\n  content: \"\\E021\";\n}\n.glyphicon-file:before {\n  content: \"\\E022\";\n}\n.glyphicon-time:before {\n  content: \"\\E023\";\n}\n.glyphicon-road:before {\n  content: \"\\E024\";\n}\n.glyphicon-download-alt:before {\n  content: \"\\E025\";\n}\n.glyphicon-download:before {\n  content: \"\\E026\";\n}\n.glyphicon-upload:before {\n  content: \"\\E027\";\n}\n.glyphicon-inbox:before {\n  content: \"\\E028\";\n}\n.glyphicon-play-circle:before {\n  content: \"\\E029\";\n}\n.glyphicon-repeat:before {\n  content: \"\\E030\";\n}\n.glyphicon-refresh:before {\n  content: \"\\E031\";\n}\n.glyphicon-list-alt:before {\n  content: \"\\E032\";\n}\n.glyphicon-lock:before {\n  content: \"\\E033\";\n}\n.glyphicon-flag:before {\n  content: \"\\E034\";\n}\n.glyphicon-headphones:before {\n  content: \"\\E035\";\n}\n.glyphicon-volume-off:before {\n  content: \"\\E036\";\n}\n.glyphicon-volume-down:before {\n  content: \"\\E037\";\n}\n.glyphicon-volume-up:before {\n  content: \"\\E038\";\n}\n.glyphicon-qrcode:before {\n  content: \"\\E039\";\n}\n.glyphicon-barcode:before {\n  content: \"\\E040\";\n}\n.glyphicon-tag:before {\n  content: \"\\E041\";\n}\n.glyphicon-tags:before {\n  content: \"\\E042\";\n}\n.glyphicon-book:before {\n  content: \"\\E043\";\n}\n.glyphicon-bookmark:before {\n  content: \"\\E044\";\n}\n.glyphicon-print:before {\n  content: \"\\E045\";\n}\n.glyphicon-camera:before {\n  content: \"\\E046\";\n}\n.glyphicon-font:before {\n  content: \"\\E047\";\n}\n.glyphicon-bold:before {\n  content: \"\\E048\";\n}\n.glyphicon-italic:before {\n  content: \"\\E049\";\n}\n.glyphicon-text-height:before {\n  content: \"\\E050\";\n}\n.glyphicon-text-width:before {\n  content: \"\\E051\";\n}\n.glyphicon-align-left:before {\n  content: \"\\E052\";\n}\n.glyphicon-align-center:before {\n  content: \"\\E053\";\n}\n.glyphicon-align-right:before {\n  content: \"\\E054\";\n}\n.glyphicon-align-justify:before {\n  content: \"\\E055\";\n}\n.glyphicon-list:before {\n  content: \"\\E056\";\n}\n.glyphicon-indent-left:before {\n  content: \"\\E057\";\n}\n.glyphicon-indent-right:before {\n  content: \"\\E058\";\n}\n.glyphicon-facetime-video:before {\n  content: \"\\E059\";\n}\n.glyphicon-picture:before {\n  content: \"\\E060\";\n}\n.glyphicon-map-marker:before {\n  content: \"\\E062\";\n}\n.glyphicon-adjust:before {\n  content: \"\\E063\";\n}\n.glyphicon-tint:before {\n  content: \"\\E064\";\n}\n.glyphicon-edit:before {\n  content: \"\\E065\";\n}\n.glyphicon-share:before {\n  content: \"\\E066\";\n}\n.glyphicon-check:before {\n  content: \"\\E067\";\n}\n.glyphicon-move:before {\n  content: \"\\E068\";\n}\n.glyphicon-step-backward:before {\n  content: \"\\E069\";\n}\n.glyphicon-fast-backward:before {\n  content: \"\\E070\";\n}\n.glyphicon-backward:before {\n  content: \"\\E071\";\n}\n.glyphicon-play:before {\n  content: \"\\E072\";\n}\n.glyphicon-pause:before {\n  content: \"\\E073\";\n}\n.glyphicon-stop:before {\n  content: \"\\E074\";\n}\n.glyphicon-forward:before {\n  content: \"\\E075\";\n}\n.glyphicon-fast-forward:before {\n  content: \"\\E076\";\n}\n.glyphicon-step-forward:before {\n  content: \"\\E077\";\n}\n.glyphicon-eject:before {\n  content: \"\\E078\";\n}\n.glyphicon-chevron-left:before {\n  content: \"\\E079\";\n}\n.glyphicon-chevron-right:before {\n  content: \"\\E080\";\n}\n.glyphicon-plus-sign:before {\n  content: \"\\E081\";\n}\n.glyphicon-minus-sign:before {\n  content: \"\\E082\";\n}\n.glyphicon-remove-sign:before {\n  content: \"\\E083\";\n}\n.glyphicon-ok-sign:before {\n  content: \"\\E084\";\n}\n.glyphicon-question-sign:before {\n  content: \"\\E085\";\n}\n.glyphicon-info-sign:before {\n  content: \"\\E086\";\n}\n.glyphicon-screenshot:before {\n  content: \"\\E087\";\n}\n.glyphicon-remove-circle:before {\n  content: \"\\E088\";\n}\n.glyphicon-ok-circle:before {\n  content: \"\\E089\";\n}\n.glyphicon-ban-circle:before {\n  content: \"\\E090\";\n}\n.glyphicon-arrow-left:before {\n  content: \"\\E091\";\n}\n.glyphicon-arrow-right:before {\n  content: \"\\E092\";\n}\n.glyphicon-arrow-up:before {\n  content: \"\\E093\";\n}\n.glyphicon-arrow-down:before {\n  content: \"\\E094\";\n}\n.glyphicon-share-alt:before {\n  content: \"\\E095\";\n}\n.glyphicon-resize-full:before {\n  content: \"\\E096\";\n}\n.glyphicon-resize-small:before {\n  content: \"\\E097\";\n}\n.glyphicon-exclamation-sign:before {\n  content: \"\\E101\";\n}\n.glyphicon-gift:before {\n  content: \"\\E102\";\n}\n.glyphicon-leaf:before {\n  content: \"\\E103\";\n}\n.glyphicon-fire:before {\n  content: \"\\E104\";\n}\n.glyphicon-eye-open:before {\n  content: \"\\E105\";\n}\n.glyphicon-eye-close:before {\n  content: \"\\E106\";\n}\n.glyphicon-warning-sign:before {\n  content: \"\\E107\";\n}\n.glyphicon-plane:before {\n  content: \"\\E108\";\n}\n.glyphicon-calendar:before {\n  content: \"\\E109\";\n}\n.glyphicon-random:before {\n  content: \"\\E110\";\n}\n.glyphicon-comment:before {\n  content: \"\\E111\";\n}\n.glyphicon-magnet:before {\n  content: \"\\E112\";\n}\n.glyphicon-chevron-up:before {\n  content: \"\\E113\";\n}\n.glyphicon-chevron-down:before {\n  content: \"\\E114\";\n}\n.glyphicon-retweet:before {\n  content: \"\\E115\";\n}\n.glyphicon-shopping-cart:before {\n  content: \"\\E116\";\n}\n.glyphicon-folder-close:before {\n  content: \"\\E117\";\n}\n.glyphicon-folder-open:before {\n  content: \"\\E118\";\n}\n.glyphicon-resize-vertical:before {\n  content: \"\\E119\";\n}\n.glyphicon-resize-horizontal:before {\n  content: \"\\E120\";\n}\n.glyphicon-hdd:before {\n  content: \"\\E121\";\n}\n.glyphicon-bullhorn:before {\n  content: \"\\E122\";\n}\n.glyphicon-bell:before {\n  content: \"\\E123\";\n}\n.glyphicon-certificate:before {\n  content: \"\\E124\";\n}\n.glyphicon-thumbs-up:before {\n  content: \"\\E125\";\n}\n.glyphicon-thumbs-down:before {\n  content: \"\\E126\";\n}\n.glyphicon-hand-right:before {\n  content: \"\\E127\";\n}\n.glyphicon-hand-left:before {\n  content: \"\\E128\";\n}\n.glyphicon-hand-up:before {\n  content: \"\\E129\";\n}\n.glyphicon-hand-down:before {\n  content: \"\\E130\";\n}\n.glyphicon-circle-arrow-right:before {\n  content: \"\\E131\";\n}\n.glyphicon-circle-arrow-left:before {\n  content: \"\\E132\";\n}\n.glyphicon-circle-arrow-up:before {\n  content: \"\\E133\";\n}\n.glyphicon-circle-arrow-down:before {\n  content: \"\\E134\";\n}\n.glyphicon-globe:before {\n  content: \"\\E135\";\n}\n.glyphicon-wrench:before {\n  content: \"\\E136\";\n}\n.glyphicon-tasks:before {\n  content: \"\\E137\";\n}\n.glyphicon-filter:before {\n  content: \"\\E138\";\n}\n.glyphicon-briefcase:before {\n  content: \"\\E139\";\n}\n.glyphicon-fullscreen:before {\n  content: \"\\E140\";\n}\n.glyphicon-dashboard:before {\n  content: \"\\E141\";\n}\n.glyphicon-paperclip:before {\n  content: \"\\E142\";\n}\n.glyphicon-heart-empty:before {\n  content: \"\\E143\";\n}\n.glyphicon-link:before {\n  content: \"\\E144\";\n}\n.glyphicon-phone:before {\n  content: \"\\E145\";\n}\n.glyphicon-pushpin:before {\n  content: \"\\E146\";\n}\n.glyphicon-usd:before {\n  content: \"\\E148\";\n}\n.glyphicon-gbp:before {\n  content: \"\\E149\";\n}\n.glyphicon-sort:before {\n  content: \"\\E150\";\n}\n.glyphicon-sort-by-alphabet:before {\n  content: \"\\E151\";\n}\n.glyphicon-sort-by-alphabet-alt:before {\n  content: \"\\E152\";\n}\n.glyphicon-sort-by-order:before {\n  content: \"\\E153\";\n}\n.glyphicon-sort-by-order-alt:before {\n  content: \"\\E154\";\n}\n.glyphicon-sort-by-attributes:before {\n  content: \"\\E155\";\n}\n.glyphicon-sort-by-attributes-alt:before {\n  content: \"\\E156\";\n}\n.glyphicon-unchecked:before {\n  content: \"\\E157\";\n}\n.glyphicon-expand:before {\n  content: \"\\E158\";\n}\n.glyphicon-collapse-down:before {\n  content: \"\\E159\";\n}\n.glyphicon-collapse-up:before {\n  content: \"\\E160\";\n}\n.glyphicon-log-in:before {\n  content: \"\\E161\";\n}\n.glyphicon-flash:before {\n  content: \"\\E162\";\n}\n.glyphicon-log-out:before {\n  content: \"\\E163\";\n}\n.glyphicon-new-window:before {\n  content: \"\\E164\";\n}\n.glyphicon-record:before {\n  content: \"\\E165\";\n}\n.glyphicon-save:before {\n  content: \"\\E166\";\n}\n.glyphicon-open:before {\n  content: \"\\E167\";\n}\n.glyphicon-saved:before {\n  content: \"\\E168\";\n}\n.glyphicon-import:before {\n  content: \"\\E169\";\n}\n.glyphicon-export:before {\n  content: \"\\E170\";\n}\n.glyphicon-send:before {\n  content: \"\\E171\";\n}\n.glyphicon-floppy-disk:before {\n  content: \"\\E172\";\n}\n.glyphicon-floppy-saved:before {\n  content: \"\\E173\";\n}\n.glyphicon-floppy-remove:before {\n  content: \"\\E174\";\n}\n.glyphicon-floppy-save:before {\n  content: \"\\E175\";\n}\n.glyphicon-floppy-open:before {\n  content: \"\\E176\";\n}\n.glyphicon-credit-card:before {\n  content: \"\\E177\";\n}\n.glyphicon-transfer:before {\n  content: \"\\E178\";\n}\n.glyphicon-cutlery:before {\n  content: \"\\E179\";\n}\n.glyphicon-header:before {\n  content: \"\\E180\";\n}\n.glyphicon-compressed:before {\n  content: \"\\E181\";\n}\n.glyphicon-earphone:before {\n  content: \"\\E182\";\n}\n.glyphicon-phone-alt:before {\n  content: \"\\E183\";\n}\n.glyphicon-tower:before {\n  content: \"\\E184\";\n}\n.glyphicon-stats:before {\n  content: \"\\E185\";\n}\n.glyphicon-sd-video:before {\n  content: \"\\E186\";\n}\n.glyphicon-hd-video:before {\n  content: \"\\E187\";\n}\n.glyphicon-subtitles:before {\n  content: \"\\E188\";\n}\n.glyphicon-sound-stereo:before {\n  content: \"\\E189\";\n}\n.glyphicon-sound-dolby:before {\n  content: \"\\E190\";\n}\n.glyphicon-sound-5-1:before {\n  content: \"\\E191\";\n}\n.glyphicon-sound-6-1:before {\n  content: \"\\E192\";\n}\n.glyphicon-sound-7-1:before {\n  content: \"\\E193\";\n}\n.glyphicon-copyright-mark:before {\n  content: \"\\E194\";\n}\n.glyphicon-registration-mark:before {\n  content: \"\\E195\";\n}\n.glyphicon-cloud-download:before {\n  content: \"\\E197\";\n}\n.glyphicon-cloud-upload:before {\n  content: \"\\E198\";\n}\n.glyphicon-tree-conifer:before {\n  content: \"\\E199\";\n}\n.glyphicon-tree-deciduous:before {\n  content: \"\\E200\";\n}\n.glyphicon-cd:before {\n  content: \"\\E201\";\n}\n.glyphicon-save-file:before {\n  content: \"\\E202\";\n}\n.glyphicon-open-file:before {\n  content: \"\\E203\";\n}\n.glyphicon-level-up:before {\n  content: \"\\E204\";\n}\n.glyphicon-copy:before {\n  content: \"\\E205\";\n}\n.glyphicon-paste:before {\n  content: \"\\E206\";\n}\n.glyphicon-alert:before {\n  content: \"\\E209\";\n}\n.glyphicon-equalizer:before {\n  content: \"\\E210\";\n}\n.glyphicon-king:before {\n  content: \"\\E211\";\n}\n.glyphicon-queen:before {\n  content: \"\\E212\";\n}\n.glyphicon-pawn:before {\n  content: \"\\E213\";\n}\n.glyphicon-bishop:before {\n  content: \"\\E214\";\n}\n.glyphicon-knight:before {\n  content: \"\\E215\";\n}\n.glyphicon-baby-formula:before {\n  content: \"\\E216\";\n}\n.glyphicon-tent:before {\n  content: \"\\26FA\";\n}\n.glyphicon-blackboard:before {\n  content: \"\\E218\";\n}\n.glyphicon-bed:before {\n  content: \"\\E219\";\n}\n.glyphicon-apple:before {\n  content: \"\\F8FF\";\n}\n.glyphicon-erase:before {\n  content: \"\\E221\";\n}\n.glyphicon-hourglass:before {\n  content: \"\\231B\";\n}\n.glyphicon-lamp:before {\n  content: \"\\E223\";\n}\n.glyphicon-duplicate:before {\n  content: \"\\E224\";\n}\n.glyphicon-piggy-bank:before {\n  content: \"\\E225\";\n}\n.glyphicon-scissors:before {\n  content: \"\\E226\";\n}\n.glyphicon-bitcoin:before {\n  content: \"\\E227\";\n}\n.glyphicon-btc:before {\n  content: \"\\E227\";\n}\n.glyphicon-xbt:before {\n  content: \"\\E227\";\n}\n.glyphicon-yen:before {\n  content: \"\\A5\";\n}\n.glyphicon-jpy:before {\n  content: \"\\A5\";\n}\n.glyphicon-ruble:before {\n  content: \"\\20BD\";\n}\n.glyphicon-rub:before {\n  content: \"\\20BD\";\n}\n.glyphicon-scale:before {\n  content: \"\\E230\";\n}\n.glyphicon-ice-lolly:before {\n  content: \"\\E231\";\n}\n.glyphicon-ice-lolly-tasted:before {\n  content: \"\\E232\";\n}\n.glyphicon-education:before {\n  content: \"\\E233\";\n}\n.glyphicon-option-horizontal:before {\n  content: \"\\E234\";\n}\n.glyphicon-option-vertical:before {\n  content: \"\\E235\";\n}\n.glyphicon-menu-hamburger:before {\n  content: \"\\E236\";\n}\n.glyphicon-modal-window:before {\n  content: \"\\E237\";\n}\n.glyphicon-oil:before {\n  content: \"\\E238\";\n}\n.glyphicon-grain:before {\n  content: \"\\E239\";\n}\n.glyphicon-sunglasses:before {\n  content: \"\\E240\";\n}\n.glyphicon-text-size:before {\n  content: \"\\E241\";\n}\n.glyphicon-text-color:before {\n  content: \"\\E242\";\n}\n.glyphicon-text-background:before {\n  content: \"\\E243\";\n}\n.glyphicon-object-align-top:before {\n  content: \"\\E244\";\n}\n.glyphicon-object-align-bottom:before {\n  content: \"\\E245\";\n}\n.glyphicon-object-align-horizontal:before {\n  content: \"\\E246\";\n}\n.glyphicon-object-align-left:before {\n  content: \"\\E247\";\n}\n.glyphicon-object-align-vertical:before {\n  content: \"\\E248\";\n}\n.glyphicon-object-align-right:before {\n  content: \"\\E249\";\n}\n.glyphicon-triangle-right:before {\n  content: \"\\E250\";\n}\n.glyphicon-triangle-left:before {\n  content: \"\\E251\";\n}\n.glyphicon-triangle-bottom:before {\n  content: \"\\E252\";\n}\n.glyphicon-triangle-top:before {\n  content: \"\\E253\";\n}\n.glyphicon-console:before {\n  content: \"\\E254\";\n}\n.glyphicon-superscript:before {\n  content: \"\\E255\";\n}\n.glyphicon-subscript:before {\n  content: \"\\E256\";\n}\n.glyphicon-menu-left:before {\n  content: \"\\E257\";\n}\n.glyphicon-menu-right:before {\n  content: \"\\E258\";\n}\n.glyphicon-menu-down:before {\n  content: \"\\E259\";\n}\n.glyphicon-menu-up:before {\n  content: \"\\E260\";\n}\n.caret {\n  display: inline-block;\n  width: 0;\n  height: 0;\n  margin-left: 2px;\n  vertical-align: middle;\n  border-top: 4px dashed;\n  border-top: 4px solid \\9;\n  border-right: 4px solid transparent;\n  border-left: 4px solid transparent;\n}\n.dropup,\n.dropdown {\n  position: relative;\n}\n.dropdown-toggle:focus {\n  outline: 0;\n}\n.dropdown-menu {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  display: none;\n  float: left;\n  min-width: 160px;\n  padding: 5px 0;\n  margin: 2px 0 0;\n  list-style: none;\n  font-size: 14px;\n  text-align: left;\n  background-color: #fff;\n  border: 1px solid #ccc;\n  border: 1px solid rgba(0, 0, 0, 0.15);\n  border-radius: 4px;\n  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  background-clip: padding-box;\n}\n.dropdown-menu.pull-right {\n  right: 0;\n  left: auto;\n}\n.dropdown-menu .divider {\n  height: 1px;\n  margin: 9px 0;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.dropdown-menu > li > a {\n  display: block;\n  padding: 3px 20px;\n  clear: both;\n  font-weight: normal;\n  line-height: 1.42857143;\n  color: #333333;\n  white-space: nowrap;\n}\n.dropdown-menu > li > a:hover,\n.dropdown-menu > li > a:focus {\n  text-decoration: none;\n  color: #262626;\n  background-color: #f5f5f5;\n}\n.dropdown-menu > .active > a,\n.dropdown-menu > .active > a:hover,\n.dropdown-menu > .active > a:focus {\n  color: #fff;\n  text-decoration: none;\n  outline: 0;\n  background-color: #337ab7;\n}\n.dropdown-menu > .disabled > a,\n.dropdown-menu > .disabled > a:hover,\n.dropdown-menu > .disabled > a:focus {\n  color: #777777;\n}\n.dropdown-menu > .disabled > a:hover,\n.dropdown-menu > .disabled > a:focus {\n  text-decoration: none;\n  background-color: transparent;\n  background-image: none;\n  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);\n  cursor: not-allowed;\n}\n.open > .dropdown-menu {\n  display: block;\n}\n.open > a {\n  outline: 0;\n}\n.dropdown-menu-right {\n  left: auto;\n  right: 0;\n}\n.dropdown-menu-left {\n  left: 0;\n  right: auto;\n}\n.dropdown-header {\n  display: block;\n  padding: 3px 20px;\n  font-size: 12px;\n  line-height: 1.42857143;\n  color: #777777;\n  white-space: nowrap;\n}\n.dropdown-backdrop {\n  position: fixed;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  top: 0;\n  z-index: 990;\n}\n.pull-right > .dropdown-menu {\n  right: 0;\n  left: auto;\n}\n.dropup .caret,\n.navbar-fixed-bottom .dropdown .caret {\n  border-top: 0;\n  border-bottom: 4px dashed;\n  border-bottom: 4px solid \\9;\n  content: \"\";\n}\n.dropup .dropdown-menu,\n.navbar-fixed-bottom .dropdown .dropdown-menu {\n  top: auto;\n  bottom: 100%;\n  margin-bottom: 2px;\n}\n@media (min-width: 768px) {\n  .navbar-right .dropdown-menu {\n    left: auto;\n    right: 0;\n  }\n  .navbar-right .dropdown-menu-left {\n    left: 0;\n    right: auto;\n  }\n}\n.btn-group,\n.btn-group-vertical {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.btn-group > .btn,\n.btn-group-vertical > .btn {\n  position: relative;\n  float: left;\n}\n.btn-group > .btn:hover,\n.btn-group-vertical > .btn:hover,\n.btn-group > .btn:focus,\n.btn-group-vertical > .btn:focus,\n.btn-group > .btn:active,\n.btn-group-vertical > .btn:active,\n.btn-group > .btn.active,\n.btn-group-vertical > .btn.active {\n  z-index: 2;\n}\n.btn-group .btn + .btn,\n.btn-group .btn + .btn-group,\n.btn-group .btn-group + .btn,\n.btn-group .btn-group + .btn-group {\n  margin-left: -1px;\n}\n.btn-toolbar {\n  margin-left: -5px;\n}\n.btn-toolbar .btn,\n.btn-toolbar .btn-group,\n.btn-toolbar .input-group {\n  float: left;\n}\n.btn-toolbar > .btn,\n.btn-toolbar > .btn-group,\n.btn-toolbar > .input-group {\n  margin-left: 5px;\n}\n.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {\n  border-radius: 0;\n}\n.btn-group > .btn:first-child {\n  margin-left: 0;\n}\n.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group > .btn:last-child:not(:first-child),\n.btn-group > .dropdown-toggle:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group > .btn-group {\n  float: left;\n}\n.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0;\n}\n.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group .dropdown-toggle:active,\n.btn-group.open .dropdown-toggle {\n  outline: 0;\n}\n.btn-group > .btn + .dropdown-toggle {\n  padding-left: 8px;\n  padding-right: 8px;\n}\n.btn-group > .btn-lg + .dropdown-toggle {\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.btn-group.open .dropdown-toggle {\n  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n}\n.btn-group.open .dropdown-toggle.btn-link {\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn .caret {\n  margin-left: 0;\n}\n.btn-lg .caret {\n  border-width: 5px 5px 0;\n  border-bottom-width: 0;\n}\n.dropup .btn-lg .caret {\n  border-width: 0 5px 5px;\n}\n.btn-group-vertical > .btn,\n.btn-group-vertical > .btn-group,\n.btn-group-vertical > .btn-group > .btn {\n  display: block;\n  float: none;\n  width: 100%;\n  max-width: 100%;\n}\n.btn-group-vertical > .btn-group > .btn {\n  float: none;\n}\n.btn-group-vertical > .btn + .btn,\n.btn-group-vertical > .btn + .btn-group,\n.btn-group-vertical > .btn-group + .btn,\n.btn-group-vertical > .btn-group + .btn-group {\n  margin-top: -1px;\n  margin-left: 0;\n}\n.btn-group-vertical > .btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.btn-group-vertical > .btn:first-child:not(:last-child) {\n  border-top-right-radius: 4px;\n  border-top-left-radius: 4px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group-vertical > .btn:last-child:not(:first-child) {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n  border-bottom-right-radius: 4px;\n  border-bottom-left-radius: 4px;\n}\n.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0;\n}\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group-justified {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n  border-collapse: separate;\n}\n.btn-group-justified > .btn,\n.btn-group-justified > .btn-group {\n  float: none;\n  display: table-cell;\n  width: 1%;\n}\n.btn-group-justified > .btn-group .btn {\n  width: 100%;\n}\n.btn-group-justified > .btn-group .dropdown-menu {\n  left: auto;\n}\n[data-toggle=\"buttons\"] > .btn input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn-group > .btn input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn input[type=\"checkbox\"],\n[data-toggle=\"buttons\"] > .btn-group > .btn input[type=\"checkbox\"] {\n  position: absolute;\n  clip: rect(0, 0, 0, 0);\n  pointer-events: none;\n}\n.input-group {\n  position: relative;\n  display: table;\n  border-collapse: separate;\n}\n.input-group[class*=\"col-\"] {\n  float: none;\n  padding-left: 0;\n  padding-right: 0;\n}\n.input-group .form-control {\n  position: relative;\n  z-index: 2;\n  float: left;\n  width: 100%;\n  margin-bottom: 0;\n}\n.input-group .form-control:focus {\n  z-index: 3;\n}\n.input-group-lg > .form-control,\n.input-group-lg > .input-group-addon,\n.input-group-lg > .input-group-btn > .btn {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n  border-radius: 6px;\n}\nselect.input-group-lg > .form-control,\nselect.input-group-lg > .input-group-addon,\nselect.input-group-lg > .input-group-btn > .btn {\n  height: 46px;\n  line-height: 46px;\n}\ntextarea.input-group-lg > .form-control,\ntextarea.input-group-lg > .input-group-addon,\ntextarea.input-group-lg > .input-group-btn > .btn,\nselect[multiple].input-group-lg > .form-control,\nselect[multiple].input-group-lg > .input-group-addon,\nselect[multiple].input-group-lg > .input-group-btn > .btn {\n  height: auto;\n}\n.input-group-sm > .form-control,\n.input-group-sm > .input-group-addon,\n.input-group-sm > .input-group-btn > .btn {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\nselect.input-group-sm > .form-control,\nselect.input-group-sm > .input-group-addon,\nselect.input-group-sm > .input-group-btn > .btn {\n  height: 30px;\n  line-height: 30px;\n}\ntextarea.input-group-sm > .form-control,\ntextarea.input-group-sm > .input-group-addon,\ntextarea.input-group-sm > .input-group-btn > .btn,\nselect[multiple].input-group-sm > .form-control,\nselect[multiple].input-group-sm > .input-group-addon,\nselect[multiple].input-group-sm > .input-group-btn > .btn {\n  height: auto;\n}\n.input-group-addon,\n.input-group-btn,\n.input-group .form-control {\n  display: table-cell;\n}\n.input-group-addon:not(:first-child):not(:last-child),\n.input-group-btn:not(:first-child):not(:last-child),\n.input-group .form-control:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.input-group-addon,\n.input-group-btn {\n  width: 1%;\n  white-space: nowrap;\n  vertical-align: middle;\n}\n.input-group-addon {\n  padding: 6px 12px;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 1;\n  color: #555555;\n  text-align: center;\n  background-color: #eeeeee;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\n.input-group-addon.input-sm {\n  padding: 5px 10px;\n  font-size: 12px;\n  border-radius: 3px;\n}\n.input-group-addon.input-lg {\n  padding: 10px 16px;\n  font-size: 18px;\n  border-radius: 6px;\n}\n.input-group-addon input[type=\"radio\"],\n.input-group-addon input[type=\"checkbox\"] {\n  margin-top: 0;\n}\n.input-group .form-control:first-child,\n.input-group-addon:first-child,\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group > .btn,\n.input-group-btn:first-child > .dropdown-toggle,\n.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),\n.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.input-group-addon:first-child {\n  border-right: 0;\n}\n.input-group .form-control:last-child,\n.input-group-addon:last-child,\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group > .btn,\n.input-group-btn:last-child > .dropdown-toggle,\n.input-group-btn:first-child > .btn:not(:first-child),\n.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.input-group-addon:last-child {\n  border-left: 0;\n}\n.input-group-btn {\n  position: relative;\n  font-size: 0;\n  white-space: nowrap;\n}\n.input-group-btn > .btn {\n  position: relative;\n}\n.input-group-btn > .btn + .btn {\n  margin-left: -1px;\n}\n.input-group-btn > .btn:hover,\n.input-group-btn > .btn:focus,\n.input-group-btn > .btn:active {\n  z-index: 2;\n}\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group {\n  margin-right: -1px;\n}\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group {\n  z-index: 2;\n  margin-left: -1px;\n}\n.nav {\n  margin-bottom: 0;\n  padding-left: 0;\n  list-style: none;\n}\n.nav > li {\n  position: relative;\n  display: block;\n}\n.nav > li > a {\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n}\n.nav > li > a:hover,\n.nav > li > a:focus {\n  text-decoration: none;\n  background-color: #eeeeee;\n}\n.nav > li.disabled > a {\n  color: #777777;\n}\n.nav > li.disabled > a:hover,\n.nav > li.disabled > a:focus {\n  color: #777777;\n  text-decoration: none;\n  background-color: transparent;\n  cursor: not-allowed;\n}\n.nav .open > a,\n.nav .open > a:hover,\n.nav .open > a:focus {\n  background-color: #eeeeee;\n  border-color: #337ab7;\n}\n.nav .nav-divider {\n  height: 1px;\n  margin: 9px 0;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.nav > li > a > img {\n  max-width: none;\n}\n.nav-tabs {\n  border-bottom: 1px solid #ddd;\n}\n.nav-tabs > li {\n  float: left;\n  margin-bottom: -1px;\n}\n.nav-tabs > li > a {\n  margin-right: 2px;\n  line-height: 1.42857143;\n  border: 1px solid transparent;\n  border-radius: 4px 4px 0 0;\n}\n.nav-tabs > li > a:hover {\n  border-color: #eeeeee #eeeeee #ddd;\n}\n.nav-tabs > li.active > a,\n.nav-tabs > li.active > a:hover,\n.nav-tabs > li.active > a:focus {\n  color: #555555;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-bottom-color: transparent;\n  cursor: default;\n}\n.nav-tabs.nav-justified {\n  width: 100%;\n  border-bottom: 0;\n}\n.nav-tabs.nav-justified > li {\n  float: none;\n}\n.nav-tabs.nav-justified > li > a {\n  text-align: center;\n  margin-bottom: 5px;\n}\n.nav-tabs.nav-justified > .dropdown .dropdown-menu {\n  top: auto;\n  left: auto;\n}\n@media (min-width: 768px) {\n  .nav-tabs.nav-justified > li {\n    display: table-cell;\n    width: 1%;\n  }\n  .nav-tabs.nav-justified > li > a {\n    margin-bottom: 0;\n  }\n}\n.nav-tabs.nav-justified > li > a {\n  margin-right: 0;\n  border-radius: 4px;\n}\n.nav-tabs.nav-justified > .active > a,\n.nav-tabs.nav-justified > .active > a:hover,\n.nav-tabs.nav-justified > .active > a:focus {\n  border: 1px solid #ddd;\n}\n@media (min-width: 768px) {\n  .nav-tabs.nav-justified > li > a {\n    border-bottom: 1px solid #ddd;\n    border-radius: 4px 4px 0 0;\n  }\n  .nav-tabs.nav-justified > .active > a,\n  .nav-tabs.nav-justified > .active > a:hover,\n  .nav-tabs.nav-justified > .active > a:focus {\n    border-bottom-color: #fff;\n  }\n}\n.nav-pills > li {\n  float: left;\n}\n.nav-pills > li > a {\n  border-radius: 4px;\n}\n.nav-pills > li + li {\n  margin-left: 2px;\n}\n.nav-pills > li.active > a,\n.nav-pills > li.active > a:hover,\n.nav-pills > li.active > a:focus {\n  color: #fff;\n  background-color: #337ab7;\n}\n.nav-stacked > li {\n  float: none;\n}\n.nav-stacked > li + li {\n  margin-top: 2px;\n  margin-left: 0;\n}\n.nav-justified {\n  width: 100%;\n}\n.nav-justified > li {\n  float: none;\n}\n.nav-justified > li > a {\n  text-align: center;\n  margin-bottom: 5px;\n}\n.nav-justified > .dropdown .dropdown-menu {\n  top: auto;\n  left: auto;\n}\n@media (min-width: 768px) {\n  .nav-justified > li {\n    display: table-cell;\n    width: 1%;\n  }\n  .nav-justified > li > a {\n    margin-bottom: 0;\n  }\n}\n.nav-tabs-justified {\n  border-bottom: 0;\n}\n.nav-tabs-justified > li > a {\n  margin-right: 0;\n  border-radius: 4px;\n}\n.nav-tabs-justified > .active > a,\n.nav-tabs-justified > .active > a:hover,\n.nav-tabs-justified > .active > a:focus {\n  border: 1px solid #ddd;\n}\n@media (min-width: 768px) {\n  .nav-tabs-justified > li > a {\n    border-bottom: 1px solid #ddd;\n    border-radius: 4px 4px 0 0;\n  }\n  .nav-tabs-justified > .active > a,\n  .nav-tabs-justified > .active > a:hover,\n  .nav-tabs-justified > .active > a:focus {\n    border-bottom-color: #fff;\n  }\n}\n.tab-content > .tab-pane {\n  display: none;\n}\n.tab-content > .active {\n  display: block;\n}\n.nav-tabs .dropdown-menu {\n  margin-top: -1px;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.navbar {\n  position: relative;\n  min-height: 50px;\n  margin-bottom: 20px;\n  border: 1px solid transparent;\n}\n@media (min-width: 768px) {\n  .navbar {\n    border-radius: 4px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-header {\n    float: left;\n  }\n}\n.navbar-collapse {\n  overflow-x: visible;\n  padding-right: 15px;\n  padding-left: 15px;\n  border-top: 1px solid transparent;\n  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);\n  -webkit-overflow-scrolling: touch;\n}\n.navbar-collapse.in {\n  overflow-y: auto;\n}\n@media (min-width: 768px) {\n  .navbar-collapse {\n    width: auto;\n    border-top: 0;\n    box-shadow: none;\n  }\n  .navbar-collapse.collapse {\n    display: block !important;\n    height: auto !important;\n    padding-bottom: 0;\n    overflow: visible !important;\n  }\n  .navbar-collapse.in {\n    overflow-y: visible;\n  }\n  .navbar-fixed-top .navbar-collapse,\n  .navbar-static-top .navbar-collapse,\n  .navbar-fixed-bottom .navbar-collapse {\n    padding-left: 0;\n    padding-right: 0;\n  }\n}\n.navbar-fixed-top .navbar-collapse,\n.navbar-fixed-bottom .navbar-collapse {\n  max-height: 340px;\n}\n@media (max-device-width: 480px) and (orientation: landscape) {\n  .navbar-fixed-top .navbar-collapse,\n  .navbar-fixed-bottom .navbar-collapse {\n    max-height: 200px;\n  }\n}\n.container > .navbar-header,\n.container-fluid > .navbar-header,\n.container > .navbar-collapse,\n.container-fluid > .navbar-collapse {\n  margin-right: -15px;\n  margin-left: -15px;\n}\n@media (min-width: 768px) {\n  .container > .navbar-header,\n  .container-fluid > .navbar-header,\n  .container > .navbar-collapse,\n  .container-fluid > .navbar-collapse {\n    margin-right: 0;\n    margin-left: 0;\n  }\n}\n.navbar-static-top {\n  z-index: 1000;\n  border-width: 0 0 1px;\n}\n@media (min-width: 768px) {\n  .navbar-static-top {\n    border-radius: 0;\n  }\n}\n.navbar-fixed-top,\n.navbar-fixed-bottom {\n  position: fixed;\n  right: 0;\n  left: 0;\n  z-index: 1030;\n}\n@media (min-width: 768px) {\n  .navbar-fixed-top,\n  .navbar-fixed-bottom {\n    border-radius: 0;\n  }\n}\n.navbar-fixed-top {\n  top: 0;\n  border-width: 0 0 1px;\n}\n.navbar-fixed-bottom {\n  bottom: 0;\n  margin-bottom: 0;\n  border-width: 1px 0 0;\n}\n.navbar-brand {\n  float: left;\n  padding: 15px 15px;\n  font-size: 18px;\n  line-height: 20px;\n  height: 50px;\n}\n.navbar-brand:hover,\n.navbar-brand:focus {\n  text-decoration: none;\n}\n.navbar-brand > img {\n  display: block;\n}\n@media (min-width: 768px) {\n  .navbar > .container .navbar-brand,\n  .navbar > .container-fluid .navbar-brand {\n    margin-left: -15px;\n  }\n}\n.navbar-toggle {\n  position: relative;\n  float: right;\n  margin-right: 15px;\n  padding: 9px 10px;\n  margin-top: 8px;\n  margin-bottom: 8px;\n  background-color: transparent;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n.navbar-toggle:focus {\n  outline: 0;\n}\n.navbar-toggle .icon-bar {\n  display: block;\n  width: 22px;\n  height: 2px;\n  border-radius: 1px;\n}\n.navbar-toggle .icon-bar + .icon-bar {\n  margin-top: 4px;\n}\n@media (min-width: 768px) {\n  .navbar-toggle {\n    display: none;\n  }\n}\n.navbar-nav {\n  margin: 7.5px -15px;\n}\n.navbar-nav > li > a {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  line-height: 20px;\n}\n@media (max-width: 767px) {\n  .navbar-nav .open .dropdown-menu {\n    position: static;\n    float: none;\n    width: auto;\n    margin-top: 0;\n    background-color: transparent;\n    border: 0;\n    box-shadow: none;\n  }\n  .navbar-nav .open .dropdown-menu > li > a,\n  .navbar-nav .open .dropdown-menu .dropdown-header {\n    padding: 5px 15px 5px 25px;\n  }\n  .navbar-nav .open .dropdown-menu > li > a {\n    line-height: 20px;\n  }\n  .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-nav .open .dropdown-menu > li > a:focus {\n    background-image: none;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-nav {\n    float: left;\n    margin: 0;\n  }\n  .navbar-nav > li {\n    float: left;\n  }\n  .navbar-nav > li > a {\n    padding-top: 15px;\n    padding-bottom: 15px;\n  }\n}\n.navbar-form {\n  margin-left: -15px;\n  margin-right: -15px;\n  padding: 10px 15px;\n  border-top: 1px solid transparent;\n  border-bottom: 1px solid transparent;\n  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);\n  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n@media (min-width: 768px) {\n  .navbar-form .form-group {\n    display: inline-block;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .navbar-form .form-control-static {\n    display: inline-block;\n  }\n  .navbar-form .input-group {\n    display: inline-table;\n    vertical-align: middle;\n  }\n  .navbar-form .input-group .input-group-addon,\n  .navbar-form .input-group .input-group-btn,\n  .navbar-form .input-group .form-control {\n    width: auto;\n  }\n  .navbar-form .input-group > .form-control {\n    width: 100%;\n  }\n  .navbar-form .control-label {\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .radio,\n  .navbar-form .checkbox {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .radio label,\n  .navbar-form .checkbox label {\n    padding-left: 0;\n  }\n  .navbar-form .radio input[type=\"radio\"],\n  .navbar-form .checkbox input[type=\"checkbox\"] {\n    position: relative;\n    margin-left: 0;\n  }\n  .navbar-form .has-feedback .form-control-feedback {\n    top: 0;\n  }\n}\n@media (max-width: 767px) {\n  .navbar-form .form-group {\n    margin-bottom: 5px;\n  }\n  .navbar-form .form-group:last-child {\n    margin-bottom: 0;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-form {\n    width: auto;\n    border: 0;\n    margin-left: 0;\n    margin-right: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    -webkit-box-shadow: none;\n    box-shadow: none;\n  }\n}\n.navbar-nav > li > .dropdown-menu {\n  margin-top: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {\n  margin-bottom: 0;\n  border-top-right-radius: 4px;\n  border-top-left-radius: 4px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.navbar-btn {\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n.navbar-btn.btn-sm {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.navbar-btn.btn-xs {\n  margin-top: 14px;\n  margin-bottom: 14px;\n}\n.navbar-text {\n  margin-top: 15px;\n  margin-bottom: 15px;\n}\n@media (min-width: 768px) {\n  .navbar-text {\n    float: left;\n    margin-left: 15px;\n    margin-right: 15px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-left {\n    float: left !important;\n  }\n  .navbar-right {\n    float: right !important;\n    margin-right: -15px;\n  }\n  .navbar-right ~ .navbar-right {\n    margin-right: 0;\n  }\n}\n.navbar-default {\n  background-color: #f8f8f8;\n  border-color: #e7e7e7;\n}\n.navbar-default .navbar-brand {\n  color: #777;\n}\n.navbar-default .navbar-brand:hover,\n.navbar-default .navbar-brand:focus {\n  color: #5e5e5e;\n  background-color: transparent;\n}\n.navbar-default .navbar-text {\n  color: #777;\n}\n.navbar-default .navbar-nav > li > a {\n  color: #777;\n}\n.navbar-default .navbar-nav > li > a:hover,\n.navbar-default .navbar-nav > li > a:focus {\n  color: #333;\n  background-color: transparent;\n}\n.navbar-default .navbar-nav > .active > a,\n.navbar-default .navbar-nav > .active > a:hover,\n.navbar-default .navbar-nav > .active > a:focus {\n  color: #555;\n  background-color: #e7e7e7;\n}\n.navbar-default .navbar-nav > .disabled > a,\n.navbar-default .navbar-nav > .disabled > a:hover,\n.navbar-default .navbar-nav > .disabled > a:focus {\n  color: #ccc;\n  background-color: transparent;\n}\n.navbar-default .navbar-toggle {\n  border-color: #ddd;\n}\n.navbar-default .navbar-toggle:hover,\n.navbar-default .navbar-toggle:focus {\n  background-color: #ddd;\n}\n.navbar-default .navbar-toggle .icon-bar {\n  background-color: #888;\n}\n.navbar-default .navbar-collapse,\n.navbar-default .navbar-form {\n  border-color: #e7e7e7;\n}\n.navbar-default .navbar-nav > .open > a,\n.navbar-default .navbar-nav > .open > a:hover,\n.navbar-default .navbar-nav > .open > a:focus {\n  background-color: #e7e7e7;\n  color: #555;\n}\n@media (max-width: 767px) {\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a {\n    color: #777;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {\n    color: #333;\n    background-color: transparent;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {\n    color: #555;\n    background-color: #e7e7e7;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {\n    color: #ccc;\n    background-color: transparent;\n  }\n}\n.navbar-default .navbar-link {\n  color: #777;\n}\n.navbar-default .navbar-link:hover {\n  color: #333;\n}\n.navbar-default .btn-link {\n  color: #777;\n}\n.navbar-default .btn-link:hover,\n.navbar-default .btn-link:focus {\n  color: #333;\n}\n.navbar-default .btn-link[disabled]:hover,\nfieldset[disabled] .navbar-default .btn-link:hover,\n.navbar-default .btn-link[disabled]:focus,\nfieldset[disabled] .navbar-default .btn-link:focus {\n  color: #ccc;\n}\n.navbar-inverse {\n  background-color: #222;\n  border-color: #080808;\n}\n.navbar-inverse .navbar-brand {\n  color: #9d9d9d;\n}\n.navbar-inverse .navbar-brand:hover,\n.navbar-inverse .navbar-brand:focus {\n  color: #fff;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-text {\n  color: #9d9d9d;\n}\n.navbar-inverse .navbar-nav > li > a {\n  color: #9d9d9d;\n}\n.navbar-inverse .navbar-nav > li > a:hover,\n.navbar-inverse .navbar-nav > li > a:focus {\n  color: #fff;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-nav > .active > a,\n.navbar-inverse .navbar-nav > .active > a:hover,\n.navbar-inverse .navbar-nav > .active > a:focus {\n  color: #fff;\n  background-color: #080808;\n}\n.navbar-inverse .navbar-nav > .disabled > a,\n.navbar-inverse .navbar-nav > .disabled > a:hover,\n.navbar-inverse .navbar-nav > .disabled > a:focus {\n  color: #444;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-toggle {\n  border-color: #333;\n}\n.navbar-inverse .navbar-toggle:hover,\n.navbar-inverse .navbar-toggle:focus {\n  background-color: #333;\n}\n.navbar-inverse .navbar-toggle .icon-bar {\n  background-color: #fff;\n}\n.navbar-inverse .navbar-collapse,\n.navbar-inverse .navbar-form {\n  border-color: #101010;\n}\n.navbar-inverse .navbar-nav > .open > a,\n.navbar-inverse .navbar-nav > .open > a:hover,\n.navbar-inverse .navbar-nav > .open > a:focus {\n  background-color: #080808;\n  color: #fff;\n}\n@media (max-width: 767px) {\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {\n    border-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {\n    background-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {\n    color: #9d9d9d;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {\n    color: #fff;\n    background-color: transparent;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {\n    color: #fff;\n    background-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {\n    color: #444;\n    background-color: transparent;\n  }\n}\n.navbar-inverse .navbar-link {\n  color: #9d9d9d;\n}\n.navbar-inverse .navbar-link:hover {\n  color: #fff;\n}\n.navbar-inverse .btn-link {\n  color: #9d9d9d;\n}\n.navbar-inverse .btn-link:hover,\n.navbar-inverse .btn-link:focus {\n  color: #fff;\n}\n.navbar-inverse .btn-link[disabled]:hover,\nfieldset[disabled] .navbar-inverse .btn-link:hover,\n.navbar-inverse .btn-link[disabled]:focus,\nfieldset[disabled] .navbar-inverse .btn-link:focus {\n  color: #444;\n}\n.breadcrumb {\n  padding: 8px 15px;\n  margin-bottom: 20px;\n  list-style: none;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n.breadcrumb > li {\n  display: inline-block;\n}\n.breadcrumb > li + li:before {\n  content: \"/\\A0\";\n  padding: 0 5px;\n  color: #ccc;\n}\n.breadcrumb > .active {\n  color: #777777;\n}\n.pagination {\n  display: inline-block;\n  padding-left: 0;\n  margin: 20px 0;\n  border-radius: 4px;\n}\n.pagination > li {\n  display: inline;\n}\n.pagination > li > a,\n.pagination > li > span {\n  position: relative;\n  float: left;\n  padding: 6px 12px;\n  line-height: 1.42857143;\n  text-decoration: none;\n  color: #337ab7;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  margin-left: -1px;\n}\n.pagination > li:first-child > a,\n.pagination > li:first-child > span {\n  margin-left: 0;\n  border-bottom-left-radius: 4px;\n  border-top-left-radius: 4px;\n}\n.pagination > li:last-child > a,\n.pagination > li:last-child > span {\n  border-bottom-right-radius: 4px;\n  border-top-right-radius: 4px;\n}\n.pagination > li > a:hover,\n.pagination > li > span:hover,\n.pagination > li > a:focus,\n.pagination > li > span:focus {\n  z-index: 2;\n  color: #23527c;\n  background-color: #eeeeee;\n  border-color: #ddd;\n}\n.pagination > .active > a,\n.pagination > .active > span,\n.pagination > .active > a:hover,\n.pagination > .active > span:hover,\n.pagination > .active > a:focus,\n.pagination > .active > span:focus {\n  z-index: 3;\n  color: #fff;\n  background-color: #337ab7;\n  border-color: #337ab7;\n  cursor: default;\n}\n.pagination > .disabled > span,\n.pagination > .disabled > span:hover,\n.pagination > .disabled > span:focus,\n.pagination > .disabled > a,\n.pagination > .disabled > a:hover,\n.pagination > .disabled > a:focus {\n  color: #777777;\n  background-color: #fff;\n  border-color: #ddd;\n  cursor: not-allowed;\n}\n.pagination-lg > li > a,\n.pagination-lg > li > span {\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.3333333;\n}\n.pagination-lg > li:first-child > a,\n.pagination-lg > li:first-child > span {\n  border-bottom-left-radius: 6px;\n  border-top-left-radius: 6px;\n}\n.pagination-lg > li:last-child > a,\n.pagination-lg > li:last-child > span {\n  border-bottom-right-radius: 6px;\n  border-top-right-radius: 6px;\n}\n.pagination-sm > li > a,\n.pagination-sm > li > span {\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n}\n.pagination-sm > li:first-child > a,\n.pagination-sm > li:first-child > span {\n  border-bottom-left-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.pagination-sm > li:last-child > a,\n.pagination-sm > li:last-child > span {\n  border-bottom-right-radius: 3px;\n  border-top-right-radius: 3px;\n}\n.pager {\n  padding-left: 0;\n  margin: 20px 0;\n  list-style: none;\n  text-align: center;\n}\n.pager li {\n  display: inline;\n}\n.pager li > a,\n.pager li > span {\n  display: inline-block;\n  padding: 5px 14px;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-radius: 15px;\n}\n.pager li > a:hover,\n.pager li > a:focus {\n  text-decoration: none;\n  background-color: #eeeeee;\n}\n.pager .next > a,\n.pager .next > span {\n  float: right;\n}\n.pager .previous > a,\n.pager .previous > span {\n  float: left;\n}\n.pager .disabled > a,\n.pager .disabled > a:hover,\n.pager .disabled > a:focus,\n.pager .disabled > span {\n  color: #777777;\n  background-color: #fff;\n  cursor: not-allowed;\n}\n.label {\n  display: inline;\n  padding: .2em .6em .3em;\n  font-size: 75%;\n  font-weight: bold;\n  line-height: 1;\n  color: #fff;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: .25em;\n}\na.label:hover,\na.label:focus {\n  color: #fff;\n  text-decoration: none;\n  cursor: pointer;\n}\n.label:empty {\n  display: none;\n}\n.btn .label {\n  position: relative;\n  top: -1px;\n}\n.label-default {\n  background-color: #777777;\n}\n.label-default[href]:hover,\n.label-default[href]:focus {\n  background-color: #5e5e5e;\n}\n.label-primary {\n  background-color: #337ab7;\n}\n.label-primary[href]:hover,\n.label-primary[href]:focus {\n  background-color: #286090;\n}\n.label-success {\n  background-color: #5cb85c;\n}\n.label-success[href]:hover,\n.label-success[href]:focus {\n  background-color: #449d44;\n}\n.label-info {\n  background-color: #5bc0de;\n}\n.label-info[href]:hover,\n.label-info[href]:focus {\n  background-color: #31b0d5;\n}\n.label-warning {\n  background-color: #f0ad4e;\n}\n.label-warning[href]:hover,\n.label-warning[href]:focus {\n  background-color: #ec971f;\n}\n.label-danger {\n  background-color: #d9534f;\n}\n.label-danger[href]:hover,\n.label-danger[href]:focus {\n  background-color: #c9302c;\n}\n.badge {\n  display: inline-block;\n  min-width: 10px;\n  padding: 3px 7px;\n  font-size: 12px;\n  font-weight: bold;\n  color: #fff;\n  line-height: 1;\n  vertical-align: middle;\n  white-space: nowrap;\n  text-align: center;\n  background-color: #777777;\n  border-radius: 10px;\n}\n.badge:empty {\n  display: none;\n}\n.btn .badge {\n  position: relative;\n  top: -1px;\n}\n.btn-xs .badge,\n.btn-group-xs > .btn .badge {\n  top: 0;\n  padding: 1px 5px;\n}\na.badge:hover,\na.badge:focus {\n  color: #fff;\n  text-decoration: none;\n  cursor: pointer;\n}\n.list-group-item.active > .badge,\n.nav-pills > .active > a > .badge {\n  color: #337ab7;\n  background-color: #fff;\n}\n.list-group-item > .badge {\n  float: right;\n}\n.list-group-item > .badge + .badge {\n  margin-right: 5px;\n}\n.nav-pills > li > a > .badge {\n  margin-left: 3px;\n}\n.jumbotron {\n  padding-top: 30px;\n  padding-bottom: 30px;\n  margin-bottom: 30px;\n  color: inherit;\n  background-color: #eeeeee;\n}\n.jumbotron h1,\n.jumbotron .h1 {\n  color: inherit;\n}\n.jumbotron p {\n  margin-bottom: 15px;\n  font-size: 21px;\n  font-weight: 200;\n}\n.jumbotron > hr {\n  border-top-color: #d5d5d5;\n}\n.container .jumbotron,\n.container-fluid .jumbotron {\n  border-radius: 6px;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.jumbotron .container {\n  max-width: 100%;\n}\n@media screen and (min-width: 768px) {\n  .jumbotron {\n    padding-top: 48px;\n    padding-bottom: 48px;\n  }\n  .container .jumbotron,\n  .container-fluid .jumbotron {\n    padding-left: 60px;\n    padding-right: 60px;\n  }\n  .jumbotron h1,\n  .jumbotron .h1 {\n    font-size: 63px;\n  }\n}\n.thumbnail {\n  display: block;\n  padding: 4px;\n  margin-bottom: 20px;\n  line-height: 1.42857143;\n  background-color: #fff;\n  border: 1px solid #ddd;\n  border-radius: 4px;\n  -webkit-transition: border 0.2s ease-in-out;\n  -o-transition: border 0.2s ease-in-out;\n  transition: border 0.2s ease-in-out;\n}\n.thumbnail > img,\n.thumbnail a > img {\n  margin-left: auto;\n  margin-right: auto;\n}\na.thumbnail:hover,\na.thumbnail:focus,\na.thumbnail.active {\n  border-color: #337ab7;\n}\n.thumbnail .caption {\n  padding: 9px;\n  color: #333333;\n}\n.alert {\n  padding: 15px;\n  margin-bottom: 20px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n.alert h4 {\n  margin-top: 0;\n  color: inherit;\n}\n.alert .alert-link {\n  font-weight: bold;\n}\n.alert > p,\n.alert > ul {\n  margin-bottom: 0;\n}\n.alert > p + p {\n  margin-top: 5px;\n}\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #d6e9c6;\n  color: #3c763d;\n}\n.alert-success hr {\n  border-top-color: #c9e2b3;\n}\n.alert-success .alert-link {\n  color: #2b542c;\n}\n.alert-info {\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n}\n.alert-info hr {\n  border-top-color: #a6e1ec;\n}\n.alert-info .alert-link {\n  color: #245269;\n}\n.alert-warning {\n  background-color: #fcf8e3;\n  border-color: #faebcc;\n  color: #8a6d3b;\n}\n.alert-warning hr {\n  border-top-color: #f7e1b5;\n}\n.alert-warning .alert-link {\n  color: #66512c;\n}\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #ebccd1;\n  color: #a94442;\n}\n.alert-danger hr {\n  border-top-color: #e4b9c0;\n}\n.alert-danger .alert-link {\n  color: #843534;\n}\n@-webkit-keyframes progress-bar-stripes {\n  from {\n    background-position: 40px 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n@keyframes progress-bar-stripes {\n  from {\n    background-position: 40px 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n.progress {\n  overflow: hidden;\n  height: 20px;\n  margin-bottom: 20px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n}\n.progress-bar {\n  float: left;\n  width: 0%;\n  height: 100%;\n  font-size: 12px;\n  line-height: 20px;\n  color: #fff;\n  text-align: center;\n  background-color: #337ab7;\n  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);\n  -webkit-transition: width 0.6s ease;\n  -o-transition: width 0.6s ease;\n  transition: width 0.6s ease;\n}\n.progress-striped .progress-bar,\n.progress-bar-striped {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-size: 40px 40px;\n}\n.progress.active .progress-bar,\n.progress-bar.active {\n  -webkit-animation: progress-bar-stripes 2s linear infinite;\n  -o-animation: progress-bar-stripes 2s linear infinite;\n  animation: progress-bar-stripes 2s linear infinite;\n}\n.progress-bar-success {\n  background-color: #5cb85c;\n}\n.progress-striped .progress-bar-success {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-info {\n  background-color: #5bc0de;\n}\n.progress-striped .progress-bar-info {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-warning {\n  background-color: #f0ad4e;\n}\n.progress-striped .progress-bar-warning {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-danger {\n  background-color: #d9534f;\n}\n.progress-striped .progress-bar-danger {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.media {\n  margin-top: 15px;\n}\n.media:first-child {\n  margin-top: 0;\n}\n.media,\n.media-body {\n  zoom: 1;\n  overflow: hidden;\n}\n.media-body {\n  width: 10000px;\n}\n.media-object {\n  display: block;\n}\n.media-object.img-thumbnail {\n  max-width: none;\n}\n.media-right,\n.media > .pull-right {\n  padding-left: 10px;\n}\n.media-left,\n.media > .pull-left {\n  padding-right: 10px;\n}\n.media-left,\n.media-right,\n.media-body {\n  display: table-cell;\n  vertical-align: top;\n}\n.media-middle {\n  vertical-align: middle;\n}\n.media-bottom {\n  vertical-align: bottom;\n}\n.media-heading {\n  margin-top: 0;\n  margin-bottom: 5px;\n}\n.media-list {\n  padding-left: 0;\n  list-style: none;\n}\n.list-group {\n  margin-bottom: 20px;\n  padding-left: 0;\n}\n.list-group-item {\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  margin-bottom: -1px;\n  background-color: #fff;\n  border: 1px solid #ddd;\n}\n.list-group-item:first-child {\n  border-top-right-radius: 4px;\n  border-top-left-radius: 4px;\n}\n.list-group-item:last-child {\n  margin-bottom: 0;\n  border-bottom-right-radius: 4px;\n  border-bottom-left-radius: 4px;\n}\na.list-group-item,\nbutton.list-group-item {\n  color: #555;\n}\na.list-group-item .list-group-item-heading,\nbutton.list-group-item .list-group-item-heading {\n  color: #333;\n}\na.list-group-item:hover,\nbutton.list-group-item:hover,\na.list-group-item:focus,\nbutton.list-group-item:focus {\n  text-decoration: none;\n  color: #555;\n  background-color: #f5f5f5;\n}\nbutton.list-group-item {\n  width: 100%;\n  text-align: left;\n}\n.list-group-item.disabled,\n.list-group-item.disabled:hover,\n.list-group-item.disabled:focus {\n  background-color: #eeeeee;\n  color: #777777;\n  cursor: not-allowed;\n}\n.list-group-item.disabled .list-group-item-heading,\n.list-group-item.disabled:hover .list-group-item-heading,\n.list-group-item.disabled:focus .list-group-item-heading {\n  color: inherit;\n}\n.list-group-item.disabled .list-group-item-text,\n.list-group-item.disabled:hover .list-group-item-text,\n.list-group-item.disabled:focus .list-group-item-text {\n  color: #777777;\n}\n.list-group-item.active,\n.list-group-item.active:hover,\n.list-group-item.active:focus {\n  z-index: 2;\n  color: #fff;\n  background-color: #337ab7;\n  border-color: #337ab7;\n}\n.list-group-item.active .list-group-item-heading,\n.list-group-item.active:hover .list-group-item-heading,\n.list-group-item.active:focus .list-group-item-heading,\n.list-group-item.active .list-group-item-heading > small,\n.list-group-item.active:hover .list-group-item-heading > small,\n.list-group-item.active:focus .list-group-item-heading > small,\n.list-group-item.active .list-group-item-heading > .small,\n.list-group-item.active:hover .list-group-item-heading > .small,\n.list-group-item.active:focus .list-group-item-heading > .small {\n  color: inherit;\n}\n.list-group-item.active .list-group-item-text,\n.list-group-item.active:hover .list-group-item-text,\n.list-group-item.active:focus .list-group-item-text {\n  color: #c7ddef;\n}\n.list-group-item-success {\n  color: #3c763d;\n  background-color: #dff0d8;\n}\na.list-group-item-success,\nbutton.list-group-item-success {\n  color: #3c763d;\n}\na.list-group-item-success .list-group-item-heading,\nbutton.list-group-item-success .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-success:hover,\nbutton.list-group-item-success:hover,\na.list-group-item-success:focus,\nbutton.list-group-item-success:focus {\n  color: #3c763d;\n  background-color: #d0e9c6;\n}\na.list-group-item-success.active,\nbutton.list-group-item-success.active,\na.list-group-item-success.active:hover,\nbutton.list-group-item-success.active:hover,\na.list-group-item-success.active:focus,\nbutton.list-group-item-success.active:focus {\n  color: #fff;\n  background-color: #3c763d;\n  border-color: #3c763d;\n}\n.list-group-item-info {\n  color: #31708f;\n  background-color: #d9edf7;\n}\na.list-group-item-info,\nbutton.list-group-item-info {\n  color: #31708f;\n}\na.list-group-item-info .list-group-item-heading,\nbutton.list-group-item-info .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-info:hover,\nbutton.list-group-item-info:hover,\na.list-group-item-info:focus,\nbutton.list-group-item-info:focus {\n  color: #31708f;\n  background-color: #c4e3f3;\n}\na.list-group-item-info.active,\nbutton.list-group-item-info.active,\na.list-group-item-info.active:hover,\nbutton.list-group-item-info.active:hover,\na.list-group-item-info.active:focus,\nbutton.list-group-item-info.active:focus {\n  color: #fff;\n  background-color: #31708f;\n  border-color: #31708f;\n}\n.list-group-item-warning {\n  color: #8a6d3b;\n  background-color: #fcf8e3;\n}\na.list-group-item-warning,\nbutton.list-group-item-warning {\n  color: #8a6d3b;\n}\na.list-group-item-warning .list-group-item-heading,\nbutton.list-group-item-warning .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-warning:hover,\nbutton.list-group-item-warning:hover,\na.list-group-item-warning:focus,\nbutton.list-group-item-warning:focus {\n  color: #8a6d3b;\n  background-color: #faf2cc;\n}\na.list-group-item-warning.active,\nbutton.list-group-item-warning.active,\na.list-group-item-warning.active:hover,\nbutton.list-group-item-warning.active:hover,\na.list-group-item-warning.active:focus,\nbutton.list-group-item-warning.active:focus {\n  color: #fff;\n  background-color: #8a6d3b;\n  border-color: #8a6d3b;\n}\n.list-group-item-danger {\n  color: #a94442;\n  background-color: #f2dede;\n}\na.list-group-item-danger,\nbutton.list-group-item-danger {\n  color: #a94442;\n}\na.list-group-item-danger .list-group-item-heading,\nbutton.list-group-item-danger .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-danger:hover,\nbutton.list-group-item-danger:hover,\na.list-group-item-danger:focus,\nbutton.list-group-item-danger:focus {\n  color: #a94442;\n  background-color: #ebcccc;\n}\na.list-group-item-danger.active,\nbutton.list-group-item-danger.active,\na.list-group-item-danger.active:hover,\nbutton.list-group-item-danger.active:hover,\na.list-group-item-danger.active:focus,\nbutton.list-group-item-danger.active:focus {\n  color: #fff;\n  background-color: #a94442;\n  border-color: #a94442;\n}\n.list-group-item-heading {\n  margin-top: 0;\n  margin-bottom: 5px;\n}\n.list-group-item-text {\n  margin-bottom: 0;\n  line-height: 1.3;\n}\n.panel {\n  margin-bottom: 20px;\n  background-color: #fff;\n  border: 1px solid transparent;\n  border-radius: 4px;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.panel-body {\n  padding: 15px;\n}\n.panel-heading {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel-heading > .dropdown .dropdown-toggle {\n  color: inherit;\n}\n.panel-title {\n  margin-top: 0;\n  margin-bottom: 0;\n  font-size: 16px;\n  color: inherit;\n}\n.panel-title > a,\n.panel-title > small,\n.panel-title > .small,\n.panel-title > small > a,\n.panel-title > .small > a {\n  color: inherit;\n}\n.panel-footer {\n  padding: 10px 15px;\n  background-color: #f5f5f5;\n  border-top: 1px solid #ddd;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .list-group,\n.panel > .panel-collapse > .list-group {\n  margin-bottom: 0;\n}\n.panel > .list-group .list-group-item,\n.panel > .panel-collapse > .list-group .list-group-item {\n  border-width: 1px 0;\n  border-radius: 0;\n}\n.panel > .list-group:first-child .list-group-item:first-child,\n.panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {\n  border-top: 0;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel > .list-group:last-child .list-group-item:last-child,\n.panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {\n  border-bottom: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.panel-heading + .list-group .list-group-item:first-child {\n  border-top-width: 0;\n}\n.list-group + .panel-footer {\n  border-top-width: 0;\n}\n.panel > .table,\n.panel > .table-responsive > .table,\n.panel > .panel-collapse > .table {\n  margin-bottom: 0;\n}\n.panel > .table caption,\n.panel > .table-responsive > .table caption,\n.panel > .panel-collapse > .table caption {\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.panel > .table:first-child,\n.panel > .table-responsive:first-child > .table:first-child {\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {\n  border-top-left-radius: 3px;\n  border-top-right-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child td:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,\n.panel > .table:first-child > thead:first-child > tr:first-child th:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {\n  border-top-left-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child td:last-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,\n.panel > .table:first-child > thead:first-child > tr:first-child th:last-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {\n  border-top-right-radius: 3px;\n}\n.panel > .table:last-child,\n.panel > .table-responsive:last-child > .table:last-child {\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {\n  border-bottom-left-radius: 3px;\n  border-bottom-right-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,\n.panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {\n  border-bottom-left-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,\n.panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {\n  border-bottom-right-radius: 3px;\n}\n.panel > .panel-body + .table,\n.panel > .panel-body + .table-responsive,\n.panel > .table + .panel-body,\n.panel > .table-responsive + .panel-body {\n  border-top: 1px solid #ddd;\n}\n.panel > .table > tbody:first-child > tr:first-child th,\n.panel > .table > tbody:first-child > tr:first-child td {\n  border-top: 0;\n}\n.panel > .table-bordered,\n.panel > .table-responsive > .table-bordered {\n  border: 0;\n}\n.panel > .table-bordered > thead > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > thead > tr > th:first-child,\n.panel > .table-bordered > tbody > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,\n.panel > .table-bordered > tfoot > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,\n.panel > .table-bordered > thead > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > thead > tr > td:first-child,\n.panel > .table-bordered > tbody > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,\n.panel > .table-bordered > tfoot > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {\n  border-left: 0;\n}\n.panel > .table-bordered > thead > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > thead > tr > th:last-child,\n.panel > .table-bordered > tbody > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,\n.panel > .table-bordered > tfoot > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,\n.panel > .table-bordered > thead > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > thead > tr > td:last-child,\n.panel > .table-bordered > tbody > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,\n.panel > .table-bordered > tfoot > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {\n  border-right: 0;\n}\n.panel > .table-bordered > thead > tr:first-child > td,\n.panel > .table-responsive > .table-bordered > thead > tr:first-child > td,\n.panel > .table-bordered > tbody > tr:first-child > td,\n.panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,\n.panel > .table-bordered > thead > tr:first-child > th,\n.panel > .table-responsive > .table-bordered > thead > tr:first-child > th,\n.panel > .table-bordered > tbody > tr:first-child > th,\n.panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {\n  border-bottom: 0;\n}\n.panel > .table-bordered > tbody > tr:last-child > td,\n.panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,\n.panel > .table-bordered > tfoot > tr:last-child > td,\n.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,\n.panel > .table-bordered > tbody > tr:last-child > th,\n.panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,\n.panel > .table-bordered > tfoot > tr:last-child > th,\n.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {\n  border-bottom: 0;\n}\n.panel > .table-responsive {\n  border: 0;\n  margin-bottom: 0;\n}\n.panel-group {\n  margin-bottom: 20px;\n}\n.panel-group .panel {\n  margin-bottom: 0;\n  border-radius: 4px;\n}\n.panel-group .panel + .panel {\n  margin-top: 5px;\n}\n.panel-group .panel-heading {\n  border-bottom: 0;\n}\n.panel-group .panel-heading + .panel-collapse > .panel-body,\n.panel-group .panel-heading + .panel-collapse > .list-group {\n  border-top: 1px solid #ddd;\n}\n.panel-group .panel-footer {\n  border-top: 0;\n}\n.panel-group .panel-footer + .panel-collapse .panel-body {\n  border-bottom: 1px solid #ddd;\n}\n.panel-default {\n  border-color: #ddd;\n}\n.panel-default > .panel-heading {\n  color: #333333;\n  background-color: #f5f5f5;\n  border-color: #ddd;\n}\n.panel-default > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #ddd;\n}\n.panel-default > .panel-heading .badge {\n  color: #f5f5f5;\n  background-color: #333333;\n}\n.panel-default > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #ddd;\n}\n.panel-primary {\n  border-color: #337ab7;\n}\n.panel-primary > .panel-heading {\n  color: #fff;\n  background-color: #337ab7;\n  border-color: #337ab7;\n}\n.panel-primary > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #337ab7;\n}\n.panel-primary > .panel-heading .badge {\n  color: #337ab7;\n  background-color: #fff;\n}\n.panel-primary > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #337ab7;\n}\n.panel-success {\n  border-color: #d6e9c6;\n}\n.panel-success > .panel-heading {\n  color: #3c763d;\n  background-color: #dff0d8;\n  border-color: #d6e9c6;\n}\n.panel-success > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #d6e9c6;\n}\n.panel-success > .panel-heading .badge {\n  color: #dff0d8;\n  background-color: #3c763d;\n}\n.panel-success > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #d6e9c6;\n}\n.panel-info {\n  border-color: #bce8f1;\n}\n.panel-info > .panel-heading {\n  color: #31708f;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n}\n.panel-info > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #bce8f1;\n}\n.panel-info > .panel-heading .badge {\n  color: #d9edf7;\n  background-color: #31708f;\n}\n.panel-info > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #bce8f1;\n}\n.panel-warning {\n  border-color: #faebcc;\n}\n.panel-warning > .panel-heading {\n  color: #8a6d3b;\n  background-color: #fcf8e3;\n  border-color: #faebcc;\n}\n.panel-warning > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #faebcc;\n}\n.panel-warning > .panel-heading .badge {\n  color: #fcf8e3;\n  background-color: #8a6d3b;\n}\n.panel-warning > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #faebcc;\n}\n.panel-danger {\n  border-color: #ebccd1;\n}\n.panel-danger > .panel-heading {\n  color: #a94442;\n  background-color: #f2dede;\n  border-color: #ebccd1;\n}\n.panel-danger > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #ebccd1;\n}\n.panel-danger > .panel-heading .badge {\n  color: #f2dede;\n  background-color: #a94442;\n}\n.panel-danger > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #ebccd1;\n}\n.well {\n  min-height: 20px;\n  padding: 19px;\n  margin-bottom: 20px;\n  background-color: #f5f5f5;\n  border: 1px solid #e3e3e3;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.well blockquote {\n  border-color: #ddd;\n  border-color: rgba(0, 0, 0, 0.15);\n}\n.well-lg {\n  padding: 24px;\n  border-radius: 6px;\n}\n.well-sm {\n  padding: 9px;\n  border-radius: 3px;\n}\n.close {\n  float: right;\n  font-size: 21px;\n  font-weight: bold;\n  line-height: 1;\n  color: #000;\n  text-shadow: 0 1px 0 #fff;\n  opacity: 0.2;\n  filter: alpha(opacity=20);\n}\n.close:hover,\n.close:focus {\n  color: #000;\n  text-decoration: none;\n  cursor: pointer;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\nbutton.close {\n  padding: 0;\n  cursor: pointer;\n  background: transparent;\n  border: 0;\n  -webkit-appearance: none;\n}\n.modal-open {\n  overflow: hidden;\n}\n.modal {\n  display: none;\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1050;\n  -webkit-overflow-scrolling: touch;\n  outline: 0;\n}\n.modal.fade .modal-dialog {\n  -webkit-transform: translate(0, -25%);\n  -ms-transform: translate(0, -25%);\n  -o-transform: translate(0, -25%);\n  transform: translate(0, -25%);\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  -moz-transition: -moz-transform 0.3s ease-out;\n  -o-transition: -o-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n}\n.modal.in .modal-dialog {\n  -webkit-transform: translate(0, 0);\n  -ms-transform: translate(0, 0);\n  -o-transform: translate(0, 0);\n  transform: translate(0, 0);\n}\n.modal-open .modal {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.modal-dialog {\n  position: relative;\n  width: auto;\n  margin: 10px;\n}\n.modal-content {\n  position: relative;\n  background-color: #fff;\n  border: 1px solid #999;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);\n  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);\n  background-clip: padding-box;\n  outline: 0;\n}\n.modal-backdrop {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1040;\n  background-color: #000;\n}\n.modal-backdrop.fade {\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.modal-backdrop.in {\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\n.modal-header {\n  padding: 15px;\n  border-bottom: 1px solid #e5e5e5;\n}\n.modal-header .close {\n  margin-top: -2px;\n}\n.modal-title {\n  margin: 0;\n  line-height: 1.42857143;\n}\n.modal-body {\n  position: relative;\n  padding: 15px;\n}\n.modal-footer {\n  padding: 15px;\n  text-align: right;\n  border-top: 1px solid #e5e5e5;\n}\n.modal-footer .btn + .btn {\n  margin-left: 5px;\n  margin-bottom: 0;\n}\n.modal-footer .btn-group .btn + .btn {\n  margin-left: -1px;\n}\n.modal-footer .btn-block + .btn-block {\n  margin-left: 0;\n}\n.modal-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll;\n}\n@media (min-width: 768px) {\n  .modal-dialog {\n    width: 600px;\n    margin: 30px auto;\n  }\n  .modal-content {\n    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);\n  }\n  .modal-sm {\n    width: 300px;\n  }\n}\n@media (min-width: 992px) {\n  .modal-lg {\n    width: 900px;\n  }\n}\n.tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.42857143;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  font-size: 12px;\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.tooltip.in {\n  opacity: 0.9;\n  filter: alpha(opacity=90);\n}\n.tooltip.top {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip.right {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip.bottom {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip.left {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner {\n  max-width: 200px;\n  padding: 3px 8px;\n  color: #fff;\n  text-align: center;\n  background-color: #000;\n  border-radius: 4px;\n}\n.tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip.top .tooltip-arrow {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000;\n}\n.tooltip.top-left .tooltip-arrow {\n  bottom: 0;\n  right: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000;\n}\n.tooltip.top-right .tooltip-arrow {\n  bottom: 0;\n  left: 5px;\n  margin-bottom: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000;\n}\n.tooltip.right .tooltip-arrow {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #000;\n}\n.tooltip.left .tooltip-arrow {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #000;\n}\n.tooltip.bottom .tooltip-arrow {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000;\n}\n.tooltip.bottom-left .tooltip-arrow {\n  top: 0;\n  right: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000;\n}\n.tooltip.bottom-right .tooltip-arrow {\n  top: 0;\n  left: 5px;\n  margin-top: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000;\n}\n.popover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1060;\n  display: none;\n  max-width: 276px;\n  padding: 1px;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  letter-spacing: normal;\n  line-break: auto;\n  line-height: 1.42857143;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  white-space: normal;\n  word-break: normal;\n  word-spacing: normal;\n  word-wrap: normal;\n  font-size: 14px;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid #ccc;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n}\n.popover.top {\n  margin-top: -10px;\n}\n.popover.right {\n  margin-left: 10px;\n}\n.popover.bottom {\n  margin-top: 10px;\n}\n.popover.left {\n  margin-left: -10px;\n}\n.popover-title {\n  margin: 0;\n  padding: 8px 14px;\n  font-size: 14px;\n  background-color: #f7f7f7;\n  border-bottom: 1px solid #ebebeb;\n  border-radius: 5px 5px 0 0;\n}\n.popover-content {\n  padding: 9px 14px;\n}\n.popover > .arrow,\n.popover > .arrow:after {\n  position: absolute;\n  display: block;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.popover > .arrow {\n  border-width: 11px;\n}\n.popover > .arrow:after {\n  border-width: 10px;\n  content: \"\";\n}\n.popover.top > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-bottom-width: 0;\n  border-top-color: #999999;\n  border-top-color: rgba(0, 0, 0, 0.25);\n  bottom: -11px;\n}\n.popover.top > .arrow:after {\n  content: \" \";\n  bottom: 1px;\n  margin-left: -10px;\n  border-bottom-width: 0;\n  border-top-color: #fff;\n}\n.popover.right > .arrow {\n  top: 50%;\n  left: -11px;\n  margin-top: -11px;\n  border-left-width: 0;\n  border-right-color: #999999;\n  border-right-color: rgba(0, 0, 0, 0.25);\n}\n.popover.right > .arrow:after {\n  content: \" \";\n  left: 1px;\n  bottom: -10px;\n  border-left-width: 0;\n  border-right-color: #fff;\n}\n.popover.bottom > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-top-width: 0;\n  border-bottom-color: #999999;\n  border-bottom-color: rgba(0, 0, 0, 0.25);\n  top: -11px;\n}\n.popover.bottom > .arrow:after {\n  content: \" \";\n  top: 1px;\n  margin-left: -10px;\n  border-top-width: 0;\n  border-bottom-color: #fff;\n}\n.popover.left > .arrow {\n  top: 50%;\n  right: -11px;\n  margin-top: -11px;\n  border-right-width: 0;\n  border-left-color: #999999;\n  border-left-color: rgba(0, 0, 0, 0.25);\n}\n.popover.left > .arrow:after {\n  content: \" \";\n  right: 1px;\n  border-right-width: 0;\n  border-left-color: #fff;\n  bottom: -10px;\n}\n.carousel {\n  position: relative;\n}\n.carousel-inner {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n.carousel-inner > .item {\n  display: none;\n  position: relative;\n  -webkit-transition: 0.6s ease-in-out left;\n  -o-transition: 0.6s ease-in-out left;\n  transition: 0.6s ease-in-out left;\n}\n.carousel-inner > .item > img,\n.carousel-inner > .item > a > img {\n  line-height: 1;\n}\n@media all and (transform-3d), (-webkit-transform-3d) {\n  .carousel-inner > .item {\n    -webkit-transition: -webkit-transform 0.6s ease-in-out;\n    -moz-transition: -moz-transform 0.6s ease-in-out;\n    -o-transition: -o-transform 0.6s ease-in-out;\n    transition: transform 0.6s ease-in-out;\n    -webkit-backface-visibility: hidden;\n    -moz-backface-visibility: hidden;\n    backface-visibility: hidden;\n    -webkit-perspective: 1000px;\n    -moz-perspective: 1000px;\n    perspective: 1000px;\n  }\n  .carousel-inner > .item.next,\n  .carousel-inner > .item.active.right {\n    -webkit-transform: translate3d(100%, 0, 0);\n    transform: translate3d(100%, 0, 0);\n    left: 0;\n  }\n  .carousel-inner > .item.prev,\n  .carousel-inner > .item.active.left {\n    -webkit-transform: translate3d(-100%, 0, 0);\n    transform: translate3d(-100%, 0, 0);\n    left: 0;\n  }\n  .carousel-inner > .item.next.left,\n  .carousel-inner > .item.prev.right,\n  .carousel-inner > .item.active {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n    left: 0;\n  }\n}\n.carousel-inner > .active,\n.carousel-inner > .next,\n.carousel-inner > .prev {\n  display: block;\n}\n.carousel-inner > .active {\n  left: 0;\n}\n.carousel-inner > .next,\n.carousel-inner > .prev {\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.carousel-inner > .next {\n  left: 100%;\n}\n.carousel-inner > .prev {\n  left: -100%;\n}\n.carousel-inner > .next.left,\n.carousel-inner > .prev.right {\n  left: 0;\n}\n.carousel-inner > .active.left {\n  left: -100%;\n}\n.carousel-inner > .active.right {\n  left: 100%;\n}\n.carousel-control {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 15%;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n  font-size: 20px;\n  color: #fff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n  background-color: rgba(0, 0, 0, 0);\n}\n.carousel-control.left {\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-repeat: repeat-x;\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);\n}\n.carousel-control.right {\n  left: auto;\n  right: 0;\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-repeat: repeat-x;\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);\n}\n.carousel-control:hover,\n.carousel-control:focus {\n  outline: 0;\n  color: #fff;\n  text-decoration: none;\n  opacity: 0.9;\n  filter: alpha(opacity=90);\n}\n.carousel-control .icon-prev,\n.carousel-control .icon-next,\n.carousel-control .glyphicon-chevron-left,\n.carousel-control .glyphicon-chevron-right {\n  position: absolute;\n  top: 50%;\n  margin-top: -10px;\n  z-index: 5;\n  display: inline-block;\n}\n.carousel-control .icon-prev,\n.carousel-control .glyphicon-chevron-left {\n  left: 50%;\n  margin-left: -10px;\n}\n.carousel-control .icon-next,\n.carousel-control .glyphicon-chevron-right {\n  right: 50%;\n  margin-right: -10px;\n}\n.carousel-control .icon-prev,\n.carousel-control .icon-next {\n  width: 20px;\n  height: 20px;\n  line-height: 1;\n  font-family: serif;\n}\n.carousel-control .icon-prev:before {\n  content: '\\2039';\n}\n.carousel-control .icon-next:before {\n  content: '\\203A';\n}\n.carousel-indicators {\n  position: absolute;\n  bottom: 10px;\n  left: 50%;\n  z-index: 15;\n  width: 60%;\n  margin-left: -30%;\n  padding-left: 0;\n  list-style: none;\n  text-align: center;\n}\n.carousel-indicators li {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 1px;\n  text-indent: -999px;\n  border: 1px solid #fff;\n  border-radius: 10px;\n  cursor: pointer;\n  background-color: #000 \\9;\n  background-color: rgba(0, 0, 0, 0);\n}\n.carousel-indicators .active {\n  margin: 0;\n  width: 12px;\n  height: 12px;\n  background-color: #fff;\n}\n.carousel-caption {\n  position: absolute;\n  left: 15%;\n  right: 15%;\n  bottom: 20px;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: #fff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n}\n.carousel-caption .btn {\n  text-shadow: none;\n}\n@media screen and (min-width: 768px) {\n  .carousel-control .glyphicon-chevron-left,\n  .carousel-control .glyphicon-chevron-right,\n  .carousel-control .icon-prev,\n  .carousel-control .icon-next {\n    width: 30px;\n    height: 30px;\n    margin-top: -10px;\n    font-size: 30px;\n  }\n  .carousel-control .glyphicon-chevron-left,\n  .carousel-control .icon-prev {\n    margin-left: -10px;\n  }\n  .carousel-control .glyphicon-chevron-right,\n  .carousel-control .icon-next {\n    margin-right: -10px;\n  }\n  .carousel-caption {\n    left: 20%;\n    right: 20%;\n    padding-bottom: 30px;\n  }\n  .carousel-indicators {\n    bottom: 20px;\n  }\n}\n.clearfix:before,\n.clearfix:after,\n.dl-horizontal dd:before,\n.dl-horizontal dd:after,\n.container:before,\n.container:after,\n.container-fluid:before,\n.container-fluid:after,\n.row:before,\n.row:after,\n.form-horizontal .form-group:before,\n.form-horizontal .form-group:after,\n.btn-toolbar:before,\n.btn-toolbar:after,\n.btn-group-vertical > .btn-group:before,\n.btn-group-vertical > .btn-group:after,\n.nav:before,\n.nav:after,\n.navbar:before,\n.navbar:after,\n.navbar-header:before,\n.navbar-header:after,\n.navbar-collapse:before,\n.navbar-collapse:after,\n.pager:before,\n.pager:after,\n.panel-body:before,\n.panel-body:after,\n.modal-header:before,\n.modal-header:after,\n.modal-footer:before,\n.modal-footer:after {\n  content: \" \";\n  display: table;\n}\n.clearfix:after,\n.dl-horizontal dd:after,\n.container:after,\n.container-fluid:after,\n.row:after,\n.form-horizontal .form-group:after,\n.btn-toolbar:after,\n.btn-group-vertical > .btn-group:after,\n.nav:after,\n.navbar:after,\n.navbar-header:after,\n.navbar-collapse:after,\n.pager:after,\n.panel-body:after,\n.modal-header:after,\n.modal-footer:after {\n  clear: both;\n}\n.center-block {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n.pull-right {\n  float: right !important;\n}\n.pull-left {\n  float: left !important;\n}\n.hide {\n  display: none !important;\n}\n.show {\n  display: block !important;\n}\n.invisible {\n  visibility: hidden;\n}\n.text-hide {\n  font: 0/0 a;\n  color: transparent;\n  text-shadow: none;\n  background-color: transparent;\n  border: 0;\n}\n.hidden {\n  display: none !important;\n}\n.affix {\n  position: fixed;\n}\n@-ms-viewport {\n  width: device-width;\n}\n.visible-xs,\n.visible-sm,\n.visible-md,\n.visible-lg {\n  display: none !important;\n}\n.visible-xs-block,\n.visible-xs-inline,\n.visible-xs-inline-block,\n.visible-sm-block,\n.visible-sm-inline,\n.visible-sm-inline-block,\n.visible-md-block,\n.visible-md-inline,\n.visible-md-inline-block,\n.visible-lg-block,\n.visible-lg-inline,\n.visible-lg-inline-block {\n  display: none !important;\n}\n@media (max-width: 767px) {\n  .visible-xs {\n    display: block !important;\n  }\n  table.visible-xs {\n    display: table !important;\n  }\n  tr.visible-xs {\n    display: table-row !important;\n  }\n  th.visible-xs,\n  td.visible-xs {\n    display: table-cell !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-block {\n    display: block !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-inline {\n    display: inline !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm {\n    display: block !important;\n  }\n  table.visible-sm {\n    display: table !important;\n  }\n  tr.visible-sm {\n    display: table-row !important;\n  }\n  th.visible-sm,\n  td.visible-sm {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-block {\n    display: block !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md {\n    display: block !important;\n  }\n  table.visible-md {\n    display: table !important;\n  }\n  tr.visible-md {\n    display: table-row !important;\n  }\n  th.visible-md,\n  td.visible-md {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-block {\n    display: block !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg {\n    display: block !important;\n  }\n  table.visible-lg {\n    display: table !important;\n  }\n  tr.visible-lg {\n    display: table-row !important;\n  }\n  th.visible-lg,\n  td.visible-lg {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-block {\n    display: block !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (max-width: 767px) {\n  .hidden-xs {\n    display: none !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .hidden-sm {\n    display: none !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .hidden-md {\n    display: none !important;\n  }\n}\n@media (min-width: 1200px) {\n  .hidden-lg {\n    display: none !important;\n  }\n}\n.visible-print {\n  display: none !important;\n}\n@media print {\n  .visible-print {\n    display: block !important;\n  }\n  table.visible-print {\n    display: table !important;\n  }\n  tr.visible-print {\n    display: table-row !important;\n  }\n  th.visible-print,\n  td.visible-print {\n    display: table-cell !important;\n  }\n}\n.visible-print-block {\n  display: none !important;\n}\n@media print {\n  .visible-print-block {\n    display: block !important;\n  }\n}\n.visible-print-inline {\n  display: none !important;\n}\n@media print {\n  .visible-print-inline {\n    display: inline !important;\n  }\n}\n.visible-print-inline-block {\n  display: none !important;\n}\n@media print {\n  .visible-print-inline-block {\n    display: inline-block !important;\n  }\n}\n@media print {\n  .hidden-print {\n    display: none !important;\n  }\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 891 */
+/* 892 */
 /***/ function(module, exports) {
 
 	/*
@@ -63648,37 +63662,37 @@
 
 
 /***/ },
-/* 892 */
+/* 893 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "f4769f9bdb7466be65088239c12046d1.eot";
 
 /***/ },
-/* 893 */
+/* 894 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "448c34a56d699c29117adc64c43affeb.woff2";
 
 /***/ },
-/* 894 */
+/* 895 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "fa2772327f55d8198301fdb8bcfc8158.woff";
 
 /***/ },
-/* 895 */
+/* 896 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "e18bbf611f2a2e43afc071aa2f4e1512.ttf";
 
 /***/ },
-/* 896 */
+/* 897 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "89889688147bd7575d6327160d64e760.svg";
 
 /***/ },
-/* 897 */
+/* 898 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -63930,10 +63944,9 @@
 
 
 /***/ },
-/* 898 */
+/* 899 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(899);
 	__webpack_require__(900);
 	__webpack_require__(901);
 	__webpack_require__(902);
@@ -63945,9 +63958,10 @@
 	__webpack_require__(908);
 	__webpack_require__(909);
 	__webpack_require__(910);
+	__webpack_require__(911);
 
 /***/ },
-/* 899 */
+/* 900 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -64012,7 +64026,7 @@
 
 
 /***/ },
-/* 900 */
+/* 901 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -64112,7 +64126,7 @@
 
 
 /***/ },
-/* 901 */
+/* 902 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -64243,7 +64257,7 @@
 
 
 /***/ },
-/* 902 */
+/* 903 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -64486,7 +64500,7 @@
 
 
 /***/ },
-/* 903 */
+/* 904 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -64704,7 +64718,7 @@
 
 
 /***/ },
-/* 904 */
+/* 905 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -64875,7 +64889,7 @@
 
 
 /***/ },
-/* 905 */
+/* 906 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -65220,7 +65234,7 @@
 
 
 /***/ },
-/* 906 */
+/* 907 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -65746,7 +65760,7 @@
 
 
 /***/ },
-/* 907 */
+/* 908 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -65860,7 +65874,7 @@
 
 
 /***/ },
-/* 908 */
+/* 909 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -66038,7 +66052,7 @@
 
 
 /***/ },
-/* 909 */
+/* 910 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -66199,7 +66213,7 @@
 
 
 /***/ },
-/* 910 */
+/* 911 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -66367,16 +66381,16 @@
 
 
 /***/ },
-/* 911 */
+/* 912 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(912);
+	var content = __webpack_require__(913);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(897)(content, {});
+	var update = __webpack_require__(898)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -66393,10 +66407,10 @@
 	}
 
 /***/ },
-/* 912 */
+/* 913 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(891)();
+	exports = module.exports = __webpack_require__(892)();
 	// imports
 	
 	
@@ -66405,20 +66419,6 @@
 	
 	// exports
 
-
-/***/ },
-/* 913 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	exports.default = {
-		threads: true,
-		colorScheme: true
-	};
 
 /***/ }
 /******/ ]);
