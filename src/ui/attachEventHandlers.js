@@ -27,7 +27,7 @@ export default (drawer) => {
 			startButton.html(text);
 		});
 
-		stopwatch.onTick((time) => {
+		stopwatch.onTick((time) => { console.log('tick', time); 
 			const seconds = time / 1000 % 60;
 			const minutes = time / (1000 * 60) % 60;
 			const hours = time / (1000 * 60 * 60);

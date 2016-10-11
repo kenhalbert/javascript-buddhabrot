@@ -56,8 +56,6 @@ const getDrawFunc = (drawer, colorFunc, sourcePlot, imagePlot, config) => {
         iterationSetStartTime = null,
         renderStartTime = null;
 
-    iterationSetStartTime = renderStartTime = new Date().getTime();
-
 	return () => {
         controlVars.isRunning = true;
 
@@ -83,12 +81,7 @@ const getDrawFunc = (drawer, colorFunc, sourcePlot, imagePlot, config) => {
 
             iteration++;
 
-            if (iteration % 10000 === 0) {
-                rebaseColors(colorFunc, imagePlot, drawer, config);
-                console.log(`iteration set ${iteration / 10000} finished in ${new Date().getTime() - iterationSetStartTime} milliseconds `
-                             + `(total runtime ${new Date().getTime() - renderStartTime} milliseconds`);
-                iterationSetStartTime = new Date().getTime();
-            }
+            if (iteration % 10000 === 0) rebaseColors(colorFunc, imagePlot, drawer, config);
 
             if (iteration !== 0 && iteration % 10 === 0) drawer.updateCanvas();
 

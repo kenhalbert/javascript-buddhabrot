@@ -8346,6 +8346,10 @@
 	
 	var _rebaseColors2 = _interopRequireDefault(_rebaseColors);
 	
+	var _mutableConfig = __webpack_require__(913);
+	
+	var _mutableConfig2 = _interopRequireDefault(_mutableConfig);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = function (drawer, colorFunc, config, callbacks) {
@@ -8413,6 +8417,19 @@
 				initCanvasAndPlots();
 	
 				isInitialized = true;
+			},
+			reconfigure: function reconfigure(config) {
+				if ((0, _drawRoutine.isRunning)()) throw Error('Draw routine must be stopped before it can be reconfigured');
+	
+				for (var key in config) {
+					if (!config.hasOwnProperty(key)) continue;
+	
+					if (!_mutableConfig2.default[key]) throw Error('Configuration setting ' + key + ' is not mutable');
+	
+					internalConfig[key] = config[key];
+				}
+	
+				drawFunc = null;
 			}
 		};
 	};
@@ -8502,8 +8519,6 @@
 	        iterationSetStartTime = null,
 	        renderStartTime = null;
 	
-	    iterationSetStartTime = renderStartTime = new Date().getTime();
-	
 	    return function () {
 	        controlVars.isRunning = true;
 	
@@ -8529,11 +8544,7 @@
 	
 	            iteration++;
 	
-	            if (iteration % 10000 === 0) {
-	                (0, _rebaseColors2.default)(colorFunc, imagePlot, drawer, config);
-	                console.log('iteration set ' + iteration / 10000 + ' finished in ' + (new Date().getTime() - iterationSetStartTime) + ' milliseconds ' + ('(total runtime ' + (new Date().getTime() - renderStartTime) + ' milliseconds'));
-	                iterationSetStartTime = new Date().getTime();
-	            }
+	            if (iteration % 10000 === 0) (0, _rebaseColors2.default)(colorFunc, imagePlot, drawer, config);
 	
 	            if (iteration !== 0 && iteration % 10 === 0) drawer.updateCanvas();
 	
@@ -63366,6 +63377,7 @@
 			});
 	
 			_stopwatch2.default.onTick(function (time) {
+				console.log('tick', time);
 				var seconds = time / 1000 % 60;
 				var minutes = time / (1000 * 60) % 60;
 				var hours = time / (1000 * 60 * 60);
@@ -63385,18 +63397,24 @@
 /* 885 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	var time = 0,
-	    startTime = null,
+	var startTime = null,
 	    stopTime = null,
+	    elapsedTime = 0,
 	    isStarted = false,
 	    onTickCallback = null;
 	
+	var getTimeSinceLastStart = function getTimeSinceLastStart() {
+		return new Date() - startTime;
+	};
+	
 	var start = function start() {
+		if (isStarted) throw Error('stopwatch has already been started');
+	
 		startTime = new Date();
 		isStarted = true;
 	
@@ -63411,17 +63429,23 @@
 	};
 	
 	var stop = function stop() {
+		if (!isStarted) throw Error('stopwatch has not been started');
+	
+		elapsedTime += getTimeSinceLastStart();
 		isStarted = false;
-		stopTime = new Date();
 	};
 	
 	var clear = function clear() {
-		stopTime = null;
 		startTime = null;
+		elapsedTime = null;
 	};
 	
 	var getTime = function getTime() {
-		return (stopTime || new Date()) - startTime;
+		var time = void 0;
+	
+		if (isStarted) time = elapsedTime ? getTimeSinceLastStart() + elapsedTime : getTimeSinceLastStart();else time = elapsedTime;
+	
+		return time;
 	};
 	
 	var onTick = function onTick(func) {
@@ -66381,6 +66405,20 @@
 	
 	// exports
 
+
+/***/ },
+/* 913 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		threads: true,
+		colorScheme: true
+	};
 
 /***/ }
 /******/ ]);

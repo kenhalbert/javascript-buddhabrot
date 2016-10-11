@@ -1,10 +1,14 @@
-let time = 0, 
-	startTime = null,
+let startTime = null,
 	stopTime = null,
+	elapsedTime = 0,
 	isStarted = false,
 	onTickCallback = null;
 
+const getTimeSinceLastStart = () => new Date() - startTime;
+
 const start = () => {
+	if (isStarted) throw Error('stopwatch has already been started');
+
 	startTime = new Date();
 	isStarted = true;
 
@@ -19,17 +23,26 @@ const tick = () => {
 }
 
 const stop = () => {
+	if (!isStarted) throw Error('stopwatch has not been started');
+
+	elapsedTime += getTimeSinceLastStart();
 	isStarted = false;
-	stopTime = new Date();
 };	
 
 const clear = () => {
-	stopTime = null;
 	startTime = null;
+	elapsedTime = null;
 };
 
 const getTime = () => {
-	return (stopTime || new Date()) - startTime; 
+	let time;
+
+	if (isStarted) time = elapsedTime 
+		? getTimeSinceLastStart() + elapsedTime 
+		: getTimeSinceLastStart();
+	else time = elapsedTime;
+
+	return time; 
 };
 
 const onTick = (func) => {
@@ -42,4 +55,4 @@ export default {
 	getTime,
 	onTick,
 	clear
-}
+};

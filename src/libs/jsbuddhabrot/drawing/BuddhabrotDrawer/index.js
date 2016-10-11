@@ -1,6 +1,7 @@
 import { getDrawFunc, isRunning, stop, registerCallbacks } from './drawRoutine';
 import DensityPlot from '../../math/DensityPlot';
 import rebaseColors from './rebaseColors';
+import mutableConfig from './mutableConfig';
 
 export default (drawer, colorFunc, config, callbacks) => {
 	const internalConfig = Object.assign({}, config),
@@ -63,6 +64,19 @@ export default (drawer, colorFunc, config, callbacks) => {
 			initCanvasAndPlots();
 
 			isInitialized = true;
+		},
+		reconfigure (config) {
+			if (isRunning()) throw Error('Draw routine must be stopped before it can be reconfigured');
+
+			for (let key in config) {
+				if (!config.hasOwnProperty(key)) continue;
+
+				if (!mutableConfig[key]) throw Error(`Configuration setting ${key} is not mutable`);
+
+				internalConfig[key] = config[key];
+			}
+
+			drawFunc = null;
 		}
 	};
 };
