@@ -63458,6 +63458,7 @@
 	
 	var updateIterationCount = (0, _utils.throttle)(function () {
 		$('.stats .iterations p').html(iterationCount);
+		$('.stats .iterations-per-second p').html(Math.floor(iterationCount / (_stopwatch2.default.getTime() / 1000)));
 	}, 1000);
 	
 	exports.default = {

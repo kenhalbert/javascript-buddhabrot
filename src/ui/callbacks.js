@@ -5,6 +5,7 @@ let iterationCount = 0;
 
 const updateIterationCount = throttle(() => {
 	$('.stats .iterations p').html(iterationCount);
+	$('.stats .iterations-per-second p').html(Math.floor(iterationCount / (stopwatch.getTime()/1000)));
 }, 1000);
 
 export default {
