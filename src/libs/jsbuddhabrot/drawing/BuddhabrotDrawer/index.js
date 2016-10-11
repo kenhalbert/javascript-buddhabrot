@@ -37,6 +37,8 @@ export default (drawer, colorFunc, config, callbacks) => {
 
 			if (isRunning()) throw Error('Draw routine has already started');
 
+			if (callbacks.onStart) callbacks.onStart();
+
 			if (!drawFunc) drawFunc = getDrawFunc(drawer, colorFunc, sourcePlot, imagePlot, internalConfig);
 
 			drawFunc();
@@ -45,6 +47,8 @@ export default (drawer, colorFunc, config, callbacks) => {
 			if (!isRunning()) throw Error('Drawer has not been started');
 
 			stop();
+
+			if (callbacks.onStop) callbacks.onStop();
 		},
 		clear () {
 			if (isRunning()) throw Error('Cannot clear canvas while draw routine is running');

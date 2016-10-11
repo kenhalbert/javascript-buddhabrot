@@ -1,22 +1,7 @@
 import createBuddhabrotDrawer from './libs/jsbuddhabrot';
-import { attachEventHandlers } from './ui';
-import { throttle } from './libs/utils';
+import { attachEventHandlers, callbacks } from './ui';
 import 'bootstrap-webpack';
 import './styles.css';
-
-let iterationCount = 0;
-const updateIterationCount = throttle(() => {
-	$('.stats .iterations p').html(iterationCount);
-}, 1000);
-const callbacks = {
-	onIterationCompleted: () => {
-		iterationCount++;
-		updateIterationCount();
-	},
-	onHighestDensityChanged: (newHighestDensity) => {
-		$('.stats .highest-density p').html(newHighestDensity);
-	}
-};
 
 const drawer = createBuddhabrotDrawer(document.getElementById('canvas'), {
 	imageWidth: 1800,
