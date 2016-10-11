@@ -1,8 +1,8 @@
-import { getDrawFunc, isRunning, stop } from './drawRoutine';
+import { getDrawFunc, isRunning, stop, registerCallbacks } from './drawRoutine';
 import DensityPlot from '../../math/DensityPlot';
 import rebaseColors from './rebaseColors';
 
-export default (drawer, colorFunc, config) => {
+export default (drawer, colorFunc, config, callbacks) => {
 	const internalConfig = Object.assign({}, config),
 		createSourcePlot = () => DensityPlot({
 			width: internalConfig.plotDimensions,
@@ -25,6 +25,8 @@ export default (drawer, colorFunc, config) => {
 		sourcePlot = null,
 		imagePlot = null,
 		isInitialized = false;
+
+	registerCallbacks(callbacks);
 
 	return {
 		get isRunning () {

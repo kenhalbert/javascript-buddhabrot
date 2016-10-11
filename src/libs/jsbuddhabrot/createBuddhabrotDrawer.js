@@ -3,12 +3,12 @@ import CanvasDrawer from './drawing/CanvasDrawer';
 import BuddhabrotGenerator from './math/BuddhabrotGenerator';
 import simpleRgbValTransform from './drawing/color/simpleRgbValTransform';
 
-export default (canvas, config) => {
+export default (canvas, config, callbacks) => {
 	const canvasDrawer = CanvasDrawer({
 		canvas,
 		imageHeight: config.imageWidth,
 		imageWidth: config.imageHeight
 	});
 
-	return BuddhabrotDrawer(canvasDrawer, simpleRgbValTransform, config);
+	return BuddhabrotDrawer(canvasDrawer, simpleRgbValTransform, config, callbacks);
 };

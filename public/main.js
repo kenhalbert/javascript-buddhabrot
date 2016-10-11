@@ -8236,11 +8236,29 @@
 	
 	var _jsbuddhabrot2 = _interopRequireDefault(_jsbuddhabrot);
 	
+	var _ui = __webpack_require__(908);
+	
+	var _utils = __webpack_require__(910);
+	
 	__webpack_require__(883);
 	
 	__webpack_require__(906);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var iterationCount = 0;
+	var updateIterationCount = (0, _utils.throttle)(function () {
+		$('.stats .iterations p').html(iterationCount);
+	}, 1000);
+	var callbacks = {
+		onIterationCompleted: function onIterationCompleted() {
+			iterationCount++;
+			updateIterationCount();
+		},
+		onHighestDensityChanged: function onHighestDensityChanged(newHighestDensity) {
+			$('.stats .highest-density p').html(newHighestDensity);
+		}
+	};
 	
 	var drawer = (0, _jsbuddhabrot2.default)(document.getElementById('canvas'), {
 		imageWidth: 1800,
@@ -8251,7 +8269,11 @@
 		sequenceEscapeThreshold: 10000,
 		sequenceBound: 2,
 		threads: 8
-	});
+	}, callbacks);
+	
+	drawer.init();
+	
+	(0, _ui.attachEventHandlers)(drawer);
 	
 	window.drawer = drawer;
 	
@@ -8310,14 +8332,14 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function (canvas, config) {
+	exports.default = function (canvas, config, callbacks) {
 		var canvasDrawer = (0, _CanvasDrawer2.default)({
 			canvas: canvas,
 			imageHeight: config.imageWidth,
 			imageWidth: config.imageHeight
 		});
 	
-		return (0, _BuddhabrotDrawer2.default)(canvasDrawer, _simpleRgbValTransform2.default, config);
+		return (0, _BuddhabrotDrawer2.default)(canvasDrawer, _simpleRgbValTransform2.default, config, callbacks);
 	};
 
 /***/ },
@@ -8342,7 +8364,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function (drawer, colorFunc, config) {
+	exports.default = function (drawer, colorFunc, config, callbacks) {
 		var internalConfig = Object.assign({}, config),
 		    createSourcePlot = function createSourcePlot() {
 			return (0, _DensityPlot2.default)({
@@ -8369,6 +8391,8 @@
 		    sourcePlot = null,
 		    imagePlot = null,
 		    isInitialized = false;
+	
+		(0, _drawRoutine.registerCallbacks)(callbacks);
 	
 		return {
 			get isRunning() {
@@ -8414,7 +8438,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.getDrawFunc = exports.isRunning = exports.stop = undefined;
+	exports.registerCallbacks = exports.getDrawFunc = exports.isRunning = exports.stop = undefined;
 	
 	var _drawPoints = __webpack_require__(372);
 	
@@ -8437,6 +8461,12 @@
 	
 	var workers = [];
 	
+	var callbacks = {};
+	
+	var registerCallbacks = function registerCallbacks(newCallbacks) {
+	    callbacks = newCallbacks;
+	};
+	
 	var stop = function stop() {
 	    controlVars.shouldStop = true;
 	
@@ -8446,8 +8476,28 @@
 	    }
 	};
 	
+	var lastHighestDensity = 0;
+	
 	var isRunning = function isRunning() {
 	    return controlVars.isRunning;
+	};
+	
+	var initWorkers = function initWorkers(threads, pointsToPlot, sequenceEscapeThreshold, sequenceBound) {
+	    for (var i = 0; i < threads; i++) {
+	        var worker = (0, _generateBuddhabrotPointsWorker2.default)();
+	        worker.onmessage = function (m) {
+	            if (callbacks.onIterationCompleted) callbacks.onIterationCompleted();
+	            for (var _i = 0; _i < m.data.length; _i++) {
+	                pointsToPlot.push(m.data[_i]);
+	            }
+	        };
+	        worker.postMessage({
+	            sequenceEscapeThreshold: sequenceEscapeThreshold,
+	            sequenceBound: sequenceBound
+	        });
+	
+	        workers.push(worker);
+	    }
 	};
 	
 	var getDrawFunc = function getDrawFunc(drawer, colorFunc, sourcePlot, imagePlot, config) {
@@ -8466,23 +8516,10 @@
 	
 	    iterationSetStartTime = renderStartTime = new Date().getTime();
 	
-	    for (var i = 0; i < threads; i++) {
-	        var worker = (0, _generateBuddhabrotPointsWorker2.default)();
-	        worker.onmessage = function (m) {
-	            for (var _i = 0; _i < m.data.length; _i++) {
-	                pointsToPlot.push(m.data[_i]);
-	            }
-	        };
-	        worker.postMessage({
-	            sequenceEscapeThreshold: sequenceEscapeThreshold,
-	            sequenceBound: sequenceBound
-	        });
-	
-	        workers.push(worker);
-	    }
-	
 	    return function () {
 	        controlVars.isRunning = true;
+	
+	        initWorkers(threads, pointsToPlot, sequenceEscapeThreshold, sequenceBound);
 	
 	        (function drawInternal() {
 	            if (controlVars.shouldStop) {
@@ -8496,6 +8533,11 @@
 	            (0, _drawPoints2.default)(sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions, colorFunc);
 	
 	            pointsToPlot.length = 0; // clear the array
+	
+	            if (lastHighestDensity !== sourcePlot.highestDensity) {
+	                lastHighestDensity = sourcePlot.highestDensity;
+	                if (callbacks.onHighestDensityChanged) callbacks.onHighestDensityChanged(lastHighestDensity);
+	            }
 	
 	            iteration++;
 	
@@ -8515,6 +8557,7 @@
 	exports.stop = stop;
 	exports.isRunning = isRunning;
 	exports.getDrawFunc = getDrawFunc;
+	exports.registerCallbacks = registerCallbacks;
 
 /***/ },
 /* 372 */
@@ -66126,10 +66169,98 @@
 	
 	
 	// module
-	exports.push([module.id, "#canvas {\n\twidth: 100%;\n\tpadding: 50px;\n}", ""]);
+	exports.push([module.id, "#canvas {\n\twidth: 100%;\n\tpadding: 50px;\n}\n\n#start {\n\twidth: 100%;\n}", ""]);
 	
 	// exports
 
+
+/***/ },
+/* 908 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.attachEventHandlers = undefined;
+	
+	var _attachEventHandlers = __webpack_require__(909);
+	
+	var _attachEventHandlers2 = _interopRequireDefault(_attachEventHandlers);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.attachEventHandlers = _attachEventHandlers2.default;
+	exports.default = { attachEventHandlers: _attachEventHandlers2.default };
+
+/***/ },
+/* 909 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	exports.default = function (drawer) {
+		$(function () {
+			var startButton = $('#start');
+	
+			startButton.click(function (e) {
+				var isRunning = drawer.isRunning;
+	
+				if (isRunning) drawer.stop();else drawer.start();
+	
+				var text = !isRunning ? 'Stop' : 'Start';
+	
+				startButton.html(text);
+			});
+		});
+	};
+
+/***/ },
+/* 910 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+			value: true
+	});
+	var debounce = function debounce(func, wait, immediate) {
+			var timeout = void 0;
+			return function () {
+					var context = this,
+					    args = arguments;
+					var later = function later() {
+							timeout = null;
+							if (!immediate) func.apply(context, args);
+					};
+					var callNow = immediate && !timeout;
+					clearTimeout(timeout);
+					timeout = setTimeout(later, wait);
+					if (callNow) func.apply(context, args);
+			};
+	};
+	
+	var throttle = function throttle(callback, limit) {
+			var wait = false;
+			return function () {
+					if (!wait) {
+							callback.apply(null, arguments);
+							wait = true;
+							setTimeout(function () {
+									wait = false;
+							}, limit);
+					}
+			};
+	};
+	
+	exports.debounce = debounce;
+	exports.throttle = throttle;
+	exports.default = { debounce: debounce, throttle: throttle };
 
 /***/ }
 /******/ ]);
