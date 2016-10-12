@@ -8252,23 +8252,18 @@
 		plotDimensions: 1800,
 		sequenceEscapeThreshold: 10000,
 		sequenceBound: 2,
-		threads: 8
+		threads: 8,
+		color: {
+			r: 255,
+			g: 0,
+			b: 0,
+			a: 255
+		}
 	}, _ui.callbacks);
 	
 	drawer.init();
 	
 	(0, _ui.attachEventHandlers)(drawer);
-	
-	window.drawer = drawer;
-	
-	// What I need to do next is create a simple, slick-looking interface that can be used to configure and control the render. 
-	// Angular is probably the best choice for that; it's easy to set up and get working.
-	// The app should work like this:
-	//		1.  Canvases can be scaled with CSS, so fit a square canvas onto the screen with CSS and use a constant canvas size for now
-	//				-- Make the body background color grey & give the canvas a nice box-shadow 
-	//		2.  For now, the plot dimensions should be constant & large enough to yield high detail on all common viewport sizes
-	//		3.  The app should present the user with an input for the number of threads with explanations and expected completion times for each, with a start button under that
-	//		4.  When the user clicks start, it should start and show a status bar next to or underneath the canvas with remaining viewport space depending on screen size
 
 /***/ },
 /* 368 */
@@ -8310,18 +8305,7 @@
 	
 	var _BuddhabrotGenerator2 = _interopRequireDefault(_BuddhabrotGenerator);
 	
-	var _SimpleRgbValTransform = __webpack_require__(914);
-	
-	var _SimpleRgbValTransform2 = _interopRequireDefault(_SimpleRgbValTransform);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var color = {
-		r: 255,
-		g: 0,
-		b: 0,
-		a: 255
-	};
 	
 	exports.default = function (canvas, config, callbacks) {
 		var canvasDrawer = (0, _CanvasDrawer2.default)({
@@ -8330,7 +8314,7 @@
 			imageWidth: config.imageHeight
 		});
 	
-		return (0, _BuddhabrotDrawer2.default)(canvasDrawer, (0, _SimpleRgbValTransform2.default)(color), config, callbacks);
+		return (0, _BuddhabrotDrawer2.default)(canvasDrawer, config, callbacks);
 	};
 
 /***/ },
@@ -8349,6 +8333,10 @@
 	
 	var _DensityPlot2 = _interopRequireDefault(_DensityPlot);
 	
+	var _SimpleRgbValTransform = __webpack_require__(883);
+	
+	var _SimpleRgbValTransform2 = _interopRequireDefault(_SimpleRgbValTransform);
+	
 	var _rebaseColors = __webpack_require__(374);
 	
 	var _rebaseColors2 = _interopRequireDefault(_rebaseColors);
@@ -8359,9 +8347,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function (drawer, colorFunc, config, callbacks) {
+	exports.default = function (drawer, config, callbacks) {
 		var internalConfig = Object.assign({}, config),
-		    createSourcePlot = function createSourcePlot() {
+		    getColorFunc = function getColorFunc() {
+			return (0, _SimpleRgbValTransform2.default)(internalConfig.color);
+		},
+		    // TODO find a way to just inject the color transform without associated configuration; needs to work when color is reconfigured (just make the color transform a config property?)
+		createSourcePlot = function createSourcePlot() {
 			return (0, _DensityPlot2.default)({
 				width: internalConfig.plotDimensions,
 				height: internalConfig.plotDimensions
@@ -8383,6 +8375,7 @@
 		};
 	
 		var drawFunc = null,
+		    colorFunc = getColorFunc(),
 		    sourcePlot = null,
 		    imagePlot = null,
 		    isInitialized = false;
@@ -8437,6 +8430,7 @@
 				}
 	
 				drawFunc = null;
+				colorFunc = getColorFunc();
 			}
 		};
 	};
@@ -8765,7 +8759,7 @@
 	});
 	exports.default = {
 		threads: true,
-		colorScheme: true
+		color: true
 	};
 
 /***/ },
@@ -63314,7 +63308,30 @@
 
 
 /***/ },
-/* 883 */,
+/* 883 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	var rgbValTransform = function rgbValTransform(rgbVal, density, highestDensity) {
+		return Math.floor(density * rgbVal / highestDensity);
+	};
+	
+	exports.default = function (color) {
+		return function (density, highestDensity) {
+			return {
+				r: rgbValTransform(color.r, density, highestDensity),
+				g: rgbValTransform(color.g, density, highestDensity),
+				b: rgbValTransform(color.b, density, highestDensity),
+				a: color.a
+			};
+		};
+	};
+
+/***/ },
 /* 884 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -63366,6 +63383,28 @@
 		return time < 1 ? '00' : time < 10 ? '0' + rounded : rounded;
 	};
 	
+	var getRgbValue = function getRgbValue(colorSection, type) {
+		return colorSection.find('.' + type + ' input')[0].value;
+	};
+	
+	var updateConfig = function updateConfig(drawer) {
+		var colorSection = $('.controls .colors');
+	
+		var color = {
+			r: getRgbValue(colorSection, 'r'),
+			g: getRgbValue(colorSection, 'g'),
+			b: getRgbValue(colorSection, 'b'),
+			a: 255
+		};
+	
+		var threads = $('.controls .threads input')[0].value;
+	
+		drawer.reconfigure({
+			threads: threads,
+			color: color
+		});
+	};
+	
 	exports.default = function (drawer) {
 		$(function () {
 			var startButton = $('#start');
@@ -63373,7 +63412,10 @@
 			startButton.click(function (e) {
 				var isRunning = drawer.isRunning;
 	
-				if (isRunning) drawer.stop();else drawer.start();
+				if (isRunning) drawer.stop();else {
+					updateConfig(drawer);
+					drawer.start();
+				}
 	
 				var text = !isRunning ? 'Stop' : 'Start';
 	
@@ -66404,34 +66446,10 @@
 	
 	
 	// module
-	exports.push([module.id, "#canvas {\n\twidth: 100%;\n\tpadding: 50px;\n}\n\n#start {\n\twidth: 100%;\n}", ""]);
+	exports.push([module.id, "#canvas {\n\twidth: 100%;\n\tpadding: 50px;\n}\n\n#start {\n\twidth: 100%;\n}\n\n.control-panel {\n    padding-top: 50px;\n}", ""]);
 	
 	// exports
 
-
-/***/ },
-/* 914 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var rgbValTransform = function rgbValTransform(rgbVal, density, highestDensity) {
-		return Math.floor(density * rgbVal / highestDensity);
-	};
-	
-	exports.default = function (color) {
-		return function (density, highestDensity) {
-			return {
-				r: rgbValTransform(color.r, density, highestDensity),
-				g: rgbValTransform(color.g, density, highestDensity),
-				b: rgbValTransform(color.b, density, highestDensity),
-				a: color.a
-			};
-		};
-	};
 
 /***/ }
 /******/ ]);

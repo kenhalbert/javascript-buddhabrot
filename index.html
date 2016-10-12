@@ -17,28 +17,40 @@
                 <div class="col-md-2 col-xs-12 control-panel">
                     <div class="controls">
                         <h2>Settings</h2>
-                        <div class="form-group">
+                        <div class="form-group threads">
                             <label for="threads" class="control-label h3">Threads</label>
-                            <input type="text" class="form-control" id="threads" placeholder="Number of threads">
+                            <input type="text" class="form-control" id="threads" value="8" placeholder="Number of threads">
                         </div>
                         <h3>Colors</h3>
-                        <div class="row">
+                        <div class="row form-horizontal colors">
                             <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="r" class="control-label">R</label>
-                                    <input type="text" class="form-control" id="r" placeholder="0-255">
+                                <div class="form-group r">
+                                    <div class="col-xs-3">
+                                        <label for="r" class="control-label">R</label>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <input type="text" class="form-control" id="r" value="0" placeholder="0-255">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="g" class="control-label">G</label>
-                                    <input type="text" class="form-control" id="g" placeholder="0-255">
+                                <div class="form-group g">
+                                    <div class="col-xs-3">
+                                        <label for="g" class="control-label">G</label>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <input type="text" class="form-control" id="g" value="255" placeholder="0-255">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="b" class="control-label">B</label>
-                                    <input type="text" class="form-control" id="b" placeholder="0-255">
+                                <div class="form-group b">
+                                    <div class="col-xs-3">
+                                        <label for="b" class="control-label">B</label>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <input type="text" class="form-control" id="b" value="0" placeholder="0-255">
+                                    </div>
                                 </div>
                             </div>
                         </div>

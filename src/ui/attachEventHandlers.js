@@ -10,6 +10,28 @@ const formatTime = (time) => {
 			:  rounded;
 };
 
+const getRgbValue = (colorSection, type) => {
+	return colorSection.find(`.${type} input`)[0].value;
+};
+
+const updateConfig = (drawer) => {
+	const colorSection = $('.controls .colors');
+
+	const color = {
+		r: getRgbValue(colorSection, 'r'),
+		g: getRgbValue(colorSection, 'g'),
+		b: getRgbValue(colorSection, 'b'),
+		a: 255
+	};
+
+	const threads = $('.controls .threads input')[0].value;
+
+	drawer.reconfigure({
+		threads,
+		color
+	});
+}
+
 export default (drawer) => {
 	$(() => {
 		const startButton = $('#start');
@@ -18,7 +40,10 @@ export default (drawer) => {
 			const isRunning = drawer.isRunning;
 
 			if (isRunning) drawer.stop();
-			else drawer.start();
+			else {
+				updateConfig(drawer)
+				drawer.start();
+			}
 
 			const text = !isRunning
 				? 'Stop'

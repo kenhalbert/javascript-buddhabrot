@@ -1,10 +1,12 @@
 import { getDrawFunc, isRunning, stop, registerCallbacks } from './drawRoutine';
 import DensityPlot from '../../math/DensityPlot';
+import SimpleRgbValTransform from '../color/SimpleRgbValTransform';
 import rebaseColors from './rebaseColors';
 import mutableConfig from './mutableConfig';
 
-export default (drawer, colorFunc, config, callbacks) => {
+export default (drawer, config, callbacks) => {
 	const internalConfig = Object.assign({}, config),
+		getColorFunc = () => SimpleRgbValTransform(internalConfig.color),  // TODO find a way to just inject the color transform without associated configuration; needs to work when color is reconfigured (just make the color transform a config property?)
 		createSourcePlot = () => DensityPlot({
 			width: internalConfig.plotDimensions,
 			height: internalConfig.plotDimensions
@@ -22,7 +24,8 @@ export default (drawer, colorFunc, config, callbacks) => {
 			drawer.updateCanvas();
 	    };
 
-	let drawFunc = null,
+	let drawFunc = null,		
+		colorFunc = getColorFunc(),
 		sourcePlot = null,
 		imagePlot = null,
 		isInitialized = false;
@@ -77,6 +80,7 @@ export default (drawer, colorFunc, config, callbacks) => {
 			}
 
 			drawFunc = null;
+			colorFunc = getColorFunc();
 		}
 	};
 };
