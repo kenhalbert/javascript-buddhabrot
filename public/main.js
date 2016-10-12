@@ -8310,11 +8310,18 @@
 	
 	var _BuddhabrotGenerator2 = _interopRequireDefault(_BuddhabrotGenerator);
 	
-	var _simpleRgbValTransform = __webpack_require__(883);
+	var _SimpleRgbValTransform = __webpack_require__(914);
 	
-	var _simpleRgbValTransform2 = _interopRequireDefault(_simpleRgbValTransform);
+	var _SimpleRgbValTransform2 = _interopRequireDefault(_SimpleRgbValTransform);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var color = {
+		r: 255,
+		g: 0,
+		b: 0,
+		a: 255
+	};
 	
 	exports.default = function (canvas, config, callbacks) {
 		var canvasDrawer = (0, _CanvasDrawer2.default)({
@@ -8323,7 +8330,7 @@
 			imageWidth: config.imageHeight
 		});
 	
-		return (0, _BuddhabrotDrawer2.default)(canvasDrawer, _simpleRgbValTransform2.default, config, callbacks);
+		return (0, _BuddhabrotDrawer2.default)(canvasDrawer, (0, _SimpleRgbValTransform2.default)(color), config, callbacks);
 	};
 
 /***/ },
@@ -8370,7 +8377,7 @@
 			sourcePlot = createSourcePlot();
 			imagePlot = createImagePlot();
 	
-			(0, _rebaseColors2.default)(colorFunc, imagePlot, drawer, internalConfig.imageScale);
+			(0, _rebaseColors2.default)(colorFunc, imagePlot, drawer);
 	
 			drawer.updateCanvas();
 		};
@@ -8531,7 +8538,7 @@
 	                return;
 	            }
 	
-	            if (iteration === 0) (0, _rebaseColors2.default)(colorFunc, imagePlot, drawer, config);
+	            if (iteration === 0) (0, _rebaseColors2.default)(colorFunc, imagePlot, drawer);
 	
 	            (0, _drawPoints2.default)(sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions, colorFunc);
 	
@@ -8544,7 +8551,7 @@
 	
 	            iteration++;
 	
-	            if (iteration % 10000 === 0) (0, _rebaseColors2.default)(colorFunc, imagePlot, drawer, config);
+	            if (iteration % 10000 === 0) (0, _rebaseColors2.default)(colorFunc, imagePlot, drawer);
 	
 	            if (iteration !== 0 && iteration % 10 === 0) drawer.updateCanvas();
 	
@@ -8605,8 +8612,8 @@
 	
 	        if (imageDensity - 1 > sourceDensity) continue;
 	
-	        var color = getColor(imageDensity, 255, imagePlot.highestDensity);
-	        drawer.setPixel(x, y, color, 0, 0, 255);
+	        var color = getColor(imageDensity, imagePlot.highestDensity);
+	        drawer.setPixel(x, y, color.r, color.g, color.b, color.a);
 	    }
 	};
 
@@ -8634,24 +8641,20 @@
 /* 374 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	
-	exports.default = function (colorFunc, imagePlot, drawer, imageScale) {
-	    console.log('rebasing colors...');
-	
+	exports.default = function (colorFunc, imagePlot, drawer) {
 	    for (var h = 0; h < imagePlot.width; h++) {
 	        for (var k = 0; k < imagePlot.height; k++) {
-	            var density = imagePlot.getDensity(h, k); // TODO colorFunc should take r, g, b values
-	            var red = colorFunc(density, 255, imagePlot.highestDensity); // TODO make color configurable and allow to be changed after render
-	            drawer.setPixel(h, k, red, 0, 0, 255); // TODO also consider allowing to save and load density plots, and inject coloring strategy to allow possibilities beyond monochrome
+	            var density = imagePlot.getDensity(h, k);
+	            var color = colorFunc(density, imagePlot.highestDensity);
+	            drawer.setPixel(h, k, color.r, color.g, color.b, color.a);
 	        }
 	    }
-	
-	    console.log('done rebasing colors');
 	};
 
 /***/ },
@@ -63311,20 +63314,7 @@
 
 
 /***/ },
-/* 883 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	exports.default = function (density, rgbVal, highestDensity) {
-	    return Math.floor(density * rgbVal / highestDensity);
-	};
-
-/***/ },
+/* 883 */,
 /* 884 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -63391,7 +63381,6 @@
 			});
 	
 			_stopwatch2.default.onTick(function (time) {
-				console.log('tick', time);
 				var seconds = time / 1000 % 60;
 				var minutes = time / (1000 * 60) % 60;
 				var hours = time / (1000 * 60 * 60);
@@ -66419,6 +66408,30 @@
 	
 	// exports
 
+
+/***/ },
+/* 914 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	var rgbValTransform = function rgbValTransform(rgbVal, density, highestDensity) {
+		return Math.floor(density * rgbVal / highestDensity);
+	};
+	
+	exports.default = function (color) {
+		return function (density, highestDensity) {
+			return {
+				r: rgbValTransform(color.r, density, highestDensity),
+				g: rgbValTransform(color.g, density, highestDensity),
+				b: rgbValTransform(color.b, density, highestDensity),
+				a: color.a
+			};
+		};
+	};
 
 /***/ }
 /******/ ]);

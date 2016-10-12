@@ -33,7 +33,7 @@ export default (sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHe
 
         if (imageDensity - 1 > sourceDensity) continue;
 
-        const color = getColor(imageDensity, 255, imagePlot.highestDensity);
-        drawer.setPixel(x, y, color, 0, 0, 255);
+        const color = getColor(imageDensity, imagePlot.highestDensity);
+        drawer.setPixel(x, y, color.r, color.g, color.b, color.a);
     }
 };

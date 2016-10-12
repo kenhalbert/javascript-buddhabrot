@@ -17,7 +17,7 @@ export default (drawer, colorFunc, config, callbacks) => {
 	    	sourcePlot = createSourcePlot();
 			imagePlot = createImagePlot();
 
-			rebaseColors(colorFunc, imagePlot, drawer, internalConfig.imageScale); 
+			rebaseColors(colorFunc, imagePlot, drawer); 
 
 			drawer.updateCanvas();
 	    };

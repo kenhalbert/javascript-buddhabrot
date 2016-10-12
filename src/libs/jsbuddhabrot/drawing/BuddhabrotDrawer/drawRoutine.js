@@ -68,7 +68,7 @@ const getDrawFunc = (drawer, colorFunc, sourcePlot, imagePlot, config) => {
                 return;
             }
 
-            if (iteration === 0) rebaseColors(colorFunc, imagePlot, drawer, config);
+            if (iteration === 0) rebaseColors(colorFunc, imagePlot, drawer);
 
             drawPoints(sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions, colorFunc);
 
@@ -81,7 +81,7 @@ const getDrawFunc = (drawer, colorFunc, sourcePlot, imagePlot, config) => {
 
             iteration++;
 
-            if (iteration % 10000 === 0) rebaseColors(colorFunc, imagePlot, drawer, config);
+            if (iteration % 10000 === 0) rebaseColors(colorFunc, imagePlot, drawer);
 
             if (iteration !== 0 && iteration % 10 === 0) drawer.updateCanvas();
 
