@@ -21,5 +21,8 @@ export default {
 	},
 	onStart: () => {
 		stopwatch.start();
+	},
+	onInitCompleted: () => {
+		$('.loading-message').addClass('hidden');
 	}
 };

@@ -8417,6 +8417,8 @@
 				initCanvasAndPlots();
 	
 				isInitialized = true;
+	
+				if (callbacks.onInitCompleted) callbacks.onInitCompleted();
 			},
 			reconfigure: function reconfigure(config) {
 				if ((0, _drawRoutine.isRunning)()) throw Error('Draw routine must be stopped before it can be reconfigured');
@@ -8781,7 +8783,8 @@
 	});
 	exports.default = {
 		threads: true,
-		color: true
+		color: true,
+		sequenceEscapeThreshold: true
 	};
 
 /***/ },
@@ -63397,9 +63400,12 @@
 	
 		var threads = $('.controls .threads input')[0].value;
 	
+		var sequenceEscapeThreshold = $('.controls .threshold input')[0].value;
+	
 		drawer.reconfigure({
 			threads: threads,
-			color: color
+			color: color,
+			sequenceEscapeThreshold: sequenceEscapeThreshold
 		});
 	};
 	
@@ -63541,6 +63547,9 @@
 		},
 		onStart: function onStart() {
 			_stopwatch2.default.start();
+		},
+		onInitCompleted: function onInitCompleted() {
+			$('.loading-message').addClass('hidden');
 		}
 	};
 
@@ -66444,7 +66453,7 @@
 	
 	
 	// module
-	exports.push([module.id, "#canvas {\n\twidth: 100%;\n\tpadding: 50px;\n}\n\n#start {\n    width: 100%;\n    max-width: 250px;\n    margin: 0 auto;\n    display: block;\n}\n\n.control-panel {\n    padding-top: 50px;\n}", ""]);
+	exports.push([module.id, "#canvas {\n\tdisplay: block;\n\twidth: 90%;\n\tmargin: 0 auto;\n\tborder: 1px solid black;\n}\n\n#start {\n    width: 100%;\n    max-width: 250px;\n    margin: 0 auto;\n    display: block;\n}\n\n.loading-message {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\n\n.loading-message span {\n\tmargin: 0 auto;\n\tfont-style: italic;\n}", ""]);
 	
 	// exports
 

@@ -26,9 +26,12 @@ const updateConfig = (drawer) => {
 
 	const threads = $('.controls .threads input')[0].value;
 
+	const sequenceEscapeThreshold = $('.controls .threshold input')[0].value;
+
 	drawer.reconfigure({
 		threads,
-		color
+		color,
+		sequenceEscapeThreshold
 	});
 }
 

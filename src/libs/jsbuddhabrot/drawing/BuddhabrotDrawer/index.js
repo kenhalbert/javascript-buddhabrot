@@ -67,6 +67,8 @@ export default (drawer, config, callbacks) => {
 			initCanvasAndPlots();
 
 			isInitialized = true;
+
+			if (callbacks.onInitCompleted) callbacks.onInitCompleted();
 		},
 		reconfigure (config) {
 			if (isRunning()) throw Error('Draw routine must be stopped before it can be reconfigured');

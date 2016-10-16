@@ -1,4 +1,5 @@
 export default {
 	threads: true,
-	color: true
+	color: true,
+	sequenceEscapeThreshold: true
 };
