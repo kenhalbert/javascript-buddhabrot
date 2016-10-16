@@ -9,7 +9,7 @@ const drawer = createBuddhabrotDrawer(document.getElementById('canvas'), {
 	imageScale: 600,
 	plotScale: 600,  // TODO should this be calculated by the program every time?  pScale = Math.floor(pDim / 3) - easy
 	plotDimensions: 1800,
-	sequenceEscapeThreshold: 10000,
+	sequenceEscapeThreshold: 15000,
 	sequenceBound: 2,
 	threads: 8,
 	color: {
@@ -20,6 +20,6 @@ const drawer = createBuddhabrotDrawer(document.getElementById('canvas'), {
 	}
 }, callbacks);
 
-drawer.init();
+setTimeout(drawer.init, 0);
 
 attachEventHandlers(drawer);

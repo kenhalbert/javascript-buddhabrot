@@ -68,8 +68,6 @@ const getDrawFunc = (drawer, colorFunc, sourcePlot, imagePlot, config) => {
                 return;
             }
 
-            if (iteration === 0) rebaseColors(colorFunc, imagePlot, drawer);
-
             drawPoints(sourcePlot, imagePlot, drawer, pointsToPlot, imageWidth, imageHeight, imageScale, plotScale, plotDimensions, colorFunc);
 
             pointsToPlot.length = 0;  // clear the array

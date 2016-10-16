@@ -4,7 +4,10 @@
 }
 
 #start {
-	width: 100%;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
 }
 
 .control-panel {
