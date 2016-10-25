@@ -6,8 +6,12 @@ export default (params) => {
 	const canvasContext = canvas.getContext('2d');
 	const canvasData = canvasContext.getImageData(0, 0, imageWidth, imageHeight);
 
+	const computeImageDataOffset = (x, y) => {
+		return (y + x * imageHeight) * 4;
+	};
+
 	const setPixel = (x, y, r, g, b, a) => {
-		const index = (x + y * imageWidth) * 4;
+		const index = computeImageDataOffset(x, y);
 
         canvasData.data[index] = r;
         canvasData.data[index + 1] = g;
@@ -20,7 +24,8 @@ export default (params) => {
 	};
 
 	const getPixel = (x, y) => {
-		const index = (x + y * imageWidth) * 4;
+		const index = computeImageDataOffset(x, y);
+
 		return {
 			r: canvasData.data[index],
 			g: canvasData.data[index + 1],

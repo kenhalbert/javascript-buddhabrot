@@ -8805,8 +8805,12 @@
 		var canvasContext = canvas.getContext('2d');
 		var canvasData = canvasContext.getImageData(0, 0, imageWidth, imageHeight);
 	
+		var computeImageDataOffset = function computeImageDataOffset(x, y) {
+			return (y + x * imageHeight) * 4;
+		};
+	
 		var setPixel = function setPixel(x, y, r, g, b, a) {
-			var index = (x + y * imageWidth) * 4;
+			var index = computeImageDataOffset(x, y);
 	
 			canvasData.data[index] = r;
 			canvasData.data[index + 1] = g;
@@ -8819,7 +8823,8 @@
 		};
 	
 		var getPixel = function getPixel(x, y) {
-			var index = (x + y * imageWidth) * 4;
+			var index = computeImageDataOffset(x, y);
+	
 			return {
 				r: canvasData.data[index],
 				g: canvasData.data[index + 1],
