@@ -66458,7 +66458,7 @@
 	
 	
 	// module
-	exports.push([module.id, "#canvas {\n\tdisplay: block;\n\twidth: 90%;\n\tmargin: 0 auto;\n\tborder: 1px solid black;\n}\n\n#start {\n    width: 100%;\n    max-width: 250px;\n    margin: 0 auto;\n    display: block;\n}\n\n.loading-message {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\n\n.loading-message span {\n\tmargin: 0 auto;\n\tfont-style: italic;\n}", ""]);
+	exports.push([module.id, "#canvas {\n\tdisplay: block;\n\twidth: 90%;\n\tmargin: 0 auto;\n\tborder: 1px solid black;\n}\n\n#start {\n    width: 100%;\n    max-width: 250px;\n    margin: 0 auto;\n    display: block;\n}\n\n.loading-message {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\n\n.loading-message span {\n\tmargin: 0 auto;\n\tfont-style: italic;\n}\n\n.what-is {\n    margin-bottom: 50px;\n}", ""]);
 	
 	// exports
 
