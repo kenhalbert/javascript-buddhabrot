@@ -2,6 +2,8 @@
 
 Generates a buddhabrot image on an HTML5 canvas.  The mandlebrot set algorithm is parallelized using web workers to speed up generation.
 
+With the default settings, you should let the renderer run for ten to fifteen minutes to get a high-quality image.
+
 This is still very much a work in progress, and some parts of the app are kind of messy.  Also, validation is missing for the fields in the control panel.  Nonetheless, it's mostly done.
 
 ## Prerequisites
