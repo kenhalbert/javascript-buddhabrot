@@ -24,4 +24,4 @@ npm install
 webpack
 ```
 
-Then, open index.html in a web browser.
+Then, open index.html in a web browser or run webpack-dev-server and navigate to localhost:8080.
