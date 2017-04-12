@@ -1,6 +1,6 @@
-## Overview
+# JavaScriptBuddhabrot
 
-Generates a buddhabrot image on an HTML5 canvas.  The mandlebrot set algorithm is parallelized using web workers to speed up generation.
+Renders a buddhabrot image on an HTML5 canvas.  The Mandlebrot set algorithm is parallelized using web workers to speed up generation.
 
 With the default settings, you should let the renderer run for ten to fifteen minutes to get a high-quality image.
 
