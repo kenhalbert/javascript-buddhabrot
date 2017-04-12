@@ -1,6 +1,8 @@
 # JavaScriptBuddhabrot
 
-Renders a buddhabrot image on an HTML5 canvas.  The Mandlebrot set algorithm is parallelized using web workers to speed up generation.
+Renders a buddhabrot image on an HTML5 canvas.  [Give it a try here on github!](https://kenhalbert.github.io/JavaScriptBuddhabrot/)
+
+The Mandlebrot set algorithm is parallelized using web workers to speed up generation.
 
 With the default settings, you should let the renderer run for ten to fifteen minutes to get a high-quality image.
 
@@ -10,7 +12,7 @@ This is still very much a work in progress, and some parts of the app are kind o
 
 You need to have webpack installed to build this web app.  To install it, run this command:
 
-```
+```	
 npm install webpack -g
 ```
 
