@@ -1,6 +1,6 @@
 # JavaScriptBuddhabrot
 
-Renders a buddhabrot image on an HTML5 canvas.  [Give it a try here on github!](https://kenhalbert.github.io/JavaScriptBuddhabrot/)
+Renders a buddhabrot image on an HTML5 canvas.  Go ahead and [give it a try here on github!](https://kenhalbert.github.io/JavaScriptBuddhabrot/)
 
 The Mandlebrot set algorithm is parallelized using web workers to speed up generation.
 
