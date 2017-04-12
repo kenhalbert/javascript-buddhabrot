@@ -2,7 +2,7 @@ import MandelbrotSequence from './MandelbrotSequence';
 import math from 'mathjs';
 
 /* This function uses a heuristic method to determine if complexToTest is in the Mandelbrot set.  If
- it is, the function yields an array of all points the generated sequence passed through; if it isn't,
+ it is not in the Mandlebrot set, the function yields all members in the generated sequence; if it is,
  the function returns an empty array. */
 const executeIteration = (complexToTest, sequenceEscapeThreshold, sequenceBound) => {
   const result = [];
