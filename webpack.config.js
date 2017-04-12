@@ -27,5 +27,14 @@ module.exports = {
     stats: {
     	colors: true
     },
+    devServer: {
+        contentBase: '',
+        proxy: {
+          '/**/': {
+            target: 'http://localhost:8080/index.html',
+            ignorePath: true
+          }
+        }
+    },
     devtool: 'source-map'
 };
