@@ -28,11 +28,11 @@
               <h2>Settings</h2>
               <div class="form-group threads">
                 <label for="threads" class="control-label">Web Workers</label>
-                <input type="text" class="form-control" id="threads" value="16" placeholder="Number of web workers">
+                <input type="text" class="form-control" id="threads" value="1" placeholder="Number of web workers">
               </div>
               <div class="form-group threshold">
                 <label for="threshold" class="control-label">Sequence Iteration Limit</label>
-                <input type="text" class="form-control" id="threshold" value="15000" placeholder="Sequence iteration limit">
+                <input type="text" class="form-control" id="threshold" value="250" placeholder="Sequence iteration limit">
               </div>
               <h4>Colors</h4>
               <div class="row form-horizontal colors">
@@ -102,31 +102,35 @@
       </div>
       <hr />
       <div class="row">
-        <h2>How does it work?</h2>
-        <p>Click "start" to start/stop the renderer, and use the settings panel to configure it.</p>
-        <ul>
-          <li>Increasing the number of web workers will speed up the render; 16 is a good number for most modern machines</li>
-          <li>The higher the sequence iteration limit, the more detailed the image will be.  Render time increases significantly as the sequence iteration limit increases</li>
-          <li>Change the color of the image with the RGB fields</li>
-        </ul>
-        <p>With the default settings, you should let the renderer run for ten to fifteen minutes to get a high-quality image.</p>
+        <div class="col-xs-12">
+          <h2>How does it work?</h2>
+          <p>Click "start" to start/stop the renderer, and use the settings panel to configure it.</p>
+          <ul>
+            <li>Increasing the number of web workers will speed up the render; 16 is a good number for most modern machines</li>
+            <li>The higher the sequence iteration limit, the more detailed the image will be.  Render time increases significantly as the sequence iteration limit increases</li>
+            <li>Change the color of the image with the RGB fields</li>
+          </ul>
+          <p>With the default settings, you should let the renderer run for ten to fifteen minutes to get a high-quality image.</p>
+        </div>
       </div>
       <div class="row what-is">
-        <h2>What is a buddhabrot?</h2>
-        <p>A buddhabrot (so-called because of its resemblance to depictions of Gautama Buddha in art) is a computer-generated image rendered by plotting points that <strong>are not</strong> part of the Mandelbrot set on the complex plane.  You can read more about the image itself <a href="https://en.wikipedia.org/wiki/Buddhabrot">here</a>.  The algorithm is as follows:</p>
-        <ol>
-          <li>Pick a point at random from the region of the complex plane being rendered into</li> <!-- TODO what region?  It's specific. -->
-          <li>
-            Using the random complex number chosen as <i>c</i> in the sequence z(n + 1) = z(n)^2 + c, calculate sequence members until
-            one of the following happens:
-            <ul>
-              <li>One of the generated sequence members falls outside of a predetermined region on the complex plane</li>
-              <li>A maximum number of sequence members are calculated without any of them falling outside of the region</li>
-            </ul>
-          </li>
-          <li>If the sequence did escape the region on the complex plane, all generated sequence members are plotted on a density plot</li>
-          <li>An image is rendered from the density plot, with each pixel representing a cell in the density plot (brighter pixels indicate a higher density)</li>
-        </ol>
+        <div class="col-xs-12">
+          <h2>What is a buddhabrot?</h2>
+          <p>A buddhabrot (so-called because of its resemblance to depictions of Gautama Buddha in art) is a computer-generated image rendered by plotting points that <strong>are not</strong> part of the Mandelbrot set on the complex plane.  You can read more about the image itself <a href="https://en.wikipedia.org/wiki/Buddhabrot">here</a>.  The algorithm is as follows:</p>
+          <ol>
+            <li>Pick a point at random from the region of the complex plane being rendered into</li> <!-- TODO what region?  It's specific. -->
+            <li>
+              Using the random complex number chosen as <i>c</i> in the sequence z(n + 1) = z(n)^2 + c, calculate sequence members until
+              one of the following happens:
+              <ul>
+                <li>One of the generated sequence members falls outside of a predetermined region on the complex plane</li>
+                <li>A maximum number of sequence members are calculated without any of them falling outside of the region</li>
+              </ul>
+            </li>
+            <li>If the sequence did escape the region on the complex plane, all generated sequence members are plotted on a density plot</li>
+            <li>An image is rendered from the density plot, with each pixel representing a cell in the density plot (brighter pixels indicate a higher density)</li>
+          </ol>
+        </div>
       </div>
     </div>
 
