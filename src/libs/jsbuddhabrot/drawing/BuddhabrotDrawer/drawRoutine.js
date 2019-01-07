@@ -31,7 +31,6 @@ const initWorkers = (threads, pointsToPlot, sequenceEscapeThreshold, sequenceBou
     const worker = BuddhabrotWorker();
 
     worker.onmessage = (m) => {
-      if (callbacks.onIterationCompleted) callbacks.onIterationCompleted();
       for (let i = 0; i < m.data.length; i++) pointsToPlot.push(m.data[i]);
     };
   
