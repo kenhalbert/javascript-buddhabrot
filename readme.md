@@ -6,8 +6,6 @@ The Mandlebrot set algorithm is [parallelized using web workers](http://kenhalbe
 
 With the default settings, you should let the renderer run for ten to fifteen minutes to get a high-quality image.
 
-This is still very much a work in progress, and some parts of the app are kind of messy.  Also, validation is missing for the fields in the control panel.  Nonetheless, it's mostly done.
-
 ## Prerequisites
 
 You need to have webpack installed to build this web app.  To install it, run this command:
